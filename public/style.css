@@ -1,0 +1,624 @@
+/* style.css (Yol Haritası Güncellenmiş Hali) */
+
+/* Genel Stil Tanımları (Bazı renkleri ve geçişleri güncelledim) */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Daha canlı ve derin bir arka plan gradyanı */
+    background: linear-gradient(120deg, #1A1A2E 0%, #302B63 50%, #0F0C29 100%);
+    color: #E0E0E0; /* Daha açık genel metin rengi */
+    margin: 0;
+    padding: 0; /* body'nin dış padding'ini kaldırıp, section'lara vereceğiz */
+    line-height: 1.7; /* Okunabilirliği artırmak için satır aralığı */
+    overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+h1, h2, h3 {
+    font-weight: 700; /* Daha kalın başlıklar */
+    margin-bottom: 15px;
+    color: #FFFFFF; /* Başlıklar tamamen beyaz */
+}
+
+h1 { font-size: 4rem; } /* Daha büyük ana başlık */
+h2 { font-size: 3rem; text-align: center; margin-bottom: 60px; color: #E0E0E0;} /* Daha büyük ve belirgin section başlıkları */
+h3 { font-size: 1.6rem; } /* Kart başlıkları biraz daha büyük */
+p { font-weight: 300; margin-bottom: 10px; } /* Metinler biraz daha hafif ve aralıklı */
+
+a {
+    color: #92B4F4; /* Link renklerini canlandıralım */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Renk geçişi */
+}
+
+a:hover {
+    color: #C0D6F7; /* Hover rengini açalım */
+}
+
+section {
+    padding: 80px 20px; /* Section padding'ini artırdık */
+    max-width: 1200px;
+    margin: 60px auto; /* Section'lar arası boşluğu artırdık */
+    position: relative; /* Animasyonlar için */
+}
+
+/* Arka Plan Şekilleri (Daha büyük ve belirgin) */
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0.7; /* Hafif saydamlık */
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px); /* Daha yoğun bulanıklık */
+    opacity: 0.6; /* Daha görünür şekiller */
+    animation: float 20s ease-in-out infinite; /* Yavaş hareket animasyonu */
+}
+
+.shape1 {
+    width: 400px; /* Daha büyük */
+    height: 400px;
+    background: linear-gradient(135deg, #7A68FF, #4E65FF); /* Daha canlı gradyan */
+    top: -100px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.shape2 {
+    width: 500px; /* Daha büyük */
+    height: 500px;
+    background: linear-gradient(135deg, #2D3E50, #0F0C29); /* Daha koyu gradyan */
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 10s;
+}
+
+/* Yüzen Animasyon */
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(20px, 20px); }
+    100% { transform: translate(0, 0); }
+}
+
+
+/* --------------------------------- */
+/* === LIQUID GLASS (GLASSMORPHISM) === */
+/* --------------------------------- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.08); /* Biraz daha az saydam, daha belirgin */
+    backdrop-filter: blur(25px); /* Daha yoğun bulanıklık */
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 25px; /* Daha yumuşak kenarlar */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Daha belirgin ışık kenarlığı */
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3); /* Daha derin gölge */
+    padding: 35px; /* Daha fazla iç boşluk */
+    transition: all 0.3s ease; /* Tüm geçişler için */
+}
+
+.glass-card:hover {
+    transform: translateY(-8px); /* Hafif yukarı kalkma efekti */
+    border-color: rgba(255, 255, 255, 0.3); /* Hover'da kenarlık belirginleşsin */
+    box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.4); /* Hover'da gölge artsın */
+}
+
+/* Header ve Navigasyon */
+header.glass-card {
+    margin: 0 auto 30px auto;
+    padding: 25px 40px;
+    border-radius: 0 0 25px 25px; /* Sadece alt kenarlar yuvarlak */
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1000;
+}
+
+/* BU KURAL ÇOK ÖNEMLİ */
+nav {
+    display: flex;
+    justify-content: space-between; /* Logoyu sola, linkleri sağa yaslar */
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.logo a {
+    color: #FFFFFF; /* Logo rengi */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex; /* Linkleri yan yana dizer */
+    list-style: none; /* Baştaki noktaları kaldırır */
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: none; /* Alttaki çizgiyi kaldırıyoruz */
+}
+
+.nav-links a::after { /* Yeni, alttan çıkan çizgi efekti */
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #92B4F4;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* CTA Buton (Daha belirgin ve animasyonlu) */
+.cta-button {
+    background: linear-gradient(90deg, #7A68FF 0%, #4E65FF 100%); /* Gradyan buton */
+    padding: 15px 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    font-weight: 700;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Daha yumuşak geçiş */
+    box-shadow: 0 8px 20px rgba(78, 101, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(78, 101, 255, 0.6);
+}
+
+.cta-button::before { /* Buton hover efekti için parlama */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg);
+    transition: all 0.7s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+/* Hero Alanı (İKİ SÜTUNLU YAPI - ÖNCEKİ ADIMDAN) */
+/* .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    gap: 40px;
+}
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    animation: slideInFromLeft 1s ease-out;
+} */
+
+.hero {
+    display: flex; /* Esnek kutu */
+    flex-direction: column; /* İçeriği dikey hizala */
+    justify-content: center; /* Dikeyde ortala */
+    align-items: center; /* Yatayda ortala */
+    min-height: 70vh;
+    text-align: center; /* Metinleri ortala */
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 800px; /* Kartın maksimum genişliği */
+    animation: fadeIn 1.5s ease-out; /* Animasyon kalsın */
+    /* Eski 'flex: 1' vb. kuralları silindi */
+}
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+.hero h1 {
+    font-size: 5.5rem;
+    line-height: 1;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center; /* Metni ortala */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #C0D6F7;
+    margin-bottom: 30px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    text-align: center; /* Metni ortala */
+}
+
+.hero-content p {
+     text-align: center; /* Metni ortala */
+     font-size: 1.2rem;
+     color: #E0E0E0;
+     margin-bottom: 30px;
+}
+.hero-image-container {
+    flex: 0 0 45%;
+    max-width: 550px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    animation: fadeIn 1.5s ease-out;
+    /* Bu .glass-card olduğu için stiller otomatik gelir */
+}
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* ----- Hero Bitişi ----- */
+
+
+/* Problem ve İstatistikler */
+.problem-section p {
+    font-size: 1.3rem; /* Metin biraz daha büyük */
+    margin-bottom: 40px;
+    color: #E0E0E0;
+}
+
+.stats-container {
+    display: grid; /* 'display: flex' idi, 'grid' olarak değişti */
+    grid-template-columns: repeat(3, 1fr); /* 3'lü sütun */
+    gap: 30px; /* 'gap: 20px' idi */
+    margin-top: 40px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 40px;
+}
+
+.stat-card h3 {
+    font-size: 3.5rem; /* Daha büyük istatistik rakamları */
+    color: #92B4F4; /* Canlı renk */
+}
+
+.stat-card p {
+    font-size: 1.1rem; /* Daha büyük metin */
+    font-weight: 400;
+}
+
+.solution-intro {
+    font-size: 1.5rem !important; /* Daha büyük çözüm metni */
+    font-weight: 500 !important;
+    color: #C0D6F7 !important;
+    margin-top: 70px !important;
+}
+
+/* style.css dosyasında bulun */
+.product-grid {
+    display: grid;
+    /* BU SATIRI GÜNCELLEYİN: */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.product-card {
+    padding: 30px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Daha belirgin kalkma */
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.product-card h3 {
+    color: #92B4F4; /* MVP başlık rengi */
+}
+
+.product-card.upcoming h3 {
+    color: #A0A0A0; /* Gelecek ürün başlık rengi */
+}
+.product-card.upcoming {
+    background: rgba(50, 50, 50, 0.12); /* Gelecek ürünler için biraz daha koyu cam */
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Ürün Detay Linki (product-page.css'ten buraya taşıdık ve güncelledik) */
+.product-card .product-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #C0D6F7;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05); /* Arka plan ekledik */
+}
+
+.product-card .product-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    transform: translateX(5px); /* Sağa doğru hafif kayma */
+}
+
+
+.team-grid {
+    display: grid; /* 'display: flex' idi, 'grid' olarak değişti */
+    grid-template-columns: repeat(3, 1fr); /* 3'lü sütun */
+    gap: 40px; /* 'gap: 30px' idi */
+}
+
+.team-card {
+    text-align: center;
+    padding: 40px;
+}
+
+.team-card img {
+    width: 160px;
+    height: 160px;
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Daha belirgin çerçeve */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3); /* Resme gölge */
+}
+
+.team-card h3 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+}
+
+.team-card .role {
+    color: #92B4F4;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+/* ======================================== */
+/* === YOL HARİTASI (Merkezi Zaman Çizgisi) [GÜNCELLENDİ] === */
+/* ======================================== */
+.roadmap-section {
+    max-width: 1000px;
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+/* === Merkezi Çizgi === */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px; /* Çizginin kalınlığı */
+    background: rgba(255, 255, 255, 0.1); /* Çizginin rengi (glass gibi) */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; /* Çizgiyi tam ortalamak için */
+    border-radius: 6px;
+}
+
+/* === Zaman Çizgisi Kartları (Genel) === */
+.timeline-item { /* Bu elementin class="timeline-item glass-card" olduğunu varsayıyoruz */
+    padding: 30px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box; /* Padding'i genişliğe dahil et */
+    margin-bottom: 20px; /* Kartlar arası dikey boşluk */
+    /* Eski 'gap' ve 'align-items' kuralları burada geçersiz */
+}
+
+/* === Kartları Sola ve Sağa Ayırma === */
+
+/* 1. Tek Sayılı Kartlar (SOL TARAF) */
+.timeline-item:nth-child(odd) {
+    padding-right: 50px; /* Ortadaki çizgiden uzaklaştırmak için */
+    left: 0;
+    text-align: right; /* Metinleri sağa yasla */
+}
+
+/* 2. Çift Sayılı Kartlar (SAĞ TARAF) */
+.timeline-item:nth-child(even) {
+    padding-left: 50px; /* Ortadaki çizgiden uzaklaştırmak için */
+    left: 50%;
+    text-align: left; /* Metinleri sola yasla */
+}
+
+/* Tarih ve içerik düzenlemesi */
+.timeline-date {
+    font-size: 1.3rem;
+    padding: 12px 18px;
+    min-width: 120px;
+    background: linear-gradient(45deg, #4E65FF, #7A68FF); /* Gradyan tarih kutusu */
+    box-shadow: 0 4px 15px rgba(78, 101, 255, 0.3);
+    color: #FFF;
+    border: 1px solid rgba(255,255,255,0.2);
+    /* Yeni eklenenler */
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #C0D6F7;
+    margin: 0 0 10px 0;
+}
+.timeline-content p {
+    color: #E0E0E0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+/* ----- Yol Haritası Bitişi ----- */
+
+
+/* İletişim ve Footer */
+.contact-section {
+    padding-bottom: 80px;
+}
+
+.contact-content {
+    padding: 50px;
+}
+
+.contact-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+}
+
+.contact-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #E0E0E0;
+}
+
+footer.glass-card {
+    margin-top: 40px;
+    padding: 30px;
+    font-size: 1rem;
+    color: #BBBBBB;
+    border-radius: 25px 25px 0 0; /* Sadece üst kenarlar yuvarlak */
+}
+
+footer a {
+    color: #BBBBBB;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+/* ======================================== */
+/* === KADEMELİ RESPONSIVE TASARIM (GÜNCELLENDİ) === */
+/* ======================================== */
+
+/* 1. KADEME: TABLET GÖRÜNÜMÜ (Örn: 900px altında) */
+/* Geniş ekrandaki 3'lü dizilimi 2'li dizilime düşürür */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column; /* Hero bölümü alt alta gelir */
+        text-align: center;
+        padding-top: 40px;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero h1, .hero h2, .hero-content p {
+        text-align: center;
+    }
+    .hero-image-container {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 30px;
+        flex: 1;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* BURASI ÖNEMLİ: 2 Sütun */
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 Sütun */
+        /* Eski flex kurallarını siliyoruz */
+    }
+    .stat-card {
+        /* Eski flex kurallarını siliyoruz */
+        width: auto; /* Otomatik genişlik */
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Sütun */
+        /* Eski flex kurallarını siliyoruz */
+    }
+    .team-card {
+        /* Eski flex kurallarını siliyoruz */
+        width: auto; /* Otomatik genişlik */
+    }
+
+    /* === YOL HARİTASI (Mobil Görünüm) [GÜNCELLENDİ] === */
+    .timeline-container::after {
+        left: 30px; /* Merkezi çizgiyi sola taşı */
+    }
+
+    .timeline-item {
+        width: 100%; /* Tam genişlik */
+        padding-left: 70px; /* Soldaki çizgiden uzaklaşsın */
+        padding-right: 20px; /* Sağ boşluk */
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: left;
+        padding-right: 20px; /* Padding'i sıfırla */
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+        text-align: left;
+        padding-left: 70px; /* Sol padding'i eşitle */
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+         float: none; 
+         text-align: left;
+    }
+
+    .timeline-item, .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+}
+
+/* 2. KADEME: TELEFON GÖRÜNÜMÜ (Örn: 600px altında) */
+/* 2'li dizilimi artık okunurluk için 1'li (alt alta) dizilime düşürür */
+@media (max-width: 600px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; margin-bottom: 40px; }
+    .hero h1 { font-size: 4rem; }
+    .hero h2 { font-size: 1.5rem; }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* BURASI ÖNEMLİ: 1 Sütun (Alt Alta) */
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr; /* 1 Sütun (Alt Alta) */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* 1 Sütun (Alt Alta) */
+    }
+}

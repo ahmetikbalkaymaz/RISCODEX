@@ -1,0 +1,90 @@
+/* product-page.css */
+/* Bu dosya, ana style.css'e ek olarak kullanılır */
+
+/* Ürün Detay Hero Alanı */
+.product-detail-hero {
+    text-align: center;
+    padding: 60px; /* Daha fazla padding */
+}
+
+.product-detail-hero h1 {
+    font-size: 4.5rem; /* Başlık büyüdü */
+    margin-bottom: 15px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.product-detail-hero .subtitle {
+    font-size: 1.8rem; /* Alt başlık büyüdü */
+    color: #C0D6F7;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    max-width: 900px; /* Görsel alanı büyüdü */
+    margin: 0 auto;
+    border-radius: 20px; /* Daha yumuşak kenarlar */
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Daha belirgin çerçeve */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Derin gölge */
+}
+
+.product-image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; /* Hover'da hafif zoom efekti */
+}
+.product-image-placeholder img:hover {
+    transform: scale(1.03); /* Hafif zoom */
+}
+
+
+/* Özellikler Alanı */
+.features-section {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.features-grid {
+    gap: 30px; /* Kartlar arası boşluk */
+}
+
+.feature-card {
+    padding: 30px;
+    transition: all 0.3s ease; /* Hover geçişi */
+}
+
+.feature-card:hover {
+    transform: translateY(-8px); /* Hafif kalkma */
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+}
+
+.feature-card h3 {
+    color: #92B4F4; /* Canlı renk */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    color: #E0E0E0;
+}
+
+
+/* Geri Dön Linki (Ana style.css'teki cta-button stilini kullanacak) */
+.return-link-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .product-detail-hero h1 { font-size: 3rem; }
+    .product-detail-hero .subtitle { font-size: 1.2rem; }
+    .features-section h2 { font-size: 2rem; }
+    .features-grid { grid-template-columns: 1fr; }
+}
