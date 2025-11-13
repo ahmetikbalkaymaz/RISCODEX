@@ -1,73 +1,199 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Riscodex - Revisor Detayları</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product-page.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Ana fontu Inter olarak ayarla */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* Çok koyu bir fon */
+            color: #f3f4f6; /* Neredeyse beyaz metin */
+        }
+        
+        /* Arka plandaki teknolojik ızgara deseni */
+        .grid-background {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Paragraflar için daha yumuşak bir renk */
+        p, .subtitle {
+            color: #d1d5db; /* Açık gri */
+        }
+
+        /* Kartların arka planı */
+        .card-bg {
+            background-color: rgba(31, 41, 55, 0.5); /* Yarı şeffaf koyu gri */
+            border: 1px solid rgba(55, 65, 81, 0.7);
+            transition: all 0.3s ease;
+        }
+        .card-bg:hover {
+            background-color: rgba(55, 65, 81, 0.7);
+            border-color: rgba(59, 130, 246, 0.7); /* Mavi hover */
+        }
+        
+        /* Tıklanabilir kartlar için (Link wrapper) */
+        .clickable-card-wrapper {
+            display: block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .clickable-card-wrapper:hover {
+            transform: translateY(-8px); /* Kartı hafifçe yukarı kaldır */
+        }
+    </style>
 </head>
-<body>
+<body class="grid-background">
 
-    <div class="background-shapes">
-        <div class="shape shape1"></div>
-        <div class="shape shape2"></div>
-    </div>
-
-    <header class="glass-card">
-        <nav>
-            <div class="logo"><a href="index.html">RISCODEX</a></div>
-            <ul class="nav-links">
-                <li><a href="index.html#problem">Problem</a></li>
-                <li><a href="index.html#products">Ürünler</a></li>
-                <li><a href="index.html#team">Ekip</a></li>
-                <li><a href="index.html#contact">İletişim</a></li>
-            </ul>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950 bg-opacity-80 backdrop-blur-md border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html#home" class="text-2xl font-bold text-white">Riscodex</a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="index.html#problem" class="text-gray-300 hover:text-white transition">Sorun</a>
+                    <a href="index.html#tariffeq" class="text-gray-300 hover:text-white transition">Aktif Ürün</a>
+                    <a href="index.html#mvps" class="text-gray-300 hover:text-white transition">Tüm MVP'ler</a>
+                    <a href="index.html#team" class="text-gray-300 hover:text-white transition">Ekip</a>
+                    <a href="index.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                        İletişime Geç
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    </button>
+                </div>
+            </div>
         </nav>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#problem" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sorun</a>
+                <a href="index.html#tariffeq" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Aktif Ürün</a>
+                <a href="index.html#mvps" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tüm MVP'ler</a>
+                <a href="index.html#team" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Ekip</a>
+                <a href="index.html#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="product-detail-hero glass-card">
-            <h1>Revisor</h1>
-            <p class="subtitle">Yapay Zeka Destekli Online Risk Sörvey Platformu</p>
-            <div class="product-image-placeholder">
-                <img src="httpsT://i.imgur.com/xIuBw4B.png" alt="Revisor Arayüzü">
-                </div>
-        </section>
-
-        <section class="features-section">
-            <h2>Temel Özellikler</h2>
-            <div class="features-grid">
+    <main class="relative z-10 pt-16"> <section class="py-20 md:py-32 px-4">
+            <div class="max-w-6xl mx-auto">
                 
-                <div class="feature-card glass-card">
-                    <h3>Hızlı ve Kapsamlı Denetim</h3>
-                    <p>Uzun saha ziyaretlerine gerek kalmadan risk değerlendirmelerini tamamlayın, denetim süresini 70%'e kadar azaltın.</p>
+                <div class="text-center mb-12">
+                    <span class="text-blue-400 font-semibold">GELECEK MODÜL</span>
+                    <h1 class="mt-2 text-5xl md:text-7xl font-bold tracking-tight text-white">
+                        Revisor
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl max-w-2xl mx-auto subtitle">
+                        Yapay Zeka Destekli Online Risk Sörvey Platformu
+                    </p>
                 </div>
 
-                <div class="feature-card glass-card">
-                    <h3>Görsel Zeka Analizi</h3>
-                    <p>Yapay zeka destekli görüntü tanıma, potansiyel tehlikeleri ve uyumluluk sorunlarını otomatik olarak tanımlar.</p>
+                <div class="mb-16">
+                    <img src="airevisor.png" 
+                         alt="Revisor Arayüzü" 
+                         class="rounded-xl shadow-2xl border-4 border-gray-700 object-cover w-full max-w-2xl mx-auto"
+                         [cite_start]title="Gerçek Revisor Ekran Görüntüsü (Upcoming Modules.pdf, Sayfa 3'ten alınmıştır)">
                 </div>
 
-                <div class="feature-card glass-card">
-                    <h3>Geçmiş Veri Takibi</h3>
-                    <p>Geçmiş anket verilerinin boylamsal (longitudinal) olarak izlenmesi ve zaman içindeki değişimlerin analiz edilmesi.</p>
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white text-center mb-12">
+                        Temel Özellikler
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        
+                        <div class="card-bg p-8 rounded-xl shadow-2xl">
+                            <ion-icon name="rocket-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">Hızlı ve Kapsamlı Denetim</h3>
+                            <p class="mt-2 subtitle">
+                                Uzun saha ziyaretlerine gerek kalmadan risk değerlendirmelerini tamamlayın, denetim süresini 70%'e kadar azaltın.
+                            </p>
+                        </div>
+
+                        <div class="card-bg p-8 rounded-xl shadow-2xl">
+                            <ion-icon name="eye-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">Görsel Zeka Analizi</h3>
+                            <p class="mt-2 subtitle">
+                                Yapay zeka destekli görüntü tanıma, potansiyel tehlikeleri ve uyumluluk sorunlarını otomatik olarak tanımlar.
+                            </p>
+                        </div>
+
+                        <div class="card-bg p-8 rounded-xl shadow-2xl">
+                            <ion-icon name="analytics-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">Geçmiş Veri Takibi</h3>
+                            <p class="mt-2 subtitle">
+                                Geçmiş anket verilerinin boylamsal (longitudinal) olarak izlenmesi ve zaman içindeki değişimlerin analiz edilmesi.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
+                
+                <div class="text-center mt-20">
+                    <a href="index.html#upcoming" class="bg-gray-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105">
+                        &larr; Tüm Modüllere Geri Dön
+                    </a>
+                </div>
+
             </div>
         </section>
 
-        <section class="return-link-section">
-            <a href="index.html#products" class="cta-button">&larr; Tüm Ürünlere Geri Dön</a>
-        </section>
     </main>
 
-    <footer class="glass-card">
-        <p>&copy; 2025 Riscodex. Tüm hakları saklıdır.</p>
-        <p><a href="mailto:contact@riscodex.ai">contact@riscodex.ai</a> | <a href="tel:+905349807319">+90 534 980 73 19</a></p>
+    <footer class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-gray-400">&copy; 2025 Riscodex. Tüm hakları saklıdır.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="index.html#problem" class="text-gray-400 hover:text-white transition">Sorun</a>
+                <a href="index.html#tariffeq" class="text-gray-400 hover:text-white transition">Aktif Ürün</a>
+                <a href="index.html#mvps" class="text-gray-400 hover:text-white transition">Tüm MVP'ler</a>
+                <a href="index.html#team" class="text-gray-400 hover:text-white transition">Ekip</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = menuButton.querySelector('svg:first-child');
+            const closeIcon = menuButton.querySelector('svg:last-child');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                const isExpanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+                menuButton.setAttribute('aria-expanded', isExpanded);
+            };
+
+            menuButton.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
