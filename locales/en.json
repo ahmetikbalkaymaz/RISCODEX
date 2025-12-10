@@ -86,11 +86,8 @@
     "team": {
         "title": "Meet Our Team",
         "furkan_role": "Co-Founder",
-        "furkan_desc": "Insurance Broker (Marsh McLennan, Lockton Omni)",
         "ubeyd_role": "Co-Founder",
-        "ubeyd_desc": "Underwriter & Structural Engineer (Anadolu Sigorta, Axa, Türk Re)",
-        "ahmet_role": "Co-Founder",
-        "ahmet_desc": "Data Scientist & AI Engineer (Linktera)"
+        "ahmet_role": "Co-Founder"
     },
     "contact": {
         "title": "Let's Shape the Future Together",
