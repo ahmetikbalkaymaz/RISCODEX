@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Riscodex - Vallist Detayları</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +17,12 @@
         /* Ana fontu Inter olarak ayarla */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #030712; /* Çok koyu bir fon */
-            color: #f3f4f6; /* Neredeyse beyaz metin */
+            background-color: #030712;
+            /* Çok koyu bir fon */
+            color: #f3f4f6;
+            /* Neredeyse beyaz metin */
         }
-        
+
         /* Arka plandaki teknolojik ızgara deseni */
         .grid-background {
             background-image:
@@ -29,32 +32,40 @@
         }
 
         /* Paragraflar için daha yumuşak bir renk */
-        p, .subtitle {
-            color: #d1d5db; /* Açık gri */
+        p,
+        .subtitle {
+            color: #d1d5db;
+            /* Açık gri */
         }
 
         /* Kartların arka planı */
         .card-bg {
-            background-color: rgba(31, 41, 55, 0.5); /* Yarı şeffaf koyu gri */
+            background-color: rgba(31, 41, 55, 0.5);
+            /* Yarı şeffaf koyu gri */
             border: 1px solid rgba(55, 65, 81, 0.7);
             transition: all 0.3s ease;
         }
+
         .card-bg:hover {
             background-color: rgba(55, 65, 81, 0.7);
-            border-color: rgba(59, 130, 246, 0.7); /* Mavi hover */
+            border-color: rgba(59, 130, 246, 0.7);
+            /* Mavi hover */
         }
-        
+
         /* Tıklanabilir kartlar için (Link wrapper) */
         .clickable-card-wrapper {
             display: block;
             text-decoration: none;
             transition: transform 0.3s ease;
         }
+
         .clickable-card-wrapper:hover {
-            transform: translateY(-8px); /* Kartı hafifçe yukarı kaldır */
+            transform: translateY(-8px);
+            /* Kartı hafifçe yukarı kaldır */
         }
     </style>
 </head>
+
 <body class="grid-background">
 
     <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950 bg-opacity-80 backdrop-blur-md border-b border-gray-800">
@@ -64,108 +75,167 @@
                     <a href="index.html#home" class="text-2xl font-bold text-white">Riscodex</a>
                 </div>
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="index.html#problem" class="text-gray-300 hover:text-white transition">Sorun</a>
-                    <a href="index.html#tariffeq" class="text-gray-300 hover:text-white transition">Aktif Ürün</a>
-                    <a href="index.html#mvps" class="text-gray-300 hover:text-white transition">Tüm MVP'ler</a>
-                    <a href="index.html#team" class="text-gray-300 hover:text-white transition">Ekip</a>
-                    <a href="index.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">
+                    <a href="index.html#problem" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.problem">Sorun</a>
+                    <a href="index.html#tariffeq" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.active_product">Aktif Ürün</a>
+                    <a href="index.html#mvps" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.all_mvps">Tüm MVP'ler</a>
+                    <a href="index.html#team" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.team">Ekip</a>
+                    <a href="index.html#contact"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition"
+                        data-i18n="nav.contact">
                         İletişime Geç
                     </a>
+                    <!-- Dil Değiştirici (Desktop) -->
+                    <div class="lang-switcher ml-4 flex items-center space-x-2 border-l border-gray-700 pl-4">
+                        <button onclick="setLanguage('tr')"
+                            class="lang-btn text-sm font-medium text-white hover:text-blue-400 transition-colors"
+                            data-lang="tr">TR</button>
+                        <span class="text-gray-600">|</span>
+                        <button onclick="setLanguage('en')"
+                            class="lang-btn text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                            data-lang="en">EN</button>
+                    </div>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false">
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                    <button id="menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-expanded="false">
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
                 </div>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden hidden border-t border-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html#problem" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sorun</a>
-                <a href="index.html#tariffeq" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Aktif Ürün</a>
-                <a href="index.html#mvps" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Tüm MVP'ler</a>
-                <a href="index.html#team" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Ekip</a>
-                <a href="index.html#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">İletişim</a>
+                <a href="index.html#problem"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.problem">Sorun</a>
+                <a href="index.html#tariffeq"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.active_product">Aktif Ürün</a>
+                <a href="index.html#mvps"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.all_mvps">Tüm MVP'ler</a>
+                <a href="index.html#team"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.team">Ekip</a>
+                <a href="index.html#contact"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.contact">İletişim</a>
+                <!-- Dil Değiştirici (Mobil) -->
+                <div class="flex items-center space-x-4 px-3 py-2 mt-2 border-t border-gray-700">
+                    <button onclick="setLanguage('tr')" class="lang-btn text-base font-medium text-white"
+                        data-lang="tr">TR</button>
+                    <span class="text-gray-500">|</span>
+                    <button onclick="setLanguage('en')" class="lang-btn text-base font-medium text-gray-400"
+                        data-lang="en">EN</button>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="relative z-10 pt-16"> <section class="py-20 md:py-32 px-4">
-            <div class="max-w-6xl mx-auto">
-                
-                <div class="text-center mb-12">
-                    <span class="text-blue-400 font-semibold">GELECEK MODÜL</span>
-                    <h1 class="mt-2 text-5xl md:text-7xl font-bold tracking-tight text-white">
-                        Vallist
-                    </h1>
-                    <p class="mt-4 text-xl md:text-2xl max-w-2xl mx-auto subtitle">
-                        Online Varlık Değerleme ve Mutabakat Aracı
-                    </p>
-                </div>
+    <main class="relative z-10        <section class=" py-20 md:py-32 px-4">
+        <div class="max-w-6xl mx-auto">
 
-                <div class="mb-16">
-                    <img src="vallist.png" 
-                         alt="Vallist Arayüzü" 
-                         class="rounded-xl shadow-2xl border-4 border-gray-700 object-cover w-full max-w-2xl mx-auto"
-                         [cite_start]title="Gerçek Vallist Ekran Görüntüsü (Upcoming Modules.pdf, Sayfa 6'dan alınmıştır) ">
-                </div>
-
-                <div class="max-w-5xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white text-center mb-12">
-                        Temel Özellikler
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                        
-                        <div class="card-bg p-8 rounded-xl shadow-2xl">
-                            <ion-icon name="rocket-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
-                            <h3 class="text-2xl font-semibold text-white">Hızlı Değerleme</h3>
-                            <p class="mt-2 subtitle">
-                                Zaman alıcı tesis ziyaretleri olmadan uzaktan 'anlaşılan değer' (agreed-value) raporları oluşturun.
-                            </p>
-                        </div>
-
-                        <div class="card-bg p-8 rounded-xl shadow-2xl">
-                            <ion-icon name="trending-down-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
-                            <h3 class="text-2xl font-semibold text-white">Amortisman Analizi</h3>
-                            <p class="mt-2 subtitle">
-                                Kapsam altındaki varlıklar ve ekipmanlar için doğru amortisman oranlarını hesaplayın.
-                            </p>
-                        </div>
-
-                        <div class="card-bg p-8 rounded-xl shadow-2xl">
-                            <ion-icon name="logo-usd" class="text-4xl text-blue-400 mb-4"></ion-icon>
-                            <h3 class="text-2xl font-semibold text-white">Piyasa Fiyatlandırması</h3>
-                            <p class="mt-2 subtitle">
-                                Yenileme maliyeti hesaplamaları için güncel piyasa değerlemelerini uygulayın.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                
-                <div class="text-center mt-20">
-                    <a href="index.html#upcoming" class="bg-gray-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105">
-                        &larr; Tüm Modüllere Geri Dön
-                    </a>
-                </div>
-
+            <div class="text-center mb-12">
+                <span class="text-blue-400 font-semibold" data-i18n="common.badge_upcoming">GELECEK MODÜL</span>
+                <h1 class="mt-2 text-5xl md:text-7xl font-bold tracking-tight text-white"
+                    data-i18n="pages.vallist.title">
+                    Vallist
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl max-w-2xl mx-auto subtitle" data-i18n="pages.vallist.subtitle">
+                    Mekkine ve Elektronik Cihaz Değerleme
+                </p>
             </div>
+
+            <div class="mb-16">
+                <img src="vallist.png" alt="Vallist Arayüzü"
+                    class="rounded-xl shadow-2xl border-4 border-gray-700 object-cover w-full max-w-2xl mx-auto"
+                    title="Gerçek Vallist Ekran Görüntüsü (Upcoming Modules.pdf, Sayfa 4'ten alınmıştır)">
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white text-center mb-12"
+                    data-i18n="common.key_features">
+                    Temel Özellikler
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <ion-icon name="list-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="pages.vallist.feature1_title">Envanter
+                            Doğrulaması</h3>
+                        <p class="mt-2 subtitle" data-i18n="pages.vallist.feature1_desc">
+                            Eksik veya yanlış sigortayı önlemek için beyan edilen makine listelerini standart
+                            veritabanlarıyla karşılaştırın.
+                        </p>
+                    </div>
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <ion-icon name="pricetag-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="pages.vallist.feature2_title">Otomatik
+                            Değerleme</h3>
+                        <p class="mt-2 subtitle" data-i18n="pages.vallist.feature2_desc">
+                            İkinci el piyasa verilerine ve amortisman tablolarına dayalı tahmini cari piyasa değerleri
+                            alın.
+                        </p>
+                    </div>
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <ion-icon name="warning-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="pages.vallist.feature3_title">Risk
+                            İşaretleri</h3>
+                        <p class="mt-2 subtitle" data-i18n="pages.vallist.feature3_desc">
+                            Belirsiz tanımlamalar, eski ekipman veya potansiyel olarak aşırı değerlenmiş kalemler için
+                            uyarılar alın.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="text-center mt-20">
+                <a href="index.html#upcoming"
+                    class="bg-gray-700 text-white font-semibold px-8 py-3 rounded-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105"
+                    data-i18n="common.back_to_modules">
+                    &larr; Tüm Modüllere Geri Dön
+                </a>
+            </div>
+
+        </div>
         </section>
 
     </main>
 
     <footer class="border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p class="text-gray-400">&copy; 2025 Riscodex. Tüm hakları saklıdır.</p>
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-gray-400" data-i18n="footer.copyright">&copy; 2025 Riscodex. Tüm hakları saklıdır.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="index.html#problem" class="text-gray-400 hover:text-white transition">Sorun</a>
-                <a href="index.html#tariffeq" class="text-gray-400 hover:text-white transition">Aktif Ürün</a>
-                <a href="index.html#mvps" class="text-gray-400 hover:text-white transition">Tüm MVP'ler</a>
-                <a href="index.html#team" class="text-gray-400 hover:text-white transition">Ekip</a>
+                <a href="index.html#problem" class="text-gray-400 hover:text-white transition"
+                    data-i18n="nav.problem">Sorun</a>
+                <a href="index.html#tariffeq" class="text-gray-400 hover:text-white transition"
+                    data-i18n="nav.active_product">Aktif Ürün</a>
+                <a href="index.html#mvps" class="text-gray-400 hover:text-white transition" data-i18n="nav.all_mvps">Tüm
+                    MVP'ler</a>
+                <a href="index.html#team" class="text-gray-400 hover:text-white transition"
+                    data-i18n="nav.team">Ekip</a>
             </div>
         </div>
     </footer>
+    <script src="js/i18n.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -196,4 +266,5 @@
     </script>
 
 </body>
+
 </html>

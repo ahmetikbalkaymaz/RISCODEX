@@ -1,0 +1,204 @@
+{
+    "nav": {
+        "problem": "Sorun",
+        "active_product": "Aktif Ürün",
+        "all_mvps": "Tüm MVP'ler",
+        "team": "Ekip",
+        "contact": "İletişime Geç",
+        "home": "Anasayfa"
+    },
+    "hero": {
+        "title": "Riscodex",
+        "subtitle": "Risk nihayet ölçülebilir.",
+        "discover_solutions": "Çözümleri Keşfet",
+        "download_deck": "Sunumu İndir"
+    },
+    "problem": {
+        "title": "Yapay zekâ analitiğiyle fiyatlama, risk yönetimi ve hasar süreçlerini dönüştürüyoruz.",
+        "description": "Parçalı ve güvensiz veriler sektör genelinde yanlış fiyatlama ve tutarsız değerlemelere yol açıyor.<br>Riscodex, veriyi sadece toplamaz; doğrular, işler ve karar süreçlerine yön veren katma değerli çıktılara dönüştürür.",
+        "card1_value": "2000+ Endüstriyel Hasar",
+        "card1_desc": "Yapay zekâ ile kapsamlı analiz",
+        "card2_value": "5x Daha Hızlı",
+        "card2_desc": "Değerleme ve fiyatlama süreçleri",
+        "card3_value": "%30 Daha Verimli",
+        "card3_desc": "Risk ve hasar süreçlerinde belirgin tasarruf"
+    },
+    "solution": {
+        "title": "Riscodex: Veriye dayalı sigortacılığın yeni standardı",
+        "card1_title": "Risk Analitiği Altyapısı",
+        "card1_desc": "Endüstriyel olaylardan piyasa trendlerine uzanan verileri toplar, temizler ve analiz için hazır hale getirir.",
+        "card2_title": "Akıllı Karar Motoru",
+        "card2_desc": "Yapay zekâ destekli modellerle risk, fiyatlama ve yatırım süreçlerinde öngörü ve doğruluk sağlar."
+    },
+    "tariffeq": {
+        "badge": "AKTİF ÜRÜNÜMÜZ (MVP)",
+        "description": "Piyasada aktif olarak kullanılan deprem prim hesaplama motorumuz. Bu platform, yüzlerce sigorta profesyoneline hizmet vermektedir.",
+        "feature1": "Anlık deprem bölgesi tespiti",
+        "feature2": "Karşılaştırmalı muafiyet/koasürans analizi",
+        "feature3": "PDF/Excel raporlama ve anlık çıktı",
+        "more_info": "Daha Fazla Bilgi",
+        "go_to_app": "Uygulamaya Git"
+    },
+    "mvps": {
+        "title": "Pilot Başarısı Kanıtlanmış MVP Modüllerimiz",
+        "locateloss_desc": "(Endüstriyel Hasar Analizi) - 5 yıllık ulusal veritabanı, OSB/medya doğrulaması.",
+        "foresight_desc": "(Yangın ve Çevresel Haritalama) - 10 yıllık orman yangını verisi (EFFIS entegrasyonu).",
+        "lossanalysis_desc": "(Deprem Hasar Tahmini) - ML senaryo modellemesi, BI kaybı tahmini.",
+        "precast_desc": "(Brüt Prim Tahmini) - Piyasaya uyumlu, geçmiş veriye dayalı prim tahmini.",
+        "partners_title": "Pilot Ortaklarımız",
+        "partners_note": "Talebinize istinaden paylaşılacaktır."
+    },
+    "upcoming": {
+        "title": "Ekosistemi Genişletiyoruz: Yaklaşan Modüller",
+        "description": "Platformumuzu, sigorta ve risk değerleme zincirinin tamamını kapsayacak şekilde genişletiyoruz.",
+        "polycheck_title": "PolyCheck",
+        "polycheck_desc": "(Yapay Zeka Poliçe Karşılaştırma) - Underwriter'lar ve Reasürörler için.",
+        "claimcore_title": "ClaimCore",
+        "claimcore_desc": "(Akıllı Hasar Analizi) - Eksperler ve Sigortacılar için.",
+        "revisor_title": "Revisor",
+        "revisor_desc": "(Kapsamlı Risk Analizi) - Mühendisler ve Brokerlar için.",
+        "vallist_title": "Vallist",
+        "vallist_desc": "(Online Varlık Değerleme ve Mutabakat Aracı) - Uzaktan değerleme için."
+    },
+    "impact": {
+        "title": "Ekosistem İçin Değer Yaratıyoruz",
+        "insurers_title": "Sigortacılar için",
+        "insurers_desc": "Doğrulanmış hasar zekası, daha hızlı ve isabetli fiyatlandırma, veriye dayalı portföy yönetimi.",
+        "brokers_title": "Brokerlar için",
+        "brokers_desc": "Rekabetçi veri avantajı, hızlı teklif oluşturma, müşteriye özel risk analizi sunma.",
+        "valuers_title": "Değerleme Uzmanları için",
+        "valuers_desc": "Uzaktan varlık değerlemesi, izlenebilir ve standartlaştırılmış süreçler, daha hızlı raporlama.",
+        "investors_title": "Yatırım Fonları için",
+        "investors_desc": "Portföydeki fiziksel varlıkların risk takibi, gerçek zamanlı uyarılar ve çevresel etki verileri."
+    },
+    "traction": {
+        "title": "Rakamlarla Riscodex",
+        "metric1_title": "Aktif MVP",
+        "metric2_title": "Doğrulanmış Olay",
+        "metric3_title": "Aylık Kullanıcı",
+        "metric4_title": "Pilot Ortak",
+        "metric5_title": "AI Doğruluk Oranı",
+        "metric6_title": "OSB Bağlantısı",
+        "api_metrics_title": "TariffEQ API Başarı Metrikleri",
+        "total_success": "Toplam Başarılı İstek (Http 2xx)",
+        "chart_title": "TariffEQ Başarılı İstek Grafiği (Son 30 Gün)"
+    },
+    "team": {
+        "title": "Ekibimizle Tanışın",
+        "furkan_role": "Co-Founder",
+        "furkan_desc": "Insurance Broker (Marsh McLennan, Lockton Omni)",
+        "ubeyd_role": "Co-Founder",
+        "ubeyd_desc": "Underwriter & Structural Engineer (Anadolu Sigorta, Axa, Türk Re)",
+        "ahmet_role": "Co-Founder",
+        "ahmet_desc": "Data Scientist & AI Engineer (Linktera)"
+    },
+    "contact": {
+        "title": "Geleceği Birlikte Şekillendirelim",
+        "description": "Sigorta, değerleme ve yatırım ekosistemini nasıl yeniden tanımladığımızı görmek ve demo talep etmek için bizimle iletişime geçin."
+    },
+    "footer": {
+        "copyright": "&copy; 2025 Riscodex. Tüm hakları saklıdır."
+    },
+    "common": {
+        "key_features": "Temel Özellikler",
+        "back_to_mvps": "&larr; Tüm MVP'lere Geri Dön",
+        "back_to_modules": "&larr; Tüm Modüllere Geri Dön",
+        "badge_active": "AKTİF ÜRÜN (MVP)",
+        "badge_upcoming": "GELECEK MODÜL",
+        "badge_active_our": "AKTİF ÜRÜNÜMÜZ (MVP)"
+    },
+    "pages": {
+        "claimcore": {
+            "title": "ClaimCore",
+            "subtitle": "Akıllı Hasar Analizi ve Yeniden İnşa Maliyet Hesaplaması",
+            "feature1_title": "Hasar Analizi",
+            "feature1_desc": "Video ve fotoğraf kanıtlarını kullanarak hasar kapsamını ve ciddiyetini değerlendirin.",
+            "feature2_title": "Kapsam Doğrulaması",
+            "feature2_desc": "Kapsanan kayıpların poliçe şartlarıyla uyumlu olduğundan emin olmak için doğrulanması.",
+            "feature3_title": "Kayıp Hesaplaması",
+            "feature3_desc": "Mevcut piyasa kurlarına ve işçilik maliyetlerine dayalı doğru yeniden inşa tahminleri oluşturun."
+        },
+        "foresight": {
+            "title": "Foresight",
+            "subtitle": "Türkiye Yangın Haritası ve Risk Analizi",
+            "feature1_title": "10 Yıllık Veri",
+            "feature1_desc": "Risk değerlendirmesi için geniş tarihsel bağlam sağlayan, Türkiye genelindeki tüm orman yangını olaylarının kapsamlı kayıtları.",
+            "feature2_title": "EFFIS Entegrasyonu",
+            "feature2_desc": "Avrupa Orman Yangını Bilgi Sistemi (EFFIS) verileriyle güçlendirilmiş, doğruluk ve uluslararası standartları sağlayan gelişmiş analiz.",
+            "feature3_title": "Konum Bazlı AI Analizi",
+            "feature3_desc": "Hassas coğrafi koordinatlara ve yakınlık faktörlerine dayalı yapay zeka odaklı risk değerlendirmesi ve yangın etki analizi."
+        },
+        "locateloss": {
+            "title": "LocateLoss",
+            "subtitle": "Endüstriyel Hasar Analizi",
+            "feature1_title": "Beş Yıllık Veritabanı",
+            "feature1_desc": "Türkiye'de meydana gelen tüm endüstriyel kayıpların, detaylı olay bilgileri ve finansal etki verilerini içeren kapsamlı veritabanı.",
+            "feature2_title": "Kapsamlı Çapraz Kontrol",
+            "feature2_desc": "Maksimum veri güvenilirliği için resmi raporlar, haber kaynakları ve endüstri veritabanları dahil olmak üzere tüm kaynakların kullanılması.",
+            "feature3_title": "Hasar Korelasyon Analizi",
+            "feature3_desc": "Hasarlı tesisler ve koordinatlar arasında yapay zeka destekli korelasyon analizi, yakınlık risklerini ortaya çıkarma ve birikim bölgelerini belirleme."
+        },
+        "lossanalysis": {
+            "title": "LossAnalysis",
+            "subtitle": "Deprem Hasar Tahmini",
+            "feature1_title": "Deprem Hasar Tahmini",
+            "feature1_desc": "Gelişmiş sismik modelleme ve yapısal güvenlik açığı analizini kullanarak tesisler için yapı hasarını ve iş kesintisi kayıplarını tahmin edin.",
+            "feature2_title": "Yapay Zeka Senaryo Analizi",
+            "feature2_desc": "Bina tipi, zemin koşulları ve sismik tarihçe dahil olmak üzere birden fazla değişkeni dikkate alan makine öğrenimi algoritmalarıyla senaryoları analiz edin.",
+            "feature3_title": "Optimal Poliçe Limitleri",
+            "feature3_desc": "Maksimum olası kayıp hesaplamalarına dayalı olarak uygun teminat limitlerini belirleyin ve optimal muafiyet seviyeleri önerin."
+        },
+        "polycheck": {
+            "title": "Polycheck",
+            "subtitle": "Poliçe Metni Kontrolü ve Uyumluluk Doğrulaması",
+            "feature1_title": "Poliçe İncelemesi",
+            "feature1_desc": "Kapsamlı uyumluluk doğrulaması için ayrıntılı poliçe şartlarını ve koşullarını tarayın",
+            "feature2_title": "Trete Uyumluluğu",
+            "feature2_desc": "Şirket standart metinleri ve reasürans trete gerekliliklerine göre çapraz referanslama yapın.",
+            "feature3_title": "Hata Tespiti",
+            "feature3_desc": "Tutarsız maddeleri çıkarın ve Fiyatlama (underwriters) uzmanları için önerilen düzeltmelerle birlikte raporlayın."
+        },
+        "precast": {
+            "title": "Precast",
+            "subtitle": "Brüt Poliçe Prim Tahmini",
+            "feature1_title": "Piyasa Uyumlu Yaklaşım",
+            "feature1_desc": "Rekabetçi ve doğru prim tahminleri sağlayan, Türk sigorta piyasası fiyatlandırma metodolojisi ile uyumlu hesaplamalar.",
+            "feature2_title": "Brüt Prim Tahmini",
+            "feature2_desc": "Kapsamlı risk parametrelerine ve tarihsel pazar verilerine dayalı potansiyel brüt prim hesaplamaları.",
+            "feature3_title": "Hızlı Değerlendirme",
+            "feature3_desc": "Anında prim teklifi oluşturma ve karşılaştırma yetenekleri, Fiyatlama (underwriting) sürecini önemli ölçüde hızlandırma."
+        },
+        "revisor": {
+            "title": "Revisor",
+            "subtitle": "Yapay Zeka Destekli Online Risk Sörvey Platformu",
+            "feature1_title": "Hızlı ve Kapsamlı Denetim",
+            "feature1_desc": "Uzun saha ziyaretlerine gerek kalmadan risk değerlendirmelerini tamamlayın, denetim süresini 70%'e kadar azaltın.",
+            "feature2_title": "Görsel Zeka Analizi",
+            "feature2_desc": "Yapay zeka destekli görüntü tanıma, potansiyel tehlikeleri ve uyumluluk sorunlarını otomatik olarak tanımlar.",
+            "feature3_title": "Geçmiş Veri Takibi",
+            "feature3_desc": "Geçmiş anket verilerinin boylamsal (longitudinal) olarak izlenmesi ve zaman içindeki değişimlerin analiz edilmesi."
+        },
+        "tariffeq": {
+            "title": "TariffEQ",
+            "subtitle": "Deprem Prim Hesaplayıcısı ve Karşılaştırma Aracı",
+            "feature1_title": "Otomatik Bölge Tespiti",
+            "feature1_desc": "En son sismik verileri ve bölgesel sınıflandırmaları yansıtacak şekilde otomatik güncellenen deprem bölgelerinin hassas tespiti.",
+            "feature2_title": "Basit Hesaplama",
+            "feature2_desc": "Sezgisel gezinme ve kolaylaştırılmış iş akışlarıyla hızlı tarife hesaplamaları sağlayan kullanıcı dostu arayüz.",
+            "feature3_title": "Karşılaştırmalı Analiz",
+            "feature3_desc": "Poliçe yapılarını ve fiyatlandırma stratejilerini optimize etmek için tüm koasürans ve muafiyet oranlarını yan yana karşılaştırın.",
+            "feature4_title": "PDF/Excel Raporlama",
+            "feature4_desc": "Her hesaplama için kapsamlı dokümantasyon sağlayan, hem PDF hem de Excel formatlarında ayrıntılı raporlama."
+        },
+        "vallist": {
+            "title": "Vallist",
+            "subtitle": "Online Varlık Değerleme ve Mutabakat Aracı",
+            "feature1_title": "Hızlı Değerleme",
+            "feature1_desc": "Zaman alıcı tesis ziyaretleri olmadan uzaktan 'anlaşılan değer' (agreed-value) raporları oluşturun.",
+            "feature2_title": "Amortisman Analizi",
+            "feature2_desc": "Kapsam altındaki varlıklar ve ekipmanlar için doğru amortisman oranlarını hesaplayın.",
+            "feature3_title": "Piyasa Fiyatlandırması",
+            "feature3_desc": "Yenileme maliyeti hesaplamaları için güncel piyasa değerlemelerini uygulayın."
+        }
+    }
+}

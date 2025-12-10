@@ -1,0 +1,204 @@
+{
+    "nav": {
+        "problem": "Problem",
+        "active_product": "Active Product",
+        "all_mvps": "All MVPs",
+        "team": "Team",
+        "contact": "Contact",
+        "home": "Home"
+    },
+    "hero": {
+        "title": "Riscodex",
+        "subtitle": "Risk is finally measurable.",
+        "discover_solutions": "Discover Solutions",
+        "download_deck": "Download Deck"
+    },
+    "problem": {
+        "title": "We transform pricing, risk management and claims processes with AI analytics.",
+        "description": "Fragmented and unreliable data leads to mispricing and inconsistent valuations across the industry.<br>Riscodex not only collects data; verifies, processes and transforms it into value-added outputs that guide decision-making processes.",
+        "card1_value": "2000+ Industrial Claims",
+        "card1_desc": "Comprehensive analysis with AI",
+        "card2_value": "5x Faster",
+        "card2_desc": "Valuation and pricing processes",
+        "card3_value": "30% More Efficient",
+        "card3_desc": "Significant savings in risk and claims processes"
+    },
+    "solution": {
+        "title": "Riscodex: The new standard in data-driven insurance",
+        "card1_title": "Risk Analytics Infrastructure",
+        "card1_desc": "Collects data ranging from industrial events to market trends, cleans, and prepares it for analysis.",
+        "card2_title": "Smart Decision Engine",
+        "card2_desc": "Provides foresight and accuracy in risk, pricing, and investment processes with AI-supported models."
+    },
+    "tariffeq": {
+        "badge": "OUR ACTIVE PRODUCT (MVP)",
+        "description": "Our earthquake premium calculation engine actively used in the market. This platform serves hundreds of insurance professionals.",
+        "feature1": "Instant earthquake zone detection",
+        "feature2": "Comparative exemption/coinsurance analysis",
+        "feature3": "PDF/Excel reporting and instant output",
+        "more_info": "More Info",
+        "go_to_app": "Go to App"
+    },
+    "mvps": {
+        "title": "Our Pilot-Proven MVP Modules",
+        "locateloss_desc": "(Industrial Loss Analysis) - 5-year national database, OIZ/media verification.",
+        "foresight_desc": "(Fire and Environmental Mapping) - 10-year forest fire data (EFFIS integration).",
+        "lossanalysis_desc": "(Earthquake Loss Estimation) - ML scenario modeling, BI loss estimation.",
+        "precast_desc": "(Gross Premium Prediction) - Market-compliant, historical data-based premium prediction.",
+        "partners_title": "Our Pilot Partners",
+        "partners_note": "Will be shared upon request."
+    },
+    "upcoming": {
+        "title": "Expanding the Ecosystem: Upcoming Modules",
+        "description": "We are expanding our platform to cover the entire insurance and risk valuation chain.",
+        "polycheck_title": "PolyCheck",
+        "polycheck_desc": "(AI Policy Comparison) - For Underwriters and Reinsurers.",
+        "claimcore_title": "ClaimCore",
+        "claimcore_desc": "(Smart Claims Analysis) - For Adjusters and Insurers.",
+        "revisor_title": "Revisor",
+        "revisor_desc": "(Comprehensive Risk Analysis) - For Engineers and Brokers.",
+        "vallist_title": "Vallist",
+        "vallist_desc": "(Online Asset Valuation and Reconciliation Tool) - For remote valuation."
+    },
+    "impact": {
+        "title": "Creating Value for the Ecosystem",
+        "insurers_title": "For Insurers",
+        "insurers_desc": "Verified claims intelligence, faster and more accurate pricing, data-driven portfolio management.",
+        "brokers_title": "For Brokers",
+        "brokers_desc": "Competitive data advantage, fast quote generation, customer-specific risk analysis.",
+        "valuers_title": "For Valuers",
+        "valuers_desc": "Remote asset valuation, traceable and standardized processes, faster reporting.",
+        "investors_title": "For Investment Funds",
+        "investors_desc": "Risk tracking of physical assets in the portfolio, real-time alerts, and environmental impact data."
+    },
+    "traction": {
+        "title": "Riscodex in Numbers",
+        "metric1_title": "Active MVPs",
+        "metric2_title": "Verified Events",
+        "metric3_title": "Monthly Users",
+        "metric4_title": "Pilot Partners",
+        "metric5_title": "AI Accuracy Rate",
+        "metric6_title": "OIZ Connections",
+        "api_metrics_title": "TariffEQ API Success Metrics",
+        "total_success": "Total Successful Requests (Http 2xx)",
+        "chart_title": "TariffEQ Successful Request Chart (Last 30 Days)"
+    },
+    "team": {
+        "title": "Meet Our Team",
+        "furkan_role": "Co-Founder",
+        "furkan_desc": "Insurance Broker (Marsh McLennan, Lockton Omni)",
+        "ubeyd_role": "Co-Founder",
+        "ubeyd_desc": "Underwriter & Structural Engineer (Anadolu Sigorta, Axa, Türk Re)",
+        "ahmet_role": "Co-Founder",
+        "ahmet_desc": "Data Scientist & AI Engineer (Linktera)"
+    },
+    "contact": {
+        "title": "Let's Shape the Future Together",
+        "description": "Contact us to see how we redefine the insurance, valuation, and investment ecosystem and to request a demo."
+    },
+    "footer": {
+        "copyright": "&copy; 2025 Riscodex. All rights reserved."
+    },
+    "common": {
+        "key_features": "Key Features",
+        "back_to_mvps": "&larr; Back to All MVPs",
+        "back_to_modules": "&larr; Back to All Modules",
+        "badge_active": "ACTIVE PRODUCT (MVP)",
+        "badge_upcoming": "UPCOMING MODULE",
+        "badge_active_our": "OUR ACTIVE PRODUCT (MVP)"
+    },
+    "pages": {
+        "claimcore": {
+            "title": "ClaimCore",
+            "subtitle": "Smart Claims Analysis and Reconstruction Cost Calculation",
+            "feature1_title": "Damage Analysis",
+            "feature1_desc": "Assess damage scope and severity using video and photo evidence.",
+            "feature2_title": "Coverage Verification",
+            "feature2_desc": "Verification to ensure covered losses comply with policy conditions.",
+            "feature3_title": "Loss Calculation",
+            "feature3_desc": "Create accurate reconstruction estimates based on current market rates and labor costs."
+        },
+        "foresight": {
+            "title": "Foresight",
+            "subtitle": "Turkey Fire Map and Risk Analysis",
+            "feature1_title": "10 Years of Data",
+            "feature1_desc": "Comprehensive records of all forest fire incidents across Turkey, providing broad historical context for risk assessment.",
+            "feature2_title": "EFFIS Integration",
+            "feature2_desc": "Advanced analysis empowered by European Forest Fire Information System (EFFIS) data, ensuring accuracy and international standards.",
+            "feature3_title": "Location-Based AI Analysis",
+            "feature3_desc": "AI-driven risk assessment and fire impact analysis based on precise geographic coordinates and proximity factors."
+        },
+        "locateloss": {
+            "title": "LocateLoss",
+            "subtitle": "Industrial Loss Analysis",
+            "feature1_title": "Five-Year Database",
+            "feature1_desc": "Comprehensive database containing detailed incident information and financial impact data for all industrial losses in Turkey.",
+            "feature2_title": "Comprehensive Cross-Check",
+            "feature2_desc": "Utilization of all sources including official reports, news sources, and industry databases for maximum data reliability.",
+            "feature3_title": "Loss Correlation Analysis",
+            "feature3_desc": "AI-powered correlation analysis between damaged facilities and coordinates, revealing proximity risks and identifying accumulation zones."
+        },
+        "lossanalysis": {
+            "title": "LossAnalysis",
+            "subtitle": "Earthquake Loss Estimation",
+            "feature1_title": "Earthquake Loss Estimation",
+            "feature1_desc": "Estimate structural damage and business interruption losses for facilities using advanced seismic modeling and structural vulnerability analysis.",
+            "feature2_title": "AI Scenario Analysis",
+            "feature2_desc": "Analyze scenarios with machine learning algorithms considering multiple variables including building type, soil conditions, and seismic history.",
+            "feature3_title": "Optimal Policy Limits",
+            "feature3_desc": "Determine appropriate coverage limits and recommend optimal deductible levels based on maximum probable loss calculations."
+        },
+        "polycheck": {
+            "title": "Polycheck",
+            "subtitle": "Policy Text Check and Compliance Verification",
+            "feature1_title": "Policy Review",
+            "feature1_desc": "Scan detailed policy terms and conditions for comprehensive compliance verification.",
+            "feature2_title": "Treaty Compliance",
+            "feature2_desc": "Cross-reference against company standard texts and reinsurance treaty requirements.",
+            "feature3_title": "Error Detection",
+            "feature3_desc": "Extract inconsistent clauses and report them with recommended corrections for Underwriters."
+        },
+        "precast": {
+            "title": "Precast",
+            "subtitle": "Gross Policy Premium Prediction",
+            "feature1_title": "Market-Aligned Approach",
+            "feature1_desc": "Calculations compatible with Turkish insurance market pricing methodology, providing competitive and accurate premium estimates.",
+            "feature2_title": "Gross Premium Prediction",
+            "feature2_desc": "Potential gross premium calculations based on comprehensive risk parameters and historical market data.",
+            "feature3_title": "Rapid Assessment",
+            "feature3_desc": "Instant premium quote generation and comparison capabilities, significantly speeding up the underwriting process."
+        },
+        "revisor": {
+            "title": "Revisor",
+            "subtitle": "AI-Supported Online Risk Survey Platform",
+            "feature1_title": "Fast and Comprehensive Audit",
+            "feature1_desc": "Complete risk assessments without the need for long field visits, reducing audit time by up to 70%.",
+            "feature2_title": "Visual Intelligence Analysis",
+            "feature2_desc": "AI-powered image recognition automatically identifies potential hazards and compliance issues.",
+            "feature3_title": "Historical Data Tracking",
+            "feature3_desc": "Longitudinal tracking of past survey data and analysis of changes over time."
+        },
+        "tariffeq": {
+            "title": "TariffEQ",
+            "subtitle": "Earthquake Premium Calculator and Comparison Tool",
+            "feature1_title": "Automatic Zone Detection",
+            "feature1_desc": "Precise detection of earthquake zones automatically updated to reflect the latest seismic data and regional classifications.",
+            "feature2_title": "Simple Calculation",
+            "feature2_desc": "User-friendly interface providing quick tariff calculations with intuitive navigation and streamlined workflows.",
+            "feature3_title": "Comparative Analysis",
+            "feature3_desc": "Compare all coinsurance and deductible rates side-by-side to optimize policy structures and pricing strategies.",
+            "feature4_title": "PDF/Excel Reporting",
+            "feature4_desc": "Detailed reporting in both PDF and Excel formats providing comprehensive documentation for every calculation."
+        },
+        "vallist": {
+            "title": "Vallist",
+            "subtitle": "Online Asset Valuation and Reconciliation Tool",
+            "feature1_title": "Rapid Valuation",
+            "feature1_desc": "Create remote 'agreed-value' reports without time-consuming facility visits.",
+            "feature2_title": "Depreciation Analysis",
+            "feature2_desc": "Calculate accurate depreciation rates for covered assets and equipment.",
+            "feature3_title": "Market Pricing",
+            "feature3_desc": "Apply current market valuations for replacement cost calculations."
+        }
+    }
+}
