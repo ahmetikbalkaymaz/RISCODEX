@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riscodex - Yapay Zeka Destekli Risk Zekası</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* Ana fontu Inter olarak ayarla */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            /* Çok koyu bir fon */
+            color: #f3f4f6;
+            /* Neredeyse beyaz metin */
+        }
+
+        /* Arka plandaki teknolojik ızgara deseni */
+        .grid-background {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Paragraflar için daha yumuşak bir renk */
+        p,
+        .subtitle {
+            color: #d1d5db;
+            /* Açık gri */
+        }
+
+        /* Kartların arka planı */
+        .card-bg {
+            background-color: rgba(31, 41, 55, 0.5);
+            /* Yarı şeffaf koyu gri */
+            border: 1px solid rgba(55, 65, 81, 0.7);
+            transition: all 0.3s ease;
+        }
+
+        .card-bg:hover {
+            background-color: rgba(55, 65, 81, 0.7);
+            border-color: rgba(59, 130, 246, 0.7);
+            /* Mavi hover */
+        }
+
+        /* Tıklanabilir kartlar için (Link wrapper) */
+        .clickable-card-wrapper {
+            display: block;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .clickable-card-wrapper:hover {
+            transform: translateY(-8px);
+            /* Kartı hafifçe yukarı kaldır */
+        }
+
+        /* Language Switcher Styles */
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .lang-btn:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="grid-background">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950 bg-opacity-80 backdrop-blur-md border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-white" data-i18n="hero.title">Riscodex</a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#problem" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.problem">Sorun</a>
+                    <a href="#tariffeq" class="text-gray-300 hover:text-white transition"
+                        data-i18n="nav.active_product">Aktif Ürün</a>
+                    <a href="#mvps" class="text-gray-300 hover:text-white transition" data-i18n="nav.all_mvps">Tüm
+                        MVP'ler</a>
+                    <a href="#team" class="text-gray-300 hover:text-white transition" data-i18n="nav.team">Ekip</a>
+                    <a href="#contact"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition"
+                        data-i18n="nav.contact">
+                        İletişime Geç
+                    </a>
+
+                    <!-- Language Switcher Desktop -->
+                    <div class="lang-switcher ml-4 border-l border-gray-700 pl-4">
+                        <button onclick="setLanguage('tr')" class="lang-btn text-white font-bold"
+                            data-lang="tr">TR</button>
+                        <span class="text-gray-600">|</span>
+                        <button onclick="setLanguage('en')" class="lang-btn text-gray-400" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center gap-4">
+                    <!-- Language Switcher Mobile (Visible in header) -->
+                    <div class="lang-switcher">
+                        <button onclick="setLanguage('tr')" class="lang-btn text-white font-bold"
+                            data-lang="tr">TR</button>
+                        <span class="text-gray-600">|</span>
+                        <button onclick="setLanguage('en')" class="lang-btn text-gray-400" data-lang="en">EN</button>
+                    </div>
+
+                    <button id="menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-expanded="false">
+                        <span class="sr-only">Menüyü aç</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#problem"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.problem">Sorun</a>
+                <a href="#tariffeq"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.active_product">Aktif Ürün</a>
+                <a href="#mvps"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.all_mvps">Tüm MVP'ler</a>
+                <a href="#team"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.team">Ekip</a>
+                <a href="#contact"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="nav.contact">İletişim</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home"
+            class="min-h-screen flex items-center justify-center text-center px-4 relative overflow-hidden">
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-700 rounded-full filter blur-3xl opacity-20 animate-pulse">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-700 rounded-full filter blur-3xl opacity-20 animate-pulse"
+                style="animation-delay: 2s;"></div>
+
+            <div class="z-10">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white tracking-tighter" data-i18n="hero.title">
+                    Riscodex
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl max-w-2xl mx-auto subtitle" data-i18n="hero.subtitle">
+                    Risk nihayet ölçülebilir.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#mvps"
+                        class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+                        data-i18n="hero.discover_solutions">
+                        Çözümleri Keşfet
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="py-20 md:py-32 px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="problem.title">
+                    Yapay zekâ analitiğiyle fiyatlama, risk yönetimi ve hasar süreçlerini dönüştürüyoruz.
+                </h2>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto subtitle" data-i18n="problem.description">
+                    Parçalı ve güvensiz veriler sektör genelinde yanlış fiyatlama ve tutarsız değerlemelere yol
+                    açıyor.<br>
+                    Riscodex, veriyi sadece toplamaz; doğrular, işler ve karar süreçlerine yön veren katma değerli
+                    çıktılara dönüştürür.
+                </p>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <span class="text-5xl font-extrabold text-blue-400" data-i18n="problem.card1_value">2000+
+                            Endüstriyel Hasar </span>
+                        <h3 class="mt-2 text-xl font-semibold text-white" data-i18n="problem.card1_desc">Yapay zekâ ile
+                            kapsamlı analiz</h3>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <span class="text-5xl font-extrabold text-blue-400" data-i18n="problem.card2_value">5x Daha
+                            Hızlı </span>
+                        <h3 class="mt-2 text-xl font-semibold text-white" data-i18n="problem.card2_desc">Değerleme ve
+                            fiyatlama süreçleri</h3>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <span class="text-5xl font-extrabold text-blue-400" data-i18n="problem.card3_value">%30 Daha
+                            Verimli</span>
+                        <h3 class="mt-2 text-xl font-semibold text-white" data-i18n="problem.card3_desc">Risk ve hasar
+                            süreçlerinde belirgin tasarruf
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-20 md:py-32 px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="solution.title">
+                    Riscodex: Veriye dayalı sigortacılığın yeni standardı
+                </h2>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <ion-icon name="layers-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="solution.card1_title">Risk Analitiği
+                            Altyapısı</h3>
+                        <p class="mt-2 subtitle" data-i18n="solution.card1_desc">
+                            Endüstriyel olaylardan piyasa trendlerine uzanan verileri toplar, temizler ve analiz için
+                            hazır hale getirir.
+                        </p>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <ion-icon name="analytics-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="solution.card2_title">Akıllı Karar
+                            Motoru</h3>
+                        <p class="mt-2 subtitle" data-i18n="solution.card2_desc">
+                            Yapay zekâ destekli modellerle risk, fiyatlama ve yatırım süreçlerinde öngörü ve doğruluk
+                            sağlar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tariffeq" class="py-20 md:py-32 px-4 bg-gray-950 bg-opacity-50">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-blue-400 font-semibold" data-i18n="tariffeq.badge">AKTİF ÜRÜNÜMÜZ (MVP)</span>
+                    <h2 class="mt-2 text-4xl md:text-5xl font-bold tracking-tight text-white">
+                        TariffEQ
+                    </h2>
+                    <p class="mt-4 text-lg subtitle" data-i18n="tariffeq.description">
+                        Piyasada aktif olarak kullanılan deprem prim hesaplama motorumuz. Bu platform, yüzlerce sigorta
+                        profesyoneline hizmet vermektedir.
+                    </p>
+                    <ul class="mt-6 space-y-3 text-lg subtitle">
+                        <li class="flex items-center">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-400 mr-3 text-2xl"></ion-icon>
+                            <span data-i18n="tariffeq.feature1">Anlık deprem bölgesi tespiti</span>
+                        </li>
+                        <li class="flex items-center">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-400 mr-3 text-2xl"></ion-icon>
+                            <span data-i18n="tariffeq.feature2">Karşılaştırmalı muafiyet/koasürans analizi</span>
+                        </li>
+                        <li class="flex items-center">
+                            <ion-icon name="checkmark-circle-outline" class="text-green-400 mr-3 text-2xl"></ion-icon>
+                            <span data-i18n="tariffeq.feature3">PDF/Excel raporlama ve anlık çıktı</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-10 flex gap-4">
+                        <a href="tariffeq.html"
+                            class="inline-block bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                            <span data-i18n="tariffeq.more_info">Daha Fazla Bilgi</span>
+                            <span class="ml-2">&rarr;</span>
+                        </a>
+
+                        <a href="https://tariffeq.com/" target="_blank"
+                            class="inline-block bg-green-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105"
+                            data-i18n="tariffeq.go_to_app">
+                            Uygulamaya Git
+                            <ion-icon name="open-outline" class="ml-2 inline-block align-middle text-xl"></ion-icon>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="flex justify-center">
+                    <img src="tariffeq.png" alt="TariffEQ Ekran Görüntüsü"
+                        class="rounded-xl shadow-2xl border-4 border-gray-700 object-cover"
+                        title="Gerçek TariffEQ Ekran Görüntüsü (MVP Demo.pdf, Sayfa 3'ten alınmıştır)">
+                </div>
+            </div>
+        </section>
+
+        <section id="mvps" class="py-20 md:py-32 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white text-center" data-i18n="mvps.title">
+                    Pilot Başarısı Kanıtlanmış MVP Modüllerimiz
+                </h2>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="locateloss.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl h-full">
+                            <ion-icon name="map-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">LocateLoss</h3>
+                            <p class="mt-2 subtitle" data-i18n="mvps.locateloss_desc">
+                                (Endüstriyel Hasar Analizi) - 5 yıllık ulusal veritabanı, OSB/medya doğrulaması.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="foresight.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl h-full">
+                            <ion-icon name="flame-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">Foresight</h3>
+                            <p class="mt-2 subtitle" data-i18n="mvps.foresight_desc">
+                                (Yangın ve Çevresel Haritalama) - 10 yıllık orman yangını verisi (EFFIS entegrasyonu).
+                            </p>
+                        </div>
+                    </a>
+                    <a href="lossanalysis.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl h-full">
+                            <ion-icon name="pulse-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">LossAnalysis</h3>
+                            <p class="mt-2 subtitle" data-i18n="mvps.lossanalysis_desc">
+                                (Deprem Hasar Tahmini) - ML senaryo modellemesi, BI kaybı tahmini.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="precast.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl h-full">
+                            <ion-icon name="calculator-outline" class="text-4xl text-blue-400 mb-4"></ion-icon>
+                            <h3 class="text-2xl font-semibold text-white">Precast</h3>
+                            <p class="mt-2 subtitle" data-i18n="mvps.precast_desc">
+                                (Brüt Prim Tahmini) - Piyasaya uyumlu, geçmiş veriye dayalı prim tahmini.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <h4 class="text-xl font-semibold text-white" data-i18n="mvps.partners_title">Pilot Ortaklarımız</h4>
+                    <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-6 opacity-70">
+
+                    </div>
+                    <br />
+                    <span class="text-2xl font-bold opacity-70" data-i18n="mvps.partners_note">Talebinize istinaden
+                        paylaşılacaktır.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="upcoming" class="py-20 md:py-32 px-4 bg-gray-950 bg-opacity-50">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="upcoming.title">
+                    Ekosistemi Genişletiyoruz: Yaklaşan Modüller
+                </h2>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto subtitle" data-i18n="upcoming.description">
+                    Platformumuzu, sigorta ve risk değerleme zincirinin tamamını kapsayacak şekilde genişletiyoruz.
+                </p>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <a href="polycheck.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl text-left h-full">
+                            <h3 class="text-xl font-semibold text-white" data-i18n="upcoming.polycheck_title">PolyCheck
+                            </h3>
+                            <p class="mt-2 subtitle text-sm" data-i18n="upcoming.polycheck_desc">
+                                (Yapay Zeka Poliçe Karşılaştırma) - Underwriter'lar ve Reasürörler için.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="claimcore.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl text-left h-full">
+                            <h3 class="text-xl font-semibold text-white" data-i18n="upcoming.claimcore_title">ClaimCore
+                            </h3>
+                            <p class="mt-2 subtitle text-sm" data-i18n="upcoming.claimcore_desc">
+                                (Akıllı Hasar Analizi) - Eksperler ve Sigortacılar için.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="revisor.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl text-left h-full">
+                            <h3 class="text-xl font-semibold text-white" data-i18n="upcoming.revisor_title">Revisor</h3>
+                            <p class="mt-2 subtitle text-sm" data-i18n="upcoming.revisor_desc">
+                                (Kapsamlı Risk Analizi) - Mühendisler ve Brokerlar için.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="vallist.html" class="clickable-card-wrapper">
+                        <div class="card-bg p-8 rounded-xl shadow-2xl text-left h-full">
+                            <h3 class="text-xl font-semibold text-white" data-i18n="upcoming.vallist_title">Vallist</h3>
+                            <p class="mt-2 subtitle text-sm" data-i18n="upcoming.vallist_desc">
+                                (Online Varlık Değerleme ve Mutabakat Aracı) - Uzaktan değerleme için.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-20 md:py-32 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white text-center"
+                    data-i18n="impact.title">
+                    Ekosistem İçin Değer Yaratıyoruz
+                </h2>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="impact.insurers_title">Sigortacılar
+                            için</h3>
+                        <p class="mt-2 subtitle" data-i18n="impact.insurers_desc">
+                            Doğrulanmış hasar zekası, daha hızlı ve isabetli fiyatlandırma, veriye dayalı portföy
+                            yönetimi.
+                        </p>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="impact.brokers_title">Brokerlar için
+                        </h3>
+                        <p class="mt-2 subtitle" data-i18n="impact.brokers_desc">
+                            Rekabetçi veri avantajı, hızlı teklif oluşturma, müşteriye özel risk analizi sunma.
+                        </p>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="impact.valuers_title">Değerleme
+                            Uzmanları için</h3>
+                        <p class="mt-2 subtitle" data-i18n="impact.valuers_desc">
+                            Uzaktan varlık değerlemesi, izlenebilir ve standartlaştırılmış süreçler, daha hızlı
+                            raporlama.
+                        </p>
+                    </div>
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <h3 class="text-2xl font-semibold text-white" data-i18n="impact.investors_title">Yatırım Fonları
+                            için</h3>
+                        <p class="mt-2 subtitle" data-i18n="impact.investors_desc">
+                            Portföydeki fiziksel varlıkların risk takibi, gerçek zamanlı uyarılar ve çevresel etki
+                            verileri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="traction" class="py-20 md:py-32 px-4 bg-gray-950 bg-opacity-50">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="traction.title">
+                    Rakamlarla Riscodex
+                </h2>
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">5</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric1_title">Aktif MVP
+                        </h3>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">2000+</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric2_title">Doğrulanmış
+                            Olay</h3>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">100+</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric3_title">Aylık
+                            Kullanıcı</h3>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">3</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric4_title">Pilot Ortak
+                        </h3>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">%95</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric5_title">AI Doğruluk
+                            Oranı</h3>
+                    </div>
+                    <div class="card-bg p-6 rounded-xl shadow-2xl">
+                        <span class="text-4xl font-extrabold text-blue-400">11</span>
+                        <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="traction.metric6_title">OSB
+                            Bağlantısı</h3>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-left">
+                    <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-white text-center mb-10"
+                        data-i18n="traction.api_metrics_title">
+                        TariffEQ API Başarı Metrikleri
+                    </h3>
+
+                    <div class="card-bg p-6 rounded-xl shadow-2xl max-w-sm mx-auto mb-10">
+                        <span class="text-xl font-semibold text-white block mb-1"
+                            data-i18n="traction.total_success">Toplam Başarılı İstek (Http
+                            2xx)</span>
+                        <span class="text-5xl font-extrabold text-green-400 block">9.12K+</span>
+                    </div>
+
+                    <div class="card-bg p-6 rounded-xl shadow-2xl w-full max-w-5xl mx-auto">
+                        <h4 class="text-xl font-semibold text-white mb-4 text-center" data-i18n="traction.chart_title">
+                            TariffEQ Başarılı İstek Grafiği
+                            (Son 30 Gün)</h4>
+                        <div class="w-full" style="max-height: 400px;">
+                            <canvas id="apiSuccessChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-20 md:py-32 px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white" data-i18n="team.title">
+                    Ekibimizle Tanışın
+                </h2>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <img src="furkan.jpeg" alt="Osman Furkan Kaymaz"
+                            class="w-32 h-32 rounded-full mx-auto border-4 border-gray-700"
+                            title="Osman Furkan Kaymaz (Riscodex Yatırımcı Sunumu.pdf, Sayfa 12'den alınmıştır)">
+                        <h3 class="mt-6 text-xl font-semibold text-white">Osman Furkan Kaymaz</h3>
+                        <p class="mt-1 text-blue-400" data-i18n="team.furkan_role">Co-Founder</p>
+                    </div>
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <img src="ubeyd.jpeg" alt="Ubeydullah Ayvaz"
+                            class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-500"
+                            title="Ubeydullah Ayvaz (Riscodex Yatırımcı Sunumu.pdf, Sayfa 12'den alınmıştır)">
+                        <h3 class="mt-6 text-xl font-semibold text-white">Ubeydullah Ayvaz</h3>
+                        <p class="mt-1 text-blue-400" data-i18n="team.ubeyd_role">Co-Founder</p>
+                    </div>
+
+                    <div class="card-bg p-8 rounded-xl shadow-2xl">
+                        <img src="ahmet.jpeg" alt="Ahmet İkbal Kaymaz"
+                            class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-blue-500"
+                            title="Ahmet İkbal Kaymaz (Riscodex Yatırımcı Sunumu.pdf, Sayfa 12'den alınmıştır)">
+                        <h3 class="mt-6 text-xl font-semibold text-white">Ahmet İkbal Kaymaz</h3>
+                        <p class="mt-1 text-blue-400" data-i18n="team.ahmet_role">Co-Founder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-32 px-4 bg-gray-950 bg-opacity-50 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white" data-i18n="contact.title">
+                    Geleceği Birlikte Şekillendirelim
+                </h2>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto subtitle" data-i18n="contact.description">
+                    Sigorta, değerleme ve yatırım ekosistemini nasıl yeniden tanımladığımızı görmek ve demo talep etmek
+                    için bizimle iletişime geçin.
+                </p>
+                <a href="mailto:contact@riscodex.com"
+                    class="mt-10 inline-block bg-blue-600 text-white font-semibold px-10 py-4 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 text-lg">
+                    contact@riscodex.com
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-gray-400" data-i18n="footer.copyright">&copy; 2025 Riscodex. Tüm hakları saklıdır.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#problem" class="text-gray-400 hover:text-white transition" data-i18n="nav.problem">Sorun</a>
+                <a href="#tariffeq" class="text-gray-400 hover:text-white transition"
+                    data-i18n="nav.active_product">Aktif Ürün</a>
+                <a href="#mvps" class="text-gray-400 hover:text-white transition" data-i18n="nav.all_mvps">Tüm
+                    MVP'ler</a>
+                <a href="#team" class="text-gray-400 hover:text-white transition" data-i18n="nav.team">Ekip</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = menuButton.querySelector('svg:first-child');
+            const closeIcon = menuButton.querySelector('svg:last-child');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                const isExpanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+                menuButton.setAttribute('aria-expanded', isExpanded);
+            };
+
+            menuButton.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // --- INTERAKTIF GRAFİK KODU BAŞLANGICI ---
+            const chartLabels = ["Oct 14 15:38", "Oct 14 21:38", "Oct 15 03:38", "Oct 15 09:38", "Oct 15 15:38", "Oct 15 21:38", "Oct 16 03:38", "Oct 16 09:38", "Oct 16 15:38", "Oct 16 21:38", "Oct 17 03:38", "Oct 17 09:38", "Oct 17 15:38", "Oct 17 21:38", "Oct 18 03:38", "Oct 18 09:38", "Oct 18 15:38", "Oct 18 21:38", "Oct 19 03:38", "Oct 19 09:38", "Oct 19 15:38", "Oct 19 21:38", "Oct 20 03:38", "Oct 20 09:38", "Oct 20 15:38", "Oct 20 21:38", "Oct 21 03:38", "Oct 21 09:38", "Oct 21 15:38", "Oct 21 21:38", "Oct 22 03:38", "Oct 22 09:38", "Oct 22 15:38", "Oct 22 21:38", "Oct 23 03:38", "Oct 23 09:38", "Oct 23 15:38", "Oct 23 21:38", "Oct 24 03:38", "Oct 24 09:38", "Oct 24 15:38", "Oct 24 21:38", "Oct 25 03:38", "Oct 25 09:38", "Oct 25 15:38", "Oct 25 21:38", "Oct 26 03:38", "Oct 26 09:38", "Oct 26 15:38", "Oct 26 21:38", "Oct 27 03:38", "Oct 27 09:38", "Oct 27 15:38", "Oct 27 21:38", "Oct 28 03:38", "Oct 28 09:38", "Oct 28 15:38", "Oct 28 21:38", "Oct 29 03:38", "Oct 29 09:38", "Oct 29 15:38", "Oct 29 21:38", "Oct 30 03:38", "Oct 30 09:38", "Oct 30 15:38", "Oct 30 21:38", "Oct 31 03:38", "Oct 31 09:38", "Oct 31 15:38", "Oct 31 21:38", "Nov 01 03:38", "Nov 01 09:38", "Nov 01 15:38", "Nov 01 21:38", "Nov 02 03:38", "Nov 02 09:38", "Nov 02 15:38", "Nov 02 21:38", "Nov 03 03:38", "Nov 03 09:38", "Nov 03 15:38", "Nov 03 21:38", "Nov 04 03:38", "Nov 04 09:38", "Nov 04 15:38", "Nov 04 21:38", "Nov 05 03:38", "Nov 05 09:38", "Nov 05 15:38", "Nov 05 21:38", "Nov 06 03:38", "Nov 06 09:38", "Nov 06 15:38", "Nov 06 21:38", "Nov 07 03:38", "Nov 07 09:38", "Nov 07 15:38", "Nov 07 21:38", "Nov 08 03:38", "Nov 08 09:38", "Nov 08 15:38", "Nov 08 21:38", "Nov 09 03:38", "Nov 09 09:38", "Nov 09 15:38", "Nov 09 21:38", "Nov 10 03:38", "Nov 10 09:38", "Nov 10 15:38", "Nov 10 21:38", "Nov 11 03:38", "Nov 11 09:38", "Nov 11 15:38", "Nov 11 21:38", "Nov 12 03:38", "Nov 12 09:38", "Nov 12 15:38", "Nov 12 21:38", "Nov 13 03:38", "Nov 13 09:38", "Nov 13 15:38", "Nov 13 21:38", "Nov 14 03:38"];
+            const chartData = [149, 40, 5, 84, 11, 26, 75, 5, 20, 10, 12, 120, 10, 16, 179, 10, 12, 10, 10, 20, 16, 173, 15, 12, 17, 30, 2, 0, 12, 30, 10, 10, 10, 10, 15, 10, 10, 15, 30, 10, 15, 10, 10, 15, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 15, 10, 10, 15, 271, 15, 163, 12, 15, 12, 17, 12, 638, 12, 15, 12, 15, 17, 12, 220, 15, 27, 2, 0, 2, 0, 5, 2, 175, 15, 26, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 314, 15, 30, 15, 15, 17, 15, 20, 15, 17, 12, 16, 15, 12, 15, 12, 15, 12, 15, 12, 15, 12, 15, 12, 15, 12, 15, 12, 36, 73, 80, 68, 27];
+
+            if (document.getElementById('apiSuccessChart')) {
+                const ctx = document.getElementById('apiSuccessChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: chartLabels,
+                        datasets: [{
+                            label: 'Başarılı İstek (Http 2xx)',
+                            data: chartData,
+                            borderColor: '#3b82f6', // Mavi
+                            backgroundColor: 'rgba(59, 130, 246, 0.4)', // Yarı şeffaf mavi
+                            tension: 0.2, // Yumuşak çizgiler
+                            fill: true,
+                            pointRadius: 0 // Noktaları gizle
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            intersect: false,
+                            mode: 'index',
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 200, // Y EKSENİ ÜST SINIRI 200 OLARAK AYARLANDI**
+                                title: {
+                                    display: true,
+                                    text: 'İstek Sayısı',
+                                    color: '#d1d5db'
+                                },
+                                ticks: { color: '#d1d5db' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                            x: {
+                                ticks: { color: '#d1d5db', maxTicksLimit: 10 },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: { color: '#f3f4f6' }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(31, 41, 55, 0.9)',
+                                titleColor: '#f3f4f6',
+                                bodyColor: '#d1d5db',
+                            }
+                        }
+                    }
+                });
+            }
+            // --- INTERAKTIF GRAFİK KODU SONU ---
+
+        });
+    </script>
+    <script src="js/i18n.js"></script>
+
+</body>
+
+</html>
