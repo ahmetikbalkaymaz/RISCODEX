@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riscodex - AI Insurance Ecosystem</title>
+    <title>Riscodex | Sigorta Operasyonları için Yapay Zeka Platformu</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -18,8 +18,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        tech: ['Montserrat', 'sans-serif'],
+                        sans: ["Montserrat", "sans-serif"],
+                        tech: ["Montserrat", "sans-serif"],
                     }
                 }
             }
@@ -27,73 +27,150 @@
     </script>
 
     <style>
+        :root {
+            --page-bg: #eef5ff;
+            --panel-bg: rgba(255, 255, 255, 0.92);
+            --card-bg: rgba(255, 255, 255, 0.94);
+            --card-soft: rgba(239, 246, 255, 0.88);
+            --line: rgba(96, 125, 175, 0.18);
+            --line-strong: rgba(79, 141, 248, 0.22);
+            --text-main: #0f172a;
+            --text-muted: #5f6f86;
+            --accent: #4f8df8;
+            --accent-strong: #255fd4;
+            --success: #35c98a;
+        }
+
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #050810;
-            color: #f1f5f9;
-        }
-
-        /* Hareketli Başlık Animasyonu */
-        @keyframes shine {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .animated-title {
-            background: linear-gradient(270deg, #2563eb, #93c5fd, #2563eb, #1d4ed8);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: shine 4s ease infinite;
-        }
-
-        /* Arka Plan Grid Efekti */
-        .bg-grid-pattern {
-            background-image: linear-gradient(to right, #3b82f615 1px, transparent 1px),
-                linear-gradient(to bottom, #3b82f615 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 10%, transparent 100%);
-            -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, #000 10%, transparent 100%);
-        }
-
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        .glass-panel {
-            background: linear-gradient(180deg, rgba(10, 18, 34, 0.94) 0%, rgba(6, 10, 20, 0.9) 100%);
-            box-shadow: 0 30px 90px rgba(3, 8, 18, 0.72), 0 0 0 1px rgba(59, 130, 246, 0.06);
-        }
-
-        .glass-panel::before {
-            content: "";
-            position: absolute;
-            inset: 0;
+            font-family: "Montserrat", sans-serif;
             background:
-                radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 30%),
-                linear-gradient(135deg, rgba(37, 99, 235, 0.09), transparent 45%);
-            pointer-events: none;
+                radial-gradient(circle at top, rgba(79, 141, 248, 0.16), transparent 35%),
+                linear-gradient(180deg, #f8fbff 0%, #edf4ff 58%, #f6f9ff 100%);
+            background-color: var(--page-bg);
+            color: var(--text-main);
         }
 
-        .floating-chip {
-            animation: float 6s ease-in-out infinite;
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(79, 141, 248, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(79, 141, 248, 0.08) 1px, transparent 1px);
+            background-size: 52px 52px;
+            mask-image: radial-gradient(ellipse 84% 84% at 50% 30%, #000 38%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 84% 84% at 50% 30%, #000 38%, transparent 100%);
+        }
+
+        .surface-panel {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 255, 0.98));
+            border: 1px solid var(--line);
+            box-shadow: 0 24px 60px rgba(66, 96, 150, 0.14);
+        }
+
+        .surface-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.96));
+            border: 1px solid var(--line);
+            box-shadow: 0 16px 34px rgba(96, 125, 175, 0.08);
+        }
+
+        .surface-card-soft {
+            background: var(--card-soft);
+            border: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            letter-spacing: -0.06em;
+        }
+
+        .button-primary {
+            background: linear-gradient(180deg, #2f6ee9 0%, #245dcb 100%);
+            color: #ffffff !important;
+            box-shadow: 0 14px 34px rgba(47, 110, 233, 0.22);
+        }
+
+        .button-primary:hover {
+            background: linear-gradient(180deg, #245dcb 0%, #1d4faf 100%);
+        }
+
+        .button-primary i,
+        .button-primary span {
+            color: #ffffff !important;
+        }
+
+        .surface-panel .button-primary,
+        .surface-card .button-primary,
+        .surface-card-soft .button-primary,
+        .surface-panel .button-primary *,
+        .surface-card .button-primary *,
+        .surface-card-soft .button-primary * {
+            color: #ffffff !important;
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(96, 125, 175, 0.2);
+            color: #17305c !important;
+            box-shadow: 0 12px 28px rgba(96, 125, 175, 0.1);
+        }
+
+        .button-secondary i,
+        .button-secondary span {
+            color: #2f6ee9 !important;
+        }
+
+        .surface-panel .text-white,
+        .surface-card .text-white,
+        .surface-card-soft .text-white {
+            color: #10213c !important;
+        }
+
+        .surface-panel .text-slate-300,
+        .surface-panel .text-slate-400,
+        .surface-card .text-slate-300,
+        .surface-card .text-slate-400,
+        .surface-card-soft .text-slate-300,
+        .surface-card-soft .text-slate-400 {
+            color: var(--text-muted) !important;
+        }
+
+        .surface-panel .text-slate-500,
+        .surface-card .text-slate-500,
+        .surface-card-soft .text-slate-500 {
+            color: #7c8ca4 !important;
+        }
+
+        .surface-panel .text-blue-300,
+        .surface-card .text-blue-300,
+        .surface-card-soft .text-blue-300 {
+            color: var(--accent-strong) !important;
+        }
+
+        .surface-panel .text-emerald-300,
+        .surface-card .text-emerald-300,
+        .surface-card-soft .text-emerald-300 {
+            color: #149a68 !important;
+        }
+
+        [class*="bg-white/[0.04]"] {
+            background-color: rgba(219, 234, 254, 0.8) !important;
+        }
+
+        [class*="bg-white/[0.03]"] {
+            background-color: rgba(255, 255, 255, 0.78) !important;
+        }
+
+        [class*="border-white/10"] {
+            border-color: rgba(96, 125, 175, 0.18) !important;
+        }
+
+        [class*="border-white/[0.08]"] {
+            border-color: rgba(96, 125, 175, 0.14) !important;
+        }
+
+        [class*="text-blue-200/[0.55]"] {
+            color: rgba(37, 95, 212, 0.78) !important;
         }
     </style>
 </head>
@@ -101,309 +178,174 @@
 <body class="selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
 
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]"></div>
         <div class="absolute inset-0 bg-grid-pattern"></div>
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-900/20 rounded-full blur-[128px]"></div>
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-900/10 rounded-full blur-[128px]"></div>
+        <div class="absolute top-0 left-1/4 h-[30rem] w-[30rem] rounded-full bg-blue-300/30 blur-[120px]"></div>
+        <div class="absolute top-32 right-20 h-[22rem] w-[22rem] rounded-full bg-sky-300/35 blur-[110px]"></div>
+        <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-200/35 blur-[130px]"></div>
     </div>
 
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="flex items-center group cursor-pointer" aria-label="Riscodex ana sayfa">
-                <img src="assets/Riscodex_Vertical_White.png" alt="Riscodex"
-                    class="h-20 md:h-24 w-auto max-w-none object-contain transition-transform duration-300 group-hover:scale-[1.03]">
-            </a>
-
-            <div class="hidden md:flex items-center space-x-1">
-                <a href="#solutions"
-                    class="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-wide">Çözümler</a>
-                <a href="#team"
-                    class="px-4 py-2 text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-wide">Ekip</a>
-                <div class="pl-4">
-                    <a href="#access-request"
-                        class="px-5 py-2 bg-white text-[#050810] hover:bg-blue-50 rounded-full font-semibold text-sm transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] border border-transparent tracking-wide inline-block">
-                        Erişim Talebi
+    <nav id="navbar" class="fixed inset-x-0 top-0 z-50 py-5 transition-all duration-300">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6">
+            <div id="nav-shell"
+                class="w-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-3 shadow-[0_18px_36px_rgba(110,140,190,0.14)] backdrop-blur-xl">
+                <div class="flex items-center justify-between gap-6">
+                    <a href="#" class="flex items-center" aria-label="Riscodex ana sayfa">
+                        <img src="assets/Riscodex_Horizontal_Color.png" alt="Riscodex"
+                            class="h-8 sm:h-10 w-auto max-w-none object-contain">
                     </a>
+
+                    <div class="hidden lg:flex items-center gap-1">
+                        <a href="#about"
+                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">Hakkımızda</a>
+                        <a href="#platform"
+                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">Platform</a>
+                        <a href="#problem"
+                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">Sorun</a>
+                        <a href="#solutions"
+                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">Çözümler</a>
+                        <a href="#operating-model"
+                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">İşleyiş</a>
+                    </div>
+
+                    <div class="hidden lg:flex items-center gap-3">
+                        <a href="#access-request"
+                            class="button-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors">
+                            Erişim Talebi
+                        </a>
+                    </div>
+
+                    <button id="mobile-menu-button" class="lg:hidden text-slate-900" onclick="toggleMobileMenu()"
+                        aria-label="Menüyü aç" aria-expanded="false">
+                        <i data-lucide="menu" class="h-5 w-5"></i>
+                    </button>
                 </div>
             </div>
-
-            <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-                <i data-lucide="menu"></i>
-            </button>
         </div>
 
         <div id="mobile-menu"
-            class="hidden md:hidden absolute top-full left-0 w-full bg-[#050810] border-b border-blue-900/20 p-6 flex flex-col space-y-4 shadow-2xl backdrop-blur-xl">
-            <a href="#solutions" class="text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Çözümler</a>
-            <a href="#team" class="text-slate-300 hover:text-white" onclick="toggleMobileMenu()">Ekip</a>
-            <a href="#access-request" class="w-full py-3 bg-white text-black rounded-lg font-bold text-center block"
-                onclick="toggleMobileMenu()">Erişim Talebi</a>
+            class="hidden lg:hidden mx-auto mt-3 max-w-7xl px-4 sm:px-6">
+            <div class="rounded-2xl border border-slate-200/80 bg-white/95 p-5 shadow-[0_18px_36px_rgba(110,140,190,0.14)] backdrop-blur-xl">
+                <div class="flex flex-col gap-3">
+                    <a href="#about" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()">Hakkımızda</a>
+                    <a href="#platform" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()">Platform</a>
+                    <a href="#problem" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()">Sorun</a>
+                    <a href="#solutions" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()">Çözümler</a>
+                    <a href="#operating-model" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()">İşleyiş</a>
+                    <a href="#access-request"
+                        class="button-primary mt-2 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold"
+                        onclick="toggleMobileMenu()">Erişim Talebi</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <section class="relative pt-44 pb-24 lg:pt-52 lg:pb-32 overflow-hidden z-10">
-        <div
-            class="absolute inset-x-0 top-20 h-[520px] bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.24),transparent_62%)]">
-        </div>
-        <div class="absolute left-1/2 top-28 h-80 w-[44rem] -translate-x-1/2 rounded-full bg-blue-700/20 blur-[120px]">
+    <section class="relative z-10 overflow-hidden pt-40 pb-20 lg:pt-44 lg:pb-24">
+        <div class="absolute inset-x-0 top-12 h-[420px] bg-[radial-gradient(circle_at_top,rgba(79,141,248,0.24),transparent_66%)]">
         </div>
 
-        <div class="container mx-auto px-6 relative">
-            <div class="max-w-5xl mx-auto text-center">
-                <div class="relative inline-block">
-                    <div
-                        class="absolute inset-x-10 top-8 h-24 rounded-full bg-blue-600/25 blur-[90px] pointer-events-none">
-                    </div>
-                    <h1
-                        class="relative text-6xl md:text-8xl lg:text-[8rem] font-bold tracking-[-0.06em] mb-6 drop-shadow-2xl z-10 animated-title">
-                        Riscodex
-                    </h1>
-                </div>
-
-                <p class="text-xl md:text-[1.7rem] text-slate-300 max-w-3xl mx-auto leading-tight font-light relative z-10">
-                    Görünmeyen riski <span class="text-blue-300 font-semibold">yönetilebilir veriye</span> dönüştüren,
-                    underwriting, fiyatlama ve hasar kararlarını tek omurgada birleştiren yapay zeka ekosistemi.
+        <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="mx-auto max-w-4xl text-center">
+                <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">
+                    Operational Risk, Pricing and Claims Platform
+                </p>
+                <h1 class="hero-title mt-6 text-5xl font-semibold leading-none text-slate-950 sm:text-6xl lg:text-7xl">
+                    Sigorta operasyonlarını tek veri katmanında yönetin.
+                </h1>
+                <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl">
+                    Riscodex, sigorta şirketleri, brokerlar ve endüstriyel ekipler için risk, fiyatlama ve hasar
+                    kararlarını tek platformda daha görünür, daha tutarlı ve daha yönetilebilir hale getirir.
                 </p>
 
-                <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
-                        class="group inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_50px_rgba(37,99,235,0.35)] transition-transform hover:-translate-y-0.5">
-                        TariffEQ'yu Aç
-                        <i data-lucide="arrow-up-right"
-                            class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
-                    </a>
+                <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <a href="#access-request"
-                        class="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white backdrop-blur-xl transition-colors hover:border-blue-400/30 hover:bg-white/[0.08]">
-                        Kurumsal Demo Talebi
-                        <i data-lucide="sparkles" class="h-4 w-4 text-blue-300"></i>
+                        class="button-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors">
+                        Demo Talep Et
+                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                    <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
+                        class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-blue-300/30 hover:bg-white">
+                        TariffEQ'yu İncele
+                        <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                     </a>
                 </div>
 
-                <div class="mt-12 grid gap-4 md:grid-cols-3 text-left">
-                    <div
-                        class="glass-panel floating-chip relative overflow-hidden rounded-[24px] border border-white/8 px-5 py-5 backdrop-blur-xl">
-                        <div class="relative z-10">
-                            <div class="text-[11px] uppercase tracking-[0.28em] text-blue-200/60">Canlı Ürün</div>
-                            <div class="mt-3 flex items-end gap-3">
-                                <span class="text-4xl font-bold text-white">01</span>
-                                <span class="pb-1 text-sm text-slate-400">Pazarda aktif sistem</span>
-                            </div>
-                        </div>
+                <div class="surface-panel mt-12 grid gap-0 overflow-hidden rounded-2xl sm:grid-cols-3">
+                    <div class="px-6 py-5 text-left">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Canlı Ürün</div>
+                        <div class="mt-2 text-lg font-semibold text-white">TariffEQ</div>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Aktif fiyatlama ve tarife karşılaştırma motoru.</p>
                     </div>
-                    <div
-                        class="glass-panel floating-chip relative overflow-hidden rounded-[24px] border border-white/8 px-5 py-5 backdrop-blur-xl [animation-delay:1.5s]">
-                        <div class="relative z-10">
-                            <div class="text-[11px] uppercase tracking-[0.28em] text-blue-200/60">Ürün Boru Hattı</div>
-                            <div class="mt-3 flex items-end gap-3">
-                                <span class="text-4xl font-bold text-white">05+</span>
-                                <span class="pb-1 text-sm text-slate-400">Modül ve iş akışı</span>
-                            </div>
-                        </div>
+                    <div class="border-t border-white/[0.08] px-6 py-5 text-left sm:border-t-0 sm:border-l">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Ürün Seti</div>
+                        <div class="mt-2 text-lg font-semibold text-white">5+ Modül</div>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Risk, pricing, karar destek ve operasyon paketleri.</p>
                     </div>
-                    <div
-                        class="glass-panel floating-chip relative overflow-hidden rounded-[24px] border border-white/8 px-5 py-5 backdrop-blur-xl [animation-delay:3s]">
-                        <div class="relative z-10">
-                            <div class="text-[11px] uppercase tracking-[0.28em] text-blue-200/60">Tarife Odağı</div>
-                            <div class="mt-3 flex items-end gap-3">
-                                <span class="text-4xl font-bold text-white">%100</span>
-                                <span class="pb-1 text-sm text-slate-400">Standart uyum hedefi</span>
-                            </div>
-                        </div>
+                    <div class="border-t border-white/[0.08] px-6 py-5 text-left sm:border-t-0 sm:border-l">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Çalışma Modeli</div>
+                        <div class="mt-2 text-lg font-semibold text-white">Kurumsal Erişim</div>
+                        <p class="mt-2 text-sm leading-6 text-slate-400">Onaylı ekiplerle pilot, erişim ve yakın operasyon kurulumu.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="mt-20 relative mx-auto max-w-6xl z-10">
-                <div
-                    class="absolute -inset-[1px] rounded-[32px] bg-gradient-to-r from-blue-700/60 via-indigo-700/40 to-sky-600/40 opacity-70 blur-sm">
-                </div>
-                <div class="glass-panel relative overflow-hidden rounded-[32px] border border-blue-400/15 p-6 md:p-8 lg:p-10">
-                    <div class="absolute -top-20 right-10 h-48 w-48 rounded-full bg-blue-500/10 blur-[90px]"></div>
-                    <div class="absolute -bottom-10 left-20 h-32 w-32 rounded-full bg-indigo-500/10 blur-[80px]"></div>
+    <section id="about" class="relative z-10 py-10 lg:py-16">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="grid gap-6 lg:grid-cols-[1.08fr_.92fr]">
+                <div class="surface-panel rounded-[28px] p-8 md:p-10">
+                    <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Hakkımızda</p>
+                    <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                        Riscodex, sigorta operasyonlarını daha görünür ve daha yönetilebilir hale getirmek için kuruldu.
+                    </h2>
+                    <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600">
+                        Ürün yaklaşımımız pazarlama dili değil, operasyonel netlik üzerine kurulu. Pricing, risk,
+                        tarife uyumu ve hasar kararlarını aynı veri katmanında buluşturarak ekiplerin daha hızlı ve
+                        daha tutarlı çalışmasını hedefliyoruz.
+                    </p>
+                    <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+                        Riscodex, kurumların gerçek iş akışlarına bağlanan modüler bir yapı kurar; bu nedenle odağımız
+                        tek bir gösterim sayfası değil, canlıya gidebilecek doğru operasyon yüzeyini inşa etmektir.
+                    </p>
 
-                    <div class="relative z-10 flex flex-col gap-8">
-                        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-                            <div class="max-w-3xl text-left">
-                                <div
-                                    class="inline-flex items-center gap-2 rounded-full border border-blue-500/15 bg-blue-950/40 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-blue-200/70">
-                                    <i data-lucide="layers" class="w-4 h-4 text-blue-400"></i>
-                                    Ürün Ekosistemi
-                                </div>
-                                <h3 class="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-white">
-                                    Risk, pricing ve claims operasyonlarını tek veri katmanında toplayın
-                                </h3>
-                                <p class="mt-3 text-base md:text-lg leading-relaxed text-slate-400">
-                                    Riscodex; tarife uyumu, underwriting kararları ve hasar akışlarını aynı ürün ailesi
-                                    içinde çalıştıran modüler bir operasyon yüzeyi sunar.
-                                </p>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                                <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 backdrop-blur-xl">
-                                    <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Canlı Sistem</div>
-                                    <div class="mt-2 text-lg font-semibold text-white">TariffEQ</div>
-                                </div>
-                                <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 backdrop-blur-xl">
-                                    <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Odak</div>
-                                    <div class="mt-2 text-lg font-semibold text-white">Deprem Pricing</div>
-                                </div>
-                                <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 backdrop-blur-xl">
-                                    <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Pipeline</div>
-                                    <div class="mt-2 text-lg font-semibold text-white">5+ Modül</div>
-                                </div>
-                                <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 backdrop-blur-xl">
-                                    <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Erişim</div>
-                                    <div class="mt-2 text-lg font-semibold text-white">Kurumsal</div>
-                                </div>
-                            </div>
+                    <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                        <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Odak</div>
+                            <div class="mt-2 text-sm font-semibold text-white">Risk, pricing ve claims</div>
                         </div>
+                        <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Model</div>
+                            <div class="mt-2 text-sm font-semibold text-white">B2B pilot ve yakın kurulum</div>
+                        </div>
+                        <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Yaklaşım</div>
+                            <div class="mt-2 text-sm font-semibold text-white">AI-native operasyon katmanı</div>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="grid grid-cols-1 gap-5 xl:grid-cols-[1.12fr_.94fr_.94fr] text-left">
-                            <div
-                                class="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-blue-500/25 bg-gradient-to-b from-[#101a39] via-[#0a1224] to-[#09101c] p-6 shadow-[0_20px_60px_rgba(9,19,45,0.45)]">
-                                <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/80 to-transparent">
-                                </div>
-                                <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-blue-500/20 blur-3xl"></div>
-                                <div class="relative z-10 flex items-start justify-between">
-                                    <div
-                                        class="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-emerald-400">
-                                        <span class="relative flex h-2 w-2">
-                                            <span
-                                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                            <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
-                                        </span>
-                                        Aktif Motor
-                                    </div>
-                                    <div class="rounded-full border border-white/10 bg-white/[0.05] p-2 text-slate-400">
-                                        <i data-lucide="activity" class="w-4 h-4"></i>
-                                    </div>
-                                </div>
+                <div class="surface-panel rounded-[28px] p-8 md:p-10">
+                    <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Kurumsal Güven</p>
 
-                                <div class="relative z-10 mt-8">
-                                    <h4 class="text-3xl font-bold text-white">TariffEQ</h4>
-                                    <p class="mt-4 max-w-md text-sm leading-7 text-slate-300">
-                                        Resmi tarife standartlarına göre deprem primi ve alternatif senaryoları yüksek
-                                        tutarlılıkla hesaplayan canlı fiyatlama motoru.
-                                    </p>
-                                </div>
+                    <div class="surface-card mt-5 rounded-[24px] p-6">
+                        <img src="assets/itu-cekirdek.png" alt="İTÜ Çekirdek"
+                            class="h-14 w-auto object-contain sm:h-16">
+                        <h3 class="mt-5 text-2xl font-semibold text-white">İTÜ Çekirdek kabulü</h3>
+                        <p class="mt-3 text-sm leading-7 text-slate-400">
+                            Riscodex, ürün yolculuğunu İTÜ Çekirdek ekosistemi içinde geliştiren bir girişim olarak
+                            sigorta teknolojisi odağını kurumsal zeminde büyütüyor.
+                        </p>
+                    </div>
 
-                                <div class="relative z-10 mt-8 grid gap-3 sm:grid-cols-2">
-                                    <div class="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-3">
-                                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Kapsam</div>
-                                        <div class="mt-2 text-sm font-medium text-white">Earthquake Pricing</div>
-                                    </div>
-                                    <div class="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-3">
-                                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Uyum</div>
-                                        <div class="mt-2 text-sm font-medium text-white">Resmi Tarife Standardı</div>
-                                    </div>
-                                    <div class="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-3">
-                                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Çıktı</div>
-                                        <div class="mt-2 text-sm font-medium text-white">Anlık Prim ve Karşılaştırma</div>
-                                    </div>
-                                    <div class="rounded-2xl border border-white/8 bg-white/[0.04] px-4 py-3">
-                                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Durum</div>
-                                        <div class="mt-2 text-sm font-medium text-emerald-400">Pazarda Kullanımda</div>
-                                    </div>
-                                </div>
-
-                                <div class="relative z-10 mt-8 flex flex-wrap items-center gap-3">
-                                    <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
-                                        class="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-500">
-                                        Canlı ürüne git
-                                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                    </a>
-                                    <span
-                                        class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-300">
-                                        Live Pricing Engine
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/8 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-6">
-                                <div class="flex items-center justify-between">
-                                    <div
-                                        class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-blue-300">
-                                        <i data-lucide="cpu" class="w-4 h-4"></i>
-                                        MVP & Beta
-                                    </div>
-                                    <span class="text-xs text-slate-500">R&D pipeline</span>
-                                </div>
-
-                                <p class="mt-5 text-sm leading-7 text-slate-400">
-                                    Aynı veri omurgasını farklı operasyon rolleri için genişleten karar ve analiz
-                                    modülleri.
-                                </p>
-
-                                <div class="mt-6 space-y-3">
-                                    <div
-                                        class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                        <span class="font-medium text-white">LocateLoss</span>
-                                        <span class="text-xs uppercase tracking-[0.24em] text-blue-300">MVP</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                        <span class="font-medium text-white">Versus</span>
-                                        <span class="text-xs uppercase tracking-[0.24em] text-indigo-300">Beta</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                        <span class="font-medium text-white">Foresight</span>
-                                        <span class="text-xs uppercase tracking-[0.24em] text-blue-300">Beta</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                        <span class="font-medium text-white">FireWatch</span>
-                                        <span class="text-xs uppercase tracking-[0.24em] text-indigo-300">MVP</span>
-                                    </div>
-                                    <div
-                                        class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                        <span class="font-medium text-white">Precast</span>
-                                        <span class="text-xs uppercase tracking-[0.24em] text-blue-300">Beta</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                class="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/8 bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-6">
-                                <div class="flex items-center justify-between">
-                                    <div
-                                        class="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-indigo-300">
-                                        <i data-lucide="sparkles" class="w-4 h-4"></i>
-                                        Gelecek Modüller
-                                    </div>
-                                    <span class="text-xs text-slate-500">Expansion</span>
-                                </div>
-
-                                <p class="mt-5 text-sm leading-7 text-slate-400">
-                                    Eksper, broker ve sigorta operasyonları için ortak karar yüzeyine bağlanan sonraki
-                                    ürün ailesi.
-                                </p>
-
-                                <div class="mt-6 grid gap-3">
-                                    <div
-                                        class="rounded-2xl border border-white/8 bg-gradient-to-r from-white/[0.06] to-transparent px-4 py-3 text-sm font-medium text-white">
-                                        PolyCheck
-                                    </div>
-                                    <div
-                                        class="rounded-2xl border border-white/8 bg-gradient-to-r from-white/[0.06] to-transparent px-4 py-3 text-sm font-medium text-white">
-                                        ClaimCore
-                                    </div>
-                                    <div
-                                        class="rounded-2xl border border-white/8 bg-gradient-to-r from-white/[0.06] to-transparent px-4 py-3 text-sm font-medium text-white">
-                                        Revisor
-                                    </div>
-                                    <div
-                                        class="rounded-2xl border border-white/8 bg-gradient-to-r from-white/[0.06] to-transparent px-4 py-3 text-sm font-medium text-white">
-                                        Vallist
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="mt-auto pt-6 text-xs uppercase tracking-[0.28em] text-slate-500 border-t border-white/8">
-                                    Ortak veri modeli ile genişleyen modüler ürün mimarisi
-                                </div>
-                            </div>
+                    <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                        <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Nereden geliyoruz</div>
+                            <div class="mt-2 text-sm font-semibold text-white">Türkiye merkezli insurtech ürün geliştirme</div>
+                        </div>
+                        <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Nasıl çalışıyoruz</div>
+                            <div class="mt-2 text-sm font-semibold text-white">Kuruma özel erişim ve pilot akışlar</div>
                         </div>
                     </div>
                 </div>
@@ -411,419 +353,487 @@
         </div>
     </section>
 
-    <section id="problem" class="py-24 relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
-                <div class="max-w-2xl">
-                    <div
-                        class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-500/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-red-200/70">
-                        Problem Çerçevesi
-                    </div>
-                    <h2 class="mt-5 text-3xl md:text-5xl font-bold mb-6 text-white">Sektörün <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">Analitik
-                            Boşluğu</span></h2>
-                    <p class="text-slate-400 text-lg leading-relaxed">Geleneksel sigortacılık "ne olduğunu" kaydeder.
-                        Riscodex, büyük veri ve yapay zeka ile "ne olacağını" öngörür.</p>
-                </div>
-                <div class="grid gap-3 sm:grid-cols-2">
-                    <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-4 backdrop-blur-xl">
-                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Bugün</div>
-                        <div class="mt-2 text-sm font-medium text-white">Manuel ve parçalı karar akışları</div>
-                    </div>
-                    <div class="rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-4 backdrop-blur-xl">
-                        <div class="text-[11px] uppercase tracking-[0.28em] text-slate-500">Hedef</div>
-                        <div class="mt-2 text-sm font-medium text-white">Öngörüye dayalı karar yüzeyi</div>
-                    </div>
-                </div>
-            </div>
+    <section id="platform" class="relative z-10 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="surface-panel overflow-hidden rounded-[28px] p-8 md:p-10">
+                <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                        <div class="max-w-3xl">
+                            <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Platform Overview</p>
+                            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                                Tek platform, üç operasyon katmanı
+                            </h2>
+                            <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+                                Riscodex; canlı fiyatlama, operasyonel karar desteği ve modüler iş akışlarını aynı veri
+                                omurgasında birleştirir. Amaç daha süslü görünmek değil, daha net ve daha güvenilir bir
+                                çalışma yüzeyi kurmaktır.
+                            </p>
+                        </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div
-                    class="group relative overflow-hidden rounded-[28px] border border-white/8 bg-gradient-to-b from-[#0d1527] to-[#09101b] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-red-600/40 hover:shadow-[0_20px_50px_rgba(20,8,8,0.35)]">
-                    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-500/70 to-transparent">
-                    </div>
-                    <div class="flex items-start justify-between mb-8">
-                        <div
-                            class="bg-white/5 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i data-lucide="database" class="w-8 h-8 text-red-400"></i>
+                        <div class="grid gap-3 sm:grid-cols-3">
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Odak</div>
+                                <div class="mt-2 text-sm font-semibold text-white">Pricing ve Tarife Uyumu</div>
+                            </div>
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Kullanım</div>
+                                <div class="mt-2 text-sm font-semibold text-white">Sigortacı, Broker, Endüstri</div>
+                            </div>
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Erişim</div>
+                                <div class="mt-2 text-sm font-semibold text-white">Pilot ve Yakın Çalışma</div>
+                            </div>
                         </div>
-                        <span class="text-4xl font-black tracking-tight text-white/5">01</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Kayıp Veri</h3>
-                    <p class="text-slate-400 leading-relaxed text-sm">Analize dönüşmeyen hasar ve saha verileri
-                        sistemlere girmediği için risk görünürlüğü eksik kalıyor.</p>
-                </div>
-                <div
-                    class="group relative overflow-hidden rounded-[28px] border border-white/8 bg-gradient-to-b from-[#0d1527] to-[#09101b] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:shadow-[0_20px_50px_rgba(20,12,8,0.35)]">
-                    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-orange-500/70 to-transparent">
+
+                    <div class="grid gap-5 xl:grid-cols-[1.12fr_.94fr_.94fr]">
+                        <article class="surface-card rounded-[26px] p-7">
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <div class="inline-flex items-center gap-2 rounded-full bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">
+                                        <span class="h-2 w-2 rounded-full bg-[var(--success)]"></span>
+                                        Canlı Ürün
+                                    </div>
+                                    <h3 class="mt-5 text-3xl font-semibold text-white">TariffEQ</h3>
+                                </div>
+                                <i data-lucide="activity" class="h-5 w-5 text-slate-500"></i>
+                            </div>
+
+                            <p class="mt-5 max-w-md text-sm leading-7 text-slate-300">
+                                Resmi tarife standartlarına göre deprem primi, senaryo karşılaştırması ve operasyonel
+                                prim kararları için aktif çalışan fiyatlama motoru.
+                            </p>
+
+                            <div class="mt-7 grid gap-3 sm:grid-cols-2">
+                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Kapsam</div>
+                                    <div class="mt-2 text-sm font-medium text-white">Earthquake Pricing</div>
+                                </div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Çıktı</div>
+                                    <div class="mt-2 text-sm font-medium text-white">Prim ve alternatif senaryo</div>
+                                </div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Uyum</div>
+                                    <div class="mt-2 text-sm font-medium text-white">Resmi tarife standardı</div>
+                                </div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Durum</div>
+                                    <div class="mt-2 text-sm font-medium text-emerald-300">Pazarda kullanımda</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-7 flex flex-wrap gap-3">
+                                <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
+                                    class="button-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors">
+                                    Canlı ürüne git
+                                    <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+                                </a>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-emerald-400/[0.15] bg-emerald-400/[0.08] px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
+                                    Live Pricing Engine
+                                </span>
+                            </div>
+                        </article>
+
+                        <article class="surface-card rounded-[26px] p-7">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]">Gelişen Modüller</div>
+                                <i data-lucide="cpu" class="h-5 w-5 text-slate-500"></i>
+                            </div>
+                            <p class="mt-5 text-sm leading-7 text-slate-400">
+                                Aynı veri omurgasını farklı operasyon rollerine açan karar ve analiz modülleri.
+                            </p>
+
+                            <div class="mt-6 space-y-3">
+                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
+                                    <span class="font-medium text-white">LocateLoss</span>
+                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300">MVP</span>
+                                </div>
+                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
+                                    <span class="font-medium text-white">Versus</span>
+                                    <span class="text-xs uppercase tracking-[0.2em] text-indigo-300">Beta</span>
+                                </div>
+                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
+                                    <span class="font-medium text-white">Foresight</span>
+                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300">Beta</span>
+                                </div>
+                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
+                                    <span class="font-medium text-white">FireWatch</span>
+                                    <span class="text-xs uppercase tracking-[0.2em] text-indigo-300">MVP</span>
+                                </div>
+                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
+                                    <span class="font-medium text-white">Precast</span>
+                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300">Beta</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="surface-card rounded-[26px] p-7">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]">Sonraki Katman</div>
+                                <i data-lucide="layers-3" class="h-5 w-5 text-slate-500"></i>
+                            </div>
+                            <p class="mt-5 text-sm leading-7 text-slate-400">
+                                Ortak veri modeli üzerinde ilerleyen ürün ailesi, eksper ve operasyon ekipleri için yeni
+                                kullanım alanları açar.
+                            </p>
+
+                            <div class="mt-6 grid gap-3">
+                                <div class="surface-card-soft rounded-2xl px-4 py-3 text-sm font-medium text-white">PolyCheck</div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3 text-sm font-medium text-white">ClaimCore</div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3 text-sm font-medium text-white">Revisor</div>
+                                <div class="surface-card-soft rounded-2xl px-4 py-3 text-sm font-medium text-white">Vallist</div>
+                            </div>
+
+                            <div class="mt-6 border-t border-white/[0.08] pt-5 text-xs uppercase tracking-[0.22em] text-slate-500">
+                                Modüler ürün mimarisi ile genişleme
+                            </div>
+                        </article>
                     </div>
-                    <div class="flex items-start justify-between mb-8">
-                        <div
-                            class="bg-white/5 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-orange-400"></i>
-                        </div>
-                        <span class="text-4xl font-black tracking-tight text-white/5">02</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Manuel Süreçler</h3>
-                    <p class="text-slate-400 leading-relaxed text-sm">Teklif ve hasar süreçlerinin manuel ilerlemesi,
-                        teknik tutarlılığı sınırlıyor ve hata payını artırıyor.</p>
-                </div>
-                <div
-                    class="group relative overflow-hidden rounded-[28px] border border-white/8 bg-gradient-to-b from-[#0d1527] to-[#09101b] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500/40 hover:shadow-[0_20px_50px_rgba(18,16,6,0.35)]">
-                    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yellow-500/70 to-transparent">
-                    </div>
-                    <div class="flex items-start justify-between mb-8">
-                        <div
-                            class="bg-white/5 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <i data-lucide="shield" class="w-8 h-8 text-yellow-400"></i>
-                        </div>
-                        <span class="text-4xl font-black tracking-tight text-white/5">03</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-white">Reaktif Yaklaşım</h3>
-                    <p class="text-slate-400 leading-relaxed text-sm">Yapay zeka sadece operasyonel kalıyor. Önleyici
-                        analitik karar süreçlerine taşınamıyor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solutions" class="py-24 bg-[#020408] relative z-10">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <div
-                    class="inline-flex items-center gap-2 rounded-full border border-blue-500/15 bg-blue-500/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-blue-200/70">
-                    Çözüm Paketleri
-                </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Görünmeyeni Yönetin</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Hedef kitlenize özel teknoloji paketleri ve operasyon
-                    yüzeyleri.</p>
+    <section id="problem" class="relative z-10 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="max-w-3xl">
+                <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Operational Friction</p>
+                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                    Bugün operasyonu yavaşlatan temel kırılmalar
+                </h2>
+                <p class="mt-4 text-base leading-7 text-slate-600">
+                    Sorun yalnızca veri eksikliği değil; parçalı karar yüzeyleri, manuel iş akışları ve operasyonel
+                    tutarsızlıkların birlikte birikmesi.
+                </p>
             </div>
 
-            <div class="flex justify-center mb-12">
-                <div
-                    class="inline-flex flex-wrap justify-center gap-2 rounded-full border border-white/10 bg-[#09101d]/80 p-2 shadow-[0_20px_40px_rgba(3,8,18,0.35)] backdrop-blur-xl">
+            <div class="mt-12 grid gap-5 lg:grid-cols-3">
+                <article class="surface-card rounded-[24px] p-7">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="database" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Kayıp veri görünürlüğü</h3>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-400">
+                        Hasar, saha ve pricing verisi karar katmanlarına tutarlı biçimde taşınamadığında gerçek risk
+                        resmi eksik kalır.
+                    </p>
+                </article>
+
+                <article class="surface-card rounded-[24px] p-7">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="bar-chart-3" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Manuel karar akışları</h3>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-400">
+                        Teklif, değerlendirme ve hasar süreçlerinin manuel ilerlemesi hız kaybı yaratırken karar kalitesini
+                        de dalgalandırır.
+                    </p>
+                </article>
+
+                <article class="surface-card rounded-[24px] p-7">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="shield" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-white">Reaktif operasyon modeli</h3>
+                    </div>
+                    <p class="mt-5 text-sm leading-7 text-slate-400">
+                        Operasyon sistemleri geçmişi kaydediyor, ama geleceği öngören karar yüzeyi eksik olduğunda ekipler
+                        sürekli geriden geliyor.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="relative z-10 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="mx-auto max-w-3xl text-center">
+                <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Audience Packages</p>
+                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                    Farklı ekipler için aynı operasyon omurgası
+                </h2>
+                <p class="mt-4 text-base leading-7 text-slate-600">
+                    Riscodex aynı çekirdek veri modelini farklı kullanıcı tipleri için ayrı paketler halinde sunar.
+                </p>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <div class="surface-panel inline-flex flex-wrap justify-center gap-2 rounded-full px-2 py-2">
                     <button onclick="switchTab('company')" id="btn-company"
-                        class="px-6 py-3 rounded-full text-sm font-semibold transition-all tracking-wide bg-gradient-to-r from-blue-600 to-indigo-500 text-white shadow-[0_12px_30px_rgba(37,99,235,0.35)]">Sigorta
-                        Şirketleri</button>
+                        class="button-primary rounded-full px-6 py-3 text-sm font-semibold transition-colors">
+                        Sigorta Şirketleri
+                    </button>
                     <button onclick="switchTab('broker')" id="btn-broker"
-                        class="px-6 py-3 rounded-full text-sm font-semibold transition-all tracking-wide text-slate-400 hover:text-white hover:bg-white/[0.06]">Broker
-                        & Acenteler</button>
+                        class="rounded-full px-6 py-3 text-sm font-semibold text-slate-600 transition-colors hover:bg-blue-50 hover:text-slate-950">
+                        Broker &amp; Acenteler
+                    </button>
                     <button onclick="switchTab('industrial')" id="btn-industrial"
-                        class="px-6 py-3 rounded-full text-sm font-semibold transition-all tracking-wide text-slate-400 hover:text-white hover:bg-white/[0.06]">Endüstriyel
-                        Tesisler</button>
+                        class="rounded-full px-6 py-3 text-sm font-semibold text-slate-600 transition-colors hover:bg-blue-50 hover:text-slate-950">
+                        Endüstriyel Tesisler
+                    </button>
                 </div>
             </div>
 
-            <div class="glass-panel rounded-[32px] border border-white/8 p-8 md:p-12 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-900/10 rounded-full blur-[80px]"></div>
-
-                <div class="flex flex-col lg:flex-row gap-12 items-center relative z-10">
-
-                    <div class="flex-1 space-y-8" id="tab-content">
+            <div class="surface-panel mt-12 rounded-[28px] p-8 md:p-10">
+                <div class="grid items-start gap-8 lg:grid-cols-[1.2fr_.8fr]">
+                    <div id="tab-content" class="space-y-7">
                         <div id="content-company" class="tab-pane">
                             <div class="flex items-center gap-4">
-                                <div
-                                    class="p-4 bg-blue-900/20 rounded-2xl text-blue-400 border border-blue-500/20 shadow-[0_0_20px_rgba(30,58,138,0.2)]">
-                                    <i data-lucide="building-2" class="w-6 h-6"></i>
+                                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.04]">
+                                    <i data-lucide="building-2" class="h-6 w-6 text-blue-300"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-3xl font-bold text-white mb-1">Sigorta Şirketleri</h3>
-                                    <div class="text-xs font-mono text-blue-500 uppercase tracking-widest">Çözüm Paketi
-                                    </div>
+                                    <h3 class="text-2xl font-semibold text-white">Sigorta Şirketleri</h3>
+                                    <p class="mt-1 text-sm text-slate-400">Risk ve pricing operasyonunu daha tutarlı hale getirin.</p>
                                 </div>
                             </div>
-                            <p class="text-xl text-slate-300 font-light leading-relaxed">Underwriting disiplinini yapay
-                                zeka ile ölçeklendirin.</p>
-                            <div class="grid gap-4">
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Sermaye Koruma</h4>
-                                        <p class="text-slate-400 text-sm">Trete dışı risklerin engellenmesi ve kümül
-                                            yönetimi ile sermaye yeterliliğini koruyun.</p>
-                                    </div>
+
+                            <div class="mt-6 grid gap-4">
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Sermaye koruma</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Trete dışı riskleri ve kümül etkilerini daha erken görünür hale getirin.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Regülasyon Uyumu</h4>
-                                        <p class="text-slate-400 text-sm">Resmi tarife standartlarına tam uyumlu,
-                                            dinamik fiyatlama modelleri.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Tarife uyumu</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Resmi standardı operasyon akışına doğrudan bağlayın ve manuel yorum farkını azaltın.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Operasyonel Verimlilik</h4>
-                                        <p class="text-slate-400 text-sm">Hasar ve poliçe süreçlerinde manuel eforu
-                                            %80'e kadar azaltın.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Operasyonel verimlilik</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Hasar ve teklif kararlarının çevrim süresini daha az eforla yönetin.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div id="content-broker" class="hidden tab-pane">
                             <div class="flex items-center gap-4">
-                                <div
-                                    class="p-4 bg-blue-900/20 rounded-2xl text-blue-400 border border-blue-500/20 shadow-[0_0_20px_rgba(30,58,138,0.2)]">
-                                    <i data-lucide="briefcase" class="w-6 h-6"></i>
+                                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.04]">
+                                    <i data-lucide="briefcase" class="h-6 w-6 text-blue-300"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-3xl font-bold text-white mb-1">Broker & Acenteler</h3>
-                                    <div class="text-xs font-mono text-blue-500 uppercase tracking-widest">Çözüm Paketi
-                                    </div>
+                                    <h3 class="text-2xl font-semibold text-white">Broker &amp; Acenteler</h3>
+                                    <p class="mt-1 text-sm text-slate-400">Satış hızını artırırken teknik karar kalitesini koruyun.</p>
                                 </div>
                             </div>
-                            <p class="text-xl text-slate-300 font-light leading-relaxed">Satış kapama hızınızı artırın,
-                                rekabeti veriye dayalı yönetin.</p>
-                            <div class="grid gap-4">
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Akıllı Karşılaştırma</h4>
-                                        <p class="text-slate-400 text-sm">Tekliflerin avantajlı ve eksik yönlerini
-                                            saniyeler içinde analiz edin.</p>
-                                    </div>
+
+                            <div class="mt-6 grid gap-4">
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Akıllı karşılaştırma</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Teklifleri daha okunabilir hale getirerek müşteriye net karar zemini sunun.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Hızlı Prim Tahmini</h4>
-                                        <p class="text-slate-400 text-sm">Müşterinize anında yaklaşık bütçe sunarak
-                                            satış sürecini hızlandırın.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Hızlı prim tahmini</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">İlk görüşmede yaklaşık bütçe ve fiyat bandı üzerinden daha hızlı aksiyon alın.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Eksik Sigorta Analizi</h4>
-                                        <p class="text-slate-400 text-sm">Müşterinizin gerçek risk ihtiyacını veri ile
-                                            kanıtlayın.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Eksik sigorta analizi</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Müşterinin ihtiyaç boşluklarını veri temelli anlatımla daha görünür kılın.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div id="content-industrial" class="hidden tab-pane">
                             <div class="flex items-center gap-4">
-                                <div
-                                    class="p-4 bg-blue-900/20 rounded-2xl text-blue-400 border border-blue-500/20 shadow-[0_0_20px_rgba(30,58,138,0.2)]">
-                                    <i data-lucide="activity" class="w-6 h-6"></i>
+                                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.04]">
+                                    <i data-lucide="activity" class="h-6 w-6 text-blue-300"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-3xl font-bold text-white mb-1">Endüstriyel Tesisler</h3>
-                                    <div class="text-xs font-mono text-blue-500 uppercase tracking-widest">Çözüm Paketi
-                                    </div>
+                                    <h3 class="text-2xl font-semibold text-white">Endüstriyel Tesisler</h3>
+                                    <p class="mt-1 text-sm text-slate-400">Gerçekleşmeden önce riski okumaya odaklanan operasyon yüzeyi.</p>
                                 </div>
                             </div>
-                            <p class="text-xl text-slate-300 font-light leading-relaxed">Riski gerçekleşmeden yönetin,
-                                varlıklarınızı koruyun.</p>
-                            <div class="grid gap-4">
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Erken Uyarı Sistemi</h4>
-                                        <p class="text-slate-400 text-sm">Uydu ve sensör verileriyle yangın gibi
-                                            riskleri önceden tespit edin.</p>
-                                    </div>
+
+                            <div class="mt-6 grid gap-4">
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Erken uyarı görünürlüğü</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Saha, sensör ve uzaktan algılama verilerini aynı karar katmanında toplayın.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Risk Haritalama</h4>
-                                        <p class="text-slate-400 text-sm">Tesisinizin dijital ikizi üzerinden potansiyel
-                                            tehlike noktalarını görün.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">Risk haritalama</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Tesis bazlı risk profilini daha görünür hale getirerek önceliklendirme yapın.</p>
                                 </div>
-                                <div
-                                    class="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-blue-500/30 transition-colors">
-                                    <div class="mt-1.5">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white font-bold text-sm mb-1">Kesintisiz İş Sürekliliği</h4>
-                                        <p class="text-slate-400 text-sm">Hasar duruşlarını minimize ederek üretimi
-                                            koruyun.</p>
-                                    </div>
+                                <div class="surface-card-soft rounded-2xl p-5">
+                                    <h4 class="text-sm font-semibold text-white">İş sürekliliği desteği</h4>
+                                    <p class="mt-2 text-sm leading-7 text-slate-400">Operasyon duruşlarını azaltacak önleyici kararları daha erken devreye alın.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div
-                        class="w-full lg:w-[24rem] glass-panel relative overflow-hidden rounded-[28px] border border-white/10 p-7 backdrop-blur-md">
-                        <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl"></div>
-                        <div class="relative z-10">
-                            <div
-                                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-300">
-                                <i data-lucide="shield-check" class="w-4 h-4 text-blue-300"></i>
-                                Kurumsal Erişim
-                            </div>
-                            <h4 class="mt-5 text-2xl font-semibold tracking-tight text-white">Onaylı partnerler için
-                                güvenli ürün erişimi</h4>
-                            <p class="mt-4 text-sm leading-7 text-slate-400">
-                                Algoritmalarımız ve veri bundle'larımız sadece onaylanmış sigorta şirketleri, brokerlar
-                                ve endüstriyel partnerler için açılır.
-                            </p>
+                    <aside class="surface-card rounded-[24px] p-7">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Access Model</p>
+                        <h3 class="mt-4 text-2xl font-semibold text-slate-950">Kurumsal erişim ve çalışma şekli</h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-600">
+                            Riscodex, geniş kitleye açık bir self-serve ürün değil; seçilmiş ekiplerle kontrollü erişim
+                            ve yakın operasyon kurulumu hedeflenir.
+                        </p>
 
-                            <div class="mt-6 space-y-3">
-                                <div
-                                    class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                    <span class="text-sm text-slate-300">Bundle erişimi</span>
-                                    <span class="text-xs uppercase tracking-[0.24em] text-emerald-300">Onaylı</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                    <span class="text-sm text-slate-300">Kurulum modeli</span>
-                                    <span class="text-xs uppercase tracking-[0.24em] text-blue-300">B2B</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between rounded-2xl border border-white/8 bg-black/20 px-4 py-3">
-                                    <span class="text-sm text-slate-300">Destek tipi</span>
-                                    <span class="text-xs uppercase tracking-[0.24em] text-indigo-300">Yakın Çalışma</span>
-                                </div>
+                        <div class="mt-6 space-y-3">
+                            <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-4">
+                                <span class="text-sm text-slate-300">Bundle erişimi</span>
+                                <span class="text-xs uppercase tracking-[0.2em] text-emerald-300">Onaylı</span>
                             </div>
-
-                            <a href="#access-request"
-                                class="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-3 text-sm font-semibold text-blue-300 transition-colors hover:bg-blue-500/20">
-                                Detaylı Demo İste
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
+                            <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-4">
+                                <span class="text-sm text-slate-300">Kurulum modeli</span>
+                                <span class="text-xs uppercase tracking-[0.2em] text-blue-300">Pilot + B2B</span>
+                            </div>
+                            <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-4">
+                                <span class="text-sm text-slate-300">Çalışma tipi</span>
+                                <span class="text-xs uppercase tracking-[0.2em] text-blue-300">Yakın entegrasyon</span>
+                            </div>
                         </div>
+
+                        <a href="#access-request"
+                            class="button-secondary mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors hover:bg-white">
+                            Detaylı Demo İste
+                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </a>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="operating-model" class="relative z-10 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="surface-panel rounded-[28px] p-8 md:p-10">
+                <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+                    <div class="max-w-2xl">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">How Engagement Works</p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                            Ürüne erişim değil, operasyon kurulumu sunuyoruz
+                        </h2>
+                        <p class="mt-4 text-base leading-7 text-slate-600">
+                            Amaç yalnızca demo göstermek değil; doğru modülü doğru ekiple eşleyip kısa bir pilot ve net
+                            operasyon modeli kurmak.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-4 lg:max-w-3xl lg:grid-cols-3">
+                        <article class="surface-card rounded-[24px] p-6">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">01 / Keşif</div>
+                            <h3 class="mt-4 text-lg font-semibold text-white">İhtiyaç haritası</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-400">Ekibin kullandığı süreç, veri ve karar noktaları birlikte netleştirilir.</p>
+                        </article>
+                        <article class="surface-card rounded-[24px] p-6">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">02 / Pilot</div>
+                            <h3 class="mt-4 text-lg font-semibold text-white">Uygun modül seçimi</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-400">TariffEQ veya uygun modül setiyle dar kapsamlı ama gerçek bir çalışma yüzeyi kurulur.</p>
+                        </article>
+                        <article class="surface-card rounded-[24px] p-6">
+                            <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">03 / Operasyon</div>
+                            <h3 class="mt-4 text-lg font-semibold text-white">Yakın devreye alma</h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-400">Canlı kullanım hedefiyle erişim modeli, çıktı akışı ve çalışma şekli birlikte oturtulur.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="access-request" class="bg-[#020408] pt-24 pb-12 border-t border-white/5 relative z-10">
-        <div class="container mx-auto px-6">
-            <div
-                class="bg-gradient-to-r from-blue-900/40 to-indigo-900/40 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden mb-20 border border-white/10">
-                <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10">
-                </div>
-                <div class="relative z-10">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 font-tech">Geleceğin Sigorta Ekosistemine
-                        Katılın</h2>
-                    <p class="text-blue-200/70 max-w-xl mx-auto mb-10">
-                        Riscodex teknolojisi, sadece seçkin sigorta şirketleri, brokerlar ve endüstriyel tesisler için
-                        erişime açıktır.
-                    </p>
+    <footer id="access-request" class="relative z-10 border-t border-slate-200/80 pt-20 pb-12">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="surface-panel overflow-hidden rounded-[28px] p-8 md:p-12">
+                <div class="grid gap-10 lg:grid-cols-[1fr_.85fr] lg:items-center">
+                    <div>
+                        <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]">Request Access</p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
+                            Kurumsal erişim talep edin
+                        </h2>
+                        <p class="mt-4 max-w-xl text-base leading-7 text-slate-600">
+                            Uygun modül, ekip yapısı ve kullanım senaryosunu birlikte değerlendirelim. İlk adımda kısa
+                            bir keşif görüşmesi ve canlı ürün walkthrough planlanır.
+                        </p>
 
-                    <form action="https://formspree.io/f/xovlerwo" method="POST"
-                        class="max-w-md mx-auto flex flex-col gap-4">
-                        <div class="relative">
-                            <input type="email" name="email" required placeholder="Kurumsal E-posta Adresiniz"
-                                class="w-full px-5 py-4 rounded-xl bg-[#0A0E17] border border-white/20 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-sans">
-                            <div
-                                class="absolute right-3 top-3.5 px-2 py-0.5 rounded bg-white/10 text-[10px] text-slate-400 font-mono border border-white/5">
-                                ENTER</div>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-3">
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Adım 1</div>
+                                <div class="mt-2 text-sm font-medium text-white">30 dk keşif görüşmesi</div>
+                            </div>
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Adım 2</div>
+                                <div class="mt-2 text-sm font-medium text-white">TariffEQ walkthrough</div>
+                            </div>
+                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500">Adım 3</div>
+                                <div class="mt-2 text-sm font-medium text-white">Uygun modül eşleşmesi</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/xovlerwo" method="POST" class="space-y-4">
+                        <div class="surface-card rounded-[24px] p-4">
+                            <label class="mb-2 block text-sm font-medium text-slate-950" for="email">Kurumsal E-posta</label>
+                            <input id="email" type="email" name="email" required placeholder="ornek@sirket.com"
+                                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-4 text-slate-950 placeholder:text-slate-500 focus:border-blue-400/30 focus:outline-none focus:ring-1 focus:ring-blue-400/30">
+                        </div>
+
+                        <div class="surface-card-soft rounded-[24px] px-4 py-4 text-sm leading-7 text-slate-600">
+                            Form gönderildiğinde ekip erişim talebinizi değerlendirmek için sizinle iletişime geçer.
                         </div>
 
                         <button type="submit"
-                            class="w-full py-4 bg-white text-[#050810] font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg shadow-white/5 font-tech tracking-wide">
+                            class="button-primary inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold transition-colors">
                             Erişim Talep Et
+                            <i data-lucide="send" class="h-4 w-4"></i>
                         </button>
                     </form>
                 </div>
             </div>
 
-            <div
-                class="flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm border-t border-white/5 pt-10">
-                <div class="mb-4 md:mb-0 font-mono">
-                    &copy; 2025 RISCODEX Teknoloji A.Ş.
-                </div>
-                <div class="flex gap-8">
-                    <a href="#" class="hover:text-white transition-colors">Gizlilik</a>
-                    <a href="#" class="hover:text-white transition-colors">Şartlar</a>
-                    <a href="mailto:contact@riscodex.com"
-                        class="hover:text-white transition-colors font-mono">contact@riscodex.com</a>
+            <div class="mt-10 flex flex-col items-start justify-between gap-5 border-t border-slate-200/80 pt-8 text-sm text-slate-500 md:flex-row md:items-center">
+                <div class="font-mono">&copy; 2025 RISCODEX Teknoloji A.Ş.</div>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="#" class="transition-colors hover:text-slate-950">Gizlilik</a>
+                    <a href="#" class="transition-colors hover:text-slate-950">Şartlar</a>
+                    <a href="mailto:contact@riscodex.com" class="font-mono transition-colors hover:text-slate-950">contact@riscodex.com</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // İkonları oluştur
         lucide.createIcons();
 
-        // Scroll Efekti
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('bg-[#050810]/80', 'backdrop-blur-lg', 'border-b', 'border-blue-900/20');
-                navbar.classList.remove('py-6');
+        const navbar = document.getElementById("navbar");
+        const navShell = document.getElementById("nav-shell");
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const activeTabClass =
+            "button-primary rounded-full px-6 py-3 text-sm font-semibold transition-colors";
+        const inactiveTabClass =
+            "rounded-full px-6 py-3 text-sm font-semibold text-slate-600 transition-colors hover:bg-blue-50 hover:text-slate-950";
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 40) {
+                navbar.classList.remove("py-5");
+                navbar.classList.add("py-3");
+                navShell.classList.add("bg-white/95", "border-slate-200");
             } else {
-                navbar.classList.remove('bg-[#050810]/80', 'backdrop-blur-lg', 'border-b', 'border-blue-900/20');
-                navbar.classList.add('py-6');
+                navbar.classList.remove("py-3");
+                navbar.classList.add("py-5");
+                navShell.classList.remove("bg-white/95", "border-slate-200");
             }
         });
 
-        // Mobile Menu
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", String(!menu.classList.contains("hidden")));
         }
 
-        // Tabs Logic
         function switchTab(tabName) {
-            // Hide all contents
-            document.querySelectorAll('.tab-pane').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll(".tab-pane").forEach((el) => el.classList.add("hidden"));
+            document.getElementById("content-" + tabName).classList.remove("hidden");
 
-            // Show selected content
-            document.getElementById('content-' + tabName).classList.remove('hidden');
-
-            // Reset buttons
-            const buttons = ['company', 'broker', 'industrial'];
-            buttons.forEach(btn => {
-                const el = document.getElementById('btn-' + btn);
-                if (btn === tabName) {
-                    el.className = "px-6 py-3 rounded-full text-sm font-semibold transition-all tracking-wide bg-gradient-to-r from-blue-600 to-indigo-500 text-white shadow-[0_12px_30px_rgba(37,99,235,0.35)]";
-                } else {
-                    el.className = "px-6 py-3 rounded-full text-sm font-semibold transition-all tracking-wide text-slate-400 hover:text-white hover:bg-white/[0.06]";
-                }
+            ["company", "broker", "industrial"].forEach((btn) => {
+                const el = document.getElementById("btn-" + btn);
+                el.className = btn === tabName ? activeTabClass : inactiveTabClass;
             });
         }
     </script>
