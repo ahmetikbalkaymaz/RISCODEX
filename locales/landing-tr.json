@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "Riscodex | Sigorta Operasyonları için Yapay Zeka Platformu"
+  },
+  "nav": {
+    "home_aria": "Riscodex ana sayfa",
+    "about": "Hakkımızda",
+    "platform": "Platform",
+    "problem": "Sorun",
+    "solutions": "Çözümler",
+    "process": "İşleyiş",
+    "access_request": "Erişim Talebi",
+    "menu_aria": "Menüyü aç"
+  },
+  "hero": {
+    "eyebrow": "Operational Risk, Pricing and Claims Platform",
+    "title": "Sigorta operasyonlarında verimliliği artırın, tüm ihtiyaçlarınıza tek noktadan çözüm bulun.",
+    "description": "Sigorta dünyasının tüm paydaşlarını tek platformda buluşturuyor, operasyonel süreçlerinize yapay zeka destekli çözümler buluyoruz",
+    "primary_cta": "Versus Demo Talebi",
+    "secondary_cta": "TariffEQ'yu İncele",
+    "metrics": {
+      "live": {
+        "label": "Canlı Ürün",
+        "title": "TariffEQ",
+        "description": "İhtiyari deprem tarifesiyle uyumlu, hatasız ve teknik doğru fiyatlama."
+      },
+      "demo": {
+        "label": "Demo Ürün",
+        "title": "Versus",
+        "description": "Tüm branşlarda teknik analiz ve yapay zeka desteğiyle, en avantajlı teklife güvenle karar verin."
+      },
+      "modules": {
+        "label": "Ürün Seti",
+        "title": "5+ Modül",
+        "description": "Risk, pricing, karar destek ve operasyon paketleri."
+      },
+      "access": {
+        "label": "Çalışma Modeli",
+        "title": "Kurumsal Erişim",
+        "description": "Onaylı ekiplerle pilot, erişim ve yakın operasyon kurulumu."
+      }
+    }
+  },
+  "applications": {
+    "eyebrow": "Uygulama Katmanı",
+    "title": "Modülleri kayan kart yapısında inceleyin",
+    "description": "Bu alan, ürün ailesini ana sayfada daha akıcı göstermek için yatay kayan kart yapısının ilk versiyonu. Mobilde kaydırılabilir, masaüstünde yön butonlarıyla ilerler.",
+    "cards": {
+      "tariffeq": {
+        "status": "Canlı",
+        "title": "TariffEQ",
+        "description": "Resmi tarifeye göre deprem primi ve alternatif senaryoları aynı yüzeyde karşılaştıran aktif fiyatlama motoru."
+      },
+      "locateloss": {
+        "status": "MVP",
+        "title": "LocateLoss",
+        "description": "Kayıp ve hasar lokasyonlarını daha görünür hale getirerek riskin saha tarafını karar sürecine taşır."
+      },
+      "foresight": {
+        "status": "Beta",
+        "title": "Foresight",
+        "description": "Risk sinyallerini erken okuyup ekiplerin daha hızlı aksiyon alması için karar desteği üretir."
+      },
+      "firewatch": {
+        "status": "MVP",
+        "title": "FireWatch",
+        "description": "Yangın ve operasyonel tehdit görünürlüğünü artırarak önleyici karar katmanını güçlendirir."
+      },
+      "claimcore": {
+        "status": "Yol Haritası",
+        "title": "ClaimCore",
+        "description": "Hasar süreçlerini daha kontrollü, daha okunabilir ve daha standart ilerletmek için tasarlanıyor."
+      },
+      "revisor": {
+        "status": "Yol Haritası",
+        "title": "Revisor",
+        "description": "İnceleme ve doğrulama iş akışlarını tek karar yüzeyinde toplayarak revizyon sürecini sadeleştirir."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Hakkımızda",
+    "title": "Riscodex, sigorta operasyonlarını daha görünür ve daha yönetilebilir hale getirmek için kuruldu.",
+    "description_1": "Riscodex, karmaşık sistemler kurmak yerine iş akışınıza akıllı modüller ekler. İster sadece prim hesaplayın, ister tüm hasar sürecini destekleyin; siz ihtiyacınızı seçin, biz operasyonunuzu hızlandıralım.",
+    "description_2": "",
+    "highlights": {
+      "focus": {
+        "label": "Odak",
+        "value": "Doğru karar, operasyonel kolaylık"
+      },
+      "model": {
+        "label": "Model",
+        "value": "B2B pilot ve yakın kurulum"
+      },
+      "approach": {
+        "label": "Yaklaşım",
+        "value": "AI-native operasyon katmanı"
+      }
+    },
+    "trust": {
+      "eyebrow": "Kurumsal Güven",
+      "title": "İTÜ Çekirdek kabulü",
+      "description": "Riscodex, ürün yolculuğunu İTÜ Çekirdek ekosistemi içinde geliştiren bir girişim olarak sigorta teknolojisi odağını kurumsal zeminde büyütüyor.",
+      "cards": {
+        "origin": {
+          "label": "Nereden geliyoruz",
+          "value": "Türkiye merkezli insurtech ürün geliştirme"
+        },
+        "operation": {
+          "label": "Nasıl çalışıyoruz",
+          "value": "Kuruma özel erişim ve pilot akışlar"
+        }
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "Çözümler",
+    "title": "Canlı ürün, demo ürün ve beta modüller",
+    "description": "Fiyatlamadan karara kadar tüm süreçlerinizi birbiriyle uyumlu modüllerle destekliyoruz. Karmaşadan uzak durarak, işinizi en doğru ve en basit şekilde yürütmenize yardımcı oluyoruz.",
+    "highlights": {
+      "focus": {
+        "label": "Odak",
+        "value": "Pricing ve Tarife Uyumu"
+      },
+      "usage": {
+        "label": "Kullanım",
+        "value": "Sigortacı, Broker, Endüstri"
+      },
+      "access": {
+        "label": "Erişim",
+        "value": "Pilot ve Yakın Çalışma"
+      }
+    },
+    "live": {
+      "badge": "Canlı Ürün",
+      "title": "TariffEQ",
+      "description": "Resmi tarife standartlarına göre deprem primi, senaryo karşılaştırması ve operasyonel prim kararları için aktif çalışan fiyatlama motoru.",
+      "metrics": {
+        "scope": {
+          "label": "Kapsam",
+          "value": "İhtiyari Deprem Tarife Primi"
+        },
+        "output": {
+          "label": "Çıktı",
+          "value": "Prim ve alternatif senaryo"
+        },
+        "compliance": {
+          "label": "Uyum",
+          "value": "Resmi tarife standardı"
+        },
+        "status": {
+          "label": "Durum",
+          "value": "Pazarda kullanımda"
+        }
+      },
+      "cta": "Canlı ürüne git"
+    },
+    "demo": {
+      "eyebrow": "Demo Ürün",
+      "title": "Versus",
+      "description": "Tüm branşlarda teknik analiz ve yapay zeka desteğiyle, en avantajlı teklife güvenle karar verin.",
+      "highlights": {
+        "analysis": "Teknik analiz",
+        "ai": "Yapay zeka desteği",
+        "choice": "En avantajlı teklif seçimi"
+      },
+      "badge": "Demo"
+    },
+    "modules": {
+      "eyebrow": "Beta Modüller",
+      "description": "Canlı ürün ve demo dışında kalan modüller, ortak veri omurgası üzerinde gelişen beta katmanları olarak ilerliyor.",
+      "items": {
+        "locateloss": {
+          "name": "LocateLoss",
+          "status": "Beta"
+        },
+        "versus": {
+          "name": "Versus",
+          "status": "Beta"
+        },
+        "foresight": {
+          "name": "Foresight",
+          "status": "Beta"
+        },
+        "firewatch": {
+          "name": "FireWatch",
+          "status": "Beta"
+        },
+        "precast": {
+          "name": "Precast",
+          "status": "Beta"
+        }
+      }
+    },
+    "next": {
+      "eyebrow": "Sonraki Katman",
+      "description": "Ortak veri modeli üzerinde ilerleyen ürün ailesi, eksper ve operasyon ekipleri için yeni kullanım alanları açar.",
+      "items": {
+        "polycheck": "PolyCheck",
+        "claimcore": "ClaimCore",
+        "revisor": "Revisor",
+        "vallist": "Vallist"
+      },
+      "footer": "Modüler ürün mimarisi ile genişleme"
+    }
+  },
+  "problem": {
+    "eyebrow": "Operational Friction",
+    "title": "Sigorta operasyonlarını yavaşlatan engelleri aşın",
+    "description": "Manuel işlemler ve teklifler arasındaki belirsizlik işinizi zorlaştırıyor. Biz, bu süreci sizin için sadeleştiriyoruz.",
+    "cards": {
+      "visibility": {
+        "label": "Teknik Doğruluk",
+        "title": "Hatasız Prim Hesaplama",
+        "description": "İhtiyari deprem tarifesine ve güncel mevzuata tam uyum sağlayın. Manuel hata riskini ortadan kaldırarak, saniyeler içinde teknik olarak en doğru fiyatlamaya ulaşın."
+      },
+      "manual": {
+        "label": "Operasyonel Hız",
+        "title": "Akıllı Teklif Karşılaştırma",
+        "description": "Tüm branşlar için poliçe ve teklifleri yapay zeka ile saniyeler içinde kıyaslayın. En avantajlı teklifi hızla tespit ederek müşterilerinize en doğru çözümü, vakit kaybetmeden sunun."
+      },
+      "reactive": {
+        "label": "Sektörel Know-How ve Karar Desteği",
+        "title": "Güvenilir Karar Mekanizması",
+        "description": "Kararlarınızı tecrübe ve verinin gücüyle birleştirin. Süreçlerinizi geçmişe bakarak değil, güncel analizlerle yöneterek operasyonunuzda tam hakimiyet kurun."
+      }
+    }
+  },
+  "solutions": {
+    "eyebrow": "Kimler İçin",
+    "title": "Riscodex kimler için değer üretiyor?",
+    "description": "Önce hangi ekibe hitap ettiğimizi net gösterip sonra ilgili operasyon katmanını detaylandırmak daha güçlü bir anlatı kurar.",
+    "cards": {
+      "company": {
+        "eyebrow": "Kimler için",
+        "title": "Sigorta Şirketleri",
+        "description": "Pricing, tarife uyumu ve risk yönetimini daha kontrollü ilerletmek isteyen sigorta ekipleri."
+      },
+      "broker": {
+        "eyebrow": "Kimler için",
+        "title": "Broker ve Acenteler",
+        "description": "Müşteriye daha hızlı teklif, daha okunabilir risk analizi ve daha net karar zemini sunmak isteyen dağıtım ekipleri."
+      },
+      "industrial": {
+        "eyebrow": "Kimler için",
+        "title": "Endüstriyel Tesisler",
+        "description": "Riski yalnızca raporlamak değil, gerçekleşmeden önce daha erken okumak isteyen operasyon ekipleri."
+      }
+    },
+    "tabs": {
+      "company": "Sigorta Şirketleri",
+      "broker": "Broker ve Acenteler",
+      "industrial": "Endüstriyel Tesisler"
+    },
+    "details": {
+      "company": {
+        "title": "Sigorta Şirketleri",
+        "subtitle": "Risk ve pricing operasyonunu daha tutarlı hale getirin.",
+        "points": {
+          "capital": {
+            "title": "Sermaye koruma",
+            "description": "Trete dışı riskleri ve kümül etkilerini daha erken görünür hale getirin."
+          },
+          "compliance": {
+            "title": "Tarife uyumu",
+            "description": "Resmi standardı operasyon akışına doğrudan bağlayın ve manuel yorum farkını azaltın."
+          },
+          "efficiency": {
+            "title": "Operasyonel verimlilik",
+            "description": "Hasar ve teklif kararlarının çevrim süresini daha az eforla yönetin."
+          }
+        }
+      },
+      "broker": {
+        "title": "Broker ve Acenteler",
+        "subtitle": "Satış hızını artırırken teknik karar kalitesini koruyun.",
+        "points": {
+          "comparison": {
+            "title": "Akıllı karşılaştırma",
+            "description": "Teklifleri daha okunabilir hale getirerek müşteriye net karar zemini sunun."
+          },
+          "quote": {
+            "title": "Hızlı prim tahmini",
+            "description": "İlk görüşmede yaklaşık bütçe ve fiyat bandı üzerinden daha hızlı aksiyon alın."
+          },
+          "gap": {
+            "title": "Eksik sigorta analizi",
+            "description": "Müşterinin ihtiyaç boşluklarını veri temelli anlatımla daha görünür kılın."
+          }
+        }
+      },
+      "industrial": {
+        "title": "Endüstriyel Tesisler",
+        "subtitle": "Gerçekleşmeden önce riski okumaya odaklanan operasyon yüzeyi.",
+        "points": {
+          "warning": {
+            "title": "Erken uyarı görünürlüğü",
+            "description": "Saha, sensör ve uzaktan algılama verilerini aynı karar katmanında toplayın."
+          },
+          "mapping": {
+            "title": "Risk haritalama",
+            "description": "Tesis bazlı risk profilini daha görünür hale getirerek önceliklendirme yapın."
+          },
+          "continuity": {
+            "title": "İş sürekliliği desteği",
+            "description": "Operasyon duruşlarını azaltacak önleyici kararları daha erken devreye alın."
+          }
+        }
+      }
+    },
+    "access": {
+      "eyebrow": "Erişim Modeli",
+      "title": "Kurumsal erişim ve çalışma şekli",
+      "description": "Riscodex, geniş kitleye açık bir self-serve ürün değil; seçilmiş ekiplerle kontrollü erişim ve yakın operasyon kurulumu hedeflenir.",
+      "items": {
+        "bundle": {
+          "label": "Bundle erişimi",
+          "value": "Onaylı"
+        },
+        "setup": {
+          "label": "Kurulum modeli",
+          "value": "Pilot + B2B"
+        },
+        "model": {
+          "label": "Çalışma tipi",
+          "value": "Yakın entegrasyon"
+        }
+      },
+      "cta": "Detaylı Demo İste"
+    }
+  },
+  "operating_model": {
+    "eyebrow": "İşleyiş",
+    "title": "Ürüne erişim değil, operasyon kurulumu sunuyoruz",
+    "description": "Amaç yalnızca demo göstermek değil; doğru modülü doğru ekiple eşleyip kısa bir pilot ve net operasyon modeli kurmak.",
+    "steps": {
+      "discovery": {
+        "label": "01 / Keşif",
+        "title": "İhtiyaç haritası",
+        "description": "Ekibin kullandığı süreç, veri ve karar noktaları birlikte netleştirilir."
+      },
+      "pilot": {
+        "label": "02 / Pilot",
+        "title": "Uygun modül seçimi",
+        "description": "Uygun modül setiyle dar kapsamlı ama gerçek bir çalışma yüzeyi kurulur."
+      },
+      "operation": {
+        "label": "03 / Operasyon",
+        "title": "Yakın devreye alma",
+        "description": "Canlı kullanım hedefiyle erişim modeli, çıktı akışı ve çalışma şekli birlikte oturtulur."
+      }
+    }
+  },
+  "footer_cta": {
+    "eyebrow": "Erişim Talebi",
+    "title": "Kurumsal erişim talep edin",
+    "description": "Uygun modül, ekip yapısı ve kullanım senaryosunu birlikte değerlendirelim. İlk adımda kısa bir keşif görüşmesi ve canlı ürün walkthrough planlanır.",
+    "steps": {
+      "step_1": {
+        "label": "Adım 1",
+        "value": "30 dk keşif görüşmesi"
+      },
+      "step_2": {
+        "label": "Adım 2",
+        "value": "Süreç İşleyişi"
+      },
+      "step_3": {
+        "label": "Adım 3",
+        "value": "Uygun modül eşleşmesi"
+      }
+    },
+    "form": {
+      "label": "Kurumsal E-posta",
+      "placeholder": "ornek@sirket.com",
+      "note": "Form gönderildiğinde ekip erişim talebinizi değerlendirmek için sizinle iletişime geçer.",
+      "submit": "Erişim Talep Et"
+    }
+  },
+  "footer": {
+    "copyright": "&copy; 2025 RISCODEX Teknoloji A.Ş.",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar"
+  }
+}

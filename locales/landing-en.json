@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "Riscodex | AI Platform for Insurance Operations"
+  },
+  "nav": {
+    "home_aria": "Riscodex homepage",
+    "about": "About",
+    "platform": "Platform",
+    "problem": "Problem",
+    "solutions": "Solutions",
+    "process": "Process",
+    "access_request": "Request Access",
+    "menu_aria": "Open menu"
+  },
+  "hero": {
+    "eyebrow": "Operational Risk, Pricing and Claims Platform",
+    "title": "Increase efficiency in insurance operations and find solutions for all your needs from a single point.",
+    "description": "We bring all stakeholders in the insurance world onto a single platform and provide AI-supported solutions for your operational processes.",
+    "primary_cta": "Request Versus Demo",
+    "secondary_cta": "Explore TariffEQ",
+    "metrics": {
+      "live": {
+        "label": "Live Product",
+        "title": "TariffEQ",
+        "description": "Technically accurate pricing aligned with facultative earthquake tariff requirements."
+      },
+      "demo": {
+        "label": "Demo Product",
+        "title": "Versus",
+        "description": "Across all lines, make the best offer decision with confidence through technical analysis and AI support."
+      },
+      "modules": {
+        "label": "Product Suite",
+        "title": "5+ Modules",
+        "description": "Risk, pricing, decision support, and operations packages."
+      },
+      "access": {
+        "label": "Engagement Model",
+        "title": "Enterprise Access",
+        "description": "Pilot access and close operational setup with approved teams."
+      }
+    }
+  },
+  "applications": {
+    "eyebrow": "Application Layer",
+    "title": "Browse the modules in a sliding card layout",
+    "description": "This section is the first version of a horizontal product rail designed to present the product family more fluidly on the homepage. It can be swiped on mobile and navigated with controls on desktop.",
+    "cards": {
+      "tariffeq": {
+        "status": "Live",
+        "title": "TariffEQ",
+        "description": "An active pricing engine that compares earthquake premium outputs and alternative scenarios on a single surface."
+      },
+      "locateloss": {
+        "status": "MVP",
+        "title": "LocateLoss",
+        "description": "Brings loss and damage locations into view so field-side risk becomes part of the decision process."
+      },
+      "foresight": {
+        "status": "Beta",
+        "title": "Foresight",
+        "description": "Reads early risk signals and produces decision support so teams can act faster."
+      },
+      "firewatch": {
+        "status": "MVP",
+        "title": "FireWatch",
+        "description": "Strengthens the preventive decision layer by increasing visibility into fire and operational threat signals."
+      },
+      "claimcore": {
+        "status": "Roadmap",
+        "title": "ClaimCore",
+        "description": "Designed to make claims processes more controlled, more readable, and more standardized."
+      },
+      "revisor": {
+        "status": "Roadmap",
+        "title": "Revisor",
+        "description": "Simplifies revision workflows by bringing review and verification into a single decision surface."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Riscodex was built to make insurance operations more visible and more manageable.",
+    "description_1": "Instead of building complex systems, Riscodex adds smart modules to your workflow. Whether you only need premium calculation or support for the full claims process, you choose the need and we accelerate your operation.",
+    "description_2": "",
+    "highlights": {
+      "focus": {
+        "label": "Focus",
+        "value": "Better decisions, operational simplicity"
+      },
+      "model": {
+        "label": "Model",
+        "value": "B2B pilot and close setup"
+      },
+      "approach": {
+        "label": "Approach",
+        "value": "AI-native operational layer"
+      }
+    },
+    "trust": {
+      "eyebrow": "Institutional Trust",
+      "title": "Accepted into ITU Cekirdek",
+      "description": "Riscodex is growing its insurance technology focus on a strong institutional foundation as a venture developing its product journey within the ITU Cekirdek ecosystem.",
+      "cards": {
+        "origin": {
+          "label": "Where we come from",
+          "value": "Turkey-based insurtech product development"
+        },
+        "operation": {
+          "label": "How we work",
+          "value": "Institution-specific access and pilot flows"
+        }
+      }
+    }
+  },
+  "platform": {
+    "eyebrow": "Solutions",
+    "title": "Live product, demo product, and beta modules",
+    "description": "We support your full workflow from pricing to decision-making with interoperable modules. By staying away from complexity, we help you run your business in the most accurate and simplest way.",
+    "highlights": {
+      "focus": {
+        "label": "Focus",
+        "value": "Pricing and tariff compliance"
+      },
+      "usage": {
+        "label": "Usage",
+        "value": "Insurer, broker, industrial"
+      },
+      "access": {
+        "label": "Access",
+        "value": "Pilot and close collaboration"
+      }
+    },
+    "live": {
+      "badge": "Live Product",
+      "title": "TariffEQ",
+      "description": "An active pricing engine used for earthquake premium decisions, scenario comparison, and operational premium outputs aligned with official tariff standards.",
+      "metrics": {
+        "scope": {
+          "label": "Scope",
+          "value": "Facultative Earthquake Tariff Premium"
+        },
+        "output": {
+          "label": "Output",
+          "value": "Premium and alternative scenario"
+        },
+        "compliance": {
+          "label": "Compliance",
+          "value": "Official tariff standard"
+        },
+        "status": {
+          "label": "Status",
+          "value": "In market use"
+        }
+      },
+      "cta": "Open live product"
+    },
+    "demo": {
+      "eyebrow": "Demo Product",
+      "title": "Versus",
+      "description": "Across all lines, make the best offer decision with confidence through technical analysis and AI support.",
+      "highlights": {
+        "analysis": "Technical analysis",
+        "ai": "AI support",
+        "choice": "Best offer selection"
+      },
+      "badge": "Demo"
+    },
+    "modules": {
+      "eyebrow": "Beta Modules",
+      "description": "Modules beyond the live product and demo are progressing as beta layers on the shared data backbone.",
+      "items": {
+        "locateloss": {
+          "name": "LocateLoss",
+          "status": "Beta"
+        },
+        "versus": {
+          "name": "Versus",
+          "status": "Beta"
+        },
+        "foresight": {
+          "name": "Foresight",
+          "status": "Beta"
+        },
+        "firewatch": {
+          "name": "FireWatch",
+          "status": "Beta"
+        },
+        "precast": {
+          "name": "Precast",
+          "status": "Beta"
+        }
+      }
+    },
+    "next": {
+      "eyebrow": "Next Layer",
+      "description": "The product family advancing on a shared data model opens new use cases for adjusters and operational teams.",
+      "items": {
+        "polycheck": "PolyCheck",
+        "claimcore": "ClaimCore",
+        "revisor": "Revisor",
+        "vallist": "Vallist"
+      },
+      "footer": "Expansion through modular product architecture"
+    }
+  },
+  "problem": {
+    "eyebrow": "Operational Friction",
+    "title": "Overcome the barriers slowing down insurance operations",
+    "description": "Manual processes and uncertainty between offers make your work harder. We simplify that process for you.",
+    "cards": {
+      "visibility": {
+        "label": "Technical Accuracy",
+        "title": "Error-Free Premium Calculation",
+        "description": "Stay fully aligned with the facultative earthquake tariff and current regulation. Eliminate manual error risk and reach the most technically accurate pricing within seconds."
+      },
+      "manual": {
+        "label": "Operational Speed",
+        "title": "Smart Offer Comparison",
+        "description": "Compare policies and offers across all lines with AI in seconds. Identify the most advantageous option quickly and present the right solution to your clients without losing time."
+      },
+      "reactive": {
+        "label": "Industry Know-How and Decision Support",
+        "title": "Reliable Decision Mechanism",
+        "description": "Combine experience with the power of data in your decisions. Manage your processes with current analysis, not backward-looking assumptions, and gain full control over operations."
+      }
+    }
+  },
+  "solutions": {
+    "eyebrow": "Who We Help",
+    "title": "Who does Riscodex create value for?",
+    "description": "Showing exactly who we serve first and then expanding into the relevant operating layer creates a stronger story.",
+    "cards": {
+      "company": {
+        "eyebrow": "Who we help",
+        "title": "Insurance Companies",
+        "description": "Insurance teams that want to run pricing, tariff compliance, and risk management with more control."
+      },
+      "broker": {
+        "eyebrow": "Who we help",
+        "title": "Brokers and Agencies",
+        "description": "Distribution teams that want to deliver faster quotes, clearer risk analysis, and a better decision basis to clients."
+      },
+      "industrial": {
+        "eyebrow": "Who we help",
+        "title": "Industrial Facilities",
+        "description": "Operational teams that want to read risk earlier instead of only reporting it after the fact."
+      }
+    },
+    "tabs": {
+      "company": "Insurance Companies",
+      "broker": "Brokers and Agencies",
+      "industrial": "Industrial Facilities"
+    },
+    "details": {
+      "company": {
+        "title": "Insurance Companies",
+        "subtitle": "Make risk and pricing operations more consistent.",
+        "points": {
+          "capital": {
+            "title": "Capital protection",
+            "description": "Make treaty-excluded risks and accumulation effects visible earlier."
+          },
+          "compliance": {
+            "title": "Tariff compliance",
+            "description": "Connect the official standard directly to operational flows and reduce interpretation differences."
+          },
+          "efficiency": {
+            "title": "Operational efficiency",
+            "description": "Manage claims and quote turnaround with less effort."
+          }
+        }
+      },
+      "broker": {
+        "title": "Brokers and Agencies",
+        "subtitle": "Increase sales speed while protecting technical decision quality.",
+        "points": {
+          "comparison": {
+            "title": "Smart comparison",
+            "description": "Make proposals easier to read and give clients a clearer decision basis."
+          },
+          "quote": {
+            "title": "Fast premium estimate",
+            "description": "Move faster with approximate budget and price band visibility in the first conversation."
+          },
+          "gap": {
+            "title": "Underinsurance analysis",
+            "description": "Make client coverage gaps more visible through a data-backed narrative."
+          }
+        }
+      },
+      "industrial": {
+        "title": "Industrial Facilities",
+        "subtitle": "An operating surface focused on reading risk before it materializes.",
+        "points": {
+          "warning": {
+            "title": "Early warning visibility",
+            "description": "Bring field, sensor, and remote sensing data into the same decision layer."
+          },
+          "mapping": {
+            "title": "Risk mapping",
+            "description": "Make site-level risk profiles more visible and support better prioritization."
+          },
+          "continuity": {
+            "title": "Business continuity support",
+            "description": "Activate preventive decisions earlier to reduce operational downtime."
+          }
+        }
+      }
+    },
+    "access": {
+      "eyebrow": "Access Model",
+      "title": "Enterprise access and engagement style",
+      "description": "Riscodex is not a self-serve product open to the public; it is designed for controlled access and close operational setup with selected teams.",
+      "items": {
+        "bundle": {
+          "label": "Bundle access",
+          "value": "Approved"
+        },
+        "setup": {
+          "label": "Setup model",
+          "value": "Pilot + B2B"
+        },
+        "model": {
+          "label": "Working mode",
+          "value": "Close integration"
+        }
+      },
+      "cta": "Request Detailed Demo"
+    }
+  },
+  "operating_model": {
+    "eyebrow": "How Engagement Works",
+    "title": "We offer operational setup, not just product access",
+    "description": "The goal is not only to show a demo, but to match the right module with the right team and establish a short pilot with a clear operating model.",
+    "steps": {
+      "discovery": {
+        "label": "01 / Discovery",
+        "title": "Needs map",
+        "description": "The team’s workflows, data, and decision points are clarified together."
+      },
+      "pilot": {
+        "label": "02 / Pilot",
+        "title": "Right module selection",
+        "description": "A narrow but real working surface is set up with the right module set."
+      },
+      "operation": {
+        "label": "03 / Operation",
+        "title": "Close go-live setup",
+        "description": "Access model, output flow, and working style are established together with live usage as the goal."
+      }
+    }
+  },
+  "footer_cta": {
+    "eyebrow": "Request Access",
+    "title": "Request enterprise access",
+    "description": "Let’s evaluate the right module, team structure, and usage scenario together. The first step is a short discovery call followed by a live product walkthrough.",
+    "steps": {
+      "step_1": {
+        "label": "Step 1",
+        "value": "30 min discovery call"
+      },
+      "step_2": {
+        "label": "Step 2",
+        "value": "Process Flow"
+      },
+      "step_3": {
+        "label": "Step 3",
+        "value": "Module fit assessment"
+      }
+    },
+    "form": {
+      "label": "Business Email",
+      "placeholder": "name@company.com",
+      "note": "Once the form is submitted, the team will contact you to evaluate your access request.",
+      "submit": "Request Access"
+    }
+  },
+  "footer": {
+    "copyright": "&copy; 2025 RISCODEX Technology Inc.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}
