@@ -5,7 +5,7 @@
   "nav": {
     "home_aria": "Riscodex homepage",
     "about": "About",
-    "platform": "Platform",
+    "platform": "Products",
     "problem": "Problem",
     "solutions": "Solutions",
     "process": "Process",
@@ -14,30 +14,30 @@
   },
   "hero": {
     "eyebrow": "Operational Risk, Pricing and Claims Platform",
-    "title": "Increase efficiency in insurance operations and find solutions for all your needs from a single point.",
-    "description": "We bring all stakeholders in the insurance world onto a single platform and provide AI-supported solutions for your operational processes.",
-    "primary_cta": "Request Versus Demo",
+    "title": "AI platform built for the insurance industry.",
+    "description": "Riscodex is designed to help insurance agencies and brokers run premium calculation, offer evaluation, and policy review processes faster and more reliably with AI.",
+    "primary_cta": "Request Access to Versus AI",
     "secondary_cta": "Explore TariffEQ",
     "metrics": {
       "live": {
-        "label": "Live Product",
-        "title": "TariffEQ",
-        "description": "Technically accurate pricing aligned with facultative earthquake tariff requirements."
+        "label": "2 Active Products",
+        "title": "TariffEQ and Versus AI",
+        "description": "TariffEQ is in market use, and Versus AI is newly launched. The product family continues to expand."
       },
       "demo": {
-        "label": "Demo Product",
-        "title": "Versus",
-        "description": "Across all lines, make the best offer decision with confidence through technical analysis and AI support."
+        "label": "10 Lines",
+        "title": "Broad line coverage",
+        "description": "From motor to fire, cargo to liability, across the core insurance lines."
       },
       "modules": {
-        "label": "Product Suite",
-        "title": "5+ Modules",
-        "description": "Risk, pricing, decision support, and operations packages."
+        "label": "No Integration Required",
+        "title": "Fits your current workflow",
+        "description": "Works without connecting to insurer core systems."
       },
       "access": {
-        "label": "Engagement Model",
-        "title": "Enterprise Access",
-        "description": "Pilot access and close operational setup with approved teams."
+        "label": "ITU Cekirdek",
+        "title": "Turkey-based venture",
+        "description": "Built within one of Turkey's leading technology development programs."
       }
     }
   },
@@ -80,117 +80,148 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "Riscodex was built to make insurance operations more visible and more manageable.",
-    "description_1": "Instead of building complex systems, Riscodex adds smart modules to your workflow. Whether you only need premium calculation or support for the full claims process, you choose the need and we accelerate your operation.",
+    "title": "Riscodex was founded to solve the structural problems of the insurance industry through technology.",
+    "description_1": "Premium calculation, offer evaluation, policy control — most of these processes are still handled manually. Riscodex builds a separate AI tool for each critical step and fits into the existing workflow without requiring institutional integration.",
     "description_2": "",
     "highlights": {
       "focus": {
-        "label": "Focus",
-        "value": "Better decisions, operational simplicity"
+        "label": "Technical Decision Support",
+        "value": "Premium validation, offer analysis, coverage comparison. Built with AI according to insurance-sector norms."
       },
       "model": {
-        "label": "Model",
-        "value": "B2B pilot and close setup"
+        "label": "Enterprise Pilot Model",
+        "value": "The right product is matched with the right team. After a short pilot process, the team moves into live usage."
       },
       "approach": {
-        "label": "Approach",
-        "value": "AI-native operational layer"
+        "label": "Full Compliance with Local Regulation",
+        "value": "Built on Turkish insurance regulation and sector standards. The technical and legal framework that foreign platforms cannot fully cover sits at the core of the product."
       }
     },
     "trust": {
-      "eyebrow": "Institutional Trust",
-      "title": "Accepted into ITU Cekirdek",
-      "description": "Riscodex is growing its insurance technology focus on a strong institutional foundation as a venture developing its product journey within the ITU Cekirdek ecosystem.",
+      "eyebrow": "ITU Cekirdek",
+      "title": "ITU Cekirdek and reference block",
+      "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It is used by insurance agencies and brokers. Its roots are in Turkey, and its ambition is global. Riscodex is growing to take its place internationally in insurance technology.",
       "cards": {
         "origin": {
-          "label": "Where we come from",
-          "value": "Turkey-based insurtech product development"
+          "label": "Usage",
+          "value": "Used by insurance agencies and brokers"
         },
         "operation": {
-          "label": "How we work",
-          "value": "Institution-specific access and pilot flows"
+          "label": "Direction",
+          "value": "Rooted in Turkey, growing globally"
         }
       }
     }
   },
   "platform": {
-    "eyebrow": "Solutions",
-    "title": "Live product, demo product, and beta modules",
-    "description": "We support your full workflow from pricing to decision-making with interoperable modules. By staying away from complexity, we help you run your business in the most accurate and simplest way.",
+    "eyebrow": "Products",
+    "title": "A tool for each critical step. The Riscodex product family.",
+    "description": "Live products, pilot-access tools, and the development pipeline progress within the same operating structure.",
     "highlights": {
       "focus": {
-        "label": "Focus",
-        "value": "Pricing and tariff compliance"
+        "label": "Target Users",
+        "value": "Insurance agencies and brokers"
       },
       "usage": {
-        "label": "Usage",
-        "value": "Insurer, broker, industrial"
+        "label": "Coverage",
+        "value": "Premium, offer, and policy workflows"
       },
       "access": {
         "label": "Access",
-        "value": "Pilot and close collaboration"
+        "value": "Pilot setup and live usage"
       }
     },
     "live": {
-      "badge": "Live Product",
+      "badge": "Live",
       "title": "TariffEQ",
-      "description": "An active pricing engine used for earthquake premium decisions, scenario comparison, and operational premium outputs aligned with official tariff standards.",
+      "description": "Calculate facultative earthquake premiums in full alignment with official tariff standards. Scenario comparison, automated validation, and technical decision support on one screen.",
       "metrics": {
         "scope": {
           "label": "Scope",
           "value": "Facultative Earthquake Tariff Premium"
         },
         "output": {
-          "label": "Output",
-          "value": "Premium and alternative scenario"
+          "label": "Feature",
+          "value": "Scenario + validation"
         },
         "compliance": {
           "label": "Compliance",
-          "value": "Official tariff standard"
+          "value": "Official tariff standards"
         },
         "status": {
-          "label": "Status",
-          "value": "In market use"
+          "label": "Access",
+          "value": "tariffeq.com"
         }
       },
-      "cta": "Open live product"
+      "cta": "tariffeq.com"
     },
     "demo": {
-      "eyebrow": "Demo Product",
-      "title": "Versus",
-      "description": "Across all lines, make the best offer decision with confidence through technical analysis and AI support.",
-      "highlights": {
-        "analysis": "Technical analysis",
-        "ai": "AI support",
-        "choice": "Best offer selection"
+      "eyebrow": "New Launch",
+      "title": "Versus AI",
+      "description": "Upload multiple insurance offers; Versus AI reads the coverages, surfaces the critical differences between insurers, and produces a reasoned evaluation report. It works across Motor, Traffic, Private Health, Supplementary Health, Personal Accident, Cargo, Fire, Construction & Installation, Energy, and Liability lines.",
+      "metrics": {
+        "input": {
+          "label": "Input",
+          "value": "Offer upload"
+        },
+        "output": {
+          "label": "Output",
+          "value": "Reasoned evaluation"
+        },
+        "lines": {
+          "label": "Coverage",
+          "value": "Support for 10 lines"
+        }
       },
-      "badge": "Demo"
+      "highlights": {
+        "analysis": "Offer upload",
+        "ai": "Reasoned evaluation",
+        "choice": "Support for 10 lines"
+      },
+      "badge": "New",
+      "cta": "Request Access"
     },
     "modules": {
-      "eyebrow": "Beta Modules",
-      "description": "Modules beyond the live product and demo are progressing as beta layers on the shared data backbone.",
+      "eyebrow": "New Launch",
+      "title": "Versus Check",
+      "description": "Does the issued policy match the offer you signed? Were last year's conditions preserved this year? Versus Check reads two insurance documents side by side and reports coverage changes, limit differences, and clause revisions together with their insurance impact.",
+      "metrics": {
+        "input": {
+          "label": "Comparison",
+          "value": "Offer + policy"
+        },
+        "output": {
+          "label": "Output",
+          "value": "Difference report"
+        },
+        "focus": {
+          "label": "Focus",
+          "value": "Coverage, limits, clauses"
+        }
+      },
       "items": {
         "locateloss": {
-          "name": "LocateLoss",
-          "status": "Beta"
+          "name": "Coverage changes",
+          "status": "New"
         },
         "versus": {
-          "name": "Versus",
-          "status": "Beta"
+          "name": "Versus AI",
+          "status": "New"
         },
         "foresight": {
-          "name": "Foresight",
-          "status": "Beta"
+          "name": "Limit differences",
+          "status": "New"
         },
         "firewatch": {
-          "name": "FireWatch",
-          "status": "Beta"
+          "name": "Clause revisions",
+          "status": "New"
         },
         "precast": {
           "name": "Precast",
-          "status": "Beta"
+          "status": "New"
         }
-      }
+      },
+      "cta": "Request Access"
     },
     "next": {
       "eyebrow": "Next Layer",
@@ -202,27 +233,52 @@
         "vallist": "Vallist"
       },
       "footer": "Expansion through modular product architecture"
+    },
+    "future": {
+      "eyebrow": "In Development",
+      "title": "New Modules",
+      "description": "New tools are being developed in risk scoring, portfolio scanning, and claims analysis.",
+      "metrics": {
+        "risk": {
+          "label": "Area",
+          "value": "Risk scoring"
+        },
+        "portfolio": {
+          "label": "Area",
+          "value": "Portfolio scanning"
+        },
+        "claims": {
+          "label": "Area",
+          "value": "Claims analysis"
+        }
+      },
+      "items": {
+        "risk_scoring": "Risk scoring",
+        "portfolio_scanning": "Portfolio scanning",
+        "claim_analysis": "Claims analysis"
+      },
+      "footer": "New modules are added to the product family in phases."
     }
   },
   "problem": {
-    "eyebrow": "Operational Friction",
-    "title": "Overcome the barriers slowing down insurance operations",
-    "description": "Manual processes and uncertainty between offers make your work harder. We simplify that process for you.",
+    "eyebrow": "Problem",
+    "title": "The barriers in front of insurance operations are still structural.",
+    "description": "Premium calculation, offer evaluation, and policy control still rely heavily on manual processes. Each step carries error risk, and every error creates either customer loss or financial responsibility.",
     "cards": {
       "visibility": {
-        "label": "Technical Accuracy",
-        "title": "Error-Free Premium Calculation",
-        "description": "Stay fully aligned with the facultative earthquake tariff and current regulation. Eliminate manual error risk and reach the most technically accurate pricing within seconds."
+        "label": "Premium Calculation",
+        "title": "Manual premium calculation",
+        "description": "Tariff compliance is checked manually. Technical error risk is high, and there is no systematic control mechanism."
       },
       "manual": {
-        "label": "Operational Speed",
-        "title": "Smart Offer Comparison",
-        "description": "Compare policies and offers across all lines with AI in seconds. Identify the most advantageous option quickly and present the right solution to your clients without losing time."
+        "label": "Offer Evaluation",
+        "title": "Time lost in offer evaluation",
+        "description": "Comparing multiple offers by coverage, deductible, and limit takes hours. That time turns directly into lost productivity."
       },
       "reactive": {
-        "label": "Industry Know-How and Decision Support",
-        "title": "Reliable Decision Mechanism",
-        "description": "Combine experience with the power of data in your decisions. Manage your processes with current analysis, not backward-looking assumptions, and gain full control over operations."
+        "label": "Policy Review",
+        "title": "Hidden losses in policy renewal",
+        "description": "Coverage narrowing, limit changes, and clause differences often go unnoticed during renewal."
       }
     }
   },
@@ -330,49 +386,49 @@
     }
   },
   "operating_model": {
-    "eyebrow": "How Engagement Works",
-    "title": "We offer operational setup, not just product access",
-    "description": "The goal is not only to show a demo, but to match the right module with the right team and establish a short pilot with a clear operating model.",
+    "eyebrow": "How It Works",
+    "title": "We place the right tool into the right workflow.",
+    "description": "With a short assessment call, we clarify the need, start a pilot with the right product, and move into live usage together.",
     "steps": {
       "discovery": {
-        "label": "01 / Discovery",
-        "title": "Needs map",
-        "description": "The team’s workflows, data, and decision points are clarified together."
+        "label": "01 — Assessment",
+        "title": "Assessment",
+        "description": "We review your current processes, decision points, and priorities together."
       },
       "pilot": {
-        "label": "02 / Pilot",
-        "title": "Right module selection",
-        "description": "A narrow but real working surface is set up with the right module set."
+        "label": "02 — Pilot",
+        "title": "Pilot",
+        "description": "A limited but real usage area is set up with the right product."
       },
       "operation": {
-        "label": "03 / Operation",
-        "title": "Close go-live setup",
-        "description": "Access model, output flow, and working style are established together with live usage as the goal."
+        "label": "03 — Live Usage",
+        "title": "Live Usage",
+        "description": "The access model and working style become clear. The team starts using the product independently."
       }
     }
   },
   "footer_cta": {
     "eyebrow": "Request Access",
-    "title": "Request enterprise access",
-    "description": "Let’s evaluate the right module, team structure, and usage scenario together. The first step is a short discovery call followed by a live product walkthrough.",
+    "title": "Which product fits which process? Let's evaluate it together.",
+    "description": "Let's define the right product and working model together. In the first meeting, we can run a live analysis using your own offer or policy files.",
     "steps": {
       "step_1": {
         "label": "Step 1",
-        "value": "30 min discovery call"
+        "value": "Assessment Call"
       },
       "step_2": {
         "label": "Step 2",
-        "value": "Process Flow"
+        "value": "Pilot Setup"
       },
       "step_3": {
         "label": "Step 3",
-        "value": "Module fit assessment"
+        "value": "Live Access"
       }
     },
     "form": {
       "label": "Business Email",
       "placeholder": "name@company.com",
-      "note": "Once the form is submitted, the team will contact you to evaluate your access request.",
+      "note": "After receiving your request, our team will contact you within 1 business day.",
       "submit": "Request Access"
     }
   },

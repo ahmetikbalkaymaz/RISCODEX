@@ -78,6 +78,35 @@
             border: 1px solid var(--line);
         }
 
+        .section-panel-accent {
+            background: linear-gradient(180deg, rgba(239, 246, 255, 0.96), rgba(227, 238, 255, 0.98));
+            border: 1px solid rgba(79, 141, 248, 0.18);
+            box-shadow: 0 24px 60px rgba(66, 96, 150, 0.12);
+        }
+
+        .section-panel-muted {
+            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(241, 247, 255, 0.98));
+            border: 1px solid rgba(96, 125, 175, 0.14);
+            box-shadow: 0 22px 54px rgba(96, 125, 175, 0.1);
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.76);
+            border: 1px solid rgba(96, 125, 175, 0.14);
+            box-shadow: 0 14px 30px rgba(96, 125, 175, 0.08);
+        }
+
+        .product-card {
+            display: flex;
+            min-height: 100%;
+            flex-direction: column;
+        }
+
+        .product-meta {
+            background: rgba(239, 246, 255, 0.76);
+            border: 1px solid rgba(96, 125, 175, 0.14);
+        }
+
         .eyebrow {
             letter-spacing: 0.22em;
             text-transform: uppercase;
@@ -85,6 +114,11 @@
 
         .hero-title {
             letter-spacing: -0.06em;
+            background: linear-gradient(180deg, #0f172a 8%, #163a84 54%, #2f6ee9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent !important;
+            -webkit-text-fill-color: transparent;
         }
 
         .button-primary {
@@ -123,10 +157,39 @@
             color: #2f6ee9 !important;
         }
 
+        .button-primary i,
+        .button-secondary i {
+            transition: transform 0.2s ease;
+        }
+
+        .button-primary:hover i,
+        .button-secondary:hover i {
+            transform: translate3d(3px, -1px, 0);
+        }
+
         .lang-toggle {
             border: 1px solid transparent;
             color: #5f6f86;
             transition: all 0.2s ease;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .nav-link.is-active {
+            background: rgba(79, 141, 248, 0.12);
+            color: #10213c !important;
+            box-shadow: inset 0 0 0 1px rgba(79, 141, 248, 0.16);
+        }
+
+        .nav-link-mobile {
+            transition: color 0.24s ease;
+        }
+
+        .nav-link-mobile.is-active {
+            color: #255fd4 !important;
         }
 
         .lang-toggle.is-active {
@@ -144,7 +207,9 @@
 
         .surface-panel .text-white,
         .surface-card .text-white,
-        .surface-card-soft .text-white {
+        .surface-card-soft .text-white,
+        .metric-card .text-white,
+        .product-meta .text-white {
             color: #10213c !important;
         }
 
@@ -153,26 +218,144 @@
         .surface-card .text-slate-300,
         .surface-card .text-slate-400,
         .surface-card-soft .text-slate-300,
-        .surface-card-soft .text-slate-400 {
+        .surface-card-soft .text-slate-400,
+        .metric-card .text-slate-300,
+        .metric-card .text-slate-400,
+        .product-meta .text-slate-300,
+        .product-meta .text-slate-400 {
             color: var(--text-muted) !important;
         }
 
         .surface-panel .text-slate-500,
         .surface-card .text-slate-500,
-        .surface-card-soft .text-slate-500 {
+        .surface-card-soft .text-slate-500,
+        .metric-card .text-slate-500,
+        .product-meta .text-slate-500 {
             color: #7c8ca4 !important;
         }
 
         .surface-panel .text-blue-300,
         .surface-card .text-blue-300,
-        .surface-card-soft .text-blue-300 {
+        .surface-card-soft .text-blue-300,
+        .metric-card .text-blue-300,
+        .product-meta .text-blue-300 {
             color: var(--accent-strong) !important;
         }
 
         .surface-panel .text-emerald-300,
         .surface-card .text-emerald-300,
-        .surface-card-soft .text-emerald-300 {
+        .surface-card-soft .text-emerald-300,
+        .metric-card .text-emerald-300,
+        .product-meta .text-emerald-300 {
             color: #149a68 !important;
+        }
+
+        .hover-lift {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+        }
+
+        .hover-lift::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(79, 141, 248, 0.07), transparent 42%, rgba(79, 141, 248, 0.05));
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.24s ease, transform 0.24s ease;
+            pointer-events: none;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(96, 125, 175, 0.14);
+            border-color: var(--line-strong);
+        }
+
+        .hover-lift:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-lift [data-lucide] {
+            transition: transform 0.24s ease, color 0.24s ease;
+        }
+
+        .hover-lift:hover [data-lucide] {
+            transform: translateY(-2px);
+            color: var(--accent-strong) !important;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.72s ease, transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.24s;
+        }
+
+        .hero-enter {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: fade-up 0.78s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .hero-enter-delay-1 {
+            animation-delay: 0.08s;
+        }
+
+        .hero-enter-delay-2 {
+            animation-delay: 0.16s;
+        }
+
+        .hero-enter-delay-3 {
+            animation-delay: 0.24s;
+        }
+
+        .float-slow {
+            animation: drift 14s ease-in-out infinite;
+        }
+
+        .float-slower {
+            animation: drift 19s ease-in-out infinite reverse;
+        }
+
+        .float-soft {
+            animation: drift 23s ease-in-out infinite;
+        }
+
+        @keyframes fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes drift {
+            0%,
+            100% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            50% {
+                transform: translate3d(0, -14px, 0);
+            }
         }
 
         [class*="bg-white/[0.04]"] {
@@ -194,6 +377,26 @@
         [class*="text-blue-200/[0.55]"] {
             color: rgba(37, 95, 212, 0.78) !important;
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hover-lift,
+            .reveal-on-scroll,
+            .hero-enter,
+            .float-slow,
+            .float-slower,
+            .float-soft,
+            .button-primary i,
+            .button-secondary i {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+            }
+
+            .reveal-on-scroll,
+            .hero-enter {
+                opacity: 1 !important;
+            }
+        }
     </style>
 </head>
 
@@ -202,9 +405,12 @@
     <div class="fixed inset-0 z-0 pointer-events-none">
         <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]"></div>
         <div class="absolute inset-0 bg-grid-pattern"></div>
-        <div class="absolute top-0 left-1/4 h-[30rem] w-[30rem] rounded-full bg-blue-300/30 blur-[120px]"></div>
-        <div class="absolute top-32 right-20 h-[22rem] w-[22rem] rounded-full bg-sky-300/35 blur-[110px]"></div>
-        <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-200/35 blur-[130px]"></div>
+        <div class="absolute top-0 left-1/4 h-[30rem] w-[30rem] rounded-full bg-blue-300/30 blur-[120px] float-slow">
+        </div>
+        <div class="absolute top-32 right-20 h-[22rem] w-[22rem] rounded-full bg-sky-300/35 blur-[110px] float-slower">
+        </div>
+        <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-200/35 blur-[130px] float-soft">
+        </div>
     </div>
 
     <nav id="navbar" class="fixed inset-x-0 top-0 z-50 py-5 transition-all duration-300">
@@ -220,19 +426,16 @@
 
                     <div class="hidden lg:flex items-center gap-1">
                         <a href="#about"
-                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+                            class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
                             data-i18n="nav.about">Hakkımızda</a>
                         <a href="#platform"
-                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
-                            data-i18n="nav.platform">Platform</a>
+                            class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+                            data-i18n="nav.platform">Ürünler</a>
                         <a href="#problem"
-                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+                            class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
                             data-i18n="nav.problem">Sorun</a>
-                        <a href="#platform"
-                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
-                            data-i18n="nav.solutions">Çözümler</a>
                         <a href="#operating-model"
-                            class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+                            class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
                             data-i18n="nav.process">İşleyiş</a>
                     </div>
 
@@ -262,15 +465,13 @@
             <div
                 class="rounded-2xl border border-slate-200/80 bg-white/95 p-5 shadow-[0_18px_36px_rgba(110,140,190,0.14)] backdrop-blur-xl">
                 <div class="flex flex-col gap-3">
-                    <a href="#about" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
+                    <a href="#about" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
                         data-i18n="nav.about">Hakkımızda</a>
-                    <a href="#platform" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
-                        data-i18n="nav.platform">Platform</a>
-                    <a href="#problem" class="text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
+                    <a href="#platform" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
+                        data-i18n="nav.platform">Ürünler</a>
+                    <a href="#problem" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
                         data-i18n="nav.problem">Sorun</a>
-                    <a href="#platform" class="text-sm text-slate-600 hover:text-slate-950"
-                        onclick="toggleMobileMenu()" data-i18n="nav.solutions">Çözümler</a>
-                    <a href="#operating-model" class="text-sm text-slate-600 hover:text-slate-950"
+                    <a href="#operating-model" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950"
                         onclick="toggleMobileMenu()" data-i18n="nav.process">İşleyiş</a>
                     <div
                         class="mt-1 inline-flex w-fit items-center rounded-full border border-slate-200 bg-slate-50/80 p-1">
@@ -287,69 +488,69 @@
         </div>
     </nav>
 
-    <section class="relative z-10 overflow-hidden pt-40 pb-20 lg:pt-44 lg:pb-24">
+    <section class="relative z-10 overflow-hidden pt-40 pb-24 lg:pt-48 lg:pb-28">
         <div
             class="absolute inset-x-0 top-12 h-[420px] bg-[radial-gradient(circle_at_top,rgba(79,141,248,0.24),transparent_66%)]">
         </div>
 
         <div class="mx-auto max-w-7xl px-6 relative">
             <div class="mx-auto max-w-4xl text-center">
-                <h1 class="hero-title text-5xl font-semibold leading-none text-slate-950 sm:text-6xl lg:text-7xl"
+                <h1 class="hero-title hero-enter text-5xl font-semibold leading-none text-slate-950 sm:text-6xl lg:text-[4.8rem]"
                     data-i18n="hero.title">
-                    Sigorta operasyonlarında verimliliği artırın, tüm ihtiyaçlarınıza tek noktadan çözüm bulun.
+                    Sigorta sektörü için geliştirilmiş yapay zeka platformu.
                 </h1>
-                <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl"
+                <p class="hero-enter hero-enter-delay-1 mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl"
                     data-i18n="hero.description">
-                    Sigorta dünyasının tüm paydaşlarını tek platformda buluşturuyor, operasyonel süreçlerinize yapay
-                    zeka destekli çözümler buluyoruz
+                    Riscodex, sigorta acentelerinin ve brokerlerin prim hesaplama, teklif değerlendirme ve poliçe
+                    inceleme süreçlerini yapay zeka ile daha hızlı ve daha güvenilir yürütmesi için tasarlanmıştır.
                 </p>
 
-                <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <div class="hero-enter hero-enter-delay-2 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <a href="#access-request"
                         class="button-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors">
-                        <span data-i18n="hero.primary_cta">Versus Demo Talebi</span>
+                        <span data-i18n="hero.primary_cta">Versus AI'a Erişim Talep Edin</span>
                         <i data-lucide="arrow-right" class="h-4 w-4"></i>
                     </a>
                     <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
                         class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-blue-300/30 hover:bg-white">
-                        <span data-i18n="hero.secondary_cta">TariffEQ'yu İncele</span>
+                        <span data-i18n="hero.secondary_cta">TariffEQ'yu İnceleyin</span>
                         <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                     </a>
                 </div>
 
-                <div class="surface-panel mt-12 grid gap-0 overflow-hidden rounded-2xl sm:grid-cols-2 xl:grid-cols-4">
-                    <div class="px-6 py-5 text-left">
-                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.live.label">Canlı Ürün</div>
+                <div class="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                    <div class="metric-card hover-lift reveal-on-scroll rounded-2xl px-6 py-5 text-left">
+                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.metrics.live.label">2 Aktif Ürün</div>
                         <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.live.title">TariffEQ
-                        </div>
+                            ve Versus AI</div>
                         <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.live.description">
-                            İhtiyari deprem tarifesiyle uyumlu, hatasız ve teknik doğru fiyatlama.</p>
+                            TariffEQ pazarda, Versus AI yeni yayında. Ürün ailesi genişlemeye devam ediyor.</p>
                     </div>
-                    <div class="border-t border-white/[0.08] px-6 py-5 text-left sm:border-t-0 sm:border-l">
-                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.demo.label">Demo Ürün</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.demo.title">Versus
-                        </div>
-                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.demo.description">Tüm
-                            branşlarda teknik analiz ve yapay zeka desteğiyle, en avantajlı teklife güvenle karar verin.
+                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-6 py-5 text-left">
+                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.metrics.demo.label">10 Branş</div>
+                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.demo.title">Geniş
+                            branş kapsamı</div>
+                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.demo.description">
+                            Kaskodan yangına, nakliyattan sorumluluk sigortasına tüm temel branşlarda.
                         </p>
                     </div>
-                    <div class="border-t border-white/[0.08] px-6 py-5 text-left xl:border-t-0 xl:border-l">
-                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.modules.label">Ürün Seti</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.modules.title">5+
-                            Modül</div>
+                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-6 py-5 text-left">
+                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.metrics.modules.label">Entegrasyon Gerektirmez</div>
+                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.modules.title">
+                            Mevcut düzeninize oturur</div>
                         <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.modules.description">
-                            Risk, pricing, karar destek ve operasyon paketleri.</p>
+                            Sigorta şirketi sistemlerine bağlantı olmadan çalışır.</p>
                     </div>
-                    <div class="border-t border-white/[0.08] px-6 py-5 text-left sm:border-l xl:border-t-0">
-                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.access.label">Çalışma Modeli</div>
+                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-3 rounded-2xl px-6 py-5 text-left">
+                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.metrics.access.label">İTÜ Çekirdek</div>
                         <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.access.title">
-                            Kurumsal Erişim</div>
+                            Türkiye merkezli girişim</div>
                         <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.access.description">
-                            Onaylı ekiplerle pilot, erişim ve yakın operasyon kurulumu.</p>
+                            Türkiye'nin önde gelen teknoloji geliştirme programı bünyesinde hayata geçirildi.</p>
                     </div>
                 </div>
             </div>
@@ -359,68 +560,77 @@
     <section id="about" class="relative z-10 py-10 lg:py-16">
         <div class="mx-auto max-w-7xl px-6">
             <div class="grid gap-6 lg:grid-cols-[1.08fr_.92fr]">
-                <div class="surface-panel rounded-[28px] p-8 md:p-10">
+                <div class="surface-panel hover-lift reveal-on-scroll rounded-[28px] p-8 md:p-10">
                     <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="about.eyebrow">
                         Hakkımızda</p>
                     <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                         data-i18n="about.title">
-                        Riscodex, sigorta operasyonlarını daha görünür ve daha yönetilebilir hale getirmek için kuruldu.
+                        Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.
                     </h2>
                     <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600" data-i18n="about.description_1">
-                        Riscodex, karmaşık sistemler kurmak yerine iş akışınıza akıllı modüller ekler. İster sadece prim
-                        hesaplayın, ister tüm hasar sürecini destekleyin; siz ihtiyacınızı seçin, biz operasyonunuzu
-                        hızlandıralım.
+                        Prim hesaplama, teklif değerlendirme, poliçe kontrolü — bu süreçlerin büyük çoğunluğu hâlâ elle
+                        yürütülüyor. Riscodex, her kritik adım için ayrı bir yapay zeka aracı geliştirir; kurumsal
+                        entegrasyon zorunluluğu olmadan, mevcut çalışma düzenine oturur.
                     </p>
 
-                    <div class="mt-8 grid gap-3 sm:grid-cols-3">
-                        <div class="surface-card-soft rounded-2xl px-4 py-4">
-                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="about.highlights.focus.label">Odak</div>
-                            <div class="mt-2 text-sm font-semibold text-white" data-i18n="about.highlights.focus.value">
-                                Doğru karar, operasyonel kolaylık</div>
+                    <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                        <div class="surface-card-soft hover-lift reveal-on-scroll rounded-2xl px-4 py-4">
+                            <div class="text-base font-semibold text-white" data-i18n="about.highlights.focus.label">
+                                Teknik Karar Desteği</div>
+                            <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.highlights.focus.value">
+                                Prim doğrulama, teklif analizi, teminat karşılaştırması. Sigorta sektörü normlarına
+                                göre, yapay zeka ile.
+                            </p>
                         </div>
-                        <div class="surface-card-soft rounded-2xl px-4 py-4">
-                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="about.highlights.model.label">Model</div>
-                            <div class="mt-2 text-sm font-semibold text-white" data-i18n="about.highlights.model.value">
-                                B2B pilot ve yakın kurulum</div>
+                        <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-4 py-4">
+                            <div class="text-base font-semibold text-white" data-i18n="about.highlights.model.label">
+                                Kurumsal Pilot Modeli</div>
+                            <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.highlights.model.value">
+                                Doğru ürün, doğru ekiple eşleştirilir. Kısa pilot sürecinin ardından canlı kullanıma
+                                geçilir.
+                            </p>
                         </div>
-                        <div class="surface-card-soft rounded-2xl px-4 py-4">
-                            <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="about.highlights.approach.label">Yaklaşım</div>
-                            <div class="mt-2 text-sm font-semibold text-white"
-                                data-i18n="about.highlights.approach.value">AI-native operasyon katmanı</div>
+                        <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-4 py-4">
+                            <div class="text-base font-semibold text-white"
+                                data-i18n="about.highlights.approach.label">Yerel Mevzuata Tam Uyum</div>
+                            <p class="mt-3 text-sm leading-7 text-slate-400"
+                                data-i18n="about.highlights.approach.value">Türk sigorta mevzuatı ve sektör standartları
+                                temel alınarak geliştirildi. Yabancı platformların kapsayamadığı teknik ve hukuki
+                                çerçeve, ürünün çekirdeğinde yer alıyor.
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="surface-panel rounded-[28px] p-8 md:p-10">
+                <div class="section-panel-accent hover-lift reveal-on-scroll reveal-delay-1 rounded-[28px] p-8 md:p-10">
                     <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="about.trust.eyebrow">
-                        Kurumsal Güven</p>
+                        İTÜ Çekirdek</p>
 
                     <div class="surface-card mt-5 rounded-[24px] p-6">
                         <img src="assets/acc-26.png" alt="İTÜ Çekirdek" class="h-14 w-auto object-contain sm:h-16">
                         <h3 class="mt-5 text-2xl font-semibold text-white" data-i18n="about.trust.title">İTÜ Çekirdek
-                            kabulü</h3>
+                            ve referans bloğu</h3>
                         <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.trust.description">
-                            Riscodex, ürün yolculuğunu İTÜ Çekirdek ekosistemi içinde geliştiren bir girişim olarak
-                            sigorta teknolojisi odağını kurumsal zeminde büyütüyor.
+                            Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi
+                            girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri
+                            Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak
+                            için büyüyor.
                         </p>
                     </div>
 
                     <div class="mt-5 grid gap-3 sm:grid-cols-2">
                         <div class="surface-card-soft rounded-2xl px-4 py-4">
                             <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="about.trust.cards.origin.label">Nereden geliyoruz</div>
+                                data-i18n="about.trust.cards.origin.label">Kullanım</div>
                             <div class="mt-2 text-sm font-semibold text-white"
-                                data-i18n="about.trust.cards.origin.value">Türkiye merkezli insurtech ürün geliştirme
-                            </div>
+                                data-i18n="about.trust.cards.origin.value">Sigorta acenteleri ve brokerler tarafından
+                                kullanılıyor</div>
                         </div>
                         <div class="surface-card-soft rounded-2xl px-4 py-4">
                             <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="about.trust.cards.operation.label">Nasıl çalışıyoruz</div>
+                                data-i18n="about.trust.cards.operation.label">Hedef</div>
                             <div class="mt-2 text-sm font-semibold text-white"
-                                data-i18n="about.trust.cards.operation.value">Kuruma özel erişim ve pilot akışlar</div>
+                                data-i18n="about.trust.cards.operation.value">Kökleri Türkiye'de, yönü global</div>
                         </div>
                     </div>
                 </div>
@@ -428,56 +638,34 @@
         </div>
     </section>
 
-    <section id="platform" class="relative z-10 py-20">
+    <section id="platform" class="relative z-10 py-24">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="surface-panel overflow-hidden rounded-[28px] p-8 md:p-10">
+            <div class="section-panel-muted reveal-on-scroll overflow-hidden rounded-[28px] p-8 md:p-10">
                 <div class="flex flex-col gap-8">
-                    <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                    <div class="flex flex-col gap-5 lg:max-w-3xl">
                         <div class="max-w-3xl">
                             <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]"
-                                data-i18n="platform.eyebrow">Çözümler</p>
+                                data-i18n="platform.eyebrow">Ürünler</p>
                             <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                                 data-i18n="platform.title">
-                                Canlı ürün, demo ürün ve beta modüller
+                                Her kritik adım için bir araç. Riscodex ürün ailesi.
                             </h2>
                             <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600"
                                 data-i18n="platform.description">
-                                Fiyatlamadan karara kadar tüm süreçlerinizi birbiriyle uyumlu modüllerle destekliyoruz.
-                                Karmaşadan uzak durarak, işinizi en doğru ve en basit şekilde yürütmenize yardımcı
-                                oluyoruz.
+                                Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı
+                                içinde ilerliyor.
                             </p>
-                        </div>
-
-                        <div class="grid gap-3 sm:grid-cols-3">
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
-                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                    data-i18n="platform.highlights.focus.label">Odak</div>
-                                <div class="mt-2 text-sm font-semibold text-white"
-                                    data-i18n="platform.highlights.focus.value">Pricing ve Tarife Uyumu</div>
-                            </div>
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
-                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                    data-i18n="platform.highlights.usage.label">Kullanım</div>
-                                <div class="mt-2 text-sm font-semibold text-white"
-                                    data-i18n="platform.highlights.usage.value">Sigortacı, Broker, Endüstri</div>
-                            </div>
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
-                                <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                    data-i18n="platform.highlights.access.label">Erişim</div>
-                                <div class="mt-2 text-sm font-semibold text-white"
-                                    data-i18n="platform.highlights.access.value">Pilot ve Yakın Çalışma</div>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="grid gap-5 xl:grid-cols-3">
-                        <article class="surface-card rounded-[26px] p-7">
+                    <div class="grid gap-5 xl:grid-cols-2 2xl:grid-cols-4">
+                        <article class="surface-card product-card hover-lift reveal-on-scroll rounded-[26px] p-7">
                             <div class="flex items-start justify-between gap-4">
                                 <div>
                                     <div
                                         class="inline-flex items-center gap-2 rounded-full bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">
                                         <span class="h-2 w-2 rounded-full bg-[var(--success)]"></span>
-                                        <span data-i18n="platform.live.badge">Canlı Ürün</span>
+                                        <span data-i18n="platform.live.badge">Yayında</span>
                                     </div>
                                     <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.live.title">
                                         TariffEQ</h3>
@@ -487,117 +675,166 @@
 
                             <p class="mt-5 max-w-md text-sm leading-7 text-slate-300"
                                 data-i18n="platform.live.description">
-                                Resmi tarife standartlarına göre deprem primi, senaryo karşılaştırması ve operasyonel
-                                prim kararları için aktif çalışan fiyatlama motoru.
+                                İhtiyari deprem prim hesaplamasını resmi tarife standartlarına tam uyumlu şekilde
+                                gerçekleştirin. Senaryo karşılaştırması, otomatik doğrulama ve teknik karar desteği tek
+                                ekranda.
                             </p>
 
-                            <div class="mt-7 grid gap-3 sm:grid-cols-2">
-                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                            <div class="mt-7 grid gap-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                         data-i18n="platform.live.metrics.scope.label">Kapsam</div>
                                     <div class="mt-2 text-sm font-medium text-white"
                                         data-i18n="platform.live.metrics.scope.value">İhtiyari Deprem Tarife Primi</div>
                                 </div>
-                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.live.metrics.output.label">Çıktı</div>
+                                        data-i18n="platform.live.metrics.output.label">Özellik</div>
                                     <div class="mt-2 text-sm font-medium text-white"
-                                        data-i18n="platform.live.metrics.output.value">Prim ve alternatif senaryo</div>
+                                        data-i18n="platform.live.metrics.output.value">Senaryo + doğrulama</div>
                                 </div>
-                                <div class="surface-card-soft rounded-2xl px-4 py-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                         data-i18n="platform.live.metrics.compliance.label">Uyum</div>
                                     <div class="mt-2 text-sm font-medium text-white"
                                         data-i18n="platform.live.metrics.compliance.value">Resmi tarife standardı</div>
                                 </div>
-                                <div class="surface-card-soft rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.live.metrics.status.label">Durum</div>
-                                    <div class="mt-2 text-sm font-medium text-emerald-300"
-                                        data-i18n="platform.live.metrics.status.value">Pazarda kullanımda</div>
-                                </div>
                             </div>
 
-                            <div class="mt-7 flex flex-wrap gap-3">
+                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
                                 <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
                                     class="button-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors">
-                                    <span data-i18n="platform.live.cta">Canlı ürüne git</span>
+                                    <span data-i18n="platform.live.cta">tariffeq.com</span>
                                     <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                                 </a>
                             </div>
                         </article>
 
-                        <article class="surface-card rounded-[26px] p-7">
+                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[26px] p-7">
                             <div class="flex items-center justify-between gap-4">
                                 <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
-                                    data-i18n="platform.demo.eyebrow">Demo Ürün</div>
+                                    data-i18n="platform.demo.eyebrow">Yeni Yayında</div>
                                 <i data-lucide="scan-search" class="h-5 w-5 text-slate-500"></i>
                             </div>
-                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.demo.title">Versus
-                            </h3>
+                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.demo.title">Versus AI</h3>
                             <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.demo.description">
-                                Tüm branşlarda teknik analiz ve yapay zeka desteğiyle, en avantajlı teklife güvenle
-                                karar verin.
+                                Birden fazla sigorta teklifini yükleyin; Versus AI teminatları okur, şirketler
+                                arasındaki kritik farkları ortaya çıkarır ve gerekçeli bir değerlendirme raporu sunar.
+                                Kasko, Trafik, Özel Sağlık Sigortası (ÖSS), Tamamlayıcı Sağlık Sigortası (TSS), Ferdi
+                                Kaza, Nakliyat, Yangın, İnşaat &amp; Montaj, Enerji ve Sorumluluk branşlarında çalışır.
                             </p>
 
-                            <div class="mt-6 space-y-3">
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white"
-                                        data-i18n="platform.demo.highlights.analysis">Teknik analiz</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300"
-                                        data-i18n="platform.demo.badge">Demo</span>
+                            <div class="mt-6 grid gap-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.demo.metrics.input.label">Girdi</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.demo.metrics.input.value">Teklif yükleme</div>
                                 </div>
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white" data-i18n="platform.demo.highlights.ai">Yapay
-                                        zeka desteği</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-indigo-300"
-                                        data-i18n="platform.demo.badge">Demo</span>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.demo.metrics.output.label">Çıktı</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.demo.metrics.output.value">Gerekçeli değerlendirme</div>
                                 </div>
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white" data-i18n="platform.demo.highlights.choice">En
-                                        avantajlı teklif seçimi</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300"
-                                        data-i18n="platform.demo.badge">Demo</span>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.demo.metrics.lines.label">Kapsam</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.demo.metrics.lines.value">10 branş desteği</div>
                                 </div>
+                            </div>
+
+                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
+                                <a href="#access-request"
+                                    class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
+                                    <span data-i18n="platform.demo.cta">Erişim Talep Edin</span>
+                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                </a>
                             </div>
                         </article>
 
-                        <article class="surface-card rounded-[26px] p-7">
+                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[26px] p-7">
                             <div class="flex items-center justify-between gap-4">
                                 <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
-                                    data-i18n="platform.modules.eyebrow">Beta Modüller</div>
-                                <i data-lucide="cpu" class="h-5 w-5 text-slate-500"></i>
+                                    data-i18n="platform.modules.eyebrow">Yeni Yayında</div>
+                                <i data-lucide="file-search" class="h-5 w-5 text-slate-500"></i>
                             </div>
+                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.modules.title">
+                                Versus Check</h3>
                             <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.modules.description">
-                                Canlı ürün ve demo dışında kalan modüller, ortak veri omurgası üzerinde gelişen beta
-                                katmanları olarak ilerliyor.
+                                İmzaladığınız teklif ile elinize geçen poliçe aynı mı? Geçen yılın koşulları bu yıl
+                                korundu mu? Versus Check, iki sigorta belgesini yan yana okur; teminat değişikliklerini,
+                                limit farklılıklarını ve kloz düzenlemelerini sigorta etkisiyle birlikte raporlar.
                             </p>
 
-                            <div class="mt-6 space-y-3">
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white"
-                                        data-i18n="platform.modules.items.locateloss.name">LocateLoss</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300"
-                                        data-i18n="platform.modules.items.locateloss.status">Beta</span>
+                            <div class="mt-6 grid gap-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.modules.metrics.input.label">Karşılaştırma</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.modules.metrics.input.value">Teklif + poliçe</div>
                                 </div>
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white"
-                                        data-i18n="platform.modules.items.foresight.name">Foresight</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300"
-                                        data-i18n="platform.modules.items.foresight.status">Beta</span>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.modules.metrics.output.label">Çıktı</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.modules.metrics.output.value">Fark raporu</div>
                                 </div>
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white"
-                                        data-i18n="platform.modules.items.firewatch.name">FireWatch</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-indigo-300"
-                                        data-i18n="platform.modules.items.firewatch.status">Beta</span>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.modules.metrics.focus.label">Odak</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.modules.metrics.focus.value">Teminat, limit, kloz</div>
                                 </div>
-                                <div class="surface-card-soft flex items-center justify-between rounded-2xl px-4 py-3">
-                                    <span class="font-medium text-white"
-                                        data-i18n="platform.modules.items.precast.name">Precast</span>
-                                    <span class="text-xs uppercase tracking-[0.2em] text-blue-300"
-                                        data-i18n="platform.modules.items.precast.status">Beta</span>
+                            </div>
+
+                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
+                                <a href="#access-request"
+                                    class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
+                                    <span data-i18n="platform.modules.cta">Erişim Talep Edin</span>
+                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-3 rounded-[26px] p-7">
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
+                                    data-i18n="platform.future.eyebrow">Geliştirme Aşamasında</div>
+                                <i data-lucide="layers-3" class="h-5 w-5 text-slate-500"></i>
+                            </div>
+                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.future.title">Yeni
+                                Modüller</h3>
+                            <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.future.description">
+                                Risk skorlama, portföy tarama ve hasar analizi alanlarında yeni araçlar
+                                geliştirilmektedir.
+                            </p>
+
+                            <div class="mt-6 grid gap-3">
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.future.metrics.risk.label">Alan</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.future.metrics.risk.value">Risk skorlama</div>
                                 </div>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.future.metrics.portfolio.label">Alan</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.future.metrics.portfolio.value">Portföy tarama</div>
+                                </div>
+                                <div class="product-meta rounded-2xl px-4 py-3">
+                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                        data-i18n="platform.future.metrics.claims.label">Alan</div>
+                                    <div class="mt-2 text-sm font-medium text-white"
+                                        data-i18n="platform.future.metrics.claims.value">Hasar analizi</div>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto pt-7 text-sm font-medium text-slate-500"
+                                data-i18n="platform.future.footer">
+                                Yeni modüller ürün ailesine kademeli olarak ekleniyor.
                             </div>
                         </article>
 
@@ -611,67 +848,69 @@
         <div class="mx-auto max-w-7xl px-6">
             <div class="max-w-3xl">
                 <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="problem.eyebrow">
-                    Operational Friction</p>
+                    Sorun</p>
                 <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                     data-i18n="problem.title">
-                    Sigorta operasyonlarını yavaşlatan engelleri aşın
+                    Sigorta operasyonlarının önündeki engeller hâlâ yapısal.
                 </h2>
                 <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="problem.description">
-                    Manuel işlemler ve teklifler arasındaki belirsizlik işinizi zorlaştırıyor. Biz, bu süreci sizin
-                    için sadeleştiriyoruz.
+                    Prim hesaplama, teklif değerlendirme, poliçe kontrolü — bu iş adımlarının büyük bölümü hâlâ manuel
+                    süreçlere dayanıyor. Her adımda hata riski, her hatada müşteri kaybı ya da mali sorumluluk var.
                 </p>
             </div>
 
             <div class="mt-12 grid gap-5 lg:grid-cols-3">
-                <article class="surface-card rounded-[24px] p-7">
+                <article class="surface-card hover-lift reveal-on-scroll rounded-[24px] p-7">
                     <div class="flex items-center gap-3">
                         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="database" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="problem.cards.visibility.label">Teknik Doğruluk</div>
-                            <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="problem.cards.visibility.title">Hatasız Prim Hesaplama</h3>
+                                data-i18n="problem.cards.visibility.label">Prim Hesaplama</div>
+                            <h3 class="mt-2 text-lg font-semibold text-white"
+                                data-i18n="problem.cards.visibility.title">Manuel prim hesaplama</h3>
                         </div>
                     </div>
                     <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="problem.cards.visibility.description">
-                        İhtiyari deprem tarifesine ve güncel mevzuata tam uyum sağlayın. Manuel hata riskini ortadan
-                        kaldırarak, saniyeler içinde teknik olarak en doğru fiyatlamaya ulaşın.
+                        Tarife uyumu elle denetleniyor. Teknik hata riski yüksek, sistematik bir kontrol mekanizması
+                        bulunmuyor.
                     </p>
                 </article>
 
-                <article class="surface-card rounded-[24px] p-7">
+                <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-7">
                     <div class="flex items-center gap-3">
                         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="bar-chart-3" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="problem.cards.manual.label">Operasyonel Hız</div>
-                            <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="problem.cards.manual.title">Akıllı Teklif Karşılaştırma</h3>
+                                data-i18n="problem.cards.manual.label">Teklif Değerlendirme</div>
+                            <h3 class="mt-2 text-lg font-semibold text-white"
+                                data-i18n="problem.cards.manual.title">Teklif değerlendirmesinde kaybedilen süre</h3>
                         </div>
                     </div>
                     <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="problem.cards.manual.description">
-                        Tüm branşlar için poliçe ve teklifleri yapay zeka ile saniyeler içinde kıyaslayın. En
-                        avantajlı teklifi hızla tespit ederek müşterilerinize en doğru çözümü, vakit kaybetmeden
-                        sunun.
+                        Birden fazla teklifi teminat, muafiyet ve limit bazında karşılaştırmak saatler alıyor. Bu süre
+                        doğrudan üretkenlik kaybına dönüşüyor.
                     </p>
                 </article>
 
-                <article class="surface-card rounded-[24px] p-7">
+                <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-7">
                     <div class="flex items-center gap-3">
                         <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="shield" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="problem.cards.reactive.label">Sektörel Know-How ve Karar Desteği</div>
-                            <h3 class="mt-2 text-lg font-semibold text-white" data-i18n="problem.cards.reactive.title">Güvenilir Karar Mekanizması</h3>
+                                data-i18n="problem.cards.reactive.label">Poliçe Kontrolü</div>
+                            <h3 class="mt-2 text-lg font-semibold text-white"
+                                data-i18n="problem.cards.reactive.title">Poliçe yenilemesinde görülemeyen kayıplar</h3>
                         </div>
                     </div>
                     <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="problem.cards.reactive.description">
-                        Kararlarınızı tecrübe ve verinin gücüyle birleştirin. Süreçlerinizi geçmişe bakarak değil,
-                        güncel analizlerle yöneterek operasyonunuzda tam hakimiyet kurun.
+                        Teminat daralması, limit değişiklikleri ve kloz farklılıkları yenileme sürecinde çoğunlukla
+                        fark edilmiyor.
                     </p>
                 </article>
             </div>
@@ -680,48 +919,48 @@
 
     <section id="operating-model" class="relative z-10 py-20">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="surface-panel rounded-[28px] p-8 md:p-10">
+            <div class="section-panel-accent reveal-on-scroll rounded-[28px] p-8 md:p-10">
                 <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
                     <div class="max-w-2xl">
                         <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]"
-                            data-i18n="operating_model.eyebrow">How Engagement Works</p>
+                            data-i18n="operating_model.eyebrow">Nasıl Çalışır</p>
                         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                             data-i18n="operating_model.title">
-                            Ürüne erişim değil, operasyon kurulumu sunuyoruz
+                            Doğru aracı, doğru iş akışına yerleştiriyoruz.
                         </h2>
                         <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="operating_model.description">
-                            Amaç yalnızca demo göstermek değil; doğru modülü doğru ekiple eşleyip kısa bir pilot ve net
-                            operasyon modeli kurmak.
+                            Kısa bir değerlendirme görüşmesiyle ihtiyacı netleştiririz, uygun ürünle pilot başlatırız,
+                            canlı kullanıma birlikte geçeriz.
                         </p>
                     </div>
 
                     <div class="grid gap-4 lg:max-w-3xl lg:grid-cols-3">
-                        <article class="surface-card rounded-[24px] p-6">
+                        <article class="surface-card hover-lift reveal-on-scroll rounded-[24px] p-6">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="operating_model.steps.discovery.label">01 / Keşif</div>
+                                data-i18n="operating_model.steps.discovery.label">01 — Değerlendirme</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
-                                data-i18n="operating_model.steps.discovery.title">İhtiyaç haritası</h3>
+                                data-i18n="operating_model.steps.discovery.title">Değerlendirme</h3>
                             <p class="mt-3 text-sm leading-7 text-slate-400"
-                                data-i18n="operating_model.steps.discovery.description">Ekibin kullandığı süreç, veri ve
-                                karar noktaları birlikte netleştirilir.</p>
+                                data-i18n="operating_model.steps.discovery.description">Mevcut süreçleri, karar
+                                noktalarını ve öncelikleri birlikte ele alırız.</p>
                         </article>
-                        <article class="surface-card rounded-[24px] p-6">
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-6">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="operating_model.steps.pilot.label">02 / Pilot</div>
+                                data-i18n="operating_model.steps.pilot.label">02 — Pilot</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
-                                data-i18n="operating_model.steps.pilot.title">Uygun modül seçimi</h3>
+                                data-i18n="operating_model.steps.pilot.title">Pilot</h3>
                             <p class="mt-3 text-sm leading-7 text-slate-400"
-                                data-i18n="operating_model.steps.pilot.description">Uygun modül setiyle dar kapsamlı ama
-                                gerçek bir çalışma yüzeyi kurulur.</p>
+                                data-i18n="operating_model.steps.pilot.description">Uygun ürünle sınırlı ama gerçek bir
+                                kullanım alanı kurulur.</p>
                         </article>
-                        <article class="surface-card rounded-[24px] p-6">
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-6">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                                data-i18n="operating_model.steps.operation.label">03 / Operasyon</div>
+                                data-i18n="operating_model.steps.operation.label">03 — Canlı Kullanım</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
-                                data-i18n="operating_model.steps.operation.title">Yakın devreye alma</h3>
+                                data-i18n="operating_model.steps.operation.title">Canlı Kullanım</h3>
                             <p class="mt-3 text-sm leading-7 text-slate-400"
-                                data-i18n="operating_model.steps.operation.description">Canlı kullanım hedefiyle erişim
-                                modeli, çıktı akışı ve çalışma şekli birlikte oturtulur.</p>
+                                data-i18n="operating_model.steps.operation.description">Erişim modeli ve çalışma biçimi
+                                netleşir. Ekip bağımsız olarak kullanmaya başlar.</p>
                         </article>
                     </div>
                 </div>
@@ -731,38 +970,38 @@
 
     <footer id="access-request" class="relative z-10 border-t border-slate-200/80 pt-20 pb-12">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="surface-panel overflow-hidden rounded-[28px] p-8 md:p-12">
+            <div class="surface-panel reveal-on-scroll overflow-hidden rounded-[28px] p-8 md:p-12">
                 <div class="grid gap-10 lg:grid-cols-[1fr_.85fr] lg:items-center">
                     <div>
                         <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]"
-                            data-i18n="footer_cta.eyebrow">Request Access</p>
+                            data-i18n="footer_cta.eyebrow">Erişim Talebi</p>
                         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                             data-i18n="footer_cta.title">
-                            Kurumsal erişim talep edin
+                            Hangi ürün, hangi süreciniz için? Birlikte değerlendirelim.
                         </h2>
                         <p class="mt-4 max-w-xl text-base leading-7 text-slate-600" data-i18n="footer_cta.description">
-                            Uygun modül, ekip yapısı ve kullanım senaryosunu birlikte değerlendirelim. İlk adımda kısa
-                            bir keşif görüşmesi ve canlı ürün walkthrough planlanır.
+                            Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da
+                            poliçe dosyalarınızla canlı bir analiz yapabiliriz.
                         </p>
 
                         <div class="mt-6 grid gap-3 sm:grid-cols-3">
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="surface-card-soft hover-lift reveal-on-scroll rounded-2xl px-4 py-4">
                                 <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                     data-i18n="footer_cta.steps.step_1.label">Adım 1</div>
                                 <div class="mt-2 text-sm font-medium text-white"
-                                    data-i18n="footer_cta.steps.step_1.value">30 dk keşif görüşmesi</div>
+                                    data-i18n="footer_cta.steps.step_1.value">Değerlendirme Görüşmesi</div>
                             </div>
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-4 py-4">
                                 <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                     data-i18n="footer_cta.steps.step_2.label">Adım 2</div>
                                 <div class="mt-2 text-sm font-medium text-white"
-                                    data-i18n="footer_cta.steps.step_2.value">Süreç İşleyişi</div>
+                                    data-i18n="footer_cta.steps.step_2.value">Pilot Kurulumu</div>
                             </div>
-                            <div class="surface-card-soft rounded-2xl px-4 py-4">
+                            <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-4 py-4">
                                 <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                     data-i18n="footer_cta.steps.step_3.label">Adım 3</div>
                                 <div class="mt-2 text-sm font-medium text-white"
-                                    data-i18n="footer_cta.steps.step_3.value">Uygun modül eşleşmesi</div>
+                                    data-i18n="footer_cta.steps.step_3.value">Canlı Erişim</div>
                             </div>
                         </div>
                     </div>
@@ -778,7 +1017,7 @@
 
                         <div class="surface-card-soft rounded-[24px] px-4 py-4 text-sm leading-7 text-slate-600"
                             data-i18n="footer_cta.form.note">
-                            Form gönderildiğinde ekip erişim talebinizi değerlendirmek için sizinle iletişime geçer.
+                            Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.
                         </div>
 
                         <button type="submit"
@@ -810,8 +1049,68 @@
         const navShell = document.getElementById("nav-shell");
         const mobileMenuButton = document.getElementById("mobile-menu-button");
         const languageStorageKey = "riscodex-lang";
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const desktopNavLinks = Array.from(document.querySelectorAll(".nav-link"));
+        const mobileNavLinks = Array.from(document.querySelectorAll(".nav-link-mobile"));
+        const trackedSectionIds = ["about", "platform", "problem", "operating-model", "access-request"];
+        const trackedSections = trackedSectionIds
+            .map((id) => document.getElementById(id))
+            .filter(Boolean);
         let currentLanguage = localStorage.getItem(languageStorageKey) || "tr";
         let landingTranslations = {};
+        let metricCountObserver = null;
+
+        function initializeRevealAnimations() {
+            const revealElements = document.querySelectorAll(".reveal-on-scroll");
+
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                revealElements.forEach((element) => element.classList.add("reveal-visible"));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    entry.target.classList.add("reveal-visible");
+                    currentObserver.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.16,
+                rootMargin: "0px 0px -8% 0px"
+            });
+
+            revealElements.forEach((element) => observer.observe(element));
+        }
+
+        function setActiveNavLink(sectionId) {
+            const targetHref = sectionId ? `#${sectionId}` : null;
+
+            desktopNavLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === targetHref);
+            });
+
+            mobileNavLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === targetHref);
+            });
+        }
+
+        function updateActiveSection() {
+            const currentScroll = window.scrollY + 180;
+            let activeSectionId = null;
+
+            trackedSections.forEach((section) => {
+                if (currentScroll >= section.offsetTop) {
+                    activeSectionId = section.id;
+                }
+            });
+
+            if (window.scrollY < (trackedSections[0]?.offsetTop || 0) - 220) {
+                activeSectionId = null;
+            }
+
+            setActiveNavLink(activeSectionId);
+        }
 
         window.addEventListener("scroll", () => {
             if (window.scrollY > 40) {
@@ -823,7 +1122,11 @@
                 navbar.classList.add("py-5");
                 navShell.classList.remove("bg-white/95", "border-slate-200");
             }
+
+            updateActiveSection();
         });
+
+        window.addEventListener("resize", updateActiveSection);
 
         function toggleMobileMenu() {
             const menu = document.getElementById("mobile-menu");
@@ -878,6 +1181,85 @@
             document.documentElement.lang = currentLanguage;
         }
 
+        function animateMetricCount(element) {
+            const target = Number(element.dataset.countTarget || 0);
+            const suffix = element.dataset.countSuffix || "";
+            const duration = 850;
+            const startTime = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const easedProgress = 1 - Math.pow(1 - progress, 3);
+                const currentValue = Math.round(target * easedProgress);
+
+                element.textContent = `${currentValue}${suffix}`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                    return;
+                }
+
+                element.textContent = element.dataset.countFinal || `${target}${suffix}`;
+                element.dataset.countAnimated = "true";
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        function initializeMetricCounts() {
+            const countLabels = document.querySelectorAll(".count-up-label");
+
+            if (metricCountObserver) {
+                metricCountObserver.disconnect();
+            }
+
+            countLabels.forEach((label) => {
+                const finalText = label.textContent.trim();
+                const match = finalText.match(/^(\d+)(.*)$/);
+
+                label.dataset.countFinal = finalText;
+                label.dataset.countAnimated = "false";
+
+                if (!match) {
+                    delete label.dataset.countTarget;
+                    delete label.dataset.countSuffix;
+                    return;
+                }
+
+                label.dataset.countTarget = match[1];
+                label.dataset.countSuffix = match[2];
+                label.textContent = `0${match[2]}`;
+            });
+
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                countLabels.forEach((label) => {
+                    label.textContent = label.dataset.countFinal || label.textContent;
+                    label.dataset.countAnimated = "true";
+                });
+                return;
+            }
+
+            metricCountObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    const label = entry.target;
+
+                    if (label.dataset.countTarget && label.dataset.countAnimated !== "true") {
+                        animateMetricCount(label);
+                    } else {
+                        label.textContent = label.dataset.countFinal || label.textContent;
+                    }
+
+                    observer.unobserve(label);
+                });
+            }, {
+                threshold: 0.65
+            });
+
+            countLabels.forEach((label) => metricCountObserver.observe(label));
+        }
+
         function updateLanguageButtons() {
             document.querySelectorAll(".lang-toggle").forEach((button) => {
                 button.classList.toggle("is-active", button.dataset.lang === currentLanguage);
@@ -910,6 +1292,8 @@
                 await loadTranslations(lang);
                 applyTranslations();
                 updateLanguageButtons();
+                initializeMetricCounts();
+                updateActiveSection();
             } catch (error) {
                 console.error(error);
 
@@ -920,6 +1304,8 @@
         }
 
         window.setLanguage = setLanguage;
+        initializeRevealAnimations();
+        updateActiveSection();
         setLanguage(currentLanguage);
     </script>
 </body>
