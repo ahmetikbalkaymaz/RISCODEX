@@ -81,25 +81,26 @@
   "about": {
     "eyebrow": "Hakkımızda",
     "title": "Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.",
-    "description_1": "Prim hesaplama, teklif değerlendirme, poliçe kontrolü — bu süreçlerin büyük çoğunluğu hâlâ elle yürütülüyor. Riscodex, her kritik adım için ayrı bir yapay zeka aracı geliştirir; kurumsal entegrasyon zorunluluğu olmadan, mevcut çalışma düzenine oturur.",
+    "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta sektöründeki yapısal sorunları teknolojiyle çözmek için kuruldu.",
+    "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka araçları geliştirir.",
     "description_2": "",
     "highlights": {
       "focus": {
         "label": "Teknik Karar Desteği",
-        "value": "Prim doğrulama, teklif analizi, teminat karşılaştırması. Sigorta sektörü normlarına göre, yapay zeka ile."
+        "value": "Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile hızlandırır."
       },
       "model": {
         "label": "Kurumsal Pilot Modeli",
-        "value": "Doğru ürün, doğru ekiple eşleştirilir. Kısa pilot sürecinin ardından canlı kullanıma geçilir."
+        "value": "Doğru ürünle kısa pilot kurulur, ekip canlı kullanıma kontrollü geçer."
       },
       "approach": {
-        "label": "Yerel Mevzuata Tam Uyum",
-        "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi. Yabancı platformların kapsayamadığı teknik ve hukuki çerçeve, ürünün çekirdeğinde yer alıyor."
+        "label": "Yerel Mevzuata Uyum",
+        "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi."
       }
     },
     "trust": {
       "eyebrow": "İTÜ Çekirdek",
-      "title": "İTÜ Çekirdek ve referans bloğu",
+      "title": "İTÜ Çekirdek destekli girişim",
       "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak için büyüyor.",
       "cards": {
         "origin": {
@@ -116,7 +117,13 @@
   "platform": {
     "eyebrow": "Ürünler",
     "title": "Her kritik adım için bir araç. Riscodex ürün ailesi.",
+    "title_html": "Her kritik adım için bir araç. <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
     "description": "Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı içinde ilerliyor.",
+    "legend": {
+      "live": "Canlı ürün",
+      "launch": "Yeni çıkanlar",
+      "roadmap": "Geliştirme hattı"
+    },
     "highlights": {
       "focus": {
         "label": "Hedef Kitle",
@@ -153,12 +160,13 @@
           "value": "tariffeq.com"
         }
       },
-      "cta": "tariffeq.com"
+      "cta": "TariffEQ'yu aç",
+      "note": "Canlı kullanımda olan ilk ürün."
     },
     "demo": {
       "eyebrow": "Yeni Yayında",
       "title": "Versus AI",
-      "description": "Birden fazla sigorta teklifini yükleyin; Versus AI teminatları okur, şirketler arasındaki kritik farkları ortaya çıkarır ve gerekçeli bir değerlendirme raporu sunar. Kasko, Trafik, Özel Sağlık Sigortası (ÖSS), Tamamlayıcı Sağlık Sigortası (TSS), Ferdi Kaza, Nakliyat, Yangın, İnşaat & Montaj, Enerji ve Sorumluluk branşlarında çalışır.",
+      "description": "Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve gerekçeli bir değerlendirme raporu sunar.",
       "metrics": {
         "input": {
           "label": "Girdi",
@@ -179,12 +187,12 @@
         "choice": "10 branş desteği"
       },
       "badge": "Yeni",
-      "cta": "Erişim Talep Edin"
+      "cta": "Versus AI için talep oluştur"
     },
     "modules": {
       "eyebrow": "Yeni Yayında",
       "title": "Versus Check",
-      "description": "İmzaladığınız teklif ile elinize geçen poliçe aynı mı? Geçen yılın koşulları bu yıl korundu mu? Versus Check, iki sigorta belgesini yan yana okur; teminat değişikliklerini, limit farklılıklarını ve kloz düzenlemelerini sigorta etkisiyle birlikte raporlar.",
+      "description": "Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle birlikte raporlar.",
       "metrics": {
         "input": {
           "label": "Karşılaştırma",
@@ -221,7 +229,7 @@
           "status": "Yeni"
         }
       },
-      "cta": "Erişim Talep Edin"
+      "cta": "Versus Check için talep oluştur"
     },
     "next": {
       "eyebrow": "Sonraki Katman",
@@ -237,18 +245,18 @@
     "future": {
       "eyebrow": "Geliştirme Aşamasında",
       "title": "Yeni Modüller",
-      "description": "Risk skorlama, portföy tarama ve hasar analizi alanlarında yeni araçlar geliştirilmektedir.",
+      "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.",
       "metrics": {
         "risk": {
-          "label": "Alan",
+          "label": "Adım 01",
           "value": "Risk skorlama"
         },
         "portfolio": {
-          "label": "Alan",
+          "label": "Adım 02",
           "value": "Portföy tarama"
         },
         "claims": {
-          "label": "Alan",
+          "label": "Adım 03",
           "value": "Hasar analizi"
         }
       },
@@ -257,7 +265,7 @@
         "portfolio_scanning": "Portföy tarama",
         "claim_analysis": "Hasar analizi"
       },
-      "footer": "Yeni modüller ürün ailesine kademeli olarak ekleniyor."
+      "footer": "Roadmap, canlı ürün ailesine kademeli olarak ekleniyor."
     }
   },
   "problem": {

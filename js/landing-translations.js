@@ -82,25 +82,26 @@ window.__landingTranslations = {
     "about": {
       "eyebrow": "Hakkımızda",
       "title": "Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.",
-      "description_1": "Prim hesaplama, teklif değerlendirme, poliçe kontrolü — bu süreçlerin büyük çoğunluğu hâlâ elle yürütülüyor. Riscodex, her kritik adım için ayrı bir yapay zeka aracı geliştirir; kurumsal entegrasyon zorunluluğu olmadan, mevcut çalışma düzenine oturur.",
+      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta sektöründeki yapısal sorunları teknolojiyle çözmek için kuruldu.",
+      "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka araçları geliştirir.",
       "description_2": "",
       "highlights": {
         "focus": {
           "label": "Teknik Karar Desteği",
-          "value": "Prim doğrulama, teklif analizi, teminat karşılaştırması. Sigorta sektörü normlarına göre, yapay zeka ile."
+          "value": "Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile hızlandırır."
         },
         "model": {
           "label": "Kurumsal Pilot Modeli",
-          "value": "Doğru ürün, doğru ekiple eşleştirilir. Kısa pilot sürecinin ardından canlı kullanıma geçilir."
+          "value": "Doğru ürünle kısa pilot kurulur, ekip canlı kullanıma kontrollü geçer."
         },
         "approach": {
-          "label": "Yerel Mevzuata Tam Uyum",
-          "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi. Yabancı platformların kapsayamadığı teknik ve hukuki çerçeve, ürünün çekirdeğinde yer alıyor."
+          "label": "Yerel Mevzuata Uyum",
+          "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi."
         }
       },
       "trust": {
         "eyebrow": "İTÜ Çekirdek",
-        "title": "İTÜ Çekirdek ve referans bloğu",
+        "title": "İTÜ Çekirdek destekli girişim",
         "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak için büyüyor.",
         "cards": {
           "origin": {
@@ -117,7 +118,13 @@ window.__landingTranslations = {
     "platform": {
       "eyebrow": "Ürünler",
       "title": "Her kritik adım için bir araç. Riscodex ürün ailesi.",
+      "title_html": "Her kritik adım için bir araç. <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
       "description": "Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı içinde ilerliyor.",
+      "legend": {
+        "live": "Canlı ürün",
+        "launch": "Yeni çıkanlar",
+        "roadmap": "Geliştirme hattı"
+      },
       "highlights": {
         "focus": {
           "label": "Hedef Kitle",
@@ -154,12 +161,13 @@ window.__landingTranslations = {
             "value": "tariffeq.com"
           }
         },
-        "cta": "tariffeq.com"
+        "cta": "TariffEQ'yu aç",
+        "note": "Canlı kullanımda olan ilk ürün."
       },
       "demo": {
         "eyebrow": "Yeni Yayında",
         "title": "Versus AI",
-        "description": "Birden fazla sigorta teklifini yükleyin; Versus AI teminatları okur, şirketler arasındaki kritik farkları ortaya çıkarır ve gerekçeli bir değerlendirme raporu sunar. Kasko, Trafik, Özel Sağlık Sigortası (ÖSS), Tamamlayıcı Sağlık Sigortası (TSS), Ferdi Kaza, Nakliyat, Yangın, İnşaat & Montaj, Enerji ve Sorumluluk branşlarında çalışır.",
+        "description": "Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve gerekçeli bir değerlendirme raporu sunar.",
         "metrics": {
           "input": {
             "label": "Girdi",
@@ -180,12 +188,12 @@ window.__landingTranslations = {
           "choice": "10 branş desteği"
         },
         "badge": "Yeni",
-        "cta": "Erişim Talep Edin"
+        "cta": "Versus AI için talep oluştur"
       },
       "modules": {
         "eyebrow": "Yeni Yayında",
         "title": "Versus Check",
-        "description": "İmzaladığınız teklif ile elinize geçen poliçe aynı mı? Geçen yılın koşulları bu yıl korundu mu? Versus Check, iki sigorta belgesini yan yana okur; teminat değişikliklerini, limit farklılıklarını ve kloz düzenlemelerini sigorta etkisiyle birlikte raporlar.",
+        "description": "Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle birlikte raporlar.",
         "metrics": {
           "input": {
             "label": "Karşılaştırma",
@@ -222,7 +230,7 @@ window.__landingTranslations = {
             "status": "Yeni"
           }
         },
-        "cta": "Erişim Talep Edin"
+        "cta": "Versus Check için talep oluştur"
       },
       "next": {
         "eyebrow": "Sonraki Katman",
@@ -238,18 +246,18 @@ window.__landingTranslations = {
       "future": {
         "eyebrow": "Geliştirme Aşamasında",
         "title": "Yeni Modüller",
-        "description": "Risk skorlama, portföy tarama ve hasar analizi alanlarında yeni araçlar geliştirilmektedir.",
+        "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.",
         "metrics": {
           "risk": {
-            "label": "Alan",
+            "label": "Adım 01",
             "value": "Risk skorlama"
           },
           "portfolio": {
-            "label": "Alan",
+            "label": "Adım 02",
             "value": "Portföy tarama"
           },
           "claims": {
-            "label": "Alan",
+            "label": "Adım 03",
             "value": "Hasar analizi"
           }
         },
@@ -258,7 +266,7 @@ window.__landingTranslations = {
           "portfolio_scanning": "Portföy tarama",
           "claim_analysis": "Hasar analizi"
         },
-        "footer": "Yeni modüller ürün ailesine kademeli olarak ekleniyor."
+        "footer": "Roadmap, canlı ürün ailesine kademeli olarak ekleniyor."
       }
     },
     "problem": {
@@ -522,25 +530,26 @@ window.__landingTranslations = {
     "about": {
       "eyebrow": "About",
       "title": "Riscodex was founded to solve the structural problems of the insurance industry through technology.",
-      "description_1": "Premium calculation, offer evaluation, policy control — most of these processes are still handled manually. Riscodex builds a separate AI tool for each critical step and fits into the existing workflow without requiring institutional integration.",
+      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span> was founded to solve structural problems in insurance through technology.",
+      "description_1": "Premium calculation, offer evaluation, and policy review still move forward manually in most teams. Riscodex builds AI tools for these critical steps without forcing institutional integration.",
       "description_2": "",
       "highlights": {
         "focus": {
           "label": "Technical Decision Support",
-          "value": "Premium validation, offer analysis, coverage comparison. Built with AI according to insurance-sector norms."
+          "value": "Accelerates premium validation, offer analysis, and coverage comparison with AI."
         },
         "model": {
           "label": "Enterprise Pilot Model",
-          "value": "The right product is matched with the right team. After a short pilot process, the team moves into live usage."
+          "value": "The right product starts with a short pilot, then moves into controlled live usage."
         },
         "approach": {
-          "label": "Full Compliance with Local Regulation",
-          "value": "Built on Turkish insurance regulation and sector standards. The technical and legal framework that foreign platforms cannot fully cover sits at the core of the product."
+          "label": "Local Regulatory Fit",
+          "value": "Built on Turkish insurance regulation and sector standards."
         }
       },
       "trust": {
         "eyebrow": "ITU Cekirdek",
-        "title": "ITU Cekirdek and reference block",
+        "title": "ITU Cekirdek-backed venture",
         "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It is used by insurance agencies and brokers. Its roots are in Turkey, and its ambition is global. Riscodex is growing to take its place internationally in insurance technology.",
         "cards": {
           "origin": {
@@ -557,7 +566,13 @@ window.__landingTranslations = {
     "platform": {
       "eyebrow": "Products",
       "title": "A tool for each critical step. The Riscodex product family.",
+      "title_html": "A tool for each critical step. The <span class=\"wordmark-gradient\">Riscodex</span> product family.",
       "description": "Live products, pilot-access tools, and the development pipeline progress within the same operating structure.",
+      "legend": {
+        "live": "Live product",
+        "launch": "New launches",
+        "roadmap": "Roadmap"
+      },
       "highlights": {
         "focus": {
           "label": "Target Users",
@@ -594,12 +609,13 @@ window.__landingTranslations = {
             "value": "tariffeq.com"
           }
         },
-        "cta": "tariffeq.com"
+        "cta": "Open TariffEQ",
+        "note": "The first product already in live usage."
       },
       "demo": {
         "eyebrow": "New Launch",
         "title": "Versus AI",
-        "description": "Upload multiple insurance offers; Versus AI reads the coverages, surfaces the critical differences between insurers, and produces a reasoned evaluation report. It works across Motor, Traffic, Private Health, Supplementary Health, Personal Accident, Cargo, Fire, Construction & Installation, Energy, and Liability lines.",
+        "description": "Upload multiple insurance offers. Versus AI surfaces the critical differences and produces a reasoned evaluation report.",
         "metrics": {
           "input": {
             "label": "Input",
@@ -620,12 +636,12 @@ window.__landingTranslations = {
           "choice": "Support for 10 lines"
         },
         "badge": "New",
-        "cta": "Request Access"
+        "cta": "Request Versus AI"
       },
       "modules": {
         "eyebrow": "New Launch",
         "title": "Versus Check",
-        "description": "Does the issued policy match the offer you signed? Were last year's conditions preserved this year? Versus Check reads two insurance documents side by side and reports coverage changes, limit differences, and clause revisions together with their insurance impact.",
+        "description": "Reads the offer and the issued policy side by side, then reports coverage, limit, and clause differences with insurance impact.",
         "metrics": {
           "input": {
             "label": "Comparison",
@@ -662,7 +678,7 @@ window.__landingTranslations = {
             "status": "New"
           }
         },
-        "cta": "Request Access"
+        "cta": "Request Versus Check"
       },
       "next": {
         "eyebrow": "Next Layer",
@@ -678,18 +694,18 @@ window.__landingTranslations = {
       "future": {
         "eyebrow": "In Development",
         "title": "New Modules",
-        "description": "New tools are being developed in risk scoring, portfolio scanning, and claims analysis.",
+        "description": "We are building new tools for risk scoring, portfolio scanning, and claims analysis.",
         "metrics": {
           "risk": {
-            "label": "Area",
+            "label": "Step 01",
             "value": "Risk scoring"
           },
           "portfolio": {
-            "label": "Area",
+            "label": "Step 02",
             "value": "Portfolio scanning"
           },
           "claims": {
-            "label": "Area",
+            "label": "Step 03",
             "value": "Claims analysis"
           }
         },
@@ -698,7 +714,7 @@ window.__landingTranslations = {
           "portfolio_scanning": "Portfolio scanning",
           "claim_analysis": "Claims analysis"
         },
-        "footer": "New modules are added to the product family in phases."
+        "footer": "The roadmap joins the live product family in phases."
       }
     },
     "problem": {

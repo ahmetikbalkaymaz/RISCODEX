@@ -107,6 +107,140 @@
             border: 1px solid rgba(96, 125, 175, 0.14);
         }
 
+        .product-card-live {
+            background: linear-gradient(180deg, rgba(248, 253, 255, 0.99), rgba(236, 246, 255, 0.98));
+            border-color: rgba(79, 141, 248, 0.22);
+            box-shadow: 0 18px 36px rgba(79, 141, 248, 0.12);
+        }
+
+        .product-card-launch {
+            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(242, 247, 255, 0.98));
+            border-color: rgba(79, 141, 248, 0.2);
+            box-shadow: 0 18px 36px rgba(96, 125, 175, 0.11);
+        }
+
+        .product-card-launch-ai {
+            background: linear-gradient(180deg, rgba(245, 250, 255, 0.99), rgba(235, 244, 255, 0.98));
+        }
+
+        .product-card-launch-check {
+            background: linear-gradient(180deg, rgba(247, 249, 255, 0.99), rgba(239, 244, 255, 0.98));
+            border-color: rgba(105, 123, 229, 0.18);
+            box-shadow: 0 18px 36px rgba(105, 123, 229, 0.1);
+        }
+
+        .product-card-roadmap {
+            background: linear-gradient(180deg, rgba(243, 247, 255, 0.96), rgba(237, 243, 252, 0.97));
+            border-color: rgba(96, 125, 175, 0.16);
+        }
+
+        .platform-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 999px;
+            padding: 0.38rem 0.8rem;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .platform-status-live {
+            background: rgba(53, 201, 138, 0.12);
+            color: #149a68;
+        }
+
+        .platform-status-launch {
+            background: rgba(47, 110, 233, 0.12);
+            color: var(--accent-strong);
+        }
+
+        .platform-status-roadmap {
+            background: rgba(96, 125, 175, 0.12);
+            color: #5f6f86;
+        }
+
+        .platform-legend-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            border-radius: 999px;
+            border: 1px solid rgba(96, 125, 175, 0.14);
+            background: rgba(255, 255, 255, 0.75);
+            padding: 0.55rem 0.9rem;
+            font-size: 12px;
+            font-weight: 600;
+            color: #51637d;
+        }
+
+        .platform-legend-dot {
+            height: 0.55rem;
+            width: 0.55rem;
+            border-radius: 999px;
+        }
+
+        .platform-meta-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .roadmap-chip {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(96, 125, 175, 0.14);
+            box-shadow: 0 10px 22px rgba(96, 125, 175, 0.06);
+        }
+
+        .platform-roadmap-track {
+            position: relative;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .platform-roadmap-step {
+            position: relative;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(96, 125, 175, 0.14);
+            box-shadow: 0 12px 26px rgba(96, 125, 175, 0.08);
+        }
+
+        .platform-roadmap-dot {
+            height: 0.8rem;
+            width: 0.8rem;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #7aa5ff 0%, #2f6ee9 100%);
+            box-shadow: 0 0 0 5px rgba(79, 141, 248, 0.08);
+        }
+
+        @media (min-width: 768px) {
+            .platform-roadmap-track::before {
+                content: "";
+                position: absolute;
+                left: 2rem;
+                right: 2rem;
+                top: 1.45rem;
+                height: 1px;
+                background: linear-gradient(90deg, rgba(79, 141, 248, 0.24), rgba(96, 125, 175, 0.16));
+            }
+        }
+
+        .about-highlight-card {
+            min-height: 100%;
+            background: linear-gradient(180deg, rgba(244, 248, 255, 0.98), rgba(236, 243, 255, 0.9));
+            border: 1px solid rgba(96, 125, 175, 0.14);
+        }
+
+        .about-highlight-card-featured {
+            background: linear-gradient(180deg, rgba(231, 240, 255, 1), rgba(242, 247, 255, 0.98));
+            border-color: rgba(79, 141, 248, 0.24);
+            box-shadow: 0 18px 36px rgba(79, 141, 248, 0.12);
+        }
+
+        .about-highlight-icon {
+            background: linear-gradient(180deg, rgba(79, 141, 248, 0.16), rgba(79, 141, 248, 0.08));
+            border: 1px solid rgba(79, 141, 248, 0.14);
+        }
+
         .eyebrow {
             letter-spacing: 0.22em;
             text-transform: uppercase;
@@ -118,6 +252,14 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent !important;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wordmark-gradient {
+            background: linear-gradient(90deg, #2f6ee9 0%, #10213c 84%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
             -webkit-text-fill-color: transparent;
         }
 
@@ -559,46 +701,71 @@
 
     <section id="about" class="relative z-10 py-10 lg:py-16">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="grid gap-6 lg:grid-cols-[1.08fr_.92fr]">
+            <div class="grid gap-6 lg:grid-cols-[1.18fr_.82fr]">
                 <div class="surface-panel hover-lift reveal-on-scroll rounded-[28px] p-8 md:p-10">
                     <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="about.eyebrow">
                         Hakkımızda</p>
-                    <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
-                        data-i18n="about.title">
-                        Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.
+                    <h2 class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                        data-i18n-html="about.title_html">
+                        <span class="wordmark-gradient">Riscodex</span>, sigorta sektöründeki yapısal sorunları
+                        teknolojiyle çözmek için kuruldu.
                     </h2>
-                    <p class="mt-5 max-w-2xl text-base leading-7 text-slate-600" data-i18n="about.description_1">
-                        Prim hesaplama, teklif değerlendirme, poliçe kontrolü — bu süreçlerin büyük çoğunluğu hâlâ elle
-                        yürütülüyor. Riscodex, her kritik adım için ayrı bir yapay zeka aracı geliştirir; kurumsal
-                        entegrasyon zorunluluğu olmadan, mevcut çalışma düzenine oturur.
+                    <p class="mt-5 max-w-3xl text-base leading-7 text-slate-600" data-i18n="about.description_1">
+                        Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor.
+                        Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka
+                        araçları geliştirir.
                     </p>
 
-                    <div class="mt-8 grid gap-4 sm:grid-cols-3">
-                        <div class="surface-card-soft hover-lift reveal-on-scroll rounded-2xl px-4 py-4">
-                            <div class="text-base font-semibold text-white" data-i18n="about.highlights.focus.label">
-                                Teknik Karar Desteği</div>
-                            <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.highlights.focus.value">
-                                Prim doğrulama, teklif analizi, teminat karşılaştırması. Sigorta sektörü normlarına
-                                göre, yapay zeka ile.
-                            </p>
-                        </div>
-                        <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-4 py-4">
-                            <div class="text-base font-semibold text-white" data-i18n="about.highlights.model.label">
-                                Kurumsal Pilot Modeli</div>
-                            <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.highlights.model.value">
-                                Doğru ürün, doğru ekiple eşleştirilir. Kısa pilot sürecinin ardından canlı kullanıma
-                                geçilir.
-                            </p>
-                        </div>
-                        <div class="surface-card-soft hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-4 py-4">
-                            <div class="text-base font-semibold text-white"
-                                data-i18n="about.highlights.approach.label">Yerel Mevzuata Tam Uyum</div>
-                            <p class="mt-3 text-sm leading-7 text-slate-400"
-                                data-i18n="about.highlights.approach.value">Türk sigorta mevzuatı ve sektör standartları
-                                temel alınarak geliştirildi. Yabancı platformların kapsayamadığı teknik ve hukuki
-                                çerçeve, ürünün çekirdeğinde yer alıyor.
-                            </p>
-                        </div>
+                    <div class="mt-8 grid gap-4 lg:grid-cols-3">
+                        <article
+                            class="about-highlight-card about-highlight-card-featured hover-lift reveal-on-scroll rounded-2xl px-5 py-5">
+                            <div class="flex items-start gap-4">
+                                <div class="about-highlight-icon flex h-11 w-11 items-center justify-center rounded-2xl">
+                                    <i data-lucide="sparkles" class="h-4 w-4 text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <div class="text-base font-semibold text-white"
+                                        data-i18n="about.highlights.focus.label">
+                                        Teknik Karar Desteği</div>
+                                    <p class="mt-2 text-sm leading-6 text-slate-400"
+                                        data-i18n="about.highlights.focus.value">
+                                        Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile
+                                        hızlandırır.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="about-highlight-card hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-5 py-5">
+                            <div class="flex items-start gap-4">
+                                <div class="about-highlight-icon flex h-11 w-11 items-center justify-center rounded-2xl">
+                                    <i data-lucide="briefcase-business" class="h-4 w-4 text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <div class="text-base font-semibold text-white"
+                                        data-i18n="about.highlights.model.label">
+                                        Kurumsal Pilot Modeli</div>
+                                    <p class="mt-2 text-sm leading-6 text-slate-400"
+                                        data-i18n="about.highlights.model.value">
+                                        Doğru ürünle kısa pilot kurulur, ekip canlı kullanıma kontrollü geçer.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="about-highlight-card hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-5 py-5">
+                            <div class="flex items-start gap-4">
+                                <div class="about-highlight-icon flex h-11 w-11 items-center justify-center rounded-2xl">
+                                    <i data-lucide="shield-check" class="h-4 w-4 text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <div class="text-base font-semibold text-white"
+                                        data-i18n="about.highlights.approach.label">Yerel Mevzuata Uyum</div>
+                                    <p class="mt-2 text-sm leading-6 text-slate-400"
+                                        data-i18n="about.highlights.approach.value">
+                                        Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
@@ -609,7 +776,7 @@
                     <div class="surface-card mt-5 rounded-[24px] p-6">
                         <img src="assets/acc-26.png" alt="İTÜ Çekirdek" class="h-14 w-auto object-contain sm:h-16">
                         <h3 class="mt-5 text-2xl font-semibold text-white" data-i18n="about.trust.title">İTÜ Çekirdek
-                            ve referans bloğu</h3>
+                            destekli girişim</h3>
                         <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.trust.description">
                             Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi
                             girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri
@@ -647,40 +814,56 @@
                             <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]"
                                 data-i18n="platform.eyebrow">Ürünler</p>
                             <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
-                                data-i18n="platform.title">
-                                Her kritik adım için bir araç. Riscodex ürün ailesi.
+                                data-i18n-html="platform.title_html">
+                                Her kritik adım için bir araç. <span class="wordmark-gradient">Riscodex</span> ürün
+                                ailesi.
                             </h2>
                             <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600"
                                 data-i18n="platform.description">
                                 Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı
                                 içinde ilerliyor.
                             </p>
+                            <div class="mt-5 flex flex-wrap gap-2">
+                                <div class="platform-legend-chip">
+                                    <span class="platform-legend-dot bg-emerald-400"></span>
+                                    <span data-i18n="platform.legend.live">Canlı ürün</span>
+                                </div>
+                                <div class="platform-legend-chip">
+                                    <span class="platform-legend-dot bg-blue-500"></span>
+                                    <span data-i18n="platform.legend.launch">Yeni çıkanlar</span>
+                                </div>
+                                <div class="platform-legend-chip">
+                                    <span class="platform-legend-dot bg-slate-400"></span>
+                                    <span data-i18n="platform.legend.roadmap">Geliştirme hattı</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="grid gap-5 xl:grid-cols-2 2xl:grid-cols-4">
-                        <article class="surface-card product-card hover-lift reveal-on-scroll rounded-[26px] p-7">
+                    <div class="grid gap-5 xl:grid-cols-3">
+                        <article
+                            class="surface-card product-card product-card-live hover-lift reveal-on-scroll rounded-[26px] p-7">
                             <div class="flex items-start justify-between gap-4">
                                 <div>
-                                    <div
-                                        class="inline-flex items-center gap-2 rounded-full bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">
+                                    <div class="platform-status platform-status-live">
                                         <span class="h-2 w-2 rounded-full bg-[var(--success)]"></span>
                                         <span data-i18n="platform.live.badge">Yayında</span>
                                     </div>
-                                    <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.live.title">
+                                    <h3 class="mt-5 text-[2.2rem] font-semibold leading-tight text-white"
+                                        data-i18n="platform.live.title">
                                         TariffEQ</h3>
                                 </div>
                                 <i data-lucide="activity" class="h-5 w-5 text-slate-500"></i>
                             </div>
 
-                            <p class="mt-5 max-w-md text-sm leading-7 text-slate-300"
+                            <p class="mt-4 text-sm leading-7 text-slate-300"
                                 data-i18n="platform.live.description">
                                 İhtiyari deprem prim hesaplamasını resmi tarife standartlarına tam uyumlu şekilde
                                 gerçekleştirin. Senaryo karşılaştırması, otomatik doğrulama ve teknik karar desteği tek
                                 ekranda.
                             </p>
 
-                            <div class="mt-7 grid gap-3">
+                            <div class="platform-meta-grid mt-6">
                                 <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                         data-i18n="platform.live.metrics.scope.label">Kapsam</div>
@@ -701,30 +884,34 @@
                                 </div>
                             </div>
 
-                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
+                            <div class="mt-auto pt-6 flex flex-wrap items-center gap-3">
                                 <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
                                     class="button-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors">
-                                    <span data-i18n="platform.live.cta">tariffeq.com</span>
+                                    <span data-i18n="platform.live.cta">TariffEQ'yu aç</span>
                                     <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                                 </a>
+                                <div class="text-sm font-medium text-slate-500"
+                                    data-i18n="platform.live.note">Canlı kullanımda olan ilk ürün.</div>
                             </div>
                         </article>
 
-                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[26px] p-7">
+                        <article
+                            class="surface-card product-card product-card-launch product-card-launch-ai hover-lift reveal-on-scroll reveal-delay-1 rounded-[26px] p-7">
                             <div class="flex items-center justify-between gap-4">
-                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
-                                    data-i18n="platform.demo.eyebrow">Yeni Yayında</div>
+                                <div class="platform-status platform-status-launch">
+                                    <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+                                    <span data-i18n="platform.demo.eyebrow">Yeni Yayında</span>
+                                </div>
                                 <i data-lucide="scan-search" class="h-5 w-5 text-slate-500"></i>
                             </div>
-                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.demo.title">Versus AI</h3>
-                            <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.demo.description">
-                                Birden fazla sigorta teklifini yükleyin; Versus AI teminatları okur, şirketler
-                                arasındaki kritik farkları ortaya çıkarır ve gerekçeli bir değerlendirme raporu sunar.
-                                Kasko, Trafik, Özel Sağlık Sigortası (ÖSS), Tamamlayıcı Sağlık Sigortası (TSS), Ferdi
-                                Kaza, Nakliyat, Yangın, İnşaat &amp; Montaj, Enerji ve Sorumluluk branşlarında çalışır.
+                            <h3 class="mt-5 text-[2rem] font-semibold leading-tight text-white"
+                                data-i18n="platform.demo.title">Versus AI</h3>
+                            <p class="mt-4 text-sm leading-7 text-slate-400" data-i18n="platform.demo.description">
+                                Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve
+                                gerekçeli bir değerlendirme raporu sunar.
                             </p>
 
-                            <div class="mt-6 grid gap-3">
+                            <div class="platform-meta-grid mt-6">
                                 <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                         data-i18n="platform.demo.metrics.input.label">Girdi</div>
@@ -748,27 +935,30 @@
                             <div class="mt-auto pt-7 flex flex-wrap gap-3">
                                 <a href="#access-request"
                                     class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
-                                    <span data-i18n="platform.demo.cta">Erişim Talep Edin</span>
+                                    <span data-i18n="platform.demo.cta">Versus AI için talep oluştur</span>
                                     <i data-lucide="arrow-right" class="h-4 w-4"></i>
                                 </a>
                             </div>
                         </article>
 
-                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[26px] p-7">
+                        <article
+                            class="surface-card product-card product-card-launch product-card-launch-check hover-lift reveal-on-scroll reveal-delay-2 rounded-[26px] p-7">
                             <div class="flex items-center justify-between gap-4">
-                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
-                                    data-i18n="platform.modules.eyebrow">Yeni Yayında</div>
+                                <div class="platform-status platform-status-launch">
+                                    <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+                                    <span data-i18n="platform.modules.eyebrow">Yeni Yayında</span>
+                                </div>
                                 <i data-lucide="file-search" class="h-5 w-5 text-slate-500"></i>
                             </div>
-                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.modules.title">
+                            <h3 class="mt-5 text-[2rem] font-semibold leading-tight text-white"
+                                data-i18n="platform.modules.title">
                                 Versus Check</h3>
-                            <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.modules.description">
-                                İmzaladığınız teklif ile elinize geçen poliçe aynı mı? Geçen yılın koşulları bu yıl
-                                korundu mu? Versus Check, iki sigorta belgesini yan yana okur; teminat değişikliklerini,
-                                limit farklılıklarını ve kloz düzenlemelerini sigorta etkisiyle birlikte raporlar.
+                            <p class="mt-4 text-sm leading-7 text-slate-400" data-i18n="platform.modules.description">
+                                Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle
+                                birlikte raporlar.
                             </p>
 
-                            <div class="mt-6 grid gap-3">
+                            <div class="platform-meta-grid mt-6">
                                 <div class="product-meta rounded-2xl px-4 py-3">
                                     <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
                                         data-i18n="platform.modules.metrics.input.label">Karşılaştırma</div>
@@ -792,53 +982,64 @@
                             <div class="mt-auto pt-7 flex flex-wrap gap-3">
                                 <a href="#access-request"
                                     class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
-                                    <span data-i18n="platform.modules.cta">Erişim Talep Edin</span>
+                                    <span data-i18n="platform.modules.cta">Versus Check için talep oluştur</span>
                                     <i data-lucide="arrow-right" class="h-4 w-4"></i>
                                 </a>
                             </div>
                         </article>
+                    </div>
 
-                        <article class="surface-card product-card hover-lift reveal-on-scroll reveal-delay-3 rounded-[26px] p-7">
-                            <div class="flex items-center justify-between gap-4">
-                                <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-200/[0.55]"
-                                    data-i18n="platform.future.eyebrow">Geliştirme Aşamasında</div>
-                                <i data-lucide="layers-3" class="h-5 w-5 text-slate-500"></i>
+                    <article
+                        class="surface-card product-card-roadmap hover-lift reveal-on-scroll reveal-delay-3 rounded-[26px] p-7 md:p-8">
+                        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                            <div class="max-w-xl">
+                                <div class="platform-status platform-status-roadmap">
+                                    <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+                                    <span data-i18n="platform.future.eyebrow">Geliştirme Aşamasında</span>
+                                </div>
+                                <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.future.title">
+                                    Yeni Modüller</h3>
+                                <p class="mt-4 text-sm leading-7 text-slate-400"
+                                    data-i18n="platform.future.description">
+                                    Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.
+                                </p>
+                                <div class="mt-6 text-sm font-medium text-slate-500"
+                                    data-i18n="platform.future.footer">
+                                    Roadmap, canlı ürün ailesine kademeli olarak ekleniyor.
+                                </div>
                             </div>
-                            <h3 class="mt-5 text-3xl font-semibold text-white" data-i18n="platform.future.title">Yeni
-                                Modüller</h3>
-                            <p class="mt-5 text-sm leading-7 text-slate-400" data-i18n="platform.future.description">
-                                Risk skorlama, portföy tarama ve hasar analizi alanlarında yeni araçlar
-                                geliştirilmektedir.
-                            </p>
 
-                            <div class="mt-6 grid gap-3">
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.future.metrics.risk.label">Alan</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
+                            <div class="platform-roadmap-track md:grid-cols-3 lg:min-w-[42rem] lg:max-w-4xl">
+                                <div class="platform-roadmap-step rounded-2xl px-5 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <span class="platform-roadmap-dot"></span>
+                                        <span class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="platform.future.metrics.risk.label">Adım 01</span>
+                                    </div>
+                                    <div class="mt-4 text-base font-semibold text-white"
                                         data-i18n="platform.future.metrics.risk.value">Risk skorlama</div>
                                 </div>
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.future.metrics.portfolio.label">Alan</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
+                                <div class="platform-roadmap-step rounded-2xl px-5 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <span class="platform-roadmap-dot"></span>
+                                        <span class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="platform.future.metrics.portfolio.label">Adım 02</span>
+                                    </div>
+                                    <div class="mt-4 text-base font-semibold text-white"
                                         data-i18n="platform.future.metrics.portfolio.value">Portföy tarama</div>
                                 </div>
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.future.metrics.claims.label">Alan</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
+                                <div class="platform-roadmap-step rounded-2xl px-5 py-5">
+                                    <div class="flex items-center gap-3">
+                                        <span class="platform-roadmap-dot"></span>
+                                        <span class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="platform.future.metrics.claims.label">Adım 03</span>
+                                    </div>
+                                    <div class="mt-4 text-base font-semibold text-white"
                                         data-i18n="platform.future.metrics.claims.value">Hasar analizi</div>
                                 </div>
                             </div>
-
-                            <div class="mt-auto pt-7 text-sm font-medium text-slate-500"
-                                data-i18n="platform.future.footer">
-                                Yeni modüller ürün ailesine kademeli olarak ekleniyor.
-                            </div>
-                        </article>
-
-                    </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </div>
