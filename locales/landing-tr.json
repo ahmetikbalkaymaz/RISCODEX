@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Riscodex | Sigorta Operasyonları için Yapay Zeka Platformu"
+    "title": "Riscodex | Sigorta Karar ve Operasyon Platformu"
   },
   "nav": {
     "home_aria": "Riscodex ana sayfa",
@@ -13,38 +13,53 @@
     "menu_aria": "Menüyü aç"
   },
   "hero": {
-    "eyebrow": "Operational Risk, Pricing and Claims Platform",
-    "title": "Sigorta sektörü için geliştirilmiş yapay zeka platformu.",
-    "description": "Riscodex, sigorta acentelerinin ve brokerlerin prim hesaplama, teklif değerlendirme ve poliçe inceleme süreçlerini yapay zeka ile daha hızlı ve daha güvenilir yürütmesi için tasarlanmıştır.",
-    "primary_cta": "Versus AI'a Erişim Talep Edin",
-    "secondary_cta": "TariffEQ'yu İnceleyin",
+    "eyebrow": "Sigorta Karar ve Operasyon Platformu",
+    "title": "Tekliften poliçeye karar akışını hızlandırın.",
+    "description": "Riscodex, fiyatlama, teklif karşılaştırma ve poliçe kontrol süreçlerini aynı karar standardında birleştiren kurumsal sigorta operasyon platformudur.",
+    "primary_cta": "Kurumsal Demo Talep Et",
+    "secondary_cta": "TariffEQ'yu İncele",
+    "decision_network": {
+      "aria": "Teklif, karşılaştırma, kontrol ve poliçe aşamalarından oluşan Riscodex karar akışı",
+      "stages": {
+        "offer": "Teklif",
+        "compare": "Karşılaştırma",
+        "control": "Kontrol",
+        "policy": "Poliçe"
+      }
+    },
     "metrics": {
       "live": {
-        "label": "2 Aktif Ürün",
+        "label": "2 Canlı Ürün",
         "title": "TariffEQ ve Versus AI",
-        "description": "TariffEQ pazarda, Versus AI yeni yayında. Ürün ailesi genişlemeye devam ediyor."
+        "description": "Fiyatlama ve teklif değerlendirme için sahada kullanılan ürün ailesi."
       },
       "demo": {
         "label": "10 Branş",
-        "title": "Geniş branş kapsamı",
-        "description": "Kaskodan yangına, nakliyattan sorumluluk sigortasına tüm temel branşlarda."
+        "title": "Teklif ve poliçe analizi",
+        "description": "Teminat, limit, muafiyet ve kloz farklarını karar raporuna dönüştürür."
       },
       "modules": {
-        "label": "Entegrasyon Gerektirmez",
-        "title": "Mevcut düzeninize oturur",
-        "description": "Sigorta şirketi sistemlerine bağlantı olmadan çalışır."
+        "label": "Kontrollü Pilot",
+        "title": "B2B erişim modeli",
+        "description": "Seçili ekiplerle kısa pilot, ardından canlı kullanım modeli."
       },
       "access": {
         "label": "İTÜ Çekirdek",
-        "title": "Türkiye merkezli girişim",
-        "description": "Türkiye'nin önde gelen teknoloji geliştirme programı bünyesinde hayata geçirildi."
+        "title": "Türkiye merkezli insurtech",
+        "description": "Türkiye’de geliştirilen, global sigorta teknolojisi odağıyla büyüyen girişim."
       }
+    },
+    "preview": {
+      "title": "Riscodex operasyon çalışma alanı",
+      "description": "Teklif karşılaştırma, kontrol ve karar raporu",
+      "status": "Canlı ürün görünümü",
+      "video_aria": "Versus AI ürün çalışma alanı"
     }
   },
   "applications": {
-    "eyebrow": "Uygulama Katmanı",
-    "title": "Modülleri kayan kart yapısında inceleyin",
-    "description": "Bu alan, ürün ailesini ana sayfada daha akıcı göstermek için yatay kayan kart yapısının ilk versiyonu. Mobilde kaydırılabilir, masaüstünde yön butonlarıyla ilerler.",
+    "eyebrow": "Ürün Katmanı",
+    "title": "Ürün ailesini iş akışına göre inceleyin",
+    "description": "Riscodex ürün ailesi fiyatlama, teklif değerlendirme, poliçe kontrolü ve risk görünürlüğü gibi net operasyon adımlarına ayrılır.",
     "cards": {
       "tariffeq": {
         "status": "Canlı",
@@ -80,28 +95,28 @@
   },
   "about": {
     "eyebrow": "Hakkımızda",
-    "title": "Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.",
-    "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta sektöründeki yapısal sorunları teknolojiyle çözmek için kuruldu.",
-    "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka araçları geliştirir.",
+    "title": "Riscodex, sigorta operasyonlarında karar standardı oluşturmak için geliştirildi.",
+    "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta operasyonlarında karar standardı oluşturmak için geliştirildi.",
+    "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex bu kritik adımları ürünleşmiş araçlarla kontrol edilebilir, ölçülebilir ve denetlenebilir hale getirir.",
     "description_2": "",
     "highlights": {
       "focus": {
-        "label": "Teknik Karar Desteği",
-        "value": "Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile hızlandırır."
+        "label": "Karar Standardı",
+        "value": "Prim, teklif ve poliçe kontrollerinde ekipler arası yorum farkını azaltır."
       },
       "model": {
         "label": "Kurumsal Pilot Modeli",
         "value": "Doğru ürünle kısa pilot kurulur, ekip canlı kullanıma kontrollü geçer."
       },
       "approach": {
-        "label": "Yerel Mevzuata Uyum",
-        "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi."
+        "label": "Mevzuat ve Operasyon Uyumu",
+        "value": "Türk sigorta mevzuatı ve saha iş akışları temel alınarak geliştirildi."
       }
     },
     "trust": {
       "eyebrow": "İTÜ Çekirdek",
       "title": "İTÜ Çekirdek destekli girişim",
-      "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak için büyüyor.",
+      "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerlerle gerçek iş akışlarında kullanılan ürünler geliştirir; kontrollü pilotlarla kurumsal kullanıma geçişi yönetir.",
       "cards": {
         "origin": {
           "label": "Kullanım",
@@ -116,9 +131,9 @@
   },
   "platform": {
     "eyebrow": "Ürünler",
-    "title": "Her kritik adım için bir araç. Riscodex ürün ailesi.",
-    "title_html": "Her kritik adım için bir araç. <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
-    "description": "Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı içinde ilerliyor.",
+    "title": "Fiyatlama, karşılaştırma ve kontrol için Riscodex ürün ailesi.",
+    "title_html": "Fiyatlama, karşılaştırma ve kontrol için <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
+    "description": "Canlı ürünler ve pilot modüller aynı karar mimarisiyle ilerler; her araç net bir operasyon adımına odaklanır.",
     "legend": {
       "live": "Canlı ürün",
       "launch": "Yeni çıkanlar",
@@ -141,7 +156,7 @@
     "live": {
       "badge": "Yayında",
       "title": "TariffEQ",
-      "description": "İhtiyari deprem prim hesaplamasını resmi tarife standartlarına tam uyumlu şekilde gerçekleştirin. Senaryo karşılaştırması, otomatik doğrulama ve teknik karar desteği tek ekranda.",
+      "description": "İhtiyari deprem prim hesaplamasını resmi tarife standartlarına uyumlu şekilde yürütün. Senaryo karşılaştırması, doğrulama ve teknik karar desteği tek ekranda.",
       "metrics": {
         "scope": {
           "label": "Kapsam",
@@ -161,12 +176,12 @@
         }
       },
       "cta": "TariffEQ'yu aç",
-      "note": "Canlı kullanımda olan ilk ürün."
+      "note": "Canlı kullanımda olan fiyatlama ürünü."
     },
     "demo": {
       "eyebrow": "Yeni Yayında",
       "title": "Versus AI",
-      "description": "Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve gerekçeli bir değerlendirme raporu sunar.",
+      "description": "Birden fazla sigorta teklifini tek çalışma alanında karşılaştırır; kritik farkları, eksik teminatları ve karar gerekçesini raporlar.",
       "metrics": {
         "input": {
           "label": "Girdi",
@@ -187,49 +202,16 @@
         "choice": "10 branş desteği"
       },
       "badge": "Yeni",
-      "cta": "Versus AI için talep oluştur"
+      "cta": "Versus AI sayfasını aç",
+      "secondary_cta": "Demo talebi bırak"
     },
     "modules": {
       "eyebrow": "Yeni Yayında",
-      "title": "Versus Check",
-      "description": "Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle birlikte raporlar.",
-      "metrics": {
-        "input": {
-          "label": "Karşılaştırma",
-          "value": "Teklif + poliçe"
-        },
-        "output": {
-          "label": "Çıktı",
-          "value": "Fark raporu"
-        },
-        "focus": {
-          "label": "Odak",
-          "value": "Teminat, limit, kloz"
-        }
-      },
-      "items": {
-        "locateloss": {
-          "name": "Teminat değişiklikleri",
-          "status": "Yeni"
-        },
-        "versus": {
-          "name": "Versus AI",
-          "status": "Yeni"
-        },
-        "foresight": {
-          "name": "Limit farklılıkları",
-          "status": "Yeni"
-        },
-        "firewatch": {
-          "name": "Kloz düzenlemeleri",
-          "status": "Yeni"
-        },
-        "precast": {
-          "name": "Precast",
-          "status": "Yeni"
-        }
-      },
-      "cta": "Versus Check için talep oluştur"
+      "title": "Versus Tools",
+      "tools": {
+        "commercial": "Ticari/Sınai poliçe primi hesaplama",
+        "fire": "Yangın abonman hesaplama"
+      }
     },
     "next": {
       "eyebrow": "Sonraki Katman",
@@ -245,7 +227,7 @@
     "future": {
       "eyebrow": "Geliştirme Aşamasında",
       "title": "Yeni Modüller",
-      "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.",
+      "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni karar modülleri geliştiriyoruz.",
       "metrics": {
         "risk": {
           "label": "Adım 01",
@@ -265,7 +247,7 @@
         "portfolio_scanning": "Portföy tarama",
         "claim_analysis": "Hasar analizi"
       },
-      "footer": "Roadmap, canlı ürün ailesine kademeli olarak ekleniyor."
+      "footer": "Yol haritası, canlı ürün ailesine kademeli olarak ekleniyor."
     }
   },
   "problem": {
@@ -293,7 +275,7 @@
   "solutions": {
     "eyebrow": "Kimler İçin",
     "title": "Riscodex kimler için değer üretiyor?",
-    "description": "Önce hangi ekibe hitap ettiğimizi net gösterip sonra ilgili operasyon katmanını detaylandırmak daha güçlü bir anlatı kurar.",
+    "description": "Dağıtım, underwriting ve operasyon ekiplerinin aynı karar dilinde çalışmasını hedefler.",
     "cards": {
       "company": {
         "eyebrow": "Kimler için",
@@ -395,7 +377,7 @@
   },
   "operating_model": {
     "eyebrow": "Nasıl Çalışır",
-    "title": "Doğru aracı, doğru iş akışına yerleştiriyoruz.",
+    "title": "Doğru ürünü, doğru iş akışına yerleştiriyoruz.",
     "description": "Kısa bir değerlendirme görüşmesiyle ihtiyacı netleştiririz, uygun ürünle pilot başlatırız, canlı kullanıma birlikte geçeriz.",
     "steps": {
       "discovery": {
@@ -417,8 +399,8 @@
   },
   "footer_cta": {
     "eyebrow": "Erişim Talebi",
-    "title": "Hangi ürün, hangi süreciniz için? Birlikte değerlendirelim.",
-    "description": "Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da poliçe dosyalarınızla canlı bir analiz yapabiliriz.",
+    "title": "Hangi ürün, hangi süreciniz için? Birlikte netleştirelim.",
+    "description": "Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da poliçe dosyalarınızla canlı bir değerlendirme yapabiliriz.",
     "steps": {
       "step_1": {
         "label": "Adım 1",
@@ -441,8 +423,6 @@
     }
   },
   "footer": {
-    "copyright": "&copy; 2025 RISCODEX Teknoloji A.Ş.",
-    "privacy": "Gizlilik",
-    "terms": "Şartlar"
+    "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
   }
 }

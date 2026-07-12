@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riscodex | Versus AI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/Riscodex_PP_Lockup_Inverse.svg">
+    <link rel="shortcut icon" href="../assets/Riscodex_PP_Lockup_Inverse.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/versus-translations.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Montserrat", "sans-serif"],
+                        tech: ["Montserrat", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --page-bg: #f6f8fb;
+            --panel-bg: rgba(255, 255, 255, 0.96);
+            --card-bg: rgba(255, 255, 255, 0.98);
+            --card-soft: rgba(244, 247, 251, 0.96);
+            --line: rgba(15, 23, 42, 0.12);
+            --line-strong: rgba(37, 99, 235, 0.22);
+            --text-main: #0f172a;
+            --text-muted: #526174;
+            --accent: #2563eb;
+            --accent-strong: #173d91;
+            --success: #16805c;
+            --ink: #08111f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background:
+                linear-gradient(180deg, #fbfcfe 0%, #f2f5f9 46%, #ffffff 100%);
+            background-color: var(--page-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        .bg-grid-pattern {
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+            background-size: 100% 72px;
+            mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+            -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+        }
+
+        .hero-glow {
+            display: none;
+        }
+
+        .surface-panel {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+        }
+
+        .surface-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.99));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+        }
+
+        .surface-card-soft {
+            background: rgba(244, 247, 251, 0.94);
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+        }
+
+        .section-panel-accent {
+            background: linear-gradient(180deg, rgba(247, 250, 254, 0.99), rgba(237, 242, 249, 0.99));
+            border: 1px solid rgba(37, 99, 235, 0.16);
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.07);
+        }
+
+        .eyebrow {
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            letter-spacing: 0;
+            color: var(--ink) !important;
+        }
+
+        .wordmark-gradient {
+            color: var(--accent-strong);
+        }
+
+        .button-primary {
+            background: #08111f;
+            color: #ffffff !important;
+            box-shadow: 0 12px 28px rgba(8, 17, 31, 0.16);
+        }
+
+        .button-primary:hover {
+            background: #173d91;
+        }
+
+        .button-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(15, 23, 42, 0.16);
+            color: #08111f !important;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        .button-primary i,
+        .button-primary span {
+            color: #ffffff !important;
+        }
+
+        .button-secondary i,
+        .button-secondary span {
+            color: #08111f !important;
+        }
+
+        .button-primary i,
+        .button-secondary i {
+            transition: transform 0.2s ease;
+        }
+
+        .button-primary:hover i,
+        .button-secondary:hover i {
+            transform: translate3d(3px, -1px, 0);
+        }
+
+        .lang-toggle {
+            border: 1px solid transparent;
+            color: #5f6f86;
+            transition: all 0.2s ease;
+        }
+
+        .lang-toggle.is-active {
+            background: #ffffff;
+            border-color: rgba(96, 125, 175, 0.2);
+            color: #10213c;
+            box-shadow: 0 6px 18px rgba(96, 125, 175, 0.12);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease;
+        }
+
+        .nav-link.is-active {
+            background: rgba(15, 23, 42, 0.06);
+            color: #10213c !important;
+            box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.1);
+        }
+
+        .nav-link-mobile {
+            transition: color 0.24s ease;
+        }
+
+        .nav-link-mobile.is-active {
+            color: #255fd4 !important;
+        }
+
+        .hover-lift {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+        }
+
+        .hover-lift::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.035), transparent 42%, rgba(37, 99, 235, 0.035));
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.24s ease, transform 0.24s ease;
+            pointer-events: none;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(96, 125, 175, 0.14);
+            border-color: var(--line-strong);
+        }
+
+        .hover-lift:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .platform-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 6px;
+            padding: 0.38rem 0.8rem;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .platform-status-launch {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent-strong);
+        }
+
+        .platform-status-live {
+            background: rgba(22, 128, 92, 0.1);
+            color: #126446;
+        }
+
+        .metric-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 251, 0.98));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+        }
+
+        .metric-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(8, 17, 31, 0.86), rgba(37, 99, 235, 0.32));
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.72s ease, transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .hero-enter {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: fade-up 0.78s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .hero-enter-delay-1 {
+            animation-delay: 0.08s;
+        }
+
+        .hero-enter-delay-2 {
+            animation-delay: 0.16s;
+        }
+
+        .hero-enter-delay-3 {
+            animation-delay: 0.24s;
+        }
+
+        .story-shell {
+            position: relative;
+            min-height: auto;
+        }
+
+        .story-pin {
+            position: relative;
+            display: flex;
+            min-height: auto;
+            align-items: center;
+            padding: 7rem 0 4rem;
+        }
+
+        .story-stage {
+            position: relative;
+            min-height: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98));
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+            padding: 1.25rem;
+        }
+
+        .story-stage-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+            background-size: 100% 56px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 100%);
+            -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 100%);
+        }
+
+        .story-direct-video-panel {
+            position: relative;
+            z-index: 2;
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 247, 251, 0.99));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.66);
+            padding: 1.25rem;
+        }
+
+        .story-paper {
+            position: absolute;
+            width: min(38%, 318px);
+            min-width: 254px;
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 255, 0.96));
+            box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+            padding: 1.1rem;
+            opacity: 0;
+            transform: translateY(80px) scale(0.97);
+            will-change: transform, opacity;
+        }
+
+        .paper-1 {
+            left: 5%;
+            top: 11%;
+            rotate: -9deg;
+        }
+
+        .paper-2 {
+            left: 24%;
+            top: 6%;
+            rotate: 7deg;
+        }
+
+        .paper-3 {
+            right: 7%;
+            top: 14%;
+            rotate: -5deg;
+        }
+
+        .paper-4 {
+            left: 8%;
+            bottom: 15%;
+            rotate: 6deg;
+        }
+
+        .paper-5 {
+            left: 30%;
+            bottom: 6%;
+            rotate: -7deg;
+        }
+
+        .paper-6 {
+            right: 6%;
+            bottom: 18%;
+            rotate: 8deg;
+        }
+
+        .paper-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(96, 125, 175, 0.16);
+            padding-bottom: 0.75rem;
+        }
+
+        .paper-body {
+            display: grid;
+            gap: 0.55rem;
+            padding-top: 0.85rem;
+        }
+
+        .paper-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.8rem;
+            border-radius: 6px;
+            background: rgba(244, 247, 251, 0.92);
+            padding: 0.55rem 0.7rem;
+        }
+
+        .paper-row-highlight {
+            background: rgba(236, 241, 248, 0.94);
+            border: 1px solid rgba(37, 99, 235, 0.14);
+        }
+
+        .paper-line {
+            display: block;
+            height: 7px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(100, 116, 139, 0.26), rgba(100, 116, 139, 0.08));
+        }
+
+        .paper-line.line-xs {
+            width: 3.6rem;
+        }
+
+        .paper-line.line-sm {
+            width: 5.4rem;
+        }
+
+        .paper-line.line-md {
+            width: 7rem;
+        }
+
+        .paper-line.line-lg {
+            width: 9rem;
+        }
+
+        .paper-line.line-xl {
+            width: 11rem;
+        }
+
+        .paper-amount {
+            font-size: 12px;
+            font-weight: 700;
+            color: #607083;
+        }
+
+        .paper-tag {
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 0.3rem 0.55rem;
+            font-size: 11px;
+            font-weight: 700;
+            color: #245dcb;
+        }
+
+        .paper-footer {
+            margin-top: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(96, 125, 175, 0.14);
+            padding-top: 0.7rem;
+        }
+
+        .story-reveal {
+            position: absolute;
+            inset: 20% 7% 8% 18%;
+            z-index: 4;
+            opacity: 0;
+            transform: translateY(48px) scale(0.98);
+            will-change: transform, opacity;
+        }
+
+        .story-media-shell {
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 247, 251, 0.99));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.66);
+            opacity: 0;
+            transform: translateY(28px);
+        }
+
+        .story-video-shell {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: #ffffff;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
+        }
+
+        .story-video-shell::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.035), transparent 28%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .story-video-frame {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            aspect-ratio: 1.94 / 1;
+            background: linear-gradient(180deg, rgba(226, 236, 255, 0.5), rgba(255, 255, 255, 0.3));
+        }
+
+        .story-video-frame video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            background: #ffffff;
+        }
+
+        .direct-demo-video {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            background: #ffffff;
+        }
+
+        .story-video-frame.is-manual video {
+            cursor: pointer;
+        }
+
+        .story-video-hint {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 6px;
+            background: rgba(15, 23, 42, 0.78);
+            padding: 0.5rem 0.9rem;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            color: white;
+            backdrop-filter: blur(8px);
+            transition: opacity 0.24s ease;
+        }
+
+        .story-video-frame:not(.is-manual) .story-video-hint {
+            opacity: 0;
+        }
+
+        .story-stage.is-static .story-paper {
+            opacity: 0.24;
+            transform: translateY(0) scale(0.98);
+        }
+
+        .story-stage.is-static .story-reveal,
+        .story-stage.is-static .story-media-shell {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .story-stage .story-paper,
+        .story-stage .story-reveal {
+            display: none;
+        }
+
+        .line-pill {
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.7rem 0.9rem;
+            font-size: 13px;
+            font-weight: 600;
+            color: #284266;
+            text-align: center;
+        }
+
+        .enterprise-nav {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.94));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .product-demo-shell {
+            overflow: hidden;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: #ffffff;
+            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+        }
+
+        .product-demo-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+            background: #08111f;
+            color: #ffffff;
+            padding: 0.9rem 1rem;
+        }
+
+        .product-demo-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .product-demo-meta {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .direct-demo-video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background: #e8edf4;
+        }
+
+        .brand-hero {
+            min-height: 100svh;
+            background:
+                linear-gradient(90deg, rgba(246, 248, 251, 0.98) 0%, rgba(246, 248, 251, 0.94) 42%, rgba(226, 232, 240, 0.76) 100%),
+                #f6f8fb;
+        }
+
+        .brand-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.12)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(226, 232, 240, 0.34));
+        }
+
+        .brand-hero-content {
+            position: relative;
+            display: flex;
+            min-height: 100svh;
+            align-items: center;
+            padding-top: 7.5rem;
+            padding-bottom: 4rem;
+        }
+
+        .brand-hero .hero-title {
+            color: var(--ink) !important;
+        }
+
+        .brand-hero .button-secondary {
+            background: rgba(255, 255, 255, 0.76);
+            border-color: rgba(15, 23, 42, 0.16);
+            color: #08111f !important;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        .brand-hero .button-secondary span,
+        .brand-hero .button-secondary i {
+            color: #08111f !important;
+        }
+
+        .brand-hero-visual {
+            position: absolute;
+            inset: 0 0 0 auto;
+            width: min(58vw, 62rem);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .brand-hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 7.5rem 0 4.5rem auto;
+            width: min(54rem, 54vw);
+            border-left: 1px solid rgba(15, 23, 42, 0.1);
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.86) 38%, rgba(255, 255, 255, 0.96)),
+                repeating-linear-gradient(0deg, rgba(15, 23, 42, 0.075) 0 1px, transparent 1px 5.6rem);
+        }
+
+        .hero-workspace {
+            position: absolute;
+            right: clamp(1.5rem, 5vw, 5.5rem);
+            top: 50%;
+            width: min(46rem, 50vw);
+            transform: translateY(-48%);
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.13);
+            backdrop-filter: blur(18px);
+        }
+
+        .hero-workspace-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+            padding: 1rem 1.1rem;
+        }
+
+        .hero-workspace-title {
+            color: #08111f;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-workspace-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: rgba(15, 23, 42, 0.62);
+            font-size: 0.76rem;
+            font-weight: 600;
+        }
+
+        .hero-command {
+            margin: 1.1rem;
+            border: 1px solid rgba(15, 23, 42, 0.12);
+            background: #08111f;
+            color: #ffffff;
+            padding: 1rem 1.1rem;
+        }
+
+        .hero-command-label {
+            color: rgba(255, 255, 255, 0.62);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-command-text {
+            margin-top: 0.6rem;
+            max-width: 30rem;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: clamp(1rem, 1.55vw, 1.35rem);
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .hero-workflow {
+            display: grid;
+            grid-template-columns: 0.86fr 1.14fr;
+            gap: 1rem;
+            padding: 0 1.1rem 1.1rem;
+        }
+
+        .hero-inbox,
+        .hero-decision-panel {
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        .hero-inbox {
+            display: grid;
+            gap: 0.65rem;
+            padding: 0.9rem;
+        }
+
+        .hero-inbox-title,
+        .hero-decision-title {
+            color: rgba(15, 23, 42, 0.62);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero-inbox-row {
+            display: grid;
+            gap: 0.35rem;
+            border-top: 1px solid rgba(15, 23, 42, 0.08);
+            padding-top: 0.65rem;
+        }
+
+        .hero-inbox-row strong {
+            color: #08111f;
+            font-size: 0.9rem;
+        }
+
+        .hero-inbox-row span {
+            color: rgba(15, 23, 42, 0.58);
+            font-size: 0.78rem;
+            font-weight: 500;
+        }
+
+        .hero-decision-panel {
+            padding: 0.95rem;
+        }
+
+        .hero-score {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 0.85rem;
+        }
+
+        .hero-score-number {
+            color: #08111f;
+            font-size: clamp(3.6rem, 6.4vw, 5.7rem);
+            font-weight: 700;
+            line-height: 0.9;
+        }
+
+        .hero-score-copy {
+            color: rgba(15, 23, 42, 0.66);
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .hero-bars {
+            display: grid;
+            gap: 0.55rem;
+            margin-top: 1rem;
+        }
+
+        .hero-bar {
+            height: 0.55rem;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(15, 23, 42, 0.08);
+        }
+
+        .hero-bar span {
+            display: block;
+            height: 100%;
+            background: #08111f;
+        }
+
+        .hero-outcomes {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+            padding: 0 1.1rem 1.1rem;
+        }
+
+        .hero-outcome {
+            border-top: 1px solid rgba(15, 23, 42, 0.12);
+            padding-top: 0.75rem;
+        }
+
+        .hero-outcome strong {
+            display: block;
+            color: #08111f;
+            font-size: 0.88rem;
+        }
+
+        .hero-outcome span {
+            display: block;
+            margin-top: 0.28rem;
+            color: rgba(15, 23, 42, 0.68);
+            font-size: 0.76rem;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 1023px) {
+            .brand-hero {
+                min-height: 760px;
+            }
+
+            .brand-hero-visual {
+                inset: auto 1rem 1.5rem 1rem;
+                height: 38%;
+                width: auto;
+                opacity: 0.72;
+            }
+
+            .brand-hero-visual::before {
+                inset: 0;
+                width: 100%;
+            }
+
+            .hero-workspace {
+                inset: auto 0 0 0;
+                top: auto;
+                right: auto;
+                width: 100%;
+                transform: none;
+            }
+
+            .hero-workflow,
+            .hero-outcomes {
+                display: none;
+            }
+        }
+
+        .surface-panel,
+        .surface-card,
+        .surface-card-soft,
+        .section-panel-accent,
+        .metric-card,
+        .story-stage,
+        .story-direct-video-panel,
+        .story-media-shell,
+        .story-video-shell,
+        .line-pill,
+        .product-demo-shell,
+        .enterprise-nav {
+            border-radius: 8px !important;
+        }
+
+        .button-primary,
+        .button-secondary,
+        .nav-link,
+        .nav-link-mobile,
+        .lang-toggle,
+        .platform-status,
+        input,
+        textarea {
+            border-radius: 8px !important;
+        }
+
+        .tracking-tight,
+        [class*="tracking-"] {
+            letter-spacing: 0 !important;
+        }
+
+        @keyframes fade-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1279px) {
+            .story-reveal {
+                inset: 18% 4% 8% 12%;
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .story-paper {
+                display: none;
+            }
+
+            .story-media-shell {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen text-slate-950 antialiased">
+    <div class="pointer-events-none fixed inset-0">
+        <div class="bg-grid-pattern absolute inset-0"></div>
+        <div class="hero-glow left-[-12rem] top-[8rem] h-[24rem] w-[24rem] bg-blue-200/40"></div>
+        <div class="hero-glow right-[-10rem] top-[14rem] h-[26rem] w-[26rem] bg-sky-200/30"></div>
+    </div>
+
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50 py-5 transition-all duration-300">
+        <div class="mx-auto max-w-7xl px-6">
+            <div id="nav-shell"
+                class="enterprise-nav flex items-center justify-between gap-4 rounded-full border border-slate-200/70 bg-white/85 px-4 py-3 shadow-[0_22px_48px_rgba(89,116,167,0.12)] backdrop-blur">
+                <div class="flex items-center gap-3">
+                    <a href="../index.html" class="shrink-0" data-i18n-aria-label="nav.home_aria">
+                        <img src="../assets/Riscodex_Horizontal_Color.png" alt="Riscodex" class="h-8 w-auto md:h-9">
+                    </a>
+                    <a href="../index.html"
+                        class="hidden rounded-full border border-slate-200/80 bg-white/70 px-3 py-2 text-xs font-semibold text-slate-600 transition hover:text-slate-950 lg:inline-flex"
+                        data-i18n="nav.back">
+                        Ana Site
+                    </a>
+                </div>
+
+                <nav class="hidden items-center gap-1 lg:flex">
+                    <a href="#problem"
+                        class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-950"
+                        data-i18n="nav.problem">Demo</a>
+                    <a href="#how-it-works"
+                        class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-950"
+                        data-i18n="nav.how">Nasıl Çalışır</a>
+                    <a href="#use-cases"
+                        class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-950"
+                        data-i18n="nav.use_cases">Kullanım Alanları</a>
+                    <a href="#request-demo"
+                        class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-500 hover:text-slate-950"
+                        data-i18n="nav.request">Demo Talebi</a>
+                </nav>
+
+                <div class="hidden items-center gap-3 md:flex">
+                    <div class="flex items-center rounded-full border border-slate-200/80 bg-slate-50/80 p-1">
+                        <button type="button"
+                            class="lang-toggle rounded-full px-3 py-2 text-xs font-semibold transition-colors"
+                            data-lang="tr">TR</button>
+                        <button type="button"
+                            class="lang-toggle rounded-full px-3 py-2 text-xs font-semibold transition-colors"
+                            data-lang="en">EN</button>
+                    </div>
+                </div>
+
+                <button id="mobile-menu-button" type="button"
+                    class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200/80 bg-white/80 text-slate-700 md:hidden"
+                    aria-expanded="false" data-i18n-aria-label="nav.menu_aria">
+                    <i data-lucide="menu" class="h-5 w-5"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu"
+                class="mt-3 hidden rounded-[28px] border border-slate-200/80 bg-white/92 p-5 shadow-[0_20px_46px_rgba(89,116,167,0.14)] backdrop-blur md:hidden">
+                <div class="flex flex-col gap-2">
+                    <a href="../index.html"
+                        class="rounded-2xl px-3 py-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950"
+                        data-i18n="nav.back">Ana Site</a>
+                    <a href="#problem"
+                        class="nav-link-mobile rounded-2xl px-3 py-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950"
+                        data-i18n="nav.problem">Demo</a>
+                    <a href="#how-it-works"
+                        class="nav-link-mobile rounded-2xl px-3 py-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950"
+                        data-i18n="nav.how">Nasıl Çalışır</a>
+                    <a href="#use-cases"
+                        class="nav-link-mobile rounded-2xl px-3 py-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950"
+                        data-i18n="nav.use_cases">Kullanım Alanları</a>
+                    <a href="#request-demo"
+                        class="nav-link-mobile rounded-2xl px-3 py-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-950"
+                        data-i18n="nav.request">Demo Talebi</a>
+                </div>
+
+                <div class="mt-5 flex items-center rounded-full border border-slate-200/80 bg-slate-50/80 p-1">
+                    <button type="button"
+                        class="lang-toggle flex-1 rounded-full px-3 py-2 text-xs font-semibold transition-colors"
+                        data-lang="tr">TR</button>
+                    <button type="button"
+                        class="lang-toggle flex-1 rounded-full px-3 py-2 text-xs font-semibold transition-colors"
+                        data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10">
+        <section class="brand-hero relative overflow-hidden">
+            <div class="brand-hero-overlay"></div>
+            <div class="brand-hero-visual" aria-hidden="true">
+                <div class="hero-workspace">
+                    <div class="hero-workspace-header">
+                        <div class="hero-workspace-title">Versus Control Desk</div>
+                        <div class="hero-workspace-status">
+                            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+                            Review ready
+                        </div>
+                    </div>
+                    <div class="hero-command">
+                        <div class="hero-command-label">Comparison request</div>
+                        <div class="hero-command-text">Compare three offers and surface coverage, limit and clause differences with decision impact.</div>
+                    </div>
+                    <div class="hero-workflow">
+                        <div class="hero-inbox">
+                            <div class="hero-inbox-title">Submission pack</div>
+                            <div class="hero-inbox-row">
+                                <strong>Offer A</strong>
+                                <span>Low premium, clause exception</span>
+                            </div>
+                            <div class="hero-inbox-row">
+                                <strong>Offer B</strong>
+                                <span>Higher limit, deductible gap</span>
+                            </div>
+                            <div class="hero-inbox-row">
+                                <strong>Issued policy</strong>
+                                <span>Renewal mismatch detected</span>
+                            </div>
+                        </div>
+                        <div class="hero-decision-panel">
+                            <div class="hero-decision-title">Comparison confidence</div>
+                            <div class="hero-score">
+                                <div class="hero-score-number">87</div>
+                                <div class="hero-score-copy">Coverage gaps, exclusions and renewal deltas grouped for review.</div>
+                            </div>
+                            <div class="hero-bars">
+                                <div class="hero-bar"><span style="width: 87%"></span></div>
+                                <div class="hero-bar"><span style="width: 72%"></span></div>
+                                <div class="hero-bar"><span style="width: 58%"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-outcomes">
+                        <div class="hero-outcome">
+                            <strong>Coverage</strong>
+                            <span>Missing or narrowed guarantees.</span>
+                        </div>
+                        <div class="hero-outcome">
+                            <strong>Limits</strong>
+                            <span>Different caps and deductibles.</span>
+                        </div>
+                        <div class="hero-outcome">
+                            <strong>Clauses</strong>
+                            <span>Operational impact by wording.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="brand-hero-content">
+                <div class="mx-auto w-full max-w-7xl px-6">
+                    <div class="max-w-3xl">
+                        <p class="hero-enter text-xs font-semibold uppercase text-slate-500" data-i18n="hero.eyebrow">
+                            Teklif ve Poliçe Karşılaştırma
+                        </p>
+                        <h1 class="hero-title hero-enter hero-enter-delay-1 mt-5 text-6xl font-semibold leading-none sm:text-7xl lg:text-[7rem]"
+                            data-i18n="hero.title">
+                            Teklifleri okuyun, farkları görün, kararı paylaşın.
+                        </h1>
+                        <p class="hero-enter hero-enter-delay-2 mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl"
+                            data-i18n="hero.description">
+                            Versus AI, sigorta tekliflerini ve poliçe dosyalarını aynı çalışma alanında karşılaştırıp
+                            kontrollü karar raporuna dönüştürür.
+                        </p>
+
+                        <div class="hero-enter hero-enter-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
+                            <a href="#request-demo"
+                                class="button-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold transition-colors">
+                                <span data-i18n="hero.primary_cta">Kurumsal Demo Talep Et</span>
+                                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                            </a>
+                            <a href="#problem"
+                                class="button-secondary inline-flex items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold transition-colors">
+                                <span data-i18n="hero.secondary_cta">Ürün Akışını İzle</span>
+                                <i data-lucide="mouse-pointer-click" class="h-4 w-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative z-10 py-12">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="grid gap-4 md:grid-cols-3">
+                    <div class="metric-card reveal-on-scroll rounded-[24px] px-5 py-5 text-left">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.stats.speed.label">Karar süresi</div>
+                        <div class="mt-3 text-base font-semibold text-slate-950"
+                            data-i18n="hero.stats.speed.value">Dakikalar içinde karşılaştırma</div>
+                    </div>
+                    <div class="metric-card reveal-on-scroll reveal-delay-1 rounded-[24px] px-5 py-5 text-left">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.stats.coverage.label">10 branş</div>
+                        <div class="mt-3 text-base font-semibold text-slate-950"
+                            data-i18n="hero.stats.coverage.value">Teklif ve poliçe dosyaları</div>
+                    </div>
+                    <div class="metric-card reveal-on-scroll reveal-delay-2 rounded-[24px] px-5 py-5 text-left">
+                        <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="hero.stats.mode.label">Kurumsal pilot</div>
+                        <div class="mt-3 text-base font-semibold text-slate-950"
+                            data-i18n="hero.stats.mode.value">Broker, acente ve sigorta ekipleri</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="relative z-10 py-8 md:py-12">
+            <div class="mx-auto max-w-[1500px] px-4 sm:px-6">
+                <div class="product-demo-shell">
+                    <div class="product-demo-header">
+                        <div>
+                            <div class="product-demo-label" data-i18n="story.media.eyebrow">Ürün Çalışma Alanı</div>
+                            <div class="product-demo-meta" data-i18n="story.media.title">Teklif karşılaştırma ve gerekçeli karar raporu</div>
+                        </div>
+                        <div class="hidden items-center gap-2 text-xs font-semibold text-white/70 sm:flex">
+                            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                            <span data-i18n="story.media.label_3">Karar raporu</span>
+                        </div>
+                    </div>
+                    <video class="versus-demo-video direct-demo-video" preload="none" muted loop playsinline
+                        poster="../assets/versus-ai-demo-poster.jpg" aria-label="Versus AI demo video"
+                        data-i18n-aria-label="story.media.video_aria">
+                        <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="story-shell hidden">
+                <div class="story-pin">
+                    <div class="mx-auto grid max-w-7xl grid-cols-[0.92fr_1.18fr] gap-8 px-6 xl:gap-12">
+                        <div class="surface-panel flex flex-col justify-between rounded-[36px] p-8 xl:p-10">
+                            <div>
+                                <p class="eyebrow text-[11px] font-semibold text-blue-700/70"
+                                    data-i18n="story.eyebrow">Problem</p>
+                                <h2 class="mt-5 text-4xl font-semibold tracking-tight text-slate-950"
+                                    data-i18n="story.title">
+                                    Dosyalar birikir, karar gecikir.
+                                </h2>
+                                <p class="mt-5 max-w-xl text-base leading-7 text-slate-600"
+                                    data-i18n="story.description">
+                                    Teklifler, ekler ve poliçe dokümanları aynı anda masaya geldiğinde asıl sorun bilgi
+                                    eksikliği değil; bilgiyi hızla okuyup güvenilir bir karara çevirememektir.
+                                </p>
+                            </div>
+
+                            <div class="mt-10 grid gap-4">
+                                <article class="surface-card-soft rounded-[24px] px-5 py-5">
+                                    <div class="text-sm font-semibold text-slate-950" data-i18n="story.points.stack.title">
+                                        Belgeler çoğalır
+                                    </div>
+                                    <p class="mt-3 text-sm leading-6 text-slate-600"
+                                        data-i18n="story.points.stack.description">
+                                        Teklifler, kloz listeleri ve yenileme dokümanları aynı anda masaya gelir.
+                                    </p>
+                                </article>
+                                <article class="surface-card-soft rounded-[24px] px-5 py-5">
+                                    <div class="text-sm font-semibold text-slate-950"
+                                        data-i18n="story.points.noise.title">
+                                        Kritik farklar gizlenir
+                                    </div>
+                                    <p class="mt-3 text-sm leading-6 text-slate-600"
+                                        data-i18n="story.points.noise.description">
+                                        Muafiyet, limit ve teminat farklılıkları satır aralarında kaybolur.
+                                    </p>
+                                </article>
+                                <article class="surface-card-soft rounded-[24px] px-5 py-5">
+                                    <div class="text-sm font-semibold text-slate-950"
+                                        data-i18n="story.points.decision.title">
+                                        Karar yavaşlar
+                                    </div>
+                                    <p class="mt-3 text-sm leading-6 text-slate-600"
+                                        data-i18n="story.points.decision.description">
+                                        Doğru teklifi seçmek için ekipler saatlerini manuel karşılaştırmaya harcar.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="story-stage" id="story-stage">
+                            <div class="story-stage-grid"></div>
+
+                            <div class="story-direct-video-panel">
+                                <div class="story-video-shell p-3 md:p-4">
+                                    <div class="story-video-frame">
+                                        <video class="versus-demo-video" preload="none" muted loop playsinline
+                                            poster="../assets/versus-ai-demo-poster.jpg"
+                                            aria-label="Versus AI demo video">
+                                            <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="story-video-hint">
+                                            <i data-lucide="play" class="h-3.5 w-3.5"></i>
+                                            <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <article class="story-paper paper-1" data-scatter-x="-120" data-scatter-y="-95">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.offer_a">Teklif Dosyası A</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Q-01</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-lg"></span>
+                                        <span class="paper-amount">₺ 1.24M</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_1">Muafiyet farkı</span>
+                                        <span class="paper-amount">+%15</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-xl"></span>
+                                        <span class="paper-amount">A+</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-md"></span>
+                                        <span class="paper-amount">12 md.</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">SET-A</span>
+                                    <span class="text-xs font-medium text-slate-500">v2.1</span>
+                                </div>
+                            </article>
+
+                            <article class="story-paper paper-2" data-scatter-x="-65" data-scatter-y="-120">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.offer_b">Teklif Dosyası B</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">Q-02</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-xl"></span>
+                                        <span class="paper-amount">₺ 1.18M</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-md"></span>
+                                        <span class="paper-amount">11 md.</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_2">Limit değişimi</span>
+                                        <span class="paper-amount">-₺ 240K</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-sm"></span>
+                                        <span class="paper-amount">B</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">SET-B</span>
+                                    <span class="text-xs font-medium text-slate-500">v1.9</span>
+                                </div>
+                            </article>
+
+                            <article class="story-paper paper-3" data-scatter-x="108" data-scatter-y="-88">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.policy">Poliçe Özeti</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">P-14</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-lg"></span>
+                                        <span class="paper-amount">L-01</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_3">Eksik teminat</span>
+                                        <span class="paper-amount">2x</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-md"></span>
+                                        <span class="paper-amount">D-01</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-xl"></span>
+                                        <span class="paper-amount">C-04</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">REN</span>
+                                    <span class="text-xs font-medium text-slate-500">v3.0</span>
+                                </div>
+                            </article>
+
+                            <article class="story-paper paper-4" data-scatter-x="-132" data-scatter-y="100">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.renewal">Yenileme Karşılaştırması</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">R-07</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-xl"></span>
+                                        <span class="paper-amount">2025</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-lg"></span>
+                                        <span class="paper-amount">2026</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_2">Limit değişimi</span>
+                                        <span class="paper-amount">3 fark</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-sm"></span>
+                                        <span class="paper-amount">REF</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">COMP</span>
+                                    <span class="text-xs font-medium text-slate-500">rev.5</span>
+                                </div>
+                            </article>
+
+                            <article class="story-paper paper-5" data-scatter-x="-18" data-scatter-y="118">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.clauses">Kloz Ekleri</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">C-11</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-md"></span>
+                                        <span class="paper-amount">12x</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-lg"></span>
+                                        <span class="paper-amount">4x</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_1">Muafiyet farkı</span>
+                                        <span class="paper-amount">1x</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-sm"></span>
+                                        <span class="paper-amount">EK</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">PDF</span>
+                                    <span class="text-xs font-medium text-slate-500">12 syf.</span>
+                                </div>
+                            </article>
+
+                            <article class="story-paper paper-6" data-scatter-x="126" data-scatter-y="96">
+                                <div class="paper-header">
+                                    <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                        data-i18n="story.papers.risk">Teminat Kontrolü</span>
+                                    <span class="text-[11px] font-semibold text-slate-400">A-05</span>
+                                </div>
+                                <div class="paper-body">
+                                    <div class="paper-row">
+                                        <span class="paper-line line-lg"></span>
+                                        <span class="paper-amount">6x</span>
+                                    </div>
+                                    <div class="paper-row paper-row-highlight">
+                                        <span class="paper-tag" data-i18n="story.papers.highlight_3">Eksik teminat</span>
+                                        <span class="paper-amount">2x</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-md"></span>
+                                        <span class="paper-amount">R-01</span>
+                                    </div>
+                                    <div class="paper-row">
+                                        <span class="paper-line line-xl"></span>
+                                        <span class="paper-amount">S-01</span>
+                                    </div>
+                                </div>
+                                <div class="paper-footer">
+                                    <span class="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">CHK</span>
+                                    <span class="text-xs font-medium text-slate-500">run</span>
+                                </div>
+                            </article>
+
+                            <article id="story-reveal" class="story-reveal surface-panel rounded-[32px] p-6 xl:p-7">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <div class="platform-status platform-status-launch">
+                                            <span class="h-2 w-2 rounded-full bg-blue-500"></span>
+                                            <span data-i18n="story.reveal.badge">Yeni Çıkan Ürün</span>
+                                        </div>
+                                        <h3 class="mt-5 text-4xl font-semibold tracking-tight wordmark-gradient"
+                                            data-i18n="story.reveal.title">VERSUS AI</h3>
+                                    </div>
+                                    <i data-lucide="file-check-2" class="h-5 w-5 text-slate-500"></i>
+                                </div>
+
+                                <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-600"
+                                    data-i18n="story.reveal.description">
+                                    Belgeleri aynı yüzeyde toparlar, kritik farkları görünür hale getirir ve teknik bir
+                                    değerlendirme akışına dönüştürür.
+                                </p>
+
+                                <div class="mt-6 grid gap-3 md:grid-cols-3">
+                                    <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                        <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="story.reveal.metrics.input.label">Girdi</div>
+                                        <div class="mt-2 text-sm font-semibold text-slate-950"
+                                            data-i18n="story.reveal.metrics.input.value">Çoklu teklif / poliçe</div>
+                                    </div>
+                                    <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                        <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="story.reveal.metrics.output.label">Çıktı</div>
+                                        <div class="mt-2 text-sm font-semibold text-slate-950"
+                                            data-i18n="story.reveal.metrics.output.value">Gerekçeli analiz özeti</div>
+                                    </div>
+                                    <div class="surface-card-soft rounded-2xl px-4 py-4">
+                                        <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
+                                            data-i18n="story.reveal.metrics.focus.label">Odak</div>
+                                        <div class="mt-2 text-sm font-semibold text-slate-950"
+                                            data-i18n="story.reveal.metrics.focus.value">Teminat, limit, muafiyet</div>
+                                    </div>
+                                </div>
+
+                                <div id="story-media-shell" class="story-media-shell mt-6 p-4 md:p-5">
+                                    <div class="flex items-start justify-between gap-4">
+                                        <div>
+                                            <div class="eyebrow text-[11px] font-semibold text-blue-700/70"
+                                                data-i18n="story.media.eyebrow">
+                                                Ürün Çalışma Alanı
+                                            </div>
+                                            <h4 class="mt-3 text-xl font-semibold text-slate-950"
+                                                data-i18n="story.media.title">
+                                                Teklif karşılaştırma ve gerekçeli karar raporu.
+                                            </h4>
+                                        </div>
+                                        <i data-lucide="monitor-play" class="h-5 w-5 text-slate-500"></i>
+                                    </div>
+
+                                    <p class="mt-3 text-sm leading-6 text-slate-600" data-i18n="story.media.description">
+                                        Video, bu alan görünür olduğunda sayfa içinde otomatik oynar. Böylece ürün akışı ayrı sekmeye gitmeden incelenebilir.
+                                    </p>
+
+                                    <div class="story-video-shell mt-5 p-3 md:p-4">
+                                        <div class="story-video-frame">
+                                            <video class="versus-demo-video" preload="none" muted loop playsinline
+                                                poster="../assets/versus-ai-demo-poster.jpg"
+                                                aria-label="Versus AI demo video">
+                                                <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="story-video-hint">
+                                                <i data-lucide="play" class="h-3.5 w-3.5"></i>
+                                                <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 grid gap-3 sm:grid-cols-3">
+                                        <div class="line-pill" data-i18n="story.media.label_1">Belge yükleme</div>
+                                        <div class="line-pill" data-i18n="story.media.label_2">Otomatik okuma</div>
+                                        <div class="line-pill" data-i18n="story.media.label_3">Gerekçeli sonuç</div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="surface-panel rounded-[32px] p-6">
+                    <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="mobile_story.eyebrow">
+                        Mobil Ürün Akışı
+                    </p>
+                    <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
+                        data-i18n="mobile_story.title">
+                        Mobilde ürün akışı daha sade sunulur.
+                    </h2>
+                    <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="mobile_story.description">
+                        Belgeler üst üste gelir, kritik satırlar öne çıkar ve VERSUS AI temiz bir analiz yüzeyi olarak
+                        görünür.
+                    </p>
+
+                    <div class="mt-8 grid gap-4">
+                        <article class="story-paper">
+                            <div class="paper-header">
+                                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                    data-i18n="story.papers.offer_a">Teklif Dosyası A</span>
+                                <span class="text-[11px] font-semibold text-slate-400">Q-01</span>
+                            </div>
+                            <div class="paper-body">
+                                <div class="paper-row"><span class="paper-line line-lg"></span><span class="paper-amount">₺ 1.24M</span></div>
+                                <div class="paper-row paper-row-highlight"><span class="paper-tag" data-i18n="story.papers.highlight_1">Muafiyet farkı</span><span class="paper-amount">+%15</span></div>
+                                <div class="paper-row"><span class="paper-line line-md"></span><span class="paper-amount">12 md.</span></div>
+                            </div>
+                        </article>
+
+                        <article class="story-paper -translate-y-2 md:translate-x-4">
+                            <div class="paper-header">
+                                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                                    data-i18n="story.papers.policy">Poliçe Özeti</span>
+                                <span class="text-[11px] font-semibold text-slate-400">P-14</span>
+                            </div>
+                            <div class="paper-body">
+                                <div class="paper-row"><span class="paper-line line-xl"></span><span class="paper-amount">L-01</span></div>
+                                <div class="paper-row paper-row-highlight"><span class="paper-tag" data-i18n="story.papers.highlight_3">Eksik teminat</span><span class="paper-amount">2x</span></div>
+                                <div class="paper-row"><span class="paper-line line-lg"></span><span class="paper-amount">C-04</span></div>
+                            </div>
+                        </article>
+
+                        <div class="story-media-shell p-4">
+                            <div class="story-video-shell p-3">
+                                <div class="story-video-frame">
+                                    <video class="versus-demo-video" preload="none" muted loop playsinline
+                                        poster="../assets/versus-ai-demo-poster.jpg" aria-label="Versus AI demo video">
+                                        <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="story-video-hint">
+                                        <i data-lucide="play" class="h-3.5 w-3.5"></i>
+                                        <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative z-10 py-20">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="grid gap-7 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                    <div class="reveal-on-scroll">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-700/70"
+                            data-i18n="capabilities.eyebrow">Ne Yapar</p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                            data-i18n="capabilities.title">
+                            Versus AI teklif değerlendirme sürecini standartlaştırır.
+                        </h2>
+                        <p class="mt-4 max-w-xl text-base leading-7 text-slate-600"
+                            data-i18n="capabilities.description">
+                            Teklifleri tek tek okumak yerine farkları, etkileri ve karar gerekçesini aynı yüzeyde görürsünüz.
+                        </p>
+                    </div>
+
+                    <div class="grid gap-5 md:grid-cols-3">
+                        <article class="surface-card hover-lift reveal-on-scroll rounded-[28px] p-6">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
+                                <i data-lucide="scan-search" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="mt-5 text-xl font-semibold text-slate-950"
+                                data-i18n="capabilities.cards.compare.title">
+                                Karşılaştırır
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="capabilities.cards.compare.description">
+                                Teklifler arasındaki teminat, limit, muafiyet ve istisna farklarını aynı tabloda
+                                görünür kılar.
+                            </p>
+                        </article>
+
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[28px] p-6">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
+                                <i data-lucide="file-check-2" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="mt-5 text-xl font-semibold text-slate-950"
+                                data-i18n="capabilities.cards.explain.title">
+                                Açıklar
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="capabilities.cards.explain.description">
+                                Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, bağlamı da taşır.
+                            </p>
+                        </article>
+
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[28px] p-6">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
+                                <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                            </div>
+                            <h3 class="mt-5 text-xl font-semibold text-slate-950"
+                                data-i18n="capabilities.cards.recommend.title">
+                                Karar Akışını Hızlandırır
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="capabilities.cards.recommend.description">
+                                Ekiplerin en avantajlı teklife daha hızlı ve daha güvenli ulaşmasına yardımcı olur.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="relative z-10 py-20">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="surface-panel rounded-[36px] p-8 md:p-10">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="how.eyebrow">
+                            Nasıl Çalışır
+                        </p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                            data-i18n="how.title">
+                            Kurumsal kullanım akışı üç adımda ilerler.
+                        </h2>
+                        <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="how.description">
+                            Önce gerçek dosya tipi ve karar ihtiyacı netleşir, ardından pilot çalışma alanı ve canlı
+                            kullanım modeli kurulur.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 grid gap-5 md:grid-cols-3">
+                        <article class="surface-card hover-lift reveal-on-scroll rounded-[28px] p-6">
+                            <div class="text-sm font-semibold text-blue-700" data-i18n="how.steps.upload.label">01</div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950" data-i18n="how.steps.upload.title">
+                                Dosyaları yükleyin
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="how.steps.upload.description">
+                                Teklifleri, poliçeleri veya yenileme belgelerini aynı vaka altında toplayın.
+                            </p>
+                        </article>
+
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[28px] p-6">
+                            <div class="text-sm font-semibold text-blue-700" data-i18n="how.steps.analyze.label">02</div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950" data-i18n="how.steps.analyze.title">
+                                Farkları standartlaştırın
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="how.steps.analyze.description">
+                                Sistem kritik farkları okur, gruplar ve değerlendirme formatında özetler.
+                            </p>
+                        </article>
+
+                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[28px] p-6">
+                            <div class="text-sm font-semibold text-blue-700" data-i18n="how.steps.decide.label">03</div>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950" data-i18n="how.steps.decide.title">
+                                Karar raporunu paylaşın
+                            </h3>
+                            <p class="mt-3 text-sm leading-7 text-slate-600"
+                                data-i18n="how.steps.decide.description">
+                                Ekibiniz hangi teklifin neden daha uygun olduğunu aynı standartta görür.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="relative z-10 py-20">
+            <div class="mx-auto max-w-7xl px-6">
+                <div class="section-panel-accent rounded-[36px] p-8 md:p-10">
+                    <div class="max-w-3xl">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="use_cases.eyebrow">
+                            Kullanım Alanları
+                        </p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                            data-i18n="use_cases.title">
+                            10 branşta aynı değerlendirme standardını kullanın.
+                        </h2>
+                        <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="use_cases.description">
+                            Versus AI farklı sigorta ürünlerinde teklif karşılaştırması ve poliçe okuma süreçlerini ortak
+                            karar formatına taşır.
+                        </p>
+                    </div>
+
+                    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+                        <div class="line-pill reveal-on-scroll" data-i18n="use_cases.items.kasko">Kasko</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-1" data-i18n="use_cases.items.trafik">Trafik</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-2" data-i18n="use_cases.items.oss">Özel Sağlık Sigortası</div>
+                        <div class="line-pill reveal-on-scroll" data-i18n="use_cases.items.tss">Tamamlayıcı Sağlık Sigortası</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-1" data-i18n="use_cases.items.ferdi">Ferdi Kaza</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-2" data-i18n="use_cases.items.nakliyat">Nakliyat</div>
+                        <div class="line-pill reveal-on-scroll" data-i18n="use_cases.items.yangin">Yangın</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-1" data-i18n="use_cases.items.insaat">İnşaat ve Montaj</div>
+                        <div class="line-pill reveal-on-scroll reveal-delay-2" data-i18n="use_cases.items.enerji">Enerji</div>
+                        <div class="line-pill reveal-on-scroll" data-i18n="use_cases.items.sorumluluk">Sorumluluk</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="request-demo" class="relative z-10 pb-12 pt-20">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="surface-panel rounded-[36px] p-8 md:p-10">
+                <div class="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+                    <div>
+                        <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="request.eyebrow">
+                            Demo Talebi
+                        </p>
+                        <h2 class="mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                            data-i18n="request.title">
+                            Kendi teklif dosyalarınızla karar akışını birlikte inceleyelim.
+                        </h2>
+                        <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600" data-i18n="request.description">
+                            İlk görüşmede ürün uygunluğunu netleştirir, gerçek dosyalar üzerinden kontrollü bir demo
+                            akışı kurgularız.
+                        </p>
+
+                        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                            <div class="surface-card-soft reveal-on-scroll rounded-2xl px-4 py-4 text-sm font-medium text-slate-700"
+                                data-i18n="request.process.step_1">
+                                İhtiyaç değerlendirmesi
+                            </div>
+                            <div class="surface-card-soft reveal-on-scroll reveal-delay-1 rounded-2xl px-4 py-4 text-sm font-medium text-slate-700"
+                                data-i18n="request.process.step_2">
+                                Pilot kurgusu
+                            </div>
+                            <div class="surface-card-soft reveal-on-scroll reveal-delay-2 rounded-2xl px-4 py-4 text-sm font-medium text-slate-700"
+                                data-i18n="request.process.step_3">
+                                Canlı kullanım planı
+                            </div>
+                        </div>
+
+                        <a href="../index.html"
+                            class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 transition-colors hover:text-blue-800">
+                            <i data-lucide="arrow-left" class="h-4 w-4"></i>
+                            <span data-i18n="footer.back">Ana sayfaya dön</span>
+                        </a>
+                    </div>
+
+                    <form action="https://formspree.io/f/xovlerwo" method="POST" class="space-y-4">
+                        <input type="hidden" name="product" value="Versus AI">
+                        <input type="hidden" name="source" value="versus-page">
+
+                        <div class="surface-card rounded-[24px] p-4">
+                            <label class="mb-2 block text-sm font-medium text-slate-950" for="name"
+                                data-i18n="request.form.name_label">
+                                Ad Soyad
+                            </label>
+                            <input id="name" type="text" name="name" required placeholder="Adınız Soyadınız"
+                                data-i18n-placeholder="request.form.name_placeholder"
+                                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-4 text-slate-950 placeholder:text-slate-500 focus:border-blue-400/30 focus:outline-none focus:ring-1 focus:ring-blue-400/30">
+                        </div>
+
+                        <div class="surface-card rounded-[24px] p-4">
+                            <label class="mb-2 block text-sm font-medium text-slate-950" for="company"
+                                data-i18n="request.form.company_label">
+                                Şirket
+                            </label>
+                            <input id="company" type="text" name="company" placeholder="Şirket adı"
+                                data-i18n-placeholder="request.form.company_placeholder"
+                                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-4 text-slate-950 placeholder:text-slate-500 focus:border-blue-400/30 focus:outline-none focus:ring-1 focus:ring-blue-400/30">
+                        </div>
+
+                        <div class="surface-card rounded-[24px] p-4">
+                            <label class="mb-2 block text-sm font-medium text-slate-950" for="email"
+                                data-i18n="request.form.email_label">
+                                Kurumsal E-posta
+                            </label>
+                            <input id="email" type="email" name="email" required placeholder="ornek@sirket.com"
+                                data-i18n-placeholder="request.form.email_placeholder"
+                                class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-4 text-slate-950 placeholder:text-slate-500 focus:border-blue-400/30 focus:outline-none focus:ring-1 focus:ring-blue-400/30">
+                        </div>
+
+                        <div class="surface-card rounded-[24px] p-4">
+                            <label class="mb-2 block text-sm font-medium text-slate-950" for="message"
+                                data-i18n="request.form.message_label">
+                                Not
+                            </label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="İncelemek istediğiniz ürün, branş veya dosya tipi"
+                                data-i18n-placeholder="request.form.message_placeholder"
+                                class="w-full resize-none rounded-2xl border border-slate-200 bg-white px-4 py-4 text-slate-950 placeholder:text-slate-500 focus:border-blue-400/30 focus:outline-none focus:ring-1 focus:ring-blue-400/30"></textarea>
+                        </div>
+
+                        <div class="surface-card-soft rounded-[24px] px-4 py-4 text-sm leading-7 text-slate-600"
+                            data-i18n="request.form.note">
+                            Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.
+                        </div>
+
+                        <button type="submit"
+                            class="button-primary inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold transition-colors">
+                            <span data-i18n="request.form.submit">Kurumsal Demo Talep Et</span>
+                            <i data-lucide="send" class="h-4 w-4"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="mt-8 flex flex-col items-start justify-between gap-5 border-t border-slate-200/80 pt-8 text-sm text-slate-500 md:flex-row md:items-center">
+                <div class="font-mono" data-i18n-html="footer.copyright">&copy; 2026 RISCODEX Teknoloji A.Ş.</div>
+                <a href="mailto:info@riscodex.com"
+                    class="font-mono transition-colors hover:text-slate-950">info@riscodex.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const navbar = document.getElementById("navbar");
+        const navShell = document.getElementById("nav-shell");
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const languageStorageKey = "riscodex-lang";
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const desktopNavLinks = Array.from(document.querySelectorAll(".nav-link"));
+        const mobileNavLinks = Array.from(document.querySelectorAll(".nav-link-mobile"));
+        const trackedSectionIds = ["problem", "how-it-works", "use-cases", "request-demo"];
+        const trackedSections = trackedSectionIds
+            .map((id) => document.getElementById(id))
+            .filter(Boolean);
+        let currentLanguage = localStorage.getItem(languageStorageKey) || "tr";
+        let versusTranslations = {};
+        let storyTimelineInitialized = false;
+
+        function initializeRevealAnimations() {
+            const revealElements = document.querySelectorAll(".reveal-on-scroll");
+
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                revealElements.forEach((element) => element.classList.add("reveal-visible"));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    entry.target.classList.add("reveal-visible");
+                    currentObserver.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.16,
+                rootMargin: "0px 0px -8% 0px"
+            });
+
+            revealElements.forEach((element) => observer.observe(element));
+        }
+
+        function setActiveNavLink(sectionId) {
+            const targetHref = sectionId ? `#${sectionId}` : null;
+
+            desktopNavLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === targetHref);
+            });
+
+            mobileNavLinks.forEach((link) => {
+                link.classList.toggle("is-active", link.getAttribute("href") === targetHref);
+            });
+        }
+
+        function updateActiveSection() {
+            const currentScroll = window.scrollY + 180;
+            let activeSectionId = null;
+
+            trackedSections.forEach((section) => {
+                if (currentScroll >= section.offsetTop) {
+                    activeSectionId = section.id;
+                }
+            });
+
+            if (window.scrollY < (trackedSections[0]?.offsetTop || 0) - 220) {
+                activeSectionId = null;
+            }
+
+            setActiveNavLink(activeSectionId);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", String(!menu.classList.contains("hidden")));
+        }
+
+        function getTranslationValue(key) {
+            return key.split(".").reduce((value, segment) => {
+                if (value && Object.prototype.hasOwnProperty.call(value, segment)) {
+                    return value[segment];
+                }
+
+                return null;
+            }, versusTranslations);
+        }
+
+        function applyTranslations() {
+            document.querySelectorAll("[data-i18n]").forEach((element) => {
+                const value = getTranslationValue(element.getAttribute("data-i18n"));
+                if (value !== null && value !== undefined) {
+                    element.textContent = value;
+                }
+            });
+
+            document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+                const value = getTranslationValue(element.getAttribute("data-i18n-html"));
+                if (value !== null && value !== undefined) {
+                    element.innerHTML = value;
+                }
+            });
+
+            document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+                const value = getTranslationValue(element.getAttribute("data-i18n-placeholder"));
+                if (value !== null && value !== undefined) {
+                    element.placeholder = value;
+                }
+            });
+
+            document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+                const value = getTranslationValue(element.getAttribute("data-i18n-aria-label"));
+                if (value !== null && value !== undefined) {
+                    element.setAttribute("aria-label", value);
+                }
+            });
+
+            const pageTitle = getTranslationValue("meta.title");
+            if (pageTitle) {
+                document.title = pageTitle;
+            }
+
+            document.documentElement.lang = currentLanguage;
+        }
+
+        function updateLanguageButtons() {
+            document.querySelectorAll(".lang-toggle").forEach((button) => {
+                button.classList.toggle("is-active", button.dataset.lang === currentLanguage);
+            });
+        }
+
+        async function loadTranslations(lang) {
+            const availableTranslations = window.__versusTranslations || {};
+            const locale = availableTranslations[lang];
+
+            if (!locale) {
+                throw new Error(`Could not load locale: ${lang}`);
+            }
+
+            return locale;
+        }
+
+        async function setLanguage(lang) {
+            versusTranslations = await loadTranslations(lang);
+            currentLanguage = lang;
+            localStorage.setItem(languageStorageKey, lang);
+            applyTranslations();
+            updateLanguageButtons();
+            lucide.createIcons();
+        }
+
+        function enableManualVideoMode(video) {
+            if (!video || video.dataset.manualMode === "true") {
+                return;
+            }
+
+            video.dataset.manualMode = "true";
+            video.controls = true;
+            video.setAttribute("controls", "");
+            video.preload = "metadata";
+            video.parentElement?.classList.add("is-manual");
+        }
+
+        function initializeDemoVideos() {
+            const videos = Array.from(document.querySelectorAll(".versus-demo-video"))
+                .filter((video) => video.offsetParent !== null);
+
+            if (!videos.length) {
+                return;
+            }
+
+            videos.forEach((video) => {
+                video.muted = true;
+                video.defaultMuted = true;
+                video.playsInline = true;
+
+                video.addEventListener("click", () => {
+                    if (video.dataset.manualMode !== "true") return;
+
+                    if (video.paused) {
+                        video.play().catch(() => { });
+                    } else {
+                        video.pause();
+                    }
+                });
+            });
+
+            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+                videos.forEach((video) => enableManualVideoMode(video));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    const video = entry.target;
+
+                    if (video.dataset.manualMode === "true") {
+                        return;
+                    }
+
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
+                        const playPromise = video.play();
+
+                        if (playPromise && typeof playPromise.catch === "function") {
+                            playPromise.catch(() => {
+                                enableManualVideoMode(video);
+                            });
+                        }
+
+                        return;
+                    }
+
+                    video.pause();
+                });
+            }, {
+                threshold: [0.05, 0.15, 0.45]
+            });
+
+            videos.forEach((video) => observer.observe(video));
+
+            document.addEventListener("visibilitychange", () => {
+                if (!document.hidden) return;
+
+                videos.forEach((video) => video.pause());
+            });
+        }
+
+        function initializeStoryAnimation() {
+            if (storyTimelineInitialized) {
+                return;
+            }
+
+            storyTimelineInitialized = true;
+        }
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 40) {
+                navbar.classList.remove("py-5");
+                navbar.classList.add("py-3");
+                navShell.classList.add("bg-white/95", "border-slate-200");
+            } else {
+                navbar.classList.remove("py-3");
+                navbar.classList.add("py-5");
+                navShell.classList.remove("bg-white/95", "border-slate-200");
+            }
+
+            updateActiveSection();
+        });
+
+        window.addEventListener("resize", () => {
+            updateActiveSection();
+        });
+
+        document.querySelectorAll(".lang-toggle").forEach((button) => {
+            button.addEventListener("click", async () => {
+                if (button.dataset.lang === currentLanguage) return;
+                await setLanguage(button.dataset.lang);
+            });
+        });
+
+        mobileMenuButton.addEventListener("click", toggleMobileMenu);
+
+        mobileNavLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                document.getElementById("mobile-menu").classList.add("hidden");
+                mobileMenuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        window.addEventListener("load", async () => {
+            try {
+                await setLanguage(currentLanguage);
+            } catch (error) {
+                await setLanguage("tr");
+            }
+
+            initializeRevealAnimations();
+            initializeStoryAnimation();
+            initializeDemoVideos();
+            updateActiveSection();
+        });
+    </script>
+</body>
+
+</html>

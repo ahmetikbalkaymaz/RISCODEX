@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Riscodex | AI Platform for Insurance Operations"
+    "title": "Riscodex | Insurance Decision and Operations Platform"
   },
   "nav": {
     "home_aria": "Riscodex homepage",
@@ -13,38 +13,53 @@
     "menu_aria": "Open menu"
   },
   "hero": {
-    "eyebrow": "Operational Risk, Pricing and Claims Platform",
-    "title": "AI platform built for the insurance industry.",
-    "description": "Riscodex is designed to help insurance agencies and brokers run premium calculation, offer evaluation, and policy review processes faster and more reliably with AI.",
-    "primary_cta": "Request Access to Versus AI",
+    "eyebrow": "Insurance Decision and Operations Platform",
+    "title": "Accelerate the decision path from offer to policy.",
+    "description": "Riscodex is an enterprise insurance operations platform that brings pricing, offer comparison, and policy control into the same decision standard.",
+    "primary_cta": "Request Enterprise Demo",
     "secondary_cta": "Explore TariffEQ",
+    "decision_network": {
+      "aria": "Riscodex decision flow from offer through comparison and control to policy",
+      "stages": {
+        "offer": "Offer",
+        "compare": "Comparison",
+        "control": "Control",
+        "policy": "Policy"
+      }
+    },
     "metrics": {
       "live": {
-        "label": "2 Active Products",
+        "label": "2 Live Products",
         "title": "TariffEQ and Versus AI",
-        "description": "TariffEQ is in market use, and Versus AI is newly launched. The product family continues to expand."
+        "description": "A product family used in the field for pricing and offer evaluation."
       },
       "demo": {
         "label": "10 Lines",
-        "title": "Broad line coverage",
-        "description": "From motor to fire, cargo to liability, across the core insurance lines."
+        "title": "Offer and policy analysis",
+        "description": "Turns coverage, limit, deductible, and clause differences into decision reports."
       },
       "modules": {
-        "label": "No Integration Required",
-        "title": "Fits your current workflow",
-        "description": "Works without connecting to insurer core systems."
+        "label": "Controlled Pilot",
+        "title": "B2B access model",
+        "description": "Short pilots with selected teams, followed by live usage."
       },
       "access": {
         "label": "ITU Cekirdek",
-        "title": "Turkey-based venture",
-        "description": "Built within one of Turkey's leading technology development programs."
+        "title": "Turkey-based insurtech",
+        "description": "Built in Turkey and growing with a global insurance technology focus."
       }
+    },
+    "preview": {
+      "title": "Riscodex operations workspace",
+      "description": "Offer comparison, control, and decision reporting",
+      "status": "Live product view",
+      "video_aria": "Versus AI product workspace"
     }
   },
   "applications": {
-    "eyebrow": "Application Layer",
-    "title": "Browse the modules in a sliding card layout",
-    "description": "This section is the first version of a horizontal product rail designed to present the product family more fluidly on the homepage. It can be swiped on mobile and navigated with controls on desktop.",
+    "eyebrow": "Product Layer",
+    "title": "Explore the product family by workflow",
+    "description": "The Riscodex product family is organized around clear operating steps such as pricing, offer evaluation, policy control, and risk visibility.",
     "cards": {
       "tariffeq": {
         "status": "Live",
@@ -80,28 +95,28 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "Riscodex was founded to solve the structural problems of the insurance industry through technology.",
-    "title_html": "<span class=\"wordmark-gradient\">Riscodex</span> was founded to solve structural problems in insurance through technology.",
-    "description_1": "Premium calculation, offer evaluation, and policy review still move forward manually in most teams. Riscodex builds AI tools for these critical steps without forcing institutional integration.",
+    "title": "Riscodex was built to create decision standards across insurance operations.",
+    "title_html": "<span class=\"wordmark-gradient\">Riscodex</span> was built to create decision standards across insurance operations.",
+    "description_1": "Premium calculation, offer evaluation, and policy control still move manually in many teams. Riscodex turns these critical steps into productized tools that are controllable, measurable, and auditable.",
     "description_2": "",
     "highlights": {
       "focus": {
-        "label": "Technical Decision Support",
-        "value": "Accelerates premium validation, offer analysis, and coverage comparison with AI."
+        "label": "Decision Standard",
+        "value": "Reduces interpretation differences across premium, offer, and policy checks."
       },
       "model": {
         "label": "Enterprise Pilot Model",
         "value": "The right product starts with a short pilot, then moves into controlled live usage."
       },
       "approach": {
-        "label": "Local Regulatory Fit",
-        "value": "Built on Turkish insurance regulation and sector standards."
+        "label": "Regulatory and Operating Fit",
+        "value": "Built around Turkish insurance regulation and real field workflows."
       }
     },
     "trust": {
       "eyebrow": "ITU Cekirdek",
       "title": "ITU Cekirdek-backed venture",
-      "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It is used by insurance agencies and brokers. Its roots are in Turkey, and its ambition is global. Riscodex is growing to take its place internationally in insurance technology.",
+      "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It builds products used in real workflows with agencies and brokers, and manages enterprise adoption through controlled pilots.",
       "cards": {
         "origin": {
           "label": "Usage",
@@ -116,9 +131,9 @@
   },
   "platform": {
     "eyebrow": "Products",
-    "title": "A tool for each critical step. The Riscodex product family.",
-    "title_html": "A tool for each critical step. The <span class=\"wordmark-gradient\">Riscodex</span> product family.",
-    "description": "Live products, pilot-access tools, and the development pipeline progress within the same operating structure.",
+    "title": "The Riscodex product family for pricing, comparison, and control.",
+    "title_html": "The <span class=\"wordmark-gradient\">Riscodex</span> product family for pricing, comparison, and control.",
+    "description": "Live products and pilot modules progress on the same decision architecture; each tool focuses on a clear operating step.",
     "legend": {
       "live": "Live product",
       "launch": "New launches",
@@ -141,7 +156,7 @@
     "live": {
       "badge": "Live",
       "title": "TariffEQ",
-      "description": "Calculate facultative earthquake premiums in full alignment with official tariff standards. Scenario comparison, automated validation, and technical decision support on one screen.",
+      "description": "Run facultative earthquake premium calculations aligned with official tariff standards. Scenario comparison, validation, and technical decision support on one screen.",
       "metrics": {
         "scope": {
           "label": "Scope",
@@ -161,12 +176,12 @@
         }
       },
       "cta": "Open TariffEQ",
-      "note": "The first product already in live usage."
+      "note": "The live pricing product already in use."
     },
     "demo": {
       "eyebrow": "New Launch",
       "title": "Versus AI",
-      "description": "Upload multiple insurance offers. Versus AI surfaces the critical differences and produces a reasoned evaluation report.",
+      "description": "Compares multiple insurance offers in a single workspace, then reports critical differences, missing coverage, and the decision rationale.",
       "metrics": {
         "input": {
           "label": "Input",
@@ -187,49 +202,16 @@
         "choice": "Support for 10 lines"
       },
       "badge": "New",
-      "cta": "Request Versus AI"
+      "cta": "Open Versus AI page",
+      "secondary_cta": "Request demo"
     },
     "modules": {
       "eyebrow": "New Launch",
-      "title": "Versus Check",
-      "description": "Reads the offer and the issued policy side by side, then reports coverage, limit, and clause differences with insurance impact.",
-      "metrics": {
-        "input": {
-          "label": "Comparison",
-          "value": "Offer + policy"
-        },
-        "output": {
-          "label": "Output",
-          "value": "Difference report"
-        },
-        "focus": {
-          "label": "Focus",
-          "value": "Coverage, limits, clauses"
-        }
-      },
-      "items": {
-        "locateloss": {
-          "name": "Coverage changes",
-          "status": "New"
-        },
-        "versus": {
-          "name": "Versus AI",
-          "status": "New"
-        },
-        "foresight": {
-          "name": "Limit differences",
-          "status": "New"
-        },
-        "firewatch": {
-          "name": "Clause revisions",
-          "status": "New"
-        },
-        "precast": {
-          "name": "Precast",
-          "status": "New"
-        }
-      },
-      "cta": "Request Versus Check"
+      "title": "Versus Tools",
+      "tools": {
+        "commercial": "Commercial/industrial policy premium calculation",
+        "fire": "Fire declaration policy calculation"
+      }
     },
     "next": {
       "eyebrow": "Next Layer",
@@ -245,7 +227,7 @@
     "future": {
       "eyebrow": "In Development",
       "title": "New Modules",
-      "description": "We are building new tools for risk scoring, portfolio scanning, and claims analysis.",
+      "description": "We are building new decision modules for risk scoring, portfolio scanning, and claims analysis.",
       "metrics": {
         "risk": {
           "label": "Step 01",
@@ -293,7 +275,7 @@
   "solutions": {
     "eyebrow": "Who We Help",
     "title": "Who does Riscodex create value for?",
-    "description": "Showing exactly who we serve first and then expanding into the relevant operating layer creates a stronger story.",
+    "description": "Designed to help distribution, underwriting, and operations teams work with the same decision language.",
     "cards": {
       "company": {
         "eyebrow": "Who we help",
@@ -395,7 +377,7 @@
   },
   "operating_model": {
     "eyebrow": "How It Works",
-    "title": "We place the right tool into the right workflow.",
+    "title": "We place the right product into the right workflow.",
     "description": "With a short assessment call, we clarify the need, start a pilot with the right product, and move into live usage together.",
     "steps": {
       "discovery": {
@@ -417,8 +399,8 @@
   },
   "footer_cta": {
     "eyebrow": "Request Access",
-    "title": "Which product fits which process? Let's evaluate it together.",
-    "description": "Let's define the right product and working model together. In the first meeting, we can run a live analysis using your own offer or policy files.",
+    "title": "Which product fits which process? Let’s define it together.",
+    "description": "Let’s define the right product and working model together. In the first meeting, we can run a live assessment using your own offer or policy files.",
     "steps": {
       "step_1": {
         "label": "Step 1",
@@ -441,8 +423,6 @@
     }
   },
   "footer": {
-    "copyright": "&copy; 2025 RISCODEX Technology Inc.",
-    "privacy": "Privacy",
-    "terms": "Terms"
+    "copyright": "&copy; 2026 RISCODEX Technology Inc."
   }
 }

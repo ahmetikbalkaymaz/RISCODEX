@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Riscodex | Versus AI"
+  },
+  "nav": {
+    "home_aria": "Riscodex ana sayfaya dön",
+    "back": "Ana Site",
+    "problem": "Ürün Akışı",
+    "how": "İşleyiş",
+    "use_cases": "Branşlar",
+    "request": "Demo Talebi",
+    "menu_aria": "Menüyü aç"
+  },
+  "hero": {
+    "eyebrow": "Teklif ve Poliçe Karşılaştırma",
+    "title": "Teklifleri okuyun, farkları görün, kararı paylaşın.",
+    "description": "Versus AI, sigorta tekliflerini ve poliçe dosyalarını aynı çalışma alanında karşılaştırıp kontrollü karar raporuna dönüştürür.",
+    "primary_cta": "Kurumsal Demo Talep Et",
+    "secondary_cta": "Ürün Akışını İzle",
+    "stats": {
+      "speed": {
+        "label": "Karar süresi",
+        "value": "Dakikalar içinde karşılaştırma"
+      },
+      "coverage": {
+        "label": "10 branş",
+        "value": "Teklif ve poliçe dosyaları"
+      },
+      "mode": {
+        "label": "Kurumsal pilot",
+        "value": "Broker, acente ve sigorta ekipleri"
+      }
+    }
+  },
+  "story": {
+    "eyebrow": "Operasyonel Sorun",
+    "title": "Teklif farkları görünmediğinde karar kalitesi düşer.",
+    "description": "Teklif, ek ve poliçe dokümanları aynı anda değerlendirildiğinde ekiplerin ihtiyacı daha fazla içerik değil; farkları standart biçimde okuyup güvenilir karara çevirecek bir çalışma alanıdır.",
+    "points": {
+      "stack": {
+        "title": "Belgeler aynı vakada toplanır",
+        "description": "Teklifler, kloz listeleri ve yenileme dokümanları tek değerlendirme alanına alınır."
+      },
+      "noise": {
+        "title": "Kritik farklar ayrıştırılır",
+        "description": "Muafiyet, limit ve teminat farklılıkları satır aralarından çıkarılır."
+      },
+      "decision": {
+        "title": "Karar raporu oluşur",
+        "description": "Ekipler hangi teklifin neden öne çıktığını aynı standartta görür."
+      }
+    },
+    "papers": {
+      "offer_a": "Teklif Dosyası A",
+      "offer_b": "Teklif Dosyası B",
+      "policy": "Poliçe Özeti",
+      "renewal": "Yenileme Karşılaştırması",
+      "clauses": "Kloz Ekleri",
+      "risk": "Teminat Kontrolü",
+      "highlight_1": "Muafiyet farkı",
+      "highlight_2": "Limit değişimi",
+      "highlight_3": "Eksik teminat"
+    },
+    "reveal": {
+      "badge": "Yeni Ürün",
+      "title": "VERSUS AI",
+      "description": "Belgeleri aynı yüzeyde toplar, kritik farkları görünür hale getirir ve değerlendirme çıktısını karar raporuna dönüştürür.",
+      "metrics": {
+        "input": {
+          "label": "Girdi",
+          "value": "Çoklu teklif / poliçe"
+        },
+        "output": {
+          "label": "Çıktı",
+          "value": "Karar raporu"
+        },
+        "focus": {
+          "label": "Odak",
+          "value": "Teminat, limit, muafiyet"
+        }
+      }
+    },
+    "media": {
+      "eyebrow": "Ürün Çalışma Alanı",
+      "title": "Teklif karşılaştırma ve gerekçeli karar raporu",
+      "description": "Demo videosu, Versus AI’ın teklifleri nasıl okuduğunu, farkları nasıl sınıflandırdığını ve karar çıktısını nasıl oluşturduğunu gösterir.",
+      "manual_hint": "Videoyu oynat",
+      "label_1": "Belge yükleme",
+      "label_2": "Fark analizi",
+      "label_3": "Karar raporu",
+      "video_aria": "Versus AI ürün çalışma alanı videosu"
+    }
+  },
+  "mobile_story": {
+    "eyebrow": "Mobil Ürün Akışı",
+    "title": "Mobilde ürün akışı daha sade sunulur.",
+    "description": "Belgeler, kritik farklar ve karar çıktısı kompakt bir değerlendirme akışı içinde gösterilir."
+  },
+  "capabilities": {
+    "eyebrow": "Ne Sağlar",
+    "title": "Versus AI teklif değerlendirme sürecini standartlaştırır.",
+    "description": "Teklifleri tek tek okumak yerine farkları, etkileri ve karar gerekçesini aynı yüzeyde görürsünüz.",
+    "cards": {
+      "compare": {
+        "title": "Farkları görünür kılar",
+        "description": "Teklifler arasındaki teminat, limit, muafiyet ve istisna farklarını aynı tabloda toplar."
+      },
+      "explain": {
+        "title": "Etkisini açıklar",
+        "description": "Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, karar bağlamını da taşır."
+      },
+      "recommend": {
+        "title": "Karar süresini kısaltır",
+        "description": "Ekiplerin en uygun teklifi daha hızlı, daha kontrollü ve daha tutarlı değerlendirmesine yardımcı olur."
+      }
+    }
+  },
+  "how": {
+    "eyebrow": "İşleyiş",
+    "title": "Kurumsal kullanım akışı üç adımda ilerler.",
+    "description": "Önce gerçek dosya tipi ve karar ihtiyacı netleşir, ardından pilot çalışma alanı ve canlı kullanım modeli kurulur.",
+    "steps": {
+      "upload": {
+        "label": "01",
+        "title": "Dosyaları aynı vakada toplayın",
+        "description": "Teklifleri, poliçeleri veya yenileme belgelerini tek değerlendirme alanına yükleyin."
+      },
+      "analyze": {
+        "label": "02",
+        "title": "Farkları standartlaştırın",
+        "description": "Sistem kritik farkları okur, gruplar ve değerlendirme formatında özetler."
+      },
+      "decide": {
+        "label": "03",
+        "title": "Karar raporunu paylaşın",
+        "description": "Ekibiniz hangi teklifin neden daha uygun olduğunu aynı standartta görür."
+      }
+    }
+  },
+  "use_cases": {
+    "eyebrow": "Branş Kapsamı",
+    "title": "10 branşta aynı değerlendirme standardını kullanın.",
+    "description": "Versus AI farklı sigorta ürünlerinde teklif karşılaştırması ve poliçe okuma süreçlerini ortak karar formatına taşır.",
+    "items": {
+      "kasko": "Kasko",
+      "trafik": "Trafik",
+      "oss": "Özel Sağlık Sigortası",
+      "tss": "Tamamlayıcı Sağlık Sigortası",
+      "ferdi": "Ferdi Kaza",
+      "nakliyat": "Nakliyat",
+      "yangin": "Yangın",
+      "insaat": "İnşaat ve Montaj",
+      "enerji": "Enerji",
+      "sorumluluk": "Sorumluluk"
+    }
+  },
+  "request": {
+    "eyebrow": "Demo Talebi",
+    "title": "Kendi teklif dosyalarınızla karar akışını birlikte inceleyelim.",
+    "description": "İlk görüşmede ürün uygunluğunu netleştirir, gerçek dosyalar üzerinden kontrollü bir demo akışı kurgularız.",
+    "process": {
+      "step_1": "İhtiyaç değerlendirmesi",
+      "step_2": "Pilot kapsamı",
+      "step_3": "Canlı kullanım planı"
+    },
+    "form": {
+      "name_label": "Ad Soyad",
+      "name_placeholder": "Adınız Soyadınız",
+      "company_label": "Şirket",
+      "company_placeholder": "Şirket adı",
+      "email_label": "Kurumsal E-posta",
+      "email_placeholder": "ornek@sirket.com",
+      "message_label": "Not",
+      "message_placeholder": "İncelemek istediğiniz branş, teklif tipi veya karar süreci",
+      "note": "Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.",
+      "submit": "Kurumsal Demo Talep Et"
+    }
+  },
+  "footer": {
+    "back": "Ana sayfaya dön",
+    "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+  }
+}

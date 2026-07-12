@@ -1,7 +1,7 @@
 window.__landingTranslations = {
   "tr": {
     "meta": {
-      "title": "Riscodex | Sigorta Operasyonları için Yapay Zeka Platformu"
+      "title": "Riscodex | Sigorta Karar ve Operasyon Platformu"
     },
     "nav": {
       "home_aria": "Riscodex ana sayfa",
@@ -14,38 +14,53 @@ window.__landingTranslations = {
       "menu_aria": "Menüyü aç"
     },
     "hero": {
-      "eyebrow": "Operational Risk, Pricing and Claims Platform",
-      "title": "Sigorta sektörü için geliştirilmiş yapay zeka platformu.",
-      "description": "Riscodex, sigorta acentelerinin ve brokerlerin prim hesaplama, teklif değerlendirme ve poliçe inceleme süreçlerini yapay zeka ile daha hızlı ve daha güvenilir yürütmesi için tasarlanmıştır.",
-      "primary_cta": "Versus AI'a Erişim Talep Edin",
-      "secondary_cta": "TariffEQ'yu İnceleyin",
+      "eyebrow": "Sigorta Karar ve Operasyon Platformu",
+      "title": "Tekliften poliçeye karar akışını hızlandırın.",
+      "description": "Riscodex, fiyatlama, teklif karşılaştırma ve poliçe kontrol süreçlerini aynı karar standardında birleştiren kurumsal sigorta operasyon platformudur.",
+      "primary_cta": "Kurumsal Demo Talep Et",
+      "secondary_cta": "TariffEQ'yu İncele",
+      "decision_network": {
+        "aria": "Teklif, karşılaştırma, kontrol ve poliçe aşamalarından oluşan Riscodex karar akışı",
+        "stages": {
+          "offer": "Teklif",
+          "compare": "Karşılaştırma",
+          "control": "Kontrol",
+          "policy": "Poliçe"
+        }
+      },
       "metrics": {
         "live": {
-          "label": "2 Aktif Ürün",
+          "label": "2 Canlı Ürün",
           "title": "TariffEQ ve Versus AI",
-          "description": "TariffEQ pazarda, Versus AI yeni yayında. Ürün ailesi genişlemeye devam ediyor."
+          "description": "Fiyatlama ve teklif değerlendirme için sahada kullanılan ürün ailesi."
         },
         "demo": {
           "label": "10 Branş",
-          "title": "Geniş branş kapsamı",
-          "description": "Kaskodan yangına, nakliyattan sorumluluk sigortasına tüm temel branşlarda."
+          "title": "Teklif ve poliçe analizi",
+          "description": "Teminat, limit, muafiyet ve kloz farklarını karar raporuna dönüştürür."
         },
         "modules": {
-          "label": "Entegrasyon Gerektirmez",
-          "title": "Mevcut düzeninize oturur",
-          "description": "Sigorta şirketi sistemlerine bağlantı olmadan çalışır."
+          "label": "Kontrollü Pilot",
+          "title": "B2B erişim modeli",
+          "description": "Seçili ekiplerle kısa pilot, ardından canlı kullanım modeli."
         },
         "access": {
           "label": "İTÜ Çekirdek",
-          "title": "Türkiye merkezli girişim",
-          "description": "Türkiye'nin önde gelen teknoloji geliştirme programı bünyesinde hayata geçirildi."
+          "title": "Türkiye merkezli insurtech",
+          "description": "Türkiye’de geliştirilen, global sigorta teknolojisi odağıyla büyüyen girişim."
         }
+      },
+      "preview": {
+        "title": "Riscodex operasyon çalışma alanı",
+        "description": "Teklif karşılaştırma, kontrol ve karar raporu",
+        "status": "Canlı ürün görünümü",
+        "video_aria": "Versus AI ürün çalışma alanı"
       }
     },
     "applications": {
-      "eyebrow": "Uygulama Katmanı",
-      "title": "Modülleri kayan kart yapısında inceleyin",
-      "description": "Bu alan, ürün ailesini ana sayfada daha akıcı göstermek için yatay kayan kart yapısının ilk versiyonu. Mobilde kaydırılabilir, masaüstünde yön butonlarıyla ilerler.",
+      "eyebrow": "Ürün Katmanı",
+      "title": "Ürün ailesini iş akışına göre inceleyin",
+      "description": "Riscodex ürün ailesi fiyatlama, teklif değerlendirme, poliçe kontrolü ve risk görünürlüğü gibi net operasyon adımlarına ayrılır.",
       "cards": {
         "tariffeq": {
           "status": "Canlı",
@@ -81,28 +96,28 @@ window.__landingTranslations = {
     },
     "about": {
       "eyebrow": "Hakkımızda",
-      "title": "Riscodex, sigorta sektörünün yapısal sorunlarını teknolojiyle çözmek için kuruldu.",
-      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta sektöründeki yapısal sorunları teknolojiyle çözmek için kuruldu.",
-      "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka araçları geliştirir.",
+      "title": "Riscodex, sigorta operasyonlarında karar standardı oluşturmak için geliştirildi.",
+      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span>, sigorta operasyonlarında karar standardı oluşturmak için geliştirildi.",
+      "description_1": "Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor. Riscodex bu kritik adımları ürünleşmiş araçlarla kontrol edilebilir, ölçülebilir ve denetlenebilir hale getirir.",
       "description_2": "",
       "highlights": {
         "focus": {
-          "label": "Teknik Karar Desteği",
-          "value": "Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile hızlandırır."
+          "label": "Karar Standardı",
+          "value": "Prim, teklif ve poliçe kontrollerinde ekipler arası yorum farkını azaltır."
         },
         "model": {
           "label": "Kurumsal Pilot Modeli",
           "value": "Doğru ürünle kısa pilot kurulur, ekip canlı kullanıma kontrollü geçer."
         },
         "approach": {
-          "label": "Yerel Mevzuata Uyum",
-          "value": "Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi."
+          "label": "Mevzuat ve Operasyon Uyumu",
+          "value": "Türk sigorta mevzuatı ve saha iş akışları temel alınarak geliştirildi."
         }
       },
       "trust": {
         "eyebrow": "İTÜ Çekirdek",
         "title": "İTÜ Çekirdek destekli girişim",
-        "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak için büyüyor.",
+        "description": "Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi girişimidir. Sigorta acenteleri ve brokerlerle gerçek iş akışlarında kullanılan ürünler geliştirir; kontrollü pilotlarla kurumsal kullanıma geçişi yönetir.",
         "cards": {
           "origin": {
             "label": "Kullanım",
@@ -117,9 +132,9 @@ window.__landingTranslations = {
     },
     "platform": {
       "eyebrow": "Ürünler",
-      "title": "Her kritik adım için bir araç. Riscodex ürün ailesi.",
-      "title_html": "Her kritik adım için bir araç. <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
-      "description": "Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı içinde ilerliyor.",
+      "title": "Fiyatlama, karşılaştırma ve kontrol için Riscodex ürün ailesi.",
+      "title_html": "Fiyatlama, karşılaştırma ve kontrol için <span class=\"wordmark-gradient\">Riscodex</span> ürün ailesi.",
+      "description": "Canlı ürünler ve pilot modüller aynı karar mimarisiyle ilerler; her araç net bir operasyon adımına odaklanır.",
       "legend": {
         "live": "Canlı ürün",
         "launch": "Yeni çıkanlar",
@@ -142,7 +157,7 @@ window.__landingTranslations = {
       "live": {
         "badge": "Yayında",
         "title": "TariffEQ",
-        "description": "İhtiyari deprem prim hesaplamasını resmi tarife standartlarına tam uyumlu şekilde gerçekleştirin. Senaryo karşılaştırması, otomatik doğrulama ve teknik karar desteği tek ekranda.",
+        "description": "İhtiyari deprem prim hesaplamasını resmi tarife standartlarına uyumlu şekilde yürütün. Senaryo karşılaştırması, doğrulama ve teknik karar desteği tek ekranda.",
         "metrics": {
           "scope": {
             "label": "Kapsam",
@@ -162,12 +177,12 @@ window.__landingTranslations = {
           }
         },
         "cta": "TariffEQ'yu aç",
-        "note": "Canlı kullanımda olan ilk ürün."
+        "note": "Canlı kullanımda olan fiyatlama ürünü."
       },
       "demo": {
         "eyebrow": "Yeni Yayında",
         "title": "Versus AI",
-        "description": "Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve gerekçeli bir değerlendirme raporu sunar.",
+        "description": "Birden fazla sigorta teklifini tek çalışma alanında karşılaştırır; kritik farkları, eksik teminatları ve karar gerekçesini raporlar.",
         "metrics": {
           "input": {
             "label": "Girdi",
@@ -188,49 +203,16 @@ window.__landingTranslations = {
           "choice": "10 branş desteği"
         },
         "badge": "Yeni",
-        "cta": "Versus AI için talep oluştur"
+        "cta": "Versus AI sayfasını aç",
+        "secondary_cta": "Demo talebi bırak"
       },
       "modules": {
         "eyebrow": "Yeni Yayında",
-        "title": "Versus Check",
-        "description": "Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle birlikte raporlar.",
-        "metrics": {
-          "input": {
-            "label": "Karşılaştırma",
-            "value": "Teklif + poliçe"
-          },
-          "output": {
-            "label": "Çıktı",
-            "value": "Fark raporu"
-          },
-          "focus": {
-            "label": "Odak",
-            "value": "Teminat, limit, kloz"
-          }
-        },
-        "items": {
-          "locateloss": {
-            "name": "Teminat değişiklikleri",
-            "status": "Yeni"
-          },
-          "versus": {
-            "name": "Versus AI",
-            "status": "Yeni"
-          },
-          "foresight": {
-            "name": "Limit farklılıkları",
-            "status": "Yeni"
-          },
-          "firewatch": {
-            "name": "Kloz düzenlemeleri",
-            "status": "Yeni"
-          },
-          "precast": {
-            "name": "Precast",
-            "status": "Yeni"
-          }
-        },
-        "cta": "Versus Check için talep oluştur"
+        "title": "Versus Tools",
+        "tools": {
+          "commercial": "Ticari/Sınai poliçe primi hesaplama",
+          "fire": "Yangın abonman hesaplama"
+        }
       },
       "next": {
         "eyebrow": "Sonraki Katman",
@@ -246,7 +228,7 @@ window.__landingTranslations = {
       "future": {
         "eyebrow": "Geliştirme Aşamasında",
         "title": "Yeni Modüller",
-        "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.",
+        "description": "Risk skorlama, portföy tarama ve hasar analizi için yeni karar modülleri geliştiriyoruz.",
         "metrics": {
           "risk": {
             "label": "Adım 01",
@@ -266,7 +248,7 @@ window.__landingTranslations = {
           "portfolio_scanning": "Portföy tarama",
           "claim_analysis": "Hasar analizi"
         },
-        "footer": "Roadmap, canlı ürün ailesine kademeli olarak ekleniyor."
+        "footer": "Yol haritası, canlı ürün ailesine kademeli olarak ekleniyor."
       }
     },
     "problem": {
@@ -294,7 +276,7 @@ window.__landingTranslations = {
     "solutions": {
       "eyebrow": "Kimler İçin",
       "title": "Riscodex kimler için değer üretiyor?",
-      "description": "Önce hangi ekibe hitap ettiğimizi net gösterip sonra ilgili operasyon katmanını detaylandırmak daha güçlü bir anlatı kurar.",
+      "description": "Dağıtım, underwriting ve operasyon ekiplerinin aynı karar dilinde çalışmasını hedefler.",
       "cards": {
         "company": {
           "eyebrow": "Kimler için",
@@ -396,7 +378,7 @@ window.__landingTranslations = {
     },
     "operating_model": {
       "eyebrow": "Nasıl Çalışır",
-      "title": "Doğru aracı, doğru iş akışına yerleştiriyoruz.",
+      "title": "Doğru ürünü, doğru iş akışına yerleştiriyoruz.",
       "description": "Kısa bir değerlendirme görüşmesiyle ihtiyacı netleştiririz, uygun ürünle pilot başlatırız, canlı kullanıma birlikte geçeriz.",
       "steps": {
         "discovery": {
@@ -418,8 +400,8 @@ window.__landingTranslations = {
     },
     "footer_cta": {
       "eyebrow": "Erişim Talebi",
-      "title": "Hangi ürün, hangi süreciniz için? Birlikte değerlendirelim.",
-      "description": "Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da poliçe dosyalarınızla canlı bir analiz yapabiliriz.",
+      "title": "Hangi ürün, hangi süreciniz için? Birlikte netleştirelim.",
+      "description": "Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da poliçe dosyalarınızla canlı bir değerlendirme yapabiliriz.",
       "steps": {
         "step_1": {
           "label": "Adım 1",
@@ -442,14 +424,12 @@ window.__landingTranslations = {
       }
     },
     "footer": {
-      "copyright": "&copy; 2025 RISCODEX Teknoloji A.Ş.",
-      "privacy": "Gizlilik",
-      "terms": "Şartlar"
+      "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
     }
   },
   "en": {
     "meta": {
-      "title": "Riscodex | AI Platform for Insurance Operations"
+      "title": "Riscodex | Insurance Decision and Operations Platform"
     },
     "nav": {
       "home_aria": "Riscodex homepage",
@@ -462,38 +442,53 @@ window.__landingTranslations = {
       "menu_aria": "Open menu"
     },
     "hero": {
-      "eyebrow": "Operational Risk, Pricing and Claims Platform",
-      "title": "AI platform built for the insurance industry.",
-      "description": "Riscodex is designed to help insurance agencies and brokers run premium calculation, offer evaluation, and policy review processes faster and more reliably with AI.",
-      "primary_cta": "Request Access to Versus AI",
+      "eyebrow": "Insurance Decision and Operations Platform",
+      "title": "Accelerate the decision path from offer to policy.",
+      "description": "Riscodex is an enterprise insurance operations platform that brings pricing, offer comparison, and policy control into the same decision standard.",
+      "primary_cta": "Request Enterprise Demo",
       "secondary_cta": "Explore TariffEQ",
+      "decision_network": {
+        "aria": "Riscodex decision flow from offer through comparison and control to policy",
+        "stages": {
+          "offer": "Offer",
+          "compare": "Comparison",
+          "control": "Control",
+          "policy": "Policy"
+        }
+      },
       "metrics": {
         "live": {
-          "label": "2 Active Products",
+          "label": "2 Live Products",
           "title": "TariffEQ and Versus AI",
-          "description": "TariffEQ is in market use, and Versus AI is newly launched. The product family continues to expand."
+          "description": "A product family used in the field for pricing and offer evaluation."
         },
         "demo": {
           "label": "10 Lines",
-          "title": "Broad line coverage",
-          "description": "From motor to fire, cargo to liability, across the core insurance lines."
+          "title": "Offer and policy analysis",
+          "description": "Turns coverage, limit, deductible, and clause differences into decision reports."
         },
         "modules": {
-          "label": "No Integration Required",
-          "title": "Fits your current workflow",
-          "description": "Works without connecting to insurer core systems."
+          "label": "Controlled Pilot",
+          "title": "B2B access model",
+          "description": "Short pilots with selected teams, followed by live usage."
         },
         "access": {
           "label": "ITU Cekirdek",
-          "title": "Turkey-based venture",
-          "description": "Built within one of Turkey's leading technology development programs."
+          "title": "Turkey-based insurtech",
+          "description": "Built in Turkey and growing with a global insurance technology focus."
         }
+      },
+      "preview": {
+        "title": "Riscodex operations workspace",
+        "description": "Offer comparison, control, and decision reporting",
+        "status": "Live product view",
+        "video_aria": "Versus AI product workspace"
       }
     },
     "applications": {
-      "eyebrow": "Application Layer",
-      "title": "Browse the modules in a sliding card layout",
-      "description": "This section is the first version of a horizontal product rail designed to present the product family more fluidly on the homepage. It can be swiped on mobile and navigated with controls on desktop.",
+      "eyebrow": "Product Layer",
+      "title": "Explore the product family by workflow",
+      "description": "The Riscodex product family is organized around clear operating steps such as pricing, offer evaluation, policy control, and risk visibility.",
       "cards": {
         "tariffeq": {
           "status": "Live",
@@ -529,28 +524,28 @@ window.__landingTranslations = {
     },
     "about": {
       "eyebrow": "About",
-      "title": "Riscodex was founded to solve the structural problems of the insurance industry through technology.",
-      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span> was founded to solve structural problems in insurance through technology.",
-      "description_1": "Premium calculation, offer evaluation, and policy review still move forward manually in most teams. Riscodex builds AI tools for these critical steps without forcing institutional integration.",
+      "title": "Riscodex was built to create decision standards across insurance operations.",
+      "title_html": "<span class=\"wordmark-gradient\">Riscodex</span> was built to create decision standards across insurance operations.",
+      "description_1": "Premium calculation, offer evaluation, and policy control still move manually in many teams. Riscodex turns these critical steps into productized tools that are controllable, measurable, and auditable.",
       "description_2": "",
       "highlights": {
         "focus": {
-          "label": "Technical Decision Support",
-          "value": "Accelerates premium validation, offer analysis, and coverage comparison with AI."
+          "label": "Decision Standard",
+          "value": "Reduces interpretation differences across premium, offer, and policy checks."
         },
         "model": {
           "label": "Enterprise Pilot Model",
           "value": "The right product starts with a short pilot, then moves into controlled live usage."
         },
         "approach": {
-          "label": "Local Regulatory Fit",
-          "value": "Built on Turkish insurance regulation and sector standards."
+          "label": "Regulatory and Operating Fit",
+          "value": "Built around Turkish insurance regulation and real field workflows."
         }
       },
       "trust": {
         "eyebrow": "ITU Cekirdek",
         "title": "ITU Cekirdek-backed venture",
-        "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It is used by insurance agencies and brokers. Its roots are in Turkey, and its ambition is global. Riscodex is growing to take its place internationally in insurance technology.",
+        "description": "Riscodex is a Turkey-based insurance technology venture developed within ITU Cekirdek. It builds products used in real workflows with agencies and brokers, and manages enterprise adoption through controlled pilots.",
         "cards": {
           "origin": {
             "label": "Usage",
@@ -565,9 +560,9 @@ window.__landingTranslations = {
     },
     "platform": {
       "eyebrow": "Products",
-      "title": "A tool for each critical step. The Riscodex product family.",
-      "title_html": "A tool for each critical step. The <span class=\"wordmark-gradient\">Riscodex</span> product family.",
-      "description": "Live products, pilot-access tools, and the development pipeline progress within the same operating structure.",
+      "title": "The Riscodex product family for pricing, comparison, and control.",
+      "title_html": "The <span class=\"wordmark-gradient\">Riscodex</span> product family for pricing, comparison, and control.",
+      "description": "Live products and pilot modules progress on the same decision architecture; each tool focuses on a clear operating step.",
       "legend": {
         "live": "Live product",
         "launch": "New launches",
@@ -590,7 +585,7 @@ window.__landingTranslations = {
       "live": {
         "badge": "Live",
         "title": "TariffEQ",
-        "description": "Calculate facultative earthquake premiums in full alignment with official tariff standards. Scenario comparison, automated validation, and technical decision support on one screen.",
+        "description": "Run facultative earthquake premium calculations aligned with official tariff standards. Scenario comparison, validation, and technical decision support on one screen.",
         "metrics": {
           "scope": {
             "label": "Scope",
@@ -610,12 +605,12 @@ window.__landingTranslations = {
           }
         },
         "cta": "Open TariffEQ",
-        "note": "The first product already in live usage."
+        "note": "The live pricing product already in use."
       },
       "demo": {
         "eyebrow": "New Launch",
         "title": "Versus AI",
-        "description": "Upload multiple insurance offers. Versus AI surfaces the critical differences and produces a reasoned evaluation report.",
+        "description": "Compares multiple insurance offers in a single workspace, then reports critical differences, missing coverage, and the decision rationale.",
         "metrics": {
           "input": {
             "label": "Input",
@@ -636,49 +631,16 @@ window.__landingTranslations = {
           "choice": "Support for 10 lines"
         },
         "badge": "New",
-        "cta": "Request Versus AI"
+        "cta": "Open Versus AI page",
+        "secondary_cta": "Request demo"
       },
       "modules": {
         "eyebrow": "New Launch",
-        "title": "Versus Check",
-        "description": "Reads the offer and the issued policy side by side, then reports coverage, limit, and clause differences with insurance impact.",
-        "metrics": {
-          "input": {
-            "label": "Comparison",
-            "value": "Offer + policy"
-          },
-          "output": {
-            "label": "Output",
-            "value": "Difference report"
-          },
-          "focus": {
-            "label": "Focus",
-            "value": "Coverage, limits, clauses"
-          }
-        },
-        "items": {
-          "locateloss": {
-            "name": "Coverage changes",
-            "status": "New"
-          },
-          "versus": {
-            "name": "Versus AI",
-            "status": "New"
-          },
-          "foresight": {
-            "name": "Limit differences",
-            "status": "New"
-          },
-          "firewatch": {
-            "name": "Clause revisions",
-            "status": "New"
-          },
-          "precast": {
-            "name": "Precast",
-            "status": "New"
-          }
-        },
-        "cta": "Request Versus Check"
+        "title": "Versus Tools",
+        "tools": {
+          "commercial": "Commercial/industrial policy premium calculation",
+          "fire": "Fire declaration policy calculation"
+        }
       },
       "next": {
         "eyebrow": "Next Layer",
@@ -694,7 +656,7 @@ window.__landingTranslations = {
       "future": {
         "eyebrow": "In Development",
         "title": "New Modules",
-        "description": "We are building new tools for risk scoring, portfolio scanning, and claims analysis.",
+        "description": "We are building new decision modules for risk scoring, portfolio scanning, and claims analysis.",
         "metrics": {
           "risk": {
             "label": "Step 01",
@@ -742,7 +704,7 @@ window.__landingTranslations = {
     "solutions": {
       "eyebrow": "Who We Help",
       "title": "Who does Riscodex create value for?",
-      "description": "Showing exactly who we serve first and then expanding into the relevant operating layer creates a stronger story.",
+      "description": "Designed to help distribution, underwriting, and operations teams work with the same decision language.",
       "cards": {
         "company": {
           "eyebrow": "Who we help",
@@ -844,7 +806,7 @@ window.__landingTranslations = {
     },
     "operating_model": {
       "eyebrow": "How It Works",
-      "title": "We place the right tool into the right workflow.",
+      "title": "We place the right product into the right workflow.",
       "description": "With a short assessment call, we clarify the need, start a pilot with the right product, and move into live usage together.",
       "steps": {
         "discovery": {
@@ -866,8 +828,8 @@ window.__landingTranslations = {
     },
     "footer_cta": {
       "eyebrow": "Request Access",
-      "title": "Which product fits which process? Let's evaluate it together.",
-      "description": "Let's define the right product and working model together. In the first meeting, we can run a live analysis using your own offer or policy files.",
+      "title": "Which product fits which process? Let’s define it together.",
+      "description": "Let’s define the right product and working model together. In the first meeting, we can run a live assessment using your own offer or policy files.",
       "steps": {
         "step_1": {
           "label": "Step 1",
@@ -890,9 +852,7 @@ window.__landingTranslations = {
       }
     },
     "footer": {
-      "copyright": "&copy; 2025 RISCODEX Technology Inc.",
-      "privacy": "Privacy",
-      "terms": "Terms"
+      "copyright": "&copy; 2026 RISCODEX Technology Inc."
     }
   }
 };

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "Riscodex | Versus AI"
+  },
+  "nav": {
+    "home_aria": "Return to the Riscodex homepage",
+    "back": "Main Site",
+    "problem": "Product Flow",
+    "how": "Process",
+    "use_cases": "Lines",
+    "request": "Request Demo",
+    "menu_aria": "Open menu"
+  },
+  "hero": {
+    "eyebrow": "Offer and Policy Comparison",
+    "title": "Read offers, see differences, share the decision.",
+    "description": "Versus AI compares insurance offers and policy files in one workspace, then turns them into controlled decision reports.",
+    "primary_cta": "Request Enterprise Demo",
+    "secondary_cta": "Watch Product Flow",
+    "stats": {
+      "speed": {
+        "label": "Decision time",
+        "value": "Comparison within minutes"
+      },
+      "coverage": {
+        "label": "10 lines",
+        "value": "Offer and policy files"
+      },
+      "mode": {
+        "label": "Enterprise pilot",
+        "value": "For brokers, agencies, and insurance teams"
+      }
+    }
+  },
+  "story": {
+    "eyebrow": "Operational Problem",
+    "title": "When offer differences are hidden, decision quality drops.",
+    "description": "When quotes, endorsements, and policy documents are evaluated together, teams do not need more content. They need a workspace that reads differences consistently and turns them into reliable decisions.",
+    "points": {
+      "stack": {
+        "title": "Documents are grouped by case",
+        "description": "Quotes, clause lists, and renewal files are brought into one evaluation workspace."
+      },
+      "noise": {
+        "title": "Critical differences are separated",
+        "description": "Deductible, limit, and coverage differences are lifted out of the document noise."
+      },
+      "decision": {
+        "title": "A decision report is created",
+        "description": "Teams see why an offer stands out through the same standard."
+      }
+    },
+    "papers": {
+      "offer_a": "Quote File A",
+      "offer_b": "Quote File B",
+      "policy": "Policy Summary",
+      "renewal": "Renewal Comparison",
+      "clauses": "Clause Addendum",
+      "risk": "Coverage Check",
+      "highlight_1": "Deductible gap",
+      "highlight_2": "Limit change",
+      "highlight_3": "Missing coverage"
+    },
+    "reveal": {
+      "badge": "New Product",
+      "title": "VERSUS AI",
+      "description": "It brings documents into one surface, exposes critical differences, and turns the evaluation output into a decision report.",
+      "metrics": {
+        "input": {
+          "label": "Input",
+          "value": "Multiple quotes / policies"
+        },
+        "output": {
+          "label": "Output",
+          "value": "Decision report"
+        },
+        "focus": {
+          "label": "Focus",
+          "value": "Coverage, limits, deductibles"
+        }
+      }
+    },
+    "media": {
+      "eyebrow": "Product Workspace",
+      "title": "Offer comparison and reasoned decision report",
+      "description": "The demo video shows how Versus AI reads offers, classifies differences, and creates the decision output.",
+      "manual_hint": "Play video",
+      "label_1": "Document upload",
+      "label_2": "Difference analysis",
+      "label_3": "Decision report",
+      "video_aria": "Versus AI product workspace video"
+    }
+  },
+  "mobile_story": {
+    "eyebrow": "Mobile Product Flow",
+    "title": "The mobile product flow is presented more simply.",
+    "description": "Documents, critical differences, and decision output are shown in a compact evaluation flow."
+  },
+  "capabilities": {
+    "eyebrow": "What It Provides",
+    "title": "Versus AI standardizes offer evaluation.",
+    "description": "Instead of reading every quote one by one, you see differences, impacts, and decision rationale in one surface.",
+    "cards": {
+      "compare": {
+        "title": "Makes differences visible",
+        "description": "Collects coverage, limit, deductible, and exclusion differences across offers in one table."
+      },
+      "explain": {
+        "title": "Explains the impact",
+        "description": "Summarizes each difference with insurance impact and carries the decision context, not raw data alone."
+      },
+      "recommend": {
+        "title": "Shortens decision time",
+        "description": "Helps teams evaluate the right offer faster, with more control and consistency."
+      }
+    }
+  },
+  "how": {
+    "eyebrow": "Process",
+    "title": "Enterprise usage moves through three steps.",
+    "description": "First, the real file type and decision need are defined; then the pilot workspace and live usage model are set up.",
+    "steps": {
+      "upload": {
+        "label": "01",
+        "title": "Collect files in one case",
+        "description": "Upload quotes, policies, or renewal documents into one evaluation workspace."
+      },
+      "analyze": {
+        "label": "02",
+        "title": "Standardize the differences",
+        "description": "The system reads critical differences, groups them, and summarizes them in an evaluation format."
+      },
+      "decide": {
+        "label": "03",
+        "title": "Share the decision report",
+        "description": "Your team sees why an offer is stronger through the same standard."
+      }
+    }
+  },
+  "use_cases": {
+    "eyebrow": "Line Coverage",
+    "title": "Use the same evaluation standard across 10 lines.",
+    "description": "Versus AI brings quote comparison and policy reading workflows into a shared decision format across insurance products.",
+    "items": {
+      "kasko": "Motor Own Damage",
+      "trafik": "Motor Third Party Liability",
+      "oss": "Private Health",
+      "tss": "Complementary Health",
+      "ferdi": "Personal Accident",
+      "nakliyat": "Marine Cargo",
+      "yangin": "Property / Fire",
+      "insaat": "Construction & Erection",
+      "enerji": "Energy",
+      "sorumluluk": "Liability"
+    }
+  },
+  "request": {
+    "eyebrow": "Request Demo",
+    "title": "Let’s review the decision flow using your own quote files.",
+    "description": "In the first conversation, we clarify product fit and set up a controlled demo flow using real files.",
+    "process": {
+      "step_1": "Needs assessment",
+      "step_2": "Pilot scope",
+      "step_3": "Live usage plan"
+    },
+    "form": {
+      "name_label": "Full Name",
+      "name_placeholder": "Your full name",
+      "company_label": "Company",
+      "company_placeholder": "Company name",
+      "email_label": "Work Email",
+      "email_placeholder": "name@company.com",
+      "message_label": "Note",
+      "message_placeholder": "Line, offer type, or decision process you want to review",
+      "note": "After we receive your request, our team will reach out within 1 business day.",
+      "submit": "Request Enterprise Demo"
+    }
+  },
+  "footer": {
+    "back": "Back to homepage",
+    "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+  }
+}

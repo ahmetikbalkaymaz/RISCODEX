@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riscodex | Sigorta Operasyonları için Yapay Zeka Platformu</title>
+    <title>Riscodex | Sigorta Karar ve Operasyon Platformu</title>
     <link rel="icon" type="image/svg+xml" href="assets/Riscodex_PP_Lockup_Inverse.svg">
     <link rel="shortcut icon" href="assets/Riscodex_PP_Lockup_Inverse.svg">
 
@@ -14,7 +14,15 @@
         rel="stylesheet">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="js/landing-translations.js"></script>
+    <script src="js/landing-translations.js?v=20260710"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js"
+            }
+        }
+    </script>
+    <script type="module" src="js/decision-network.js?v=20260710-3"></script>
 
     <script>
         tailwind.config = {
@@ -31,133 +39,172 @@
 
     <style>
         :root {
-            --page-bg: #eef5ff;
-            --panel-bg: rgba(255, 255, 255, 0.92);
-            --card-bg: rgba(255, 255, 255, 0.94);
-            --card-soft: rgba(239, 246, 255, 0.88);
-            --line: rgba(96, 125, 175, 0.18);
-            --line-strong: rgba(79, 141, 248, 0.22);
+            --page-bg: #f6f8fb;
+            --panel-bg: rgba(255, 255, 255, 0.96);
+            --card-bg: rgba(255, 255, 255, 0.98);
+            --card-soft: rgba(244, 247, 251, 0.96);
+            --line: rgba(15, 23, 42, 0.12);
+            --line-strong: rgba(37, 99, 235, 0.22);
             --text-main: #0f172a;
-            --text-muted: #5f6f86;
-            --accent: #4f8df8;
-            --accent-strong: #255fd4;
-            --success: #35c98a;
+            --text-muted: #526174;
+            --accent: #2563eb;
+            --accent-strong: #173d91;
+            --success: #16805c;
+            --ink: #08111f;
         }
 
         body {
             font-family: "Montserrat", sans-serif;
             background:
-                radial-gradient(circle at top, rgba(79, 141, 248, 0.16), transparent 35%),
-                linear-gradient(180deg, #f8fbff 0%, #edf4ff 58%, #f6f9ff 100%);
+                linear-gradient(180deg, #fbfcfe 0%, #f2f5f9 44%, #ffffff 100%);
             background-color: var(--page-bg);
             color: var(--text-main);
         }
 
         .bg-grid-pattern {
-            background-image: linear-gradient(to right, rgba(79, 141, 248, 0.08) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(79, 141, 248, 0.08) 1px, transparent 1px);
-            background-size: 52px 52px;
-            mask-image: radial-gradient(ellipse 84% 84% at 50% 30%, #000 38%, transparent 100%);
-            -webkit-mask-image: radial-gradient(ellipse 84% 84% at 50% 30%, #000 38%, transparent 100%);
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+            background-size: 100% 72px;
+            mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
+            -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 82%);
         }
 
         .surface-panel {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 249, 255, 0.98));
-            border: 1px solid var(--line);
-            box-shadow: 0 24px 60px rgba(66, 96, 150, 0.14);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
         }
 
         .surface-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.96));
-            border: 1px solid var(--line);
-            box-shadow: 0 16px 34px rgba(96, 125, 175, 0.08);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 250, 252, 0.99));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
         }
 
         .surface-card-soft {
-            background: var(--card-soft);
-            border: 1px solid var(--line);
+            background: rgba(244, 247, 251, 0.94);
+            border: 1px solid rgba(15, 23, 42, 0.1);
         }
 
         .section-panel-accent {
-            background: linear-gradient(180deg, rgba(239, 246, 255, 0.96), rgba(227, 238, 255, 0.98));
-            border: 1px solid rgba(79, 141, 248, 0.18);
-            box-shadow: 0 24px 60px rgba(66, 96, 150, 0.12);
+            background:
+                linear-gradient(180deg, rgba(247, 250, 254, 0.99), rgba(237, 242, 249, 0.99));
+            border: 1px solid rgba(37, 99, 235, 0.16);
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.07);
         }
 
         .section-panel-muted {
-            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(241, 247, 255, 0.98));
-            border: 1px solid rgba(96, 125, 175, 0.14);
-            box-shadow: 0 22px 54px rgba(96, 125, 175, 0.1);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(247, 249, 252, 0.99));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.07);
         }
 
         .metric-card {
-            background: rgba(255, 255, 255, 0.76);
-            border: 1px solid rgba(96, 125, 175, 0.14);
-            box-shadow: 0 14px 30px rgba(96, 125, 175, 0.08);
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 248, 251, 0.98));
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+        }
+
+        .metric-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(8, 17, 31, 0.86), rgba(37, 99, 235, 0.32));
+        }
+
+        .metric-card::after {
+            display: none;
         }
 
         .product-card {
             display: flex;
             min-height: 100%;
             flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .product-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 4px;
+            background: linear-gradient(90deg, rgba(8, 17, 31, 0.82), rgba(37, 99, 235, 0.24));
+            z-index: 0;
+        }
+
+        .product-card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .product-meta {
-            background: rgba(239, 246, 255, 0.76);
-            border: 1px solid rgba(96, 125, 175, 0.14);
+            background: rgba(244, 247, 251, 0.9);
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
         }
 
         .product-card-live {
-            background: linear-gradient(180deg, rgba(248, 253, 255, 0.99), rgba(236, 246, 255, 0.98));
-            border-color: rgba(79, 141, 248, 0.22);
-            box-shadow: 0 18px 36px rgba(79, 141, 248, 0.12);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(243, 247, 251, 0.99));
+            border-color: rgba(22, 128, 92, 0.18);
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
         }
 
         .product-card-launch {
-            background: linear-gradient(180deg, rgba(250, 252, 255, 0.98), rgba(242, 247, 255, 0.98));
-            border-color: rgba(79, 141, 248, 0.2);
-            box-shadow: 0 18px 36px rgba(96, 125, 175, 0.11);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(246, 248, 251, 0.99));
+            border-color: rgba(37, 99, 235, 0.16);
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
         }
 
         .product-card-launch-ai {
-            background: linear-gradient(180deg, rgba(245, 250, 255, 0.99), rgba(235, 244, 255, 0.98));
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 247, 251, 0.99));
         }
 
         .product-card-launch-check {
-            background: linear-gradient(180deg, rgba(247, 249, 255, 0.99), rgba(239, 244, 255, 0.98));
-            border-color: rgba(105, 123, 229, 0.18);
-            box-shadow: 0 18px 36px rgba(105, 123, 229, 0.1);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 247, 251, 0.99));
+            border-color: rgba(37, 99, 235, 0.16);
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.07);
         }
 
         .product-card-roadmap {
-            background: linear-gradient(180deg, rgba(243, 247, 255, 0.96), rgba(237, 243, 252, 0.97));
-            border-color: rgba(96, 125, 175, 0.16);
+            background:
+                linear-gradient(180deg, rgba(247, 249, 252, 0.99), rgba(239, 243, 248, 0.99));
+            border-color: rgba(15, 23, 42, 0.1);
         }
 
         .platform-status {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            border-radius: 999px;
+            border-radius: 6px;
             padding: 0.38rem 0.8rem;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.22em;
+            letter-spacing: 0;
             text-transform: uppercase;
         }
 
         .platform-status-live {
-            background: rgba(53, 201, 138, 0.12);
-            color: #149a68;
+            background: rgba(22, 128, 92, 0.1);
+            color: #126446;
         }
 
         .platform-status-launch {
-            background: rgba(47, 110, 233, 0.12);
+            background: rgba(37, 99, 235, 0.1);
             color: var(--accent-strong);
         }
 
         .platform-status-roadmap {
-            background: rgba(96, 125, 175, 0.12);
+            background: rgba(15, 23, 42, 0.06);
             color: #5f6f86;
         }
 
@@ -165,9 +212,9 @@
             display: inline-flex;
             align-items: center;
             gap: 0.55rem;
-            border-radius: 999px;
-            border: 1px solid rgba(96, 125, 175, 0.14);
-            background: rgba(255, 255, 255, 0.75);
+            border-radius: 8px;
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.88);
             padding: 0.55rem 0.9rem;
             font-size: 12px;
             font-weight: 600;
@@ -208,8 +255,8 @@
             height: 0.8rem;
             width: 0.8rem;
             border-radius: 999px;
-            background: linear-gradient(180deg, #7aa5ff 0%, #2f6ee9 100%);
-            box-shadow: 0 0 0 5px rgba(79, 141, 248, 0.08);
+            background: #173d91;
+            box-shadow: 0 0 0 5px rgba(15, 23, 42, 0.06);
         }
 
         @media (min-width: 768px) {
@@ -220,57 +267,51 @@
                 right: 2rem;
                 top: 1.45rem;
                 height: 1px;
-                background: linear-gradient(90deg, rgba(79, 141, 248, 0.24), rgba(96, 125, 175, 0.16));
+                background: linear-gradient(90deg, rgba(15, 23, 42, 0.16), rgba(37, 99, 235, 0.12));
             }
         }
 
         .about-highlight-card {
             min-height: 100%;
-            background: linear-gradient(180deg, rgba(244, 248, 255, 0.98), rgba(236, 243, 255, 0.9));
-            border: 1px solid rgba(96, 125, 175, 0.14);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.96));
+            border: 1px solid rgba(15, 23, 42, 0.1);
         }
 
         .about-highlight-card-featured {
-            background: linear-gradient(180deg, rgba(231, 240, 255, 1), rgba(242, 247, 255, 0.98));
-            border-color: rgba(79, 141, 248, 0.24);
-            box-shadow: 0 18px 36px rgba(79, 141, 248, 0.12);
+            background:
+                linear-gradient(180deg, rgba(240, 245, 252, 1), rgba(248, 250, 252, 0.98));
+            border-color: rgba(37, 99, 235, 0.18);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
         }
 
         .about-highlight-icon {
-            background: linear-gradient(180deg, rgba(79, 141, 248, 0.16), rgba(79, 141, 248, 0.08));
-            border: 1px solid rgba(79, 141, 248, 0.14);
+            background: linear-gradient(180deg, rgba(37, 99, 235, 0.12), rgba(15, 23, 42, 0.04));
+            border: 1px solid rgba(37, 99, 235, 0.14);
         }
 
         .eyebrow {
-            letter-spacing: 0.22em;
+            letter-spacing: 0;
             text-transform: uppercase;
         }
 
         .hero-title {
-            letter-spacing: -0.06em;
-            background: linear-gradient(180deg, #0f172a 8%, #163a84 54%, #2f6ee9 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent !important;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: 0;
+            color: var(--ink) !important;
         }
 
         .wordmark-gradient {
-            background: linear-gradient(90deg, #2f6ee9 0%, #10213c 84%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent-strong);
         }
 
         .button-primary {
-            background: linear-gradient(180deg, #2f6ee9 0%, #245dcb 100%);
+            background: #08111f;
             color: #ffffff !important;
-            box-shadow: 0 14px 34px rgba(47, 110, 233, 0.22);
+            box-shadow: 0 12px 28px rgba(8, 17, 31, 0.16);
         }
 
         .button-primary:hover {
-            background: linear-gradient(180deg, #245dcb 0%, #1d4faf 100%);
+            background: #173d91;
         }
 
         .button-primary i,
@@ -289,14 +330,90 @@
 
         .button-secondary {
             background: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(96, 125, 175, 0.2);
-            color: #17305c !important;
-            box-shadow: 0 12px 28px rgba(96, 125, 175, 0.1);
+            border: 1px solid rgba(15, 23, 42, 0.16);
+            color: #08111f !important;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        .enterprise-nav {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.94));
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        .hero-section {
+            min-height: 760px;
+        }
+
+        .hero-section::after {
+            display: none;
+        }
+
+        .section-heading {
+            max-width: 48rem;
+        }
+
+        .section-rule {
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.16), rgba(15, 23, 42, 0.04));
+        }
+
+        .problem-card,
+        .process-card,
+        .audience-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before,
+        .process-card::before {
+            content: attr(data-step);
+            position: absolute;
+            right: 1.25rem;
+            top: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 0;
+            color: rgba(15, 23, 42, 0.05);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .audience-card::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(8, 17, 31, 0.7), rgba(37, 99, 235, 0.12));
+            z-index: 0;
+        }
+
+        .audience-card::after {
+            display: none;
+        }
+
+        .problem-card > *,
+        .process-card > *,
+        .audience-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .problem-card .icon-shell,
+        .process-card .icon-shell {
+            background: linear-gradient(180deg, rgba(37, 99, 235, 0.1), rgba(15, 23, 42, 0.04));
+            border: 1px solid rgba(37, 99, 235, 0.14);
+        }
+
+        .cta-panel {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(242, 246, 251, 0.99));
         }
 
         .button-secondary i,
         .button-secondary span {
-            color: #2f6ee9 !important;
+            color: #08111f !important;
         }
 
         .button-primary i,
@@ -307,6 +424,266 @@
         .button-primary:hover i,
         .button-secondary:hover i {
             transform: translate3d(3px, -1px, 0);
+        }
+
+        .hero-proof-strip {
+            border: 1px solid rgba(15, 23, 42, 0.1);
+            background: rgba(255, 255, 255, 0.84);
+            box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+        }
+
+        .brand-hero {
+            min-height: 100svh;
+            background:
+                linear-gradient(90deg, rgba(246, 248, 251, 0.98) 0%, rgba(246, 248, 251, 0.94) 42%, rgba(226, 232, 240, 0.76) 100%),
+                #f6f8fb;
+        }
+
+        .brand-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.12)),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(226, 232, 240, 0.34));
+        }
+
+        .brand-hero-content {
+            position: relative;
+            display: flex;
+            min-height: 100svh;
+            align-items: center;
+            padding-top: 7.5rem;
+            padding-bottom: 4rem;
+        }
+
+        .brand-hero .hero-title {
+            color: var(--ink) !important;
+        }
+
+        .brand-hero .button-secondary {
+            background: rgba(255, 255, 255, 0.76);
+            border-color: rgba(15, 23, 42, 0.16);
+            color: #08111f !important;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        .brand-hero .button-secondary span,
+        .brand-hero .button-secondary i {
+            color: #08111f !important;
+        }
+
+        .brand-hero-visual {
+            position: absolute;
+            inset: 0 0 0 auto;
+            width: min(58vw, 62rem);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .brand-hero-visual::before {
+            content: "";
+            position: absolute;
+            inset: 7.5rem 0 4.5rem auto;
+            width: min(54rem, 54vw);
+            border-left: 1px solid rgba(15, 23, 42, 0.1);
+            background: repeating-linear-gradient(0deg, rgba(15, 23, 42, 0.045) 0 1px, transparent 1px 5.6rem);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+        }
+
+        .decision-story-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 5;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .decision-network-shell {
+            position: absolute;
+            inset: 7.25rem 0 3.5rem;
+            overflow: hidden;
+        }
+
+        #decision-network {
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .decision-story-layer.is-ready #decision-network {
+            opacity: 1;
+        }
+
+        .decision-network-shell.is-ready .decision-network-fallback {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        [data-story-section]:not(.brand-hero) > :first-child,
+        .brand-hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand-hero-visual {
+            z-index: 10;
+        }
+
+        .brand-hero-overlay {
+            z-index: 1;
+        }
+
+        .decision-network-atmosphere {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(90deg, #f6f8fb 0%, rgba(246, 248, 251, 0.82) 16%, transparent 52%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 28%, rgba(255, 255, 255, 0.32));
+            pointer-events: none;
+        }
+
+        .decision-network-labels {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .decision-network-label {
+            position: absolute;
+            display: grid;
+            gap: 0.2rem;
+            color: #526174;
+            opacity: 0.38;
+            transform: translateY(0);
+            transition: color 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .decision-network-label:nth-child(1) {
+            left: 13%;
+            top: 30%;
+        }
+
+        .decision-network-label:nth-child(2) {
+            left: 35%;
+            top: 62%;
+        }
+
+        .decision-network-label:nth-child(3) {
+            left: 59%;
+            top: 28%;
+        }
+
+        .decision-network-label:nth-child(4) {
+            left: 79%;
+            top: 60%;
+        }
+
+        .decision-network-label.is-active {
+            color: #08111f;
+            opacity: 1;
+            transform: translateY(-4px);
+        }
+
+        .decision-network-label span {
+            color: #2563eb;
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
+
+        .decision-network-label strong {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .decision-network-fallback {
+            position: absolute;
+            inset: 20% 7% 14%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+            transition: opacity 0.35s ease;
+        }
+
+        .decision-network-fallback span {
+            display: grid;
+            place-items: center;
+            width: 5.5rem;
+            aspect-ratio: 1;
+            border: 1px solid rgba(37, 99, 235, 0.22);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+            color: #0f172a;
+            font-size: 0.68rem;
+            font-weight: 700;
+        }
+
+        .decision-network-fallback span:nth-of-type(even) {
+            transform: translateY(2.2rem);
+        }
+
+        .decision-network-fallback i {
+            width: clamp(1rem, 3vw, 3.5rem);
+            height: 1px;
+            background: rgba(37, 99, 235, 0.3);
+        }
+
+        @media (max-width: 1023px) {
+            .brand-hero {
+                min-height: 760px;
+            }
+
+            .brand-hero-visual {
+                inset: auto 1rem 1.5rem 1rem;
+                height: 38%;
+                width: auto;
+                opacity: 0.72;
+            }
+
+            .brand-hero-visual::before {
+                inset: 0;
+                width: 100%;
+            }
+
+            .decision-network-shell {
+                inset: 0;
+            }
+
+            .decision-network-label {
+                display: none;
+            }
+
+            .decision-network-label.is-active {
+                display: grid;
+                left: auto;
+                right: 8%;
+                top: auto;
+                bottom: 12%;
+            }
+
+            .decision-network-fallback {
+                inset: 10% 3% 8%;
+            }
+
+            .decision-network-fallback span {
+                width: 4.5rem;
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .decision-network-fallback span {
+                width: 4rem;
+            }
+
+            .decision-network-fallback i {
+                width: 0.8rem;
+            }
         }
 
         .lang-toggle {
@@ -321,9 +698,9 @@
         }
 
         .nav-link.is-active {
-            background: rgba(79, 141, 248, 0.12);
+            background: rgba(15, 23, 42, 0.06);
             color: #10213c !important;
-            box-shadow: inset 0 0 0 1px rgba(79, 141, 248, 0.16);
+            box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.1);
         }
 
         .nav-link-mobile {
@@ -342,9 +719,9 @@
         }
 
         .audience-card-active {
-            border-color: rgba(47, 110, 233, 0.32) !important;
-            background: linear-gradient(180deg, rgba(236, 244, 255, 1), rgba(248, 251, 255, 1)) !important;
-            box-shadow: 0 16px 34px rgba(47, 110, 233, 0.12);
+            border-color: rgba(37, 99, 235, 0.22) !important;
+            background: linear-gradient(180deg, rgba(246, 249, 253, 1), rgba(255, 255, 255, 1)) !important;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
         }
 
         .surface-panel .text-white,
@@ -402,7 +779,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(79, 141, 248, 0.07), transparent 42%, rgba(79, 141, 248, 0.05));
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.035), transparent 42%, rgba(37, 99, 235, 0.035));
             opacity: 0;
             transform: translateY(14px);
             transition: opacity 0.24s ease, transform 0.24s ease;
@@ -496,7 +873,7 @@
             }
 
             50% {
-                transform: translate3d(0, -14px, 0);
+                transform: translate3d(0, -8px, 0);
             }
         }
 
@@ -520,10 +897,49 @@
             color: rgba(37, 95, 212, 0.78) !important;
         }
 
+        .enterprise-nav,
+        .surface-panel,
+        .section-panel-accent,
+        .section-panel-muted,
+        .cta-panel {
+            border-radius: 8px !important;
+        }
+
+        .surface-card,
+        .surface-card-soft,
+        .metric-card,
+        .product-card,
+        .product-meta,
+        .platform-roadmap-step,
+        .about-highlight-card,
+        .problem-card,
+        .process-card,
+        .audience-card,
+        .hero-proof-strip {
+            border-radius: 8px !important;
+        }
+
+        .button-primary,
+        .button-secondary,
+        .nav-link,
+        .lang-toggle,
+        .platform-status,
+        .platform-legend-chip {
+            border-radius: 8px !important;
+        }
+
+        .tracking-tight,
+        [class*="tracking-"] {
+            letter-spacing: 0 !important;
+        }
+
         @media (prefers-reduced-motion: reduce) {
             .hover-lift,
             .reveal-on-scroll,
             .hero-enter,
+            #decision-network,
+            .decision-network-label,
+            .decision-network-fallback,
             .float-slow,
             .float-slower,
             .float-soft,
@@ -545,20 +961,18 @@
 <body class="selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
 
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]"></div>
+        <div class="absolute inset-0 bg-slate-950/[0.015]"></div>
         <div class="absolute inset-0 bg-grid-pattern"></div>
-        <div class="absolute top-0 left-1/4 h-[30rem] w-[30rem] rounded-full bg-blue-300/30 blur-[120px] float-slow">
-        </div>
-        <div class="absolute top-32 right-20 h-[22rem] w-[22rem] rounded-full bg-sky-300/35 blur-[110px] float-slower">
-        </div>
-        <div class="absolute bottom-0 left-1/3 h-[28rem] w-[28rem] rounded-full bg-indigo-200/35 blur-[130px] float-soft">
-        </div>
+    </div>
+
+    <div class="decision-story-layer" data-decision-network aria-hidden="true">
+        <canvas id="decision-network" aria-hidden="true"></canvas>
     </div>
 
     <nav id="navbar" class="fixed inset-x-0 top-0 z-50 py-5 transition-all duration-300">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6">
             <div id="nav-shell"
-                class="w-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-3 shadow-[0_18px_36px_rgba(110,140,190,0.14)] backdrop-blur-xl">
+                class="enterprise-nav w-full rounded-2xl border border-slate-200/80 bg-white/80 px-5 py-3 shadow-[0_18px_36px_rgba(110,140,190,0.14)] backdrop-blur-xl">
                 <div class="flex items-center justify-between gap-6">
                     <a href="#" class="flex items-center" aria-label="Riscodex ana sayfa"
                         data-i18n-aria-label="nav.home_aria">
@@ -576,6 +990,9 @@
                         <a href="#problem"
                             class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
                             data-i18n="nav.problem">Sorun</a>
+                        <a href="#solutions"
+                            class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
+                            data-i18n="nav.solutions">Çözümler</a>
                         <a href="#operating-model"
                             class="nav-link rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-slate-950"
                             data-i18n="nav.process">İşleyiş</a>
@@ -613,6 +1030,8 @@
                         data-i18n="nav.platform">Ürünler</a>
                     <a href="#problem" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
                         data-i18n="nav.problem">Sorun</a>
+                    <a href="#solutions" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950" onclick="toggleMobileMenu()"
+                        data-i18n="nav.solutions">Çözümler</a>
                     <a href="#operating-model" class="nav-link-mobile text-sm text-slate-600 hover:text-slate-950"
                         onclick="toggleMobileMenu()" data-i18n="nav.process">İşleyiş</a>
                     <div
@@ -630,90 +1049,116 @@
         </div>
     </nav>
 
-    <section class="relative z-10 overflow-hidden pt-40 pb-24 lg:pt-48 lg:pb-28">
-        <div
-            class="absolute inset-x-0 top-12 h-[420px] bg-[radial-gradient(circle_at_top,rgba(79,141,248,0.24),transparent_66%)]">
+    <section class="brand-hero relative overflow-hidden" data-story-section="hero">
+        <div class="brand-hero-overlay"></div>
+        <div class="brand-hero-visual">
+            <div class="decision-network-shell">
+                <div class="decision-network-atmosphere" aria-hidden="true"></div>
+                <div class="decision-network-labels" aria-hidden="true">
+                    <div class="decision-network-label is-active" data-stage="0"><span>01</span><strong data-i18n="hero.decision_network.stages.offer">Teklif</strong></div>
+                    <div class="decision-network-label" data-stage="1"><span>02</span><strong data-i18n="hero.decision_network.stages.compare">Karşılaştırma</strong></div>
+                    <div class="decision-network-label" data-stage="2"><span>03</span><strong data-i18n="hero.decision_network.stages.control">Kontrol</strong></div>
+                    <div class="decision-network-label" data-stage="3"><span>04</span><strong data-i18n="hero.decision_network.stages.policy">Poliçe</strong></div>
+                </div>
+                <div id="decision-network-fallback" class="decision-network-fallback" role="img"
+                    aria-label="Teklif, karşılaştırma, kontrol ve poliçe aşamalarından oluşan Riscodex karar akışı"
+                    data-i18n-aria-label="hero.decision_network.aria">
+                    <span data-fallback-stage="0" data-i18n="hero.decision_network.stages.offer">Teklif</span><i></i>
+                    <span data-fallback-stage="1" data-i18n="hero.decision_network.stages.compare">Karşılaştırma</span><i></i>
+                    <span data-fallback-stage="2" data-i18n="hero.decision_network.stages.control">Kontrol</span><i></i>
+                    <span data-fallback-stage="3" data-i18n="hero.decision_network.stages.policy">Poliçe</span>
+                </div>
+            </div>
         </div>
 
-        <div class="mx-auto max-w-7xl px-6 relative">
-            <div class="mx-auto max-w-4xl text-center">
-                <h1 class="hero-title hero-enter text-5xl font-semibold leading-none text-slate-950 sm:text-6xl lg:text-[4.8rem]"
-                    data-i18n="hero.title">
-                    Sigorta sektörü için geliştirilmiş yapay zeka platformu.
-                </h1>
-                <p class="hero-enter hero-enter-delay-1 mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 sm:text-xl"
-                    data-i18n="hero.description">
-                    Riscodex, sigorta acentelerinin ve brokerlerin prim hesaplama, teklif değerlendirme ve poliçe
-                    inceleme süreçlerini yapay zeka ile daha hızlı ve daha güvenilir yürütmesi için tasarlanmıştır.
-                </p>
+        <div class="brand-hero-content">
+            <div class="mx-auto w-full max-w-7xl px-6">
+                <div class="max-w-3xl">
+                    <p class="hero-enter text-xs font-semibold uppercase text-slate-500" data-i18n="hero.eyebrow">
+                        Sigorta Karar ve Operasyon Platformu
+                    </p>
+                    <h1 class="hero-title hero-enter hero-enter-delay-1 mt-5 text-6xl font-semibold leading-none sm:text-7xl lg:text-[7rem]"
+                        data-i18n="hero.title">
+                        Tekliften poliçeye karar akışını hızlandırın.
+                    </h1>
+                    <p class="hero-enter hero-enter-delay-2 mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl"
+                        data-i18n="hero.description">
+                        Riscodex, fiyatlama, teklif karşılaştırma ve poliçe kontrol süreçlerini aynı karar standardında
+                        birleştiren kurumsal sigorta operasyon platformudur.
+                    </p>
 
-                <div class="hero-enter hero-enter-delay-2 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <a href="#access-request"
-                        class="button-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors">
-                        <span data-i18n="hero.primary_cta">Versus AI'a Erişim Talep Edin</span>
-                        <i data-lucide="arrow-right" class="h-4 w-4"></i>
-                    </a>
-                    <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
-                        class="button-secondary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors hover:border-blue-300/30 hover:bg-white">
-                        <span data-i18n="hero.secondary_cta">TariffEQ'yu İnceleyin</span>
-                        <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-                    </a>
-                </div>
-
-                <div class="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                    <div class="metric-card hover-lift reveal-on-scroll rounded-2xl px-6 py-5 text-left">
-                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.live.label">2 Aktif Ürün</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.live.title">TariffEQ
-                            ve Versus AI</div>
-                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.live.description">
-                            TariffEQ pazarda, Versus AI yeni yayında. Ürün ailesi genişlemeye devam ediyor.</p>
-                    </div>
-                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-6 py-5 text-left">
-                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.demo.label">10 Branş</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.demo.title">Geniş
-                            branş kapsamı</div>
-                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.demo.description">
-                            Kaskodan yangına, nakliyattan sorumluluk sigortasına tüm temel branşlarda.
-                        </p>
-                    </div>
-                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-6 py-5 text-left">
-                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.modules.label">Entegrasyon Gerektirmez</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.modules.title">
-                            Mevcut düzeninize oturur</div>
-                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.modules.description">
-                            Sigorta şirketi sistemlerine bağlantı olmadan çalışır.</p>
-                    </div>
-                    <div class="metric-card hover-lift reveal-on-scroll reveal-delay-3 rounded-2xl px-6 py-5 text-left">
-                        <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
-                            data-i18n="hero.metrics.access.label">İTÜ Çekirdek</div>
-                        <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.access.title">
-                            Türkiye merkezli girişim</div>
-                        <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.access.description">
-                            Türkiye'nin önde gelen teknoloji geliştirme programı bünyesinde hayata geçirildi.</p>
+                    <div class="hero-enter hero-enter-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
+                        <a href="#access-request"
+                            class="button-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors">
+                            <span data-i18n="hero.primary_cta">Kurumsal Demo Talep Et</span>
+                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </a>
+                        <a href="https://tariffeq.com/" target="_blank" rel="noopener noreferrer"
+                            class="button-secondary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors">
+                            <span data-i18n="hero.secondary_cta">TariffEQ'yu İncele</span>
+                            <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="relative z-10 py-10 lg:py-16">
+    <section class="relative z-10 py-12">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <div class="metric-card hover-lift reveal-on-scroll rounded-2xl px-6 py-5 text-left">
+                    <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                        data-i18n="hero.metrics.live.label">2 Canlı Ürün</div>
+                    <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.live.title">TariffEQ ve
+                        Versus AI</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.live.description">
+                        Fiyatlama ve teklif değerlendirme için sahada kullanılan ürün ailesi.</p>
+                </div>
+                <div class="metric-card hover-lift reveal-on-scroll reveal-delay-1 rounded-2xl px-6 py-5 text-left">
+                    <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                        data-i18n="hero.metrics.demo.label">10 Branş</div>
+                    <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.demo.title">Teklif ve
+                        poliçe analizi</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.demo.description">
+                        Teminat, limit, muafiyet ve kloz farklarını karar raporuna dönüştürür.
+                    </p>
+                </div>
+                <div class="metric-card hover-lift reveal-on-scroll reveal-delay-2 rounded-2xl px-6 py-5 text-left">
+                    <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                        data-i18n="hero.metrics.modules.label">Kontrollü Pilot</div>
+                    <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.modules.title">
+                        B2B erişim modeli</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.modules.description">
+                        Seçili ekiplerle kısa pilot, ardından canlı kullanım modeli.</p>
+                </div>
+                <div class="metric-card hover-lift reveal-on-scroll reveal-delay-3 rounded-2xl px-6 py-5 text-left">
+                    <div class="count-up-label text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                        data-i18n="hero.metrics.access.label">İTÜ Çekirdek</div>
+                    <div class="mt-2 text-lg font-semibold text-white" data-i18n="hero.metrics.access.title">
+                        Türkiye merkezli insurtech</div>
+                    <p class="mt-2 text-sm leading-6 text-slate-400" data-i18n="hero.metrics.access.description">
+                        Türkiye’de geliştirilen, global sigorta teknolojisi odağıyla büyüyen girişim.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="relative py-10 lg:py-16" data-story-section="about">
         <div class="mx-auto max-w-7xl px-6">
             <div class="grid gap-6 lg:grid-cols-[1.18fr_.82fr]">
-                <div class="surface-panel hover-lift reveal-on-scroll rounded-[28px] p-8 md:p-10">
+                <div class="surface-panel reveal-on-scroll rounded-[28px] p-8 md:p-10">
                     <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="about.eyebrow">
                         Hakkımızda</p>
                     <h2 class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                         data-i18n-html="about.title_html">
-                        <span class="wordmark-gradient">Riscodex</span>, sigorta sektöründeki yapısal sorunları
-                        teknolojiyle çözmek için kuruldu.
+                        <span class="wordmark-gradient">Riscodex</span>, sigorta operasyonlarında karar standardı
+                        oluşturmak için geliştirildi.
                     </h2>
                     <p class="mt-5 max-w-3xl text-base leading-7 text-slate-600" data-i18n="about.description_1">
                         Prim hesaplama, teklif değerlendirme ve poliçe kontrolü hâlâ çoğu ekipte manuel ilerliyor.
-                        Riscodex, bu kritik adımlar için kurumsal entegrasyon zorunluluğu olmadan çalışan yapay zeka
-                        araçları geliştirir.
+                        Riscodex bu kritik adımları ürünleşmiş araçlarla kontrol edilebilir, ölçülebilir ve
+                        denetlenebilir hale getirir.
                     </p>
 
                     <div class="mt-8 grid gap-4 lg:grid-cols-3">
@@ -721,16 +1166,15 @@
                             class="about-highlight-card about-highlight-card-featured hover-lift reveal-on-scroll rounded-2xl px-5 py-5">
                             <div class="flex items-start gap-4">
                                 <div class="about-highlight-icon flex h-11 w-11 items-center justify-center rounded-2xl">
-                                    <i data-lucide="sparkles" class="h-4 w-4 text-blue-300"></i>
+                                    <i data-lucide="file-check-2" class="h-4 w-4 text-blue-300"></i>
                                 </div>
                                 <div>
                                     <div class="text-base font-semibold text-white"
                                         data-i18n="about.highlights.focus.label">
-                                        Teknik Karar Desteği</div>
+                                        Karar Standardı</div>
                                     <p class="mt-2 text-sm leading-6 text-slate-400"
                                         data-i18n="about.highlights.focus.value">
-                                        Prim doğrulama, teklif analizi ve teminat karşılaştırmasını yapay zeka ile
-                                        hızlandırır.
+                                        Prim, teklif ve poliçe kontrollerinde ekipler arası yorum farkını azaltır.
                                     </p>
                                 </div>
                             </div>
@@ -758,10 +1202,10 @@
                                 </div>
                                 <div>
                                     <div class="text-base font-semibold text-white"
-                                        data-i18n="about.highlights.approach.label">Yerel Mevzuata Uyum</div>
+                                        data-i18n="about.highlights.approach.label">Mevzuat ve Operasyon Uyumu</div>
                                     <p class="mt-2 text-sm leading-6 text-slate-400"
                                         data-i18n="about.highlights.approach.value">
-                                        Türk sigorta mevzuatı ve sektör standartları temel alınarak geliştirildi.
+                                        Türk sigorta mevzuatı ve saha iş akışları temel alınarak geliştirildi.
                                     </p>
                                 </div>
                             </div>
@@ -769,7 +1213,7 @@
                     </div>
                 </div>
 
-                <div class="section-panel-accent hover-lift reveal-on-scroll reveal-delay-1 rounded-[28px] p-8 md:p-10">
+                <div class="section-panel-accent reveal-on-scroll reveal-delay-1 rounded-[28px] p-8 md:p-10">
                     <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="about.trust.eyebrow">
                         İTÜ Çekirdek</p>
 
@@ -779,9 +1223,8 @@
                             destekli girişim</h3>
                         <p class="mt-3 text-sm leading-7 text-slate-400" data-i18n="about.trust.description">
                             Riscodex, İTÜ Çekirdek bünyesinde geliştirilen Türkiye merkezli bir sigorta teknolojisi
-                            girişimidir. Sigorta acenteleri ve brokerler tarafından kullanılmaktadır. Kökleri
-                            Türkiye'de, hedefi global. Riscodex, sigorta teknolojisinde uluslararası alanda yer almak
-                            için büyüyor.
+                            girişimidir. Sigorta acenteleri ve brokerlerle gerçek iş akışlarında kullanılan ürünler
+                            geliştirir; kontrollü pilotlarla kurumsal kullanıma geçişi yönetir.
                         </p>
                     </div>
 
@@ -805,7 +1248,7 @@
         </div>
     </section>
 
-    <section id="platform" class="relative z-10 py-24">
+    <section id="platform" class="relative py-24" data-story-section="platform">
         <div class="mx-auto max-w-7xl px-6">
             <div class="section-panel-muted reveal-on-scroll overflow-hidden rounded-[28px] p-8 md:p-10">
                 <div class="flex flex-col gap-8">
@@ -815,13 +1258,13 @@
                                 data-i18n="platform.eyebrow">Ürünler</p>
                             <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                                 data-i18n-html="platform.title_html">
-                                Her kritik adım için bir araç. <span class="wordmark-gradient">Riscodex</span> ürün
-                                ailesi.
+                                Fiyatlama, karşılaştırma ve kontrol için <span class="wordmark-gradient">Riscodex</span>
+                                ürün ailesi.
                             </h2>
                             <p class="mt-4 max-w-2xl text-base leading-7 text-slate-600"
                                 data-i18n="platform.description">
-                                Yayındaki ürünler, pilot erişime açılan yeni araçlar ve geliştirme hattı aynı yapı
-                                içinde ilerliyor.
+                                Canlı ürünler ve pilot modüller aynı karar mimarisiyle ilerler; her araç net bir
+                                operasyon adımına odaklanır.
                             </p>
                             <div class="mt-5 flex flex-wrap gap-2">
                                 <div class="platform-legend-chip">
@@ -858,9 +1301,8 @@
 
                             <p class="mt-4 text-sm leading-7 text-slate-300"
                                 data-i18n="platform.live.description">
-                                İhtiyari deprem prim hesaplamasını resmi tarife standartlarına tam uyumlu şekilde
-                                gerçekleştirin. Senaryo karşılaştırması, otomatik doğrulama ve teknik karar desteği tek
-                                ekranda.
+                                İhtiyari deprem prim hesaplamasını resmi tarife standartlarına uyumlu şekilde yürütün.
+                                Senaryo karşılaştırması, doğrulama ve teknik karar desteği tek ekranda.
                             </p>
 
                             <div class="platform-meta-grid mt-6">
@@ -891,7 +1333,7 @@
                                     <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                                 </a>
                                 <div class="text-sm font-medium text-slate-500"
-                                    data-i18n="platform.live.note">Canlı kullanımda olan ilk ürün.</div>
+                                    data-i18n="platform.live.note">Canlı kullanımda olan fiyatlama ürünü.</div>
                             </div>
                         </article>
 
@@ -907,8 +1349,8 @@
                             <h3 class="mt-5 text-[2rem] font-semibold leading-tight text-white"
                                 data-i18n="platform.demo.title">Versus AI</h3>
                             <p class="mt-4 text-sm leading-7 text-slate-400" data-i18n="platform.demo.description">
-                                Birden fazla sigorta teklifini yükleyin. Versus AI kritik farkları çıkarır ve
-                                gerekçeli bir değerlendirme raporu sunar.
+                                Birden fazla sigorta teklifini tek çalışma alanında karşılaştırır; kritik farkları,
+                                eksik teminatları ve karar gerekçesini raporlar.
                             </p>
 
                             <div class="platform-meta-grid mt-6">
@@ -932,12 +1374,15 @@
                                 </div>
                             </div>
 
-                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
-                                <a href="#access-request"
+                            <div class="mt-auto pt-7 flex flex-wrap items-center gap-3">
+                                <a href="versus/"
                                     class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
-                                    <span data-i18n="platform.demo.cta">Versus AI için talep oluştur</span>
-                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                                    <span data-i18n="platform.demo.cta">Versus AI sayfasını aç</span>
+                                    <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
                                 </a>
+                                <a href="#access-request"
+                                    class="text-sm font-semibold text-blue-700 transition-colors hover:text-blue-800"
+                                    data-i18n="platform.demo.secondary_cta">Demo talebi bırak</a>
                             </div>
                         </article>
 
@@ -948,44 +1393,21 @@
                                     <span class="h-2 w-2 rounded-full bg-blue-500"></span>
                                     <span data-i18n="platform.modules.eyebrow">Yeni Yayında</span>
                                 </div>
-                                <i data-lucide="file-search" class="h-5 w-5 text-slate-500"></i>
+                                <i data-lucide="calculator" class="h-5 w-5 text-slate-500"></i>
                             </div>
                             <h3 class="mt-5 text-[2rem] font-semibold leading-tight text-white"
                                 data-i18n="platform.modules.title">
-                                Versus Check</h3>
-                            <p class="mt-4 text-sm leading-7 text-slate-400" data-i18n="platform.modules.description">
-                                Teklif ile poliçeyi yan yana okur; teminat, limit ve kloz farklarını sigorta etkisiyle
-                                birlikte raporlar.
-                            </p>
-
-                            <div class="platform-meta-grid mt-6">
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.modules.metrics.input.label">Karşılaştırma</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
-                                        data-i18n="platform.modules.metrics.input.value">Teklif + poliçe</div>
-                                </div>
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.modules.metrics.output.label">Çıktı</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
-                                        data-i18n="platform.modules.metrics.output.value">Fark raporu</div>
-                                </div>
-                                <div class="product-meta rounded-2xl px-4 py-3">
-                                    <div class="text-[11px] uppercase tracking-[0.22em] text-slate-500"
-                                        data-i18n="platform.modules.metrics.focus.label">Odak</div>
-                                    <div class="mt-2 text-sm font-medium text-white"
-                                        data-i18n="platform.modules.metrics.focus.value">Teminat, limit, kloz</div>
-                                </div>
-                            </div>
-
-                            <div class="mt-auto pt-7 flex flex-wrap gap-3">
-                                <a href="#access-request"
-                                    class="button-secondary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors hover:bg-white">
-                                    <span data-i18n="platform.modules.cta">Versus Check için talep oluştur</span>
-                                    <i data-lucide="arrow-right" class="h-4 w-4"></i>
-                                </a>
-                            </div>
+                                Versus Tools</h3>
+                            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+                                <li class="product-meta flex items-start gap-3 rounded-2xl px-4 py-3">
+                                    <i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-blue-600"></i>
+                                    <span data-i18n="platform.modules.tools.commercial">Ticari/Sınai poliçe primi hesaplama</span>
+                                </li>
+                                <li class="product-meta flex items-start gap-3 rounded-2xl px-4 py-3">
+                                    <i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-blue-600"></i>
+                                    <span data-i18n="platform.modules.tools.fire">Yangın abonman hesaplama</span>
+                                </li>
+                            </ul>
                         </article>
                     </div>
 
@@ -1001,11 +1423,11 @@
                                     Yeni Modüller</h3>
                                 <p class="mt-4 text-sm leading-7 text-slate-400"
                                     data-i18n="platform.future.description">
-                                    Risk skorlama, portföy tarama ve hasar analizi için yeni araçlar geliştiriyoruz.
+                                    Risk skorlama, portföy tarama ve hasar analizi için yeni karar modülleri geliştiriyoruz.
                                 </p>
                                 <div class="mt-6 text-sm font-medium text-slate-500"
                                     data-i18n="platform.future.footer">
-                                    Roadmap, canlı ürün ailesine kademeli olarak ekleniyor.
+                                    Yol haritası, canlı ürün ailesine kademeli olarak ekleniyor.
                                 </div>
                             </div>
 
@@ -1045,7 +1467,7 @@
         </div>
     </section>
 
-    <section id="problem" class="relative z-10 py-20">
+    <section id="problem" class="relative py-20" data-story-section="problem">
         <div class="mx-auto max-w-7xl px-6">
             <div class="max-w-3xl">
                 <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="problem.eyebrow">
@@ -1061,9 +1483,9 @@
             </div>
 
             <div class="mt-12 grid gap-5 lg:grid-cols-3">
-                <article class="surface-card hover-lift reveal-on-scroll rounded-[24px] p-7">
+                <article class="problem-card surface-card hover-lift reveal-on-scroll rounded-[24px] p-7" data-step="01">
                     <div class="flex items-center gap-3">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                        <div class="icon-shell flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="database" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
@@ -1079,9 +1501,9 @@
                     </p>
                 </article>
 
-                <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-7">
+                <article class="problem-card surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-7" data-step="02">
                     <div class="flex items-center gap-3">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                        <div class="icon-shell flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="bar-chart-3" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
@@ -1097,9 +1519,9 @@
                     </p>
                 </article>
 
-                <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-7">
+                <article class="problem-card surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-7" data-step="03">
                     <div class="flex items-center gap-3">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                        <div class="icon-shell flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
                             <i data-lucide="shield" class="h-5 w-5 text-blue-300"></i>
                         </div>
                         <div>
@@ -1118,7 +1540,78 @@
         </div>
     </section>
 
-    <section id="operating-model" class="relative z-10 py-20">
+    <section id="solutions" class="relative py-20" data-story-section="solutions">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="section-panel-muted reveal-on-scroll rounded-[28px] p-8 md:p-10">
+                <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+                    <div class="section-heading">
+                        <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]" data-i18n="solutions.eyebrow">
+                            Kimler İçin</p>
+                        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
+                            data-i18n="solutions.title">
+                            Riscodex kimler için değer üretiyor?
+                        </h2>
+                            <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="solutions.description">
+                            Dağıtım, underwriting ve operasyon ekiplerinin aynı karar dilinde çalışmasını hedefler.
+                        </p>
+                    </div>
+                    <div class="section-rule hidden md:block"></div>
+                </div>
+
+                <div class="mt-10 grid gap-5 lg:grid-cols-3">
+                    <article class="audience-card surface-card hover-lift reveal-on-scroll rounded-[24px] p-7">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="building-2" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <p class="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="solutions.cards.company.eyebrow">Kimler için</p>
+                        <h3 class="mt-3 text-xl font-semibold text-white" data-i18n="solutions.cards.company.title">
+                            Sigorta Şirketleri
+                        </h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-400"
+                            data-i18n="solutions.cards.company.description">
+                            Pricing, tarife uyumu ve risk yönetimini daha kontrollü ilerletmek isteyen sigorta
+                            ekipleri.
+                        </p>
+                    </article>
+
+                    <article class="audience-card surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-7">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="handshake" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <p class="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="solutions.cards.broker.eyebrow">Kimler için</p>
+                        <h3 class="mt-3 text-xl font-semibold text-white" data-i18n="solutions.cards.broker.title">
+                            Broker ve Acenteler
+                        </h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-400"
+                            data-i18n="solutions.cards.broker.description">
+                            Müşteriye daha hızlı teklif, daha okunabilir risk analizi ve daha net karar zemini sunmak
+                            isteyen dağıtım ekipleri.
+                        </p>
+                    </article>
+
+                    <article class="audience-card surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-7">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.04]">
+                            <i data-lucide="factory" class="h-5 w-5 text-blue-300"></i>
+                        </div>
+                        <p class="mt-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
+                            data-i18n="solutions.cards.industrial.eyebrow">Kimler için</p>
+                        <h3 class="mt-3 text-xl font-semibold text-white" data-i18n="solutions.cards.industrial.title">
+                            Endüstriyel Tesisler
+                        </h3>
+                        <p class="mt-4 text-sm leading-7 text-slate-400"
+                            data-i18n="solutions.cards.industrial.description">
+                            Riski yalnızca raporlamak değil, gerçekleşmeden önce daha erken okumak isteyen operasyon
+                            ekipleri.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="operating-model" class="relative py-20" data-story-section="operating-model">
         <div class="mx-auto max-w-7xl px-6">
             <div class="section-panel-accent reveal-on-scroll rounded-[28px] p-8 md:p-10">
                 <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
@@ -1127,7 +1620,7 @@
                             data-i18n="operating_model.eyebrow">Nasıl Çalışır</p>
                         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                             data-i18n="operating_model.title">
-                            Doğru aracı, doğru iş akışına yerleştiriyoruz.
+                            Doğru ürünü, doğru iş akışına yerleştiriyoruz.
                         </h2>
                         <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="operating_model.description">
                             Kısa bir değerlendirme görüşmesiyle ihtiyacı netleştiririz, uygun ürünle pilot başlatırız,
@@ -1136,7 +1629,7 @@
                     </div>
 
                     <div class="grid gap-4 lg:max-w-3xl lg:grid-cols-3">
-                        <article class="surface-card hover-lift reveal-on-scroll rounded-[24px] p-6">
+                        <article class="process-card surface-card hover-lift reveal-on-scroll rounded-[24px] p-6" data-step="01">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
                                 data-i18n="operating_model.steps.discovery.label">01 — Değerlendirme</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
@@ -1145,7 +1638,7 @@
                                 data-i18n="operating_model.steps.discovery.description">Mevcut süreçleri, karar
                                 noktalarını ve öncelikleri birlikte ele alırız.</p>
                         </article>
-                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-6">
+                        <article class="process-card surface-card hover-lift reveal-on-scroll reveal-delay-1 rounded-[24px] p-6" data-step="02">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
                                 data-i18n="operating_model.steps.pilot.label">02 — Pilot</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
@@ -1154,7 +1647,7 @@
                                 data-i18n="operating_model.steps.pilot.description">Uygun ürünle sınırlı ama gerçek bir
                                 kullanım alanı kurulur.</p>
                         </article>
-                        <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-6">
+                        <article class="process-card surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[24px] p-6" data-step="03">
                             <div class="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500"
                                 data-i18n="operating_model.steps.operation.label">03 — Canlı Kullanım</div>
                             <h3 class="mt-4 text-lg font-semibold text-white"
@@ -1169,20 +1662,20 @@
         </div>
     </section>
 
-    <footer id="access-request" class="relative z-10 border-t border-slate-200/80 pt-20 pb-12">
+    <footer id="access-request" class="relative border-t border-slate-200/80 pt-20 pb-12" data-story-section="access-request">
         <div class="mx-auto max-w-7xl px-6">
-            <div class="surface-panel reveal-on-scroll overflow-hidden rounded-[28px] p-8 md:p-12">
+            <div class="cta-panel surface-panel reveal-on-scroll overflow-hidden rounded-[28px] p-8 md:p-12">
                 <div class="grid gap-10 lg:grid-cols-[1fr_.85fr] lg:items-center">
                     <div>
                         <p class="eyebrow text-[11px] font-semibold text-blue-200/[0.55]"
                             data-i18n="footer_cta.eyebrow">Erişim Talebi</p>
                         <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl"
                             data-i18n="footer_cta.title">
-                            Hangi ürün, hangi süreciniz için? Birlikte değerlendirelim.
+                            Hangi ürün, hangi süreciniz için? Birlikte netleştirelim.
                         </h2>
                         <p class="mt-4 max-w-xl text-base leading-7 text-slate-600" data-i18n="footer_cta.description">
                             Uygun ürünü ve çalışma modelini birlikte belirleyelim. İlk görüşmede kendi teklif ya da
-                            poliçe dosyalarınızla canlı bir analiz yapabiliriz.
+                            poliçe dosyalarınızla canlı bir değerlendirme yapabiliriz.
                         </p>
 
                         <div class="mt-6 grid gap-3 sm:grid-cols-3">
@@ -1232,12 +1725,10 @@
 
             <div
                 class="mt-10 flex flex-col items-start justify-between gap-5 border-t border-slate-200/80 pt-8 text-sm text-slate-500 md:flex-row md:items-center">
-                <div class="font-mono" data-i18n-html="footer.copyright">&copy; 2025 RISCODEX Teknoloji A.Ş.</div>
+                <div class="font-mono" data-i18n-html="footer.copyright">&copy; 2026 RISCODEX Teknoloji A.Ş.</div>
                 <div class="flex flex-wrap items-center gap-6">
-                    <a href="#" class="transition-colors hover:text-slate-950" data-i18n="footer.privacy">Gizlilik</a>
-                    <a href="#" class="transition-colors hover:text-slate-950" data-i18n="footer.terms">Şartlar</a>
-                    <a href="mailto:contact@riscodex.com"
-                        class="font-mono transition-colors hover:text-slate-950">contact@riscodex.com</a>
+                    <a href="mailto:info@riscodex.com"
+                        class="font-mono transition-colors hover:text-slate-950">info@riscodex.com</a>
                 </div>
             </div>
         </div>
@@ -1253,7 +1744,7 @@
         const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         const desktopNavLinks = Array.from(document.querySelectorAll(".nav-link"));
         const mobileNavLinks = Array.from(document.querySelectorAll(".nav-link-mobile"));
-        const trackedSectionIds = ["about", "platform", "problem", "operating-model", "access-request"];
+        const trackedSectionIds = ["about", "platform", "problem", "solutions", "operating-model", "access-request"];
         const trackedSections = trackedSectionIds
             .map((id) => document.getElementById(id))
             .filter(Boolean);
