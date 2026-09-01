@@ -83,12 +83,9 @@
     "media": {
       "eyebrow": "Ürün Çalışma Alanı",
       "title": "Teklif karşılaştırma ve gerekçeli karar raporu",
-      "description": "Demo videosu, Versus AI’ın teklifleri nasıl okuduğunu, farkları nasıl sınıflandırdığını ve karar çıktısını nasıl oluşturduğunu gösterir.",
-      "manual_hint": "Videoyu oynat",
       "label_1": "Belge yükleme",
       "label_2": "Fark analizi",
-      "label_3": "Karar raporu",
-      "video_aria": "Versus AI ürün çalışma alanı videosu"
+      "label_3": "Karar raporu"
     }
   },
   "mobile_story": {

@@ -313,16 +313,6 @@
             -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 100%);
         }
 
-        .story-direct-video-panel {
-            position: relative;
-            z-index: 2;
-            border-radius: 8px;
-            border: 1px solid rgba(15, 23, 42, 0.1);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(244, 247, 251, 0.99));
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.66);
-            padding: 1.25rem;
-        }
-
         .story-paper {
             position: absolute;
             width: min(38%, 318px);
@@ -472,79 +462,6 @@
             transform: translateY(28px);
         }
 
-        .story-video-shell {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid rgba(15, 23, 42, 0.1);
-            background: #ffffff;
-            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
-        }
-
-        .story-video-shell::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.035), transparent 28%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .story-video-frame {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            aspect-ratio: 1.94 / 1;
-            background: linear-gradient(180deg, rgba(226, 236, 255, 0.5), rgba(255, 255, 255, 0.3));
-        }
-
-        .story-video-frame video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: contain;
-            background: #ffffff;
-        }
-
-        .direct-demo-video {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            background: #ffffff;
-        }
-
-        .story-video-frame.is-manual video {
-            cursor: pointer;
-        }
-
-        .story-video-hint {
-            position: absolute;
-            left: 1rem;
-            bottom: 1rem;
-            z-index: 3;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 6px;
-            background: rgba(15, 23, 42, 0.78);
-            padding: 0.5rem 0.9rem;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0;
-            text-transform: uppercase;
-            color: white;
-            backdrop-filter: blur(8px);
-            transition: opacity 0.24s ease;
-        }
-
-        .story-video-frame:not(.is-manual) .story-video-hint {
-            opacity: 0;
-        }
-
         .story-stage.is-static .story-paper {
             opacity: 0.24;
             transform: translateY(0) scale(0.98);
@@ -576,44 +493,6 @@
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.94));
             border: 1px solid rgba(15, 23, 42, 0.1);
             box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-        }
-
-        .product-demo-shell {
-            overflow: hidden;
-            border: 1px solid rgba(15, 23, 42, 0.12);
-            background: #ffffff;
-            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
-        }
-
-        .product-demo-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            border-bottom: 1px solid rgba(15, 23, 42, 0.1);
-            background: #08111f;
-            color: #ffffff;
-            padding: 0.9rem 1rem;
-        }
-
-        .product-demo-label {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .product-demo-meta {
-            color: rgba(255, 255, 255, 0.72);
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        .direct-demo-video {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            background: #e8edf4;
         }
 
         .brand-hero {
@@ -889,11 +768,8 @@
         .section-panel-accent,
         .metric-card,
         .story-stage,
-        .story-direct-video-panel,
         .story-media-shell,
-        .story-video-shell,
         .line-pill,
-        .product-demo-shell,
         .enterprise-nav {
             border-radius: 8px !important;
         }
@@ -1147,27 +1023,7 @@
             </div>
         </section>
 
-        <section id="problem" class="relative z-10 py-8 md:py-12">
-            <div class="mx-auto max-w-[1500px] px-4 sm:px-6">
-                <div class="product-demo-shell">
-                    <div class="product-demo-header">
-                        <div>
-                            <div class="product-demo-label" data-i18n="story.media.eyebrow">Ürün Çalışma Alanı</div>
-                            <div class="product-demo-meta" data-i18n="story.media.title">Teklif karşılaştırma ve gerekçeli karar raporu</div>
-                        </div>
-                        <div class="hidden items-center gap-2 text-xs font-semibold text-white/70 sm:flex">
-                            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
-                            <span data-i18n="story.media.label_3">Karar raporu</span>
-                        </div>
-                    </div>
-                    <video class="versus-demo-video direct-demo-video" preload="none" muted loop playsinline
-                        poster="../assets/versus-ai-demo-poster.jpg" aria-label="Versus AI demo video"
-                        data-i18n-aria-label="story.media.video_aria">
-                        <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-
+        <section id="problem" class="relative z-10">
             <div class="story-shell hidden">
                 <div class="story-pin">
                     <div class="mx-auto grid max-w-7xl grid-cols-[0.92fr_1.18fr] gap-8 px-6 xl:gap-12">
@@ -1221,22 +1077,6 @@
 
                         <div class="story-stage" id="story-stage">
                             <div class="story-stage-grid"></div>
-
-                            <div class="story-direct-video-panel">
-                                <div class="story-video-shell p-3 md:p-4">
-                                    <div class="story-video-frame">
-                                        <video class="versus-demo-video" preload="none" muted loop playsinline
-                                            poster="../assets/versus-ai-demo-poster.jpg"
-                                            aria-label="Versus AI demo video">
-                                            <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
-                                        </video>
-                                        <div class="story-video-hint">
-                                            <i data-lucide="play" class="h-3.5 w-3.5"></i>
-                                            <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <article class="story-paper paper-1" data-scatter-x="-120" data-scatter-y="-95">
                                 <div class="paper-header">
@@ -1470,25 +1310,6 @@
                                                 Teklif karşılaştırma ve gerekçeli karar raporu.
                                             </h4>
                                         </div>
-                                        <i data-lucide="monitor-play" class="h-5 w-5 text-slate-500"></i>
-                                    </div>
-
-                                    <p class="mt-3 text-sm leading-6 text-slate-600" data-i18n="story.media.description">
-                                        Video, bu alan görünür olduğunda sayfa içinde otomatik oynar. Böylece ürün akışı ayrı sekmeye gitmeden incelenebilir.
-                                    </p>
-
-                                    <div class="story-video-shell mt-5 p-3 md:p-4">
-                                        <div class="story-video-frame">
-                                            <video class="versus-demo-video" preload="none" muted loop playsinline
-                                                poster="../assets/versus-ai-demo-poster.jpg"
-                                                aria-label="Versus AI demo video">
-                                                <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
-                                            </video>
-                                            <div class="story-video-hint">
-                                                <i data-lucide="play" class="h-3.5 w-3.5"></i>
-                                                <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div class="mt-4 grid gap-3 sm:grid-cols-3">
@@ -1546,20 +1367,6 @@
                             </div>
                         </article>
 
-                        <div class="story-media-shell p-4">
-                            <div class="story-video-shell p-3">
-                                <div class="story-video-frame">
-                                    <video class="versus-demo-video" preload="none" muted loop playsinline
-                                        poster="../assets/versus-ai-demo-poster.jpg" aria-label="Versus AI demo video">
-                                        <source src="../assets/versus-ai-demo.mp4" type="video/mp4">
-                                    </video>
-                                    <div class="story-video-hint">
-                                        <i data-lucide="play" class="h-3.5 w-3.5"></i>
-                                        <span data-i18n="story.media.manual_hint">Videoyu oynat</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1974,82 +1781,6 @@
             lucide.createIcons();
         }
 
-        function enableManualVideoMode(video) {
-            if (!video || video.dataset.manualMode === "true") {
-                return;
-            }
-
-            video.dataset.manualMode = "true";
-            video.controls = true;
-            video.setAttribute("controls", "");
-            video.preload = "metadata";
-            video.parentElement?.classList.add("is-manual");
-        }
-
-        function initializeDemoVideos() {
-            const videos = Array.from(document.querySelectorAll(".versus-demo-video"))
-                .filter((video) => video.offsetParent !== null);
-
-            if (!videos.length) {
-                return;
-            }
-
-            videos.forEach((video) => {
-                video.muted = true;
-                video.defaultMuted = true;
-                video.playsInline = true;
-
-                video.addEventListener("click", () => {
-                    if (video.dataset.manualMode !== "true") return;
-
-                    if (video.paused) {
-                        video.play().catch(() => { });
-                    } else {
-                        video.pause();
-                    }
-                });
-            });
-
-            if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-                videos.forEach((video) => enableManualVideoMode(video));
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    const video = entry.target;
-
-                    if (video.dataset.manualMode === "true") {
-                        return;
-                    }
-
-                    if (entry.isIntersecting && entry.intersectionRatio >= 0.15) {
-                        const playPromise = video.play();
-
-                        if (playPromise && typeof playPromise.catch === "function") {
-                            playPromise.catch(() => {
-                                enableManualVideoMode(video);
-                            });
-                        }
-
-                        return;
-                    }
-
-                    video.pause();
-                });
-            }, {
-                threshold: [0.05, 0.15, 0.45]
-            });
-
-            videos.forEach((video) => observer.observe(video));
-
-            document.addEventListener("visibilitychange", () => {
-                if (!document.hidden) return;
-
-                videos.forEach((video) => video.pause());
-            });
-        }
-
         function initializeStoryAnimation() {
             if (storyTimelineInitialized) {
                 return;
@@ -2101,7 +1832,6 @@
 
             initializeRevealAnimations();
             initializeStoryAnimation();
-            initializeDemoVideos();
             updateActiveSection();
         });
     </script>

@@ -83,12 +83,9 @@
     "media": {
       "eyebrow": "Product Workspace",
       "title": "Offer comparison and reasoned decision report",
-      "description": "The demo video shows how Versus AI reads offers, classifies differences, and creates the decision output.",
-      "manual_hint": "Play video",
       "label_1": "Document upload",
       "label_2": "Difference analysis",
-      "label_3": "Decision report",
-      "video_aria": "Versus AI product workspace video"
+      "label_3": "Decision report"
     }
   },
   "mobile_story": {
