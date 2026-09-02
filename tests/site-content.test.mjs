@@ -69,6 +69,19 @@ test("Versus AI page does not ship demo video media or playback controls", async
     await assert.rejects(access(new URL("../assets/versus-ai-demo-poster.jpg", import.meta.url)));
 });
 
+test("application actions use the dedicated Versus application page", async () => {
+    const html = await read("index.html");
+    const versusHtml = await read("versus/index.html");
+    const applicationUrl = "https://versus.riscodex.com/basvuru";
+    const countLinks = (source) => (source.match(new RegExp(`href="${applicationUrl}"`, "g")) || []).length;
+
+    assert.equal(countLinks(html), 5);
+    assert.equal(countLinks(versusHtml), 4);
+    assert.doesNotMatch(html, /href="#access-request"/);
+    assert.doesNotMatch(versusHtml, /href="#request-demo"/);
+    assert.doesNotMatch(`${html}\n${versusHtml}`, /formspree\.io|<form\b/i);
+});
+
 test("standalone locale files match the embedded landing translations", async () => {
     const tr = JSON.parse(await read("locales/landing-tr.json"));
     const en = JSON.parse(await read("locales/landing-en.json"));
