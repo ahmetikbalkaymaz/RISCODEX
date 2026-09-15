@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { runInNewContext } from "node:vm";
 
 const rootUrl = new URL("../", import.meta.url);
@@ -49,6 +49,38 @@ test("footer exposes the current company details without placeholder policy link
     assert.doesNotMatch(versusHtml, /contact@riscodex\.com/);
     assert.equal(translations.tr.footer.copyright, "&copy; 2026 RISCODEX Teknoloji A.Ş.");
     assert.equal(translations.en.footer.copyright, "&copy; 2026 RISCODEX Technology Inc.");
+});
+
+test("Versus AI page does not ship demo video media or playback controls", async () => {
+    const versusHtml = await read("versus/index.html");
+    const translationSource = await read("js/versus-translations.js");
+    const tr = JSON.parse(await read("locales/versus-tr.json"));
+    const en = JSON.parse(await read("locales/versus-en.json"));
+
+    assert.doesNotMatch(versusHtml, /<video\b/i);
+    assert.doesNotMatch(versusHtml, /versus-ai-demo\.(?:mp4|jpg)/);
+    assert.doesNotMatch(versusHtml, /initializeDemoVideos|enableManualVideoMode/);
+    assert.doesNotMatch(translationSource, /demo video|demo videosu|Videoyu oynat|Play video|video_aria/i);
+    assert.equal(Object.hasOwn(tr.story.media, "manual_hint"), false);
+    assert.equal(Object.hasOwn(tr.story.media, "video_aria"), false);
+    assert.equal(Object.hasOwn(en.story.media, "manual_hint"), false);
+    assert.equal(Object.hasOwn(en.story.media, "video_aria"), false);
+    await assert.rejects(access(new URL("../assets/versus-ai-demo.mp4", import.meta.url)));
+    await assert.rejects(access(new URL("../assets/versus-ai-demo-poster.jpg", import.meta.url)));
+});
+
+test("application actions use the dedicated Versus application page", async () => {
+    const html = await read("index.html");
+    const versusHtml = await read("versus/index.html");
+    const applicationUrl = "https://versus.riscodex.com/basvuru";
+    const countLinks = (source) => (source.match(new RegExp(`href="${applicationUrl}"`, "g")) || []).length;
+
+    assert.equal(countLinks(html), 2);
+    const product = html.match(/<article[^>]*data-product="versus"[\s\S]*?<\/article>/)?.[0];
+    assert.ok(product?.includes(`href="${applicationUrl}"`));
+    assert.equal(countLinks(versusHtml), 4);
+    assert.doesNotMatch(versusHtml, /href="#request-demo"/);
+    assert.doesNotMatch(`${html}\n${versusHtml}`, /formspree\.io|<form\b/i);
 });
 
 test("standalone locale files match the embedded landing translations", async () => {

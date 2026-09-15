@@ -129,7 +129,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.75rem); line-height: 1.15; letter-spacing: -.
 .contact-section input { width: 100%; border: 1px solid #394659; border-radius: 8px; background: #131f30; color: #fff; padding: 17px 18px; font-size: 15px; }
 .contact-section input::placeholder { color: #8495ad; }
 .form-note { color: #9eafc7; font-size: 12px; line-height: 1.9; margin-top: 15px; }
-.contact-section button { width: 100%; margin-top: 26px; background: #2850a4; border-color: transparent; }
+.contact-application .button-primary { width: 100%; margin-top: 26px; background: #2850a4; border-color: transparent; }
 .light-border { position: relative; isolation: isolate; }
 .light-border::before { content: ''; position: absolute; inset: -2px; padding: 2px; border-radius: 10px; background: conic-gradient(from var(--beam-angle,0deg), #5085ff15 65%, #a1c4ff 80%, #5085ff15 95%); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; pointer-events: none; animation: border-orbit 7s linear infinite; }
 @property --beam-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }

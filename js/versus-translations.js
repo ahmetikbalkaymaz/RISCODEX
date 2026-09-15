@@ -84,12 +84,9 @@ window.__versusTranslations = {
       "media": {
         "eyebrow": "Ürün Çalışma Alanı",
         "title": "Teklif karşılaştırma ve gerekçeli karar raporu",
-        "description": "Demo videosu, Versus AI’ın teklifleri nasıl okuduğunu, farkları nasıl sınıflandırdığını ve karar çıktısını nasıl oluşturduğunu gösterir.",
-        "manual_hint": "Videoyu oynat",
         "label_1": "Belge yükleme",
         "label_2": "Fark analizi",
-        "label_3": "Karar raporu",
-        "video_aria": "Versus AI ürün çalışma alanı videosu"
+        "label_3": "Karar raporu"
       }
     },
     "mobile_story": {
@@ -267,12 +264,9 @@ window.__versusTranslations = {
       "media": {
         "eyebrow": "Product Workspace",
         "title": "Offer comparison and reasoned decision report",
-        "description": "The demo video shows how Versus AI reads offers, classifies differences, and creates the decision output.",
-        "manual_hint": "Play video",
         "label_1": "Document upload",
         "label_2": "Difference analysis",
-        "label_3": "Decision report",
-        "video_aria": "Versus AI product workspace video"
+        "label_3": "Decision report"
       }
     },
     "mobile_story": {

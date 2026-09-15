@@ -151,8 +151,10 @@ window.__landingTranslations = {
         "label": "Kurumsal E-posta",
         "placeholder": "ornek@sirket.com",
         "note": "Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.",
-        "submit": "İletişime Geç"
-      }
+        "submit": "Demo Talep Et"
+      },
+      "application_title": "Versus AI demo talebi",
+      "application_description": "Versus AI’ı incelemek için başvuru sayfasından demo talebinizi iletin."
     },
     "footer": {
       "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
@@ -310,8 +312,10 @@ window.__landingTranslations = {
         "label": "Business Email",
         "placeholder": "name@company.com",
         "note": "After receiving your request, our team will contact you within 1 business day.",
-        "submit": "Get in Touch"
-      }
+        "submit": "Request a Demo"
+      },
+      "application_title": "Request a Versus AI demo",
+      "application_description": "Submit a demo request through the application page to explore Versus AI."
     },
     "footer": {
       "copyright": "&copy; 2026 RISCODEX Technology Inc."

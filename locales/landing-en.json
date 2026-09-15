@@ -150,8 +150,10 @@
       "label": "Business Email",
       "placeholder": "name@company.com",
       "note": "After receiving your request, our team will contact you within 1 business day.",
-      "submit": "Get in Touch"
-    }
+      "submit": "Request a Demo"
+    },
+    "application_title": "Request a Versus AI demo",
+    "application_description": "Submit a demo request through the application page to explore Versus AI."
   },
   "footer": {
     "copyright": "&copy; 2026 RISCODEX Technology Inc."
