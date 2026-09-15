@@ -1,362 +1,210 @@
 window.__versusTranslations = {
   "tr": {
     "meta": {
-      "title": "Riscodex | Versus AI"
+      "title": "Versus AI | Riscodex"
     },
     "nav": {
-      "home_aria": "Riscodex ana sayfaya dön",
-      "back": "Ana Site",
-      "problem": "Ürün Akışı",
-      "how": "İşleyiş",
-      "use_cases": "Branşlar",
-      "request": "Demo Talebi",
-      "menu_aria": "Menüyü aç"
+      "home_aria": "Riscodex ana sayfa",
+      "menu_aria": "Menüyü aç",
+      "how": "Nasıl Çalışır?",
+      "tools": "Versus Tools",
+      "lines": "Branşlar",
+      "demo": "Demo Talep Et"
     },
     "hero": {
-      "eyebrow": "Teklif ve Poliçe Karşılaştırma",
-      "title": "Teklifleri karşılaştırın, gerekçeli önerilerle karar verin.",
-      "description": "Versus AI, sigorta tekliflerini ve poliçeleri karşılaştırır; önemli farkları açıklar ve hangi teklifin neden daha uygun olduğuna dair gerekçeli öneriler sunar.",
-      "primary_cta": "Kurumsal Demo Talep Et",
-      "secondary_cta": "Ürün Akışını İzle",
-      "stats": {
-        "speed": {
-          "label": "Karar süresi",
-          "value": "Dakikalar içinde karşılaştırma"
-        },
-        "coverage": {
-          "label": "10 branş",
-          "value": "Teklif ve poliçe dosyaları"
-        },
-        "mode": {
-          "label": "Kurumsal pilot",
-          "value": "Broker, acente ve sigorta ekipleri"
-        }
-      }
+      "eyebrow": "RISCODEX / VERSUS AI",
+      "title": "Teklifleri karşılaştırın.",
+      "title_accent": "Gerekçeli önerilerle karar verin.",
+      "description": "Teminat, limit ve muafiyet farklarını görün. Hangi teklifin neden daha uygun olduğunu açıklayan önerilerle değerlendirmenizi tamamlayın.",
+      "how": "Nasıl Çalışır?",
+      "foot": "Teklif ve poliçe karşılaştırma · Analiz · Öneri"
     },
-    "story": {
-      "eyebrow": "Operasyonel Sorun",
-      "title": "Teklif farkları görünmediğinde karar kalitesi düşer.",
-      "description": "Teklif, ek ve poliçe dokümanları aynı anda değerlendirildiğinde ekiplerin ihtiyacı daha fazla içerik değil; farkları standart biçimde okuyup güvenilir karara çevirecek bir çalışma alanıdır.",
-      "points": {
-        "stack": {
-          "title": "Belgeler aynı vakada toplanır",
-          "description": "Teklifler, kloz listeleri ve yenileme dokümanları tek değerlendirme alanına alınır."
-        },
-        "noise": {
-          "title": "Kritik farklar ayrıştırılır",
-          "description": "Muafiyet, limit ve teminat farklılıkları satır aralarından çıkarılır."
-        },
-        "decision": {
-          "title": "Karar raporu oluşur",
-          "description": "Ekipler hangi teklifin neden öne çıktığını aynı standartta görür."
-        }
-      },
-      "papers": {
-        "offer_a": "Teklif Dosyası A",
-        "offer_b": "Teklif Dosyası B",
-        "policy": "Poliçe Özeti",
-        "renewal": "Yenileme Karşılaştırması",
-        "clauses": "Kloz Ekleri",
-        "risk": "Teminat Kontrolü",
-        "highlight_1": "Muafiyet farkı",
-        "highlight_2": "Limit değişimi",
-        "highlight_3": "Eksik teminat"
-      },
-      "reveal": {
-        "badge": "Yeni Ürün",
-        "title": "VERSUS AI",
-        "description": "Belgeleri aynı yüzeyde toplar, kritik farkları görünür hale getirir ve değerlendirme çıktısını karar raporuna dönüştürür.",
-        "metrics": {
-          "input": {
-            "label": "Girdi",
-            "value": "Çoklu teklif / poliçe"
-          },
-          "output": {
-            "label": "Çıktı",
-            "value": "Karar raporu"
-          },
-          "focus": {
-            "label": "Odak",
-            "value": "Teminat, limit, muafiyet"
-          }
-        }
-      },
-      "media": {
-        "eyebrow": "Ürün Çalışma Alanı",
-        "title": "Teklif karşılaştırma ve gerekçeli karar raporu",
-        "label_1": "Belge yükleme",
-        "label_2": "Fark analizi",
-        "label_3": "Karar raporu"
-      }
+    "example": {
+      "label": "TEMSİLİ ÖRNEK",
+      "title": "Farkı görün. Gerekçeyi anlayın.",
+      "note": "Bu örnekteki belgeler, tutarlar ve öneriler kurgusaldır; ürünün çalışma mantığını gösterir.",
+      "a": "Teklif A",
+      "b": "Teklif B",
+      "field": "Karşılaştırma",
+      "limit": "Teminat limiti",
+      "deductible": "Muafiyet",
+      "premium": "Yıllık prim",
+      "limit_a": "10 milyon TL",
+      "limit_b": "15 milyon TL",
+      "deductible_a": "%2",
+      "deductible_b": "%1",
+      "premium_a": "100.000 TL",
+      "premium_b": "120.000 TL",
+      "insight": "Daha yüksek limit. Daha düşük muafiyet.",
+      "tradeoff": "Teklif B’nin primi de daha yüksek.",
+      "short_reason": "Limit ve muafiyet önceliğinde Teklif B öne çıkıyor.",
+      "report": "Örnek değerlendirme",
+      "documents": "İki teklif, tek değerlendirme",
+      "document_note": "Aynı senaryoya ait teklif belgeleri değerlendirmeye alınır.",
+      "file_a": "Teklif_A.pdf",
+      "file_b": "Teklif_B.pdf",
+      "file_type": "Temsili teklif belgesi",
+      "input_note": "Ürün akışını keşfetmek için aşağıdaki adıma geçin.",
+      "next_compare": "Farkları incele",
+      "next_recommend": "Öneriyi gör",
+      "comparison_title": "Aynı başlıklar altında karşılaştırın.",
+      "comparison_note": "Fiyatı, teminat limitini ve muafiyeti birlikte değerlendirin.",
+      "recommend_title": "Tercihin arkasındaki gerekçeyi görün.",
+      "priority": "Örnek öncelik: yüksek limit ve düşük muafiyet",
+      "recommendation": "Bu önceliklerle Teklif B öne çıkıyor.",
+      "reason": "15 milyon TL teminat limiti ve %1 muafiyet sunuyor. Teklif A’ya göre limiti daha yüksek, muafiyeti daha düşük.",
+      "caveat": "Bunun karşılığında yıllık prim 20.000 TL artıyor. Öncelik düşük prim olduğunda Teklif A değerlendirilebilir.",
+      "report_note": "Karşılaştırma ve gerekçeli öneri aynı raporda bir araya gelir."
     },
-    "mobile_story": {
-      "eyebrow": "Karşılaştırma ve öneri",
-      "title": "Belgelerden gerekçeli önerilere.",
-      "description": "Teklif ve poliçeleri yükleyin, kritik farkları görün ve önerileri rapor halinde inceleyin."
+    "flow": {
+      "eyebrow": "NASIL ÇALIŞIR?",
+      "title": "Belgelerden gerekçeli bir karara.",
+      "description": "Üç adımı seçerek örnek bir değerlendirmenin nasıl ilerlediğini inceleyin.",
+      "one": "Belgeleri yükle",
+      "one_desc": "Teklifleri veya poliçeleri aynı değerlendirmede toplayın.",
+      "two": "Farkları incele",
+      "two_desc": "Teminat, limit, muafiyet ve klozları karşılaştırın.",
+      "three": "Öneriyi değerlendir",
+      "three_desc": "Hangi teklifin neden öne çıktığını görün.",
+      "aria": "Örnek değerlendirme adımları"
     },
-    "capabilities": {
-      "eyebrow": "Ne Sağlar",
-      "title": "Versus AI teklif değerlendirme sürecini standartlaştırır.",
-      "description": "Teklifleri tek tek okumak yerine farkları, etkileri ve karar gerekçesini aynı yüzeyde görürsünüz.",
-      "cards": {
-        "compare": {
-          "title": "Farkları görünür kılar",
-          "description": "Teklifler arasındaki teminat, limit, muafiyet ve istisna farklarını aynı tabloda toplar."
-        },
-        "explain": {
-          "title": "Etkisini açıklar",
-          "description": "Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, karar bağlamını da taşır."
-        },
-        "recommend": {
-          "title": "Gerekçeli öneri sunar",
-          "description": "Teklifleri analiz ederek hangi seçeneğin neden daha uygun olduğunu açıklar; önerisini karşılaştırma raporunda sunar."
-        }
-      }
+    "tools": {
+      "eyebrow": "VERSUS AI İÇİNDE",
+      "title": "Hesaplama tarafında da yanınızda.",
+      "description": "Versus Tools, hesaplama araçlarını Versus AI içinde bir araya getirir.",
+      "commercial": "Ticari/Sınai poliçe primi hesaplama",
+      "fire": "Yangın abonman hesaplama",
+      "included": "Versus AI içindeki hesaplama araçları"
     },
-    "how": {
-      "eyebrow": "İşleyiş",
-      "title": "Kurumsal kullanım akışı üç adımda ilerler.",
-      "description": "Belgelerinizi yükleyin, farkları inceleyin ve gerekçeli önerileri içeren raporu ekibinizle paylaşın.",
-      "steps": {
-        "upload": {
-          "label": "01",
-          "title": "Dosyaları aynı vakada toplayın",
-          "description": "Teklifleri, poliçeleri veya yenileme belgelerini tek değerlendirme alanına yükleyin."
-        },
-        "analyze": {
-          "label": "02",
-          "title": "Farkları standartlaştırın",
-          "description": "Sistem kritik farkları okur, gruplar ve değerlendirme formatında özetler."
-        },
-        "decide": {
-          "label": "03",
-          "title": "Önerileri değerlendirin ve paylaşın",
-          "description": "Hangi teklifin neden daha uygun olduğuna dair önerileri inceleyin ve raporu ekibinizle paylaşın."
-        }
-      }
+    "lines": {
+      "eyebrow": "BRANŞ KAPSAMI",
+      "title": "10 branş. Tek karşılaştırma yaklaşımı.",
+      "description": "Farklı branşlardaki teklif ve poliçeleri ortak bir değerlendirme düzeninde inceleyin.",
+      "items": [
+        "Kasko",
+        "Trafik",
+        "Özel Sağlık",
+        "Tamamlayıcı Sağlık",
+        "Ferdi Kaza",
+        "Nakliyat",
+        "Yangın",
+        "İnşaat ve Montaj",
+        "Enerji",
+        "Sorumluluk"
+      ]
     },
-    "use_cases": {
-      "eyebrow": "Branş Kapsamı",
-      "title": "10 branşta aynı değerlendirme standardını kullanın.",
-      "description": "Versus AI farklı sigorta ürünlerinde teklif karşılaştırması ve poliçe okuma süreçlerini ortak karar formatına taşır.",
-      "items": {
-        "kasko": "Kasko",
-        "trafik": "Trafik",
-        "oss": "Özel Sağlık Sigortası",
-        "tss": "Tamamlayıcı Sağlık Sigortası",
-        "ferdi": "Ferdi Kaza",
-        "nakliyat": "Nakliyat",
-        "yangin": "Yangın",
-        "insaat": "İnşaat ve Montaj",
-        "enerji": "Enerji",
-        "sorumluluk": "Sorumluluk"
-      }
-    },
-    "request": {
-      "eyebrow": "Demo Talebi",
-      "title": "Kendi teklif dosyalarınızla karar akışını birlikte inceleyelim.",
-      "description": "İlk görüşmede ürün uygunluğunu netleştirir, gerçek dosyalar üzerinden kontrollü bir demo akışı kurgularız.",
-      "process": {
-        "step_1": "İhtiyaç değerlendirmesi",
-        "step_2": "Pilot kapsamı",
-        "step_3": "Canlı kullanım planı"
-      },
-      "form": {
-        "name_label": "Ad Soyad",
-        "name_placeholder": "Adınız Soyadınız",
-        "company_label": "Şirket",
-        "company_placeholder": "Şirket adı",
-        "email_label": "Kurumsal E-posta",
-        "email_placeholder": "ornek@sirket.com",
-        "message_label": "Not",
-        "message_placeholder": "İncelemek istediğiniz branş, teklif tipi veya karar süreci",
-        "note": "Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.",
-        "submit": "Kurumsal Demo Talep Et"
-      }
+    "contact": {
+      "eyebrow": "BİRLİKTE İNCELEYELİM",
+      "title": "Versus AI’ı iş akışınızda keşfedin.",
+      "description": "İhtiyacınızı paylaşın; ürünün ekibinize nasıl yardımcı olabileceğini birlikte değerlendirelim.",
+      "back": "Riscodex ana sayfa"
     },
     "footer": {
-      "back": "Ana sayfaya dön",
-      "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+      "copyright": "© 2026 RISCODEX Teknoloji A.Ş."
     }
   },
   "en": {
     "meta": {
-      "title": "Riscodex | Versus AI"
+      "title": "Versus AI | Riscodex"
     },
     "nav": {
-      "home_aria": "Return to the Riscodex homepage",
-      "back": "Main Site",
-      "problem": "Product Flow",
-      "how": "Process",
-      "use_cases": "Lines",
-      "request": "Request Demo",
-      "menu_aria": "Open menu"
+      "home_aria": "Riscodex homepage",
+      "menu_aria": "Open menu",
+      "how": "How It Works",
+      "tools": "Versus Tools",
+      "lines": "Insurance Lines",
+      "demo": "Request a Demo"
     },
     "hero": {
-      "eyebrow": "Offer and Policy Comparison",
-      "title": "Compare quotes. Decide with reasoned recommendations.",
-      "description": "Versus AI compares insurance quotes and policies, explains important differences, and offers reasoned recommendations on which quote is more suitable and why.",
-      "primary_cta": "Request Enterprise Demo",
-      "secondary_cta": "Watch Product Flow",
-      "stats": {
-        "speed": {
-          "label": "Decision time",
-          "value": "Comparison within minutes"
-        },
-        "coverage": {
-          "label": "10 lines",
-          "value": "Offer and policy files"
-        },
-        "mode": {
-          "label": "Enterprise pilot",
-          "value": "For brokers, agencies, and insurance teams"
-        }
-      }
+      "eyebrow": "RISCODEX / VERSUS AI",
+      "title": "Compare your quotes.",
+      "title_accent": "Decide with clear reasoning.",
+      "description": "See differences in coverage, limits and deductibles. Complete your review with recommendations explaining which quote fits better and why.",
+      "how": "How It Works",
+      "foot": "Quote and policy comparison · Analysis · Recommendations"
     },
-    "story": {
-      "eyebrow": "Operational Problem",
-      "title": "When offer differences are hidden, decision quality drops.",
-      "description": "When quotes, endorsements, and policy documents are evaluated together, teams do not need more content. They need a workspace that reads differences consistently and turns them into reliable decisions.",
-      "points": {
-        "stack": {
-          "title": "Documents are grouped by case",
-          "description": "Quotes, clause lists, and renewal files are brought into one evaluation workspace."
-        },
-        "noise": {
-          "title": "Critical differences are separated",
-          "description": "Deductible, limit, and coverage differences are lifted out of the document noise."
-        },
-        "decision": {
-          "title": "A decision report is created",
-          "description": "Teams see why an offer stands out through the same standard."
-        }
-      },
-      "papers": {
-        "offer_a": "Quote File A",
-        "offer_b": "Quote File B",
-        "policy": "Policy Summary",
-        "renewal": "Renewal Comparison",
-        "clauses": "Clause Addendum",
-        "risk": "Coverage Check",
-        "highlight_1": "Deductible gap",
-        "highlight_2": "Limit change",
-        "highlight_3": "Missing coverage"
-      },
-      "reveal": {
-        "badge": "New Product",
-        "title": "VERSUS AI",
-        "description": "It brings documents into one surface, exposes critical differences, and turns the evaluation output into a decision report.",
-        "metrics": {
-          "input": {
-            "label": "Input",
-            "value": "Multiple quotes / policies"
-          },
-          "output": {
-            "label": "Output",
-            "value": "Decision report"
-          },
-          "focus": {
-            "label": "Focus",
-            "value": "Coverage, limits, deductibles"
-          }
-        }
-      },
-      "media": {
-        "eyebrow": "Product Workspace",
-        "title": "Offer comparison and reasoned decision report",
-        "label_1": "Document upload",
-        "label_2": "Difference analysis",
-        "label_3": "Decision report"
-      }
+    "example": {
+      "label": "ILLUSTRATIVE EXAMPLE",
+      "title": "See the difference. Understand why.",
+      "note": "The documents, amounts and recommendations in this example are fictional and illustrate how the product works.",
+      "a": "Quote A",
+      "b": "Quote B",
+      "field": "Comparison",
+      "limit": "Coverage limit",
+      "deductible": "Deductible",
+      "premium": "Annual premium",
+      "limit_a": "TRY 10 million",
+      "limit_b": "TRY 15 million",
+      "deductible_a": "2%",
+      "deductible_b": "1%",
+      "premium_a": "TRY 100,000",
+      "premium_b": "TRY 120,000",
+      "insight": "Higher limit. Lower deductible.",
+      "tradeoff": "Quote B also has a higher premium.",
+      "short_reason": "Quote B stands out when limits and deductibles take priority.",
+      "report": "Example evaluation",
+      "documents": "Two quotes, one evaluation",
+      "document_note": "Quotes for the same scenario are brought together for review.",
+      "file_a": "Quote_A.pdf",
+      "file_b": "Quote_B.pdf",
+      "file_type": "Illustrative quote document",
+      "input_note": "Continue to the next step to explore the product workflow.",
+      "next_compare": "Compare differences",
+      "next_recommend": "View recommendation",
+      "comparison_title": "Compare the same terms side by side.",
+      "comparison_note": "Consider the price, coverage limit and deductible together.",
+      "recommend_title": "Understand the reasoning behind a choice.",
+      "priority": "Example priority: a higher limit and lower deductible",
+      "recommendation": "With these priorities, Quote B stands out.",
+      "reason": "It provides a TRY 15 million coverage limit and a 1% deductible. Its limit is higher and its deductible is lower than Quote A’s.",
+      "caveat": "The annual premium increases by TRY 20,000 in return. Quote A may be considered when a lower premium takes priority.",
+      "report_note": "The comparison and reasoned recommendation come together in one report."
     },
-    "mobile_story": {
-      "eyebrow": "Comparison and recommendations",
-      "title": "From documents to reasoned recommendations.",
-      "description": "Upload quotes and policies, see the critical differences, and review recommendations in a report."
+    "flow": {
+      "eyebrow": "HOW IT WORKS",
+      "title": "From documents to a reasoned decision.",
+      "description": "Select each of the three steps to explore an example evaluation.",
+      "one": "Upload documents",
+      "one_desc": "Bring quotes or policies into a single evaluation.",
+      "two": "Review differences",
+      "two_desc": "Compare coverage, limits, deductibles and clauses.",
+      "three": "Review the recommendation",
+      "three_desc": "See which quote stands out and understand why.",
+      "aria": "Example evaluation steps"
     },
-    "capabilities": {
-      "eyebrow": "What It Provides",
-      "title": "Versus AI standardizes offer evaluation.",
-      "description": "Instead of reading every quote one by one, you see differences, impacts, and decision rationale in one surface.",
-      "cards": {
-        "compare": {
-          "title": "Makes differences visible",
-          "description": "Collects coverage, limit, deductible, and exclusion differences across offers in one table."
-        },
-        "explain": {
-          "title": "Explains the impact",
-          "description": "Summarizes each difference with insurance impact and carries the decision context, not raw data alone."
-        },
-        "recommend": {
-          "title": "Offers reasoned recommendations",
-          "description": "Analyzes quotes and explains which option is more suitable and why, presenting its recommendation in the comparison report."
-        }
-      }
+    "tools": {
+      "eyebrow": "INCLUDED IN VERSUS AI",
+      "title": "Support for your calculations, too.",
+      "description": "Versus Tools brings calculation tools together within Versus AI.",
+      "commercial": "Commercial/industrial policy premium calculation",
+      "fire": "Fire declaration policy calculation",
+      "included": "Calculation tools within Versus AI"
     },
-    "how": {
-      "eyebrow": "Process",
-      "title": "Enterprise usage moves through three steps.",
-      "description": "Upload your documents, review the differences, and share a report with reasoned recommendations with your team.",
-      "steps": {
-        "upload": {
-          "label": "01",
-          "title": "Collect files in one case",
-          "description": "Upload quotes, policies, or renewal documents into one evaluation workspace."
-        },
-        "analyze": {
-          "label": "02",
-          "title": "Standardize the differences",
-          "description": "The system reads critical differences, groups them, and summarizes them in an evaluation format."
-        },
-        "decide": {
-          "label": "03",
-          "title": "Review and share recommendations",
-          "description": "Review recommendations explaining which quote is more suitable and why, and share the report with your team."
-        }
-      }
+    "lines": {
+      "eyebrow": "INSURANCE LINES",
+      "title": "10 lines. One comparison approach.",
+      "description": "Review quotes and policies across insurance lines in a consistent format.",
+      "items": [
+        "Motor Own Damage",
+        "Motor Liability",
+        "Private Health",
+        "Supplementary Health",
+        "Personal Accident",
+        "Marine Cargo",
+        "Fire",
+        "Construction & Erection",
+        "Energy",
+        "Liability"
+      ]
     },
-    "use_cases": {
-      "eyebrow": "Line Coverage",
-      "title": "Use the same evaluation standard across 10 lines.",
-      "description": "Versus AI brings quote comparison and policy reading workflows into a shared decision format across insurance products.",
-      "items": {
-        "kasko": "Motor Own Damage",
-        "trafik": "Motor Third Party Liability",
-        "oss": "Private Health",
-        "tss": "Complementary Health",
-        "ferdi": "Personal Accident",
-        "nakliyat": "Marine Cargo",
-        "yangin": "Property / Fire",
-        "insaat": "Construction & Erection",
-        "enerji": "Energy",
-        "sorumluluk": "Liability"
-      }
-    },
-    "request": {
-      "eyebrow": "Request Demo",
-      "title": "Let’s review the decision flow using your own quote files.",
-      "description": "In the first conversation, we clarify product fit and set up a controlled demo flow using real files.",
-      "process": {
-        "step_1": "Needs assessment",
-        "step_2": "Pilot scope",
-        "step_3": "Live usage plan"
-      },
-      "form": {
-        "name_label": "Full Name",
-        "name_placeholder": "Your full name",
-        "company_label": "Company",
-        "company_placeholder": "Company name",
-        "email_label": "Work Email",
-        "email_placeholder": "name@company.com",
-        "message_label": "Note",
-        "message_placeholder": "Line, offer type, or decision process you want to review",
-        "note": "After we receive your request, our team will reach out within 1 business day.",
-        "submit": "Request Enterprise Demo"
-      }
+    "contact": {
+      "eyebrow": "LET’S EXPLORE",
+      "title": "See Versus AI in your workflow.",
+      "description": "Tell us what you need, and let’s explore how the product can help your team.",
+      "back": "Riscodex homepage"
     },
     "footer": {
-      "back": "Back to homepage",
-      "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+      "copyright": "© 2026 RISCODEX Technology Inc."
     }
   }
 };

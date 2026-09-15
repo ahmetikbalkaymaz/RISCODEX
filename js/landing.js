@@ -1,5 +1,5 @@
 (() => {
-    const translations = window.__landingTranslations || {};
+    const translations = window.__versusTranslations || window.__landingTranslations || {};
     const storageKey = 'riscodex-lang';
     const menu = document.getElementById('mobile-menu');
     const menuButton = document.getElementById('mobile-menu-button');

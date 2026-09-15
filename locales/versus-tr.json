@@ -1,180 +1,104 @@
 {
   "meta": {
-    "title": "Riscodex | Versus AI"
+    "title": "Versus AI | Riscodex"
   },
   "nav": {
-    "home_aria": "Riscodex ana sayfaya dön",
-    "back": "Ana Site",
-    "problem": "Ürün Akışı",
-    "how": "İşleyiş",
-    "use_cases": "Branşlar",
-    "request": "Demo Talebi",
-    "menu_aria": "Menüyü aç"
+    "home_aria": "Riscodex ana sayfa",
+    "menu_aria": "Menüyü aç",
+    "how": "Nasıl Çalışır?",
+    "tools": "Versus Tools",
+    "lines": "Branşlar",
+    "demo": "Demo Talep Et"
   },
   "hero": {
-    "eyebrow": "Teklif ve Poliçe Karşılaştırma",
-    "title": "Teklifleri karşılaştırın, gerekçeli önerilerle karar verin.",
-    "description": "Versus AI, sigorta tekliflerini ve poliçeleri karşılaştırır; önemli farkları açıklar ve hangi teklifin neden daha uygun olduğuna dair gerekçeli öneriler sunar.",
-    "primary_cta": "Kurumsal Demo Talep Et",
-    "secondary_cta": "Ürün Akışını İzle",
-    "stats": {
-      "speed": {
-        "label": "Karar süresi",
-        "value": "Dakikalar içinde karşılaştırma"
-      },
-      "coverage": {
-        "label": "10 branş",
-        "value": "Teklif ve poliçe dosyaları"
-      },
-      "mode": {
-        "label": "Kurumsal pilot",
-        "value": "Broker, acente ve sigorta ekipleri"
-      }
-    }
+    "eyebrow": "RISCODEX / VERSUS AI",
+    "title": "Teklifleri karşılaştırın.",
+    "title_accent": "Gerekçeli önerilerle karar verin.",
+    "description": "Teminat, limit ve muafiyet farklarını görün. Hangi teklifin neden daha uygun olduğunu açıklayan önerilerle değerlendirmenizi tamamlayın.",
+    "how": "Nasıl Çalışır?",
+    "foot": "Teklif ve poliçe karşılaştırma · Analiz · Öneri"
   },
-  "story": {
-    "eyebrow": "Operasyonel Sorun",
-    "title": "Teklif farkları görünmediğinde karar kalitesi düşer.",
-    "description": "Teklif, ek ve poliçe dokümanları aynı anda değerlendirildiğinde ekiplerin ihtiyacı daha fazla içerik değil; farkları standart biçimde okuyup güvenilir karara çevirecek bir çalışma alanıdır.",
-    "points": {
-      "stack": {
-        "title": "Belgeler aynı vakada toplanır",
-        "description": "Teklifler, kloz listeleri ve yenileme dokümanları tek değerlendirme alanına alınır."
-      },
-      "noise": {
-        "title": "Kritik farklar ayrıştırılır",
-        "description": "Muafiyet, limit ve teminat farklılıkları satır aralarından çıkarılır."
-      },
-      "decision": {
-        "title": "Karar raporu oluşur",
-        "description": "Ekipler hangi teklifin neden öne çıktığını aynı standartta görür."
-      }
-    },
-    "papers": {
-      "offer_a": "Teklif Dosyası A",
-      "offer_b": "Teklif Dosyası B",
-      "policy": "Poliçe Özeti",
-      "renewal": "Yenileme Karşılaştırması",
-      "clauses": "Kloz Ekleri",
-      "risk": "Teminat Kontrolü",
-      "highlight_1": "Muafiyet farkı",
-      "highlight_2": "Limit değişimi",
-      "highlight_3": "Eksik teminat"
-    },
-    "reveal": {
-      "badge": "Yeni Ürün",
-      "title": "VERSUS AI",
-      "description": "Belgeleri aynı yüzeyde toplar, kritik farkları görünür hale getirir ve değerlendirme çıktısını karar raporuna dönüştürür.",
-      "metrics": {
-        "input": {
-          "label": "Girdi",
-          "value": "Çoklu teklif / poliçe"
-        },
-        "output": {
-          "label": "Çıktı",
-          "value": "Karar raporu"
-        },
-        "focus": {
-          "label": "Odak",
-          "value": "Teminat, limit, muafiyet"
-        }
-      }
-    },
-    "media": {
-      "eyebrow": "Ürün Çalışma Alanı",
-      "title": "Teklif karşılaştırma ve gerekçeli karar raporu",
-      "label_1": "Belge yükleme",
-      "label_2": "Fark analizi",
-      "label_3": "Karar raporu"
-    }
+  "example": {
+    "label": "TEMSİLİ ÖRNEK",
+    "title": "Farkı görün. Gerekçeyi anlayın.",
+    "note": "Bu örnekteki belgeler, tutarlar ve öneriler kurgusaldır; ürünün çalışma mantığını gösterir.",
+    "a": "Teklif A",
+    "b": "Teklif B",
+    "field": "Karşılaştırma",
+    "limit": "Teminat limiti",
+    "deductible": "Muafiyet",
+    "premium": "Yıllık prim",
+    "limit_a": "10 milyon TL",
+    "limit_b": "15 milyon TL",
+    "deductible_a": "%2",
+    "deductible_b": "%1",
+    "premium_a": "100.000 TL",
+    "premium_b": "120.000 TL",
+    "insight": "Daha yüksek limit. Daha düşük muafiyet.",
+    "tradeoff": "Teklif B’nin primi de daha yüksek.",
+    "short_reason": "Limit ve muafiyet önceliğinde Teklif B öne çıkıyor.",
+    "report": "Örnek değerlendirme",
+    "documents": "İki teklif, tek değerlendirme",
+    "document_note": "Aynı senaryoya ait teklif belgeleri değerlendirmeye alınır.",
+    "file_a": "Teklif_A.pdf",
+    "file_b": "Teklif_B.pdf",
+    "file_type": "Temsili teklif belgesi",
+    "input_note": "Ürün akışını keşfetmek için aşağıdaki adıma geçin.",
+    "next_compare": "Farkları incele",
+    "next_recommend": "Öneriyi gör",
+    "comparison_title": "Aynı başlıklar altında karşılaştırın.",
+    "comparison_note": "Fiyatı, teminat limitini ve muafiyeti birlikte değerlendirin.",
+    "recommend_title": "Tercihin arkasındaki gerekçeyi görün.",
+    "priority": "Örnek öncelik: yüksek limit ve düşük muafiyet",
+    "recommendation": "Bu önceliklerle Teklif B öne çıkıyor.",
+    "reason": "15 milyon TL teminat limiti ve %1 muafiyet sunuyor. Teklif A’ya göre limiti daha yüksek, muafiyeti daha düşük.",
+    "caveat": "Bunun karşılığında yıllık prim 20.000 TL artıyor. Öncelik düşük prim olduğunda Teklif A değerlendirilebilir.",
+    "report_note": "Karşılaştırma ve gerekçeli öneri aynı raporda bir araya gelir."
   },
-  "mobile_story": {
-    "eyebrow": "Karşılaştırma ve öneri",
-    "title": "Belgelerden gerekçeli önerilere.",
-    "description": "Teklif ve poliçeleri yükleyin, kritik farkları görün ve önerileri rapor halinde inceleyin."
+  "flow": {
+    "eyebrow": "NASIL ÇALIŞIR?",
+    "title": "Belgelerden gerekçeli bir karara.",
+    "description": "Üç adımı seçerek örnek bir değerlendirmenin nasıl ilerlediğini inceleyin.",
+    "one": "Belgeleri yükle",
+    "one_desc": "Teklifleri veya poliçeleri aynı değerlendirmede toplayın.",
+    "two": "Farkları incele",
+    "two_desc": "Teminat, limit, muafiyet ve klozları karşılaştırın.",
+    "three": "Öneriyi değerlendir",
+    "three_desc": "Hangi teklifin neden öne çıktığını görün.",
+    "aria": "Örnek değerlendirme adımları"
   },
-  "capabilities": {
-    "eyebrow": "Ne Sağlar",
-    "title": "Versus AI teklif değerlendirme sürecini standartlaştırır.",
-    "description": "Teklifleri tek tek okumak yerine farkları, etkileri ve karar gerekçesini aynı yüzeyde görürsünüz.",
-    "cards": {
-      "compare": {
-        "title": "Farkları görünür kılar",
-        "description": "Teklifler arasındaki teminat, limit, muafiyet ve istisna farklarını aynı tabloda toplar."
-      },
-      "explain": {
-        "title": "Etkisini açıklar",
-        "description": "Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, karar bağlamını da taşır."
-      },
-      "recommend": {
-        "title": "Gerekçeli öneri sunar",
-        "description": "Teklifleri analiz ederek hangi seçeneğin neden daha uygun olduğunu açıklar; önerisini karşılaştırma raporunda sunar."
-      }
-    }
+  "tools": {
+    "eyebrow": "VERSUS AI İÇİNDE",
+    "title": "Hesaplama tarafında da yanınızda.",
+    "description": "Versus Tools, hesaplama araçlarını Versus AI içinde bir araya getirir.",
+    "commercial": "Ticari/Sınai poliçe primi hesaplama",
+    "fire": "Yangın abonman hesaplama",
+    "included": "Versus AI içindeki hesaplama araçları"
   },
-  "how": {
-    "eyebrow": "İşleyiş",
-    "title": "Kurumsal kullanım akışı üç adımda ilerler.",
-    "description": "Belgelerinizi yükleyin, farkları inceleyin ve gerekçeli önerileri içeren raporu ekibinizle paylaşın.",
-    "steps": {
-      "upload": {
-        "label": "01",
-        "title": "Dosyaları aynı vakada toplayın",
-        "description": "Teklifleri, poliçeleri veya yenileme belgelerini tek değerlendirme alanına yükleyin."
-      },
-      "analyze": {
-        "label": "02",
-        "title": "Farkları standartlaştırın",
-        "description": "Sistem kritik farkları okur, gruplar ve değerlendirme formatında özetler."
-      },
-      "decide": {
-        "label": "03",
-        "title": "Önerileri değerlendirin ve paylaşın",
-        "description": "Hangi teklifin neden daha uygun olduğuna dair önerileri inceleyin ve raporu ekibinizle paylaşın."
-      }
-    }
+  "lines": {
+    "eyebrow": "BRANŞ KAPSAMI",
+    "title": "10 branş. Tek karşılaştırma yaklaşımı.",
+    "description": "Farklı branşlardaki teklif ve poliçeleri ortak bir değerlendirme düzeninde inceleyin.",
+    "items": [
+      "Kasko",
+      "Trafik",
+      "Özel Sağlık",
+      "Tamamlayıcı Sağlık",
+      "Ferdi Kaza",
+      "Nakliyat",
+      "Yangın",
+      "İnşaat ve Montaj",
+      "Enerji",
+      "Sorumluluk"
+    ]
   },
-  "use_cases": {
-    "eyebrow": "Branş Kapsamı",
-    "title": "10 branşta aynı değerlendirme standardını kullanın.",
-    "description": "Versus AI farklı sigorta ürünlerinde teklif karşılaştırması ve poliçe okuma süreçlerini ortak karar formatına taşır.",
-    "items": {
-      "kasko": "Kasko",
-      "trafik": "Trafik",
-      "oss": "Özel Sağlık Sigortası",
-      "tss": "Tamamlayıcı Sağlık Sigortası",
-      "ferdi": "Ferdi Kaza",
-      "nakliyat": "Nakliyat",
-      "yangin": "Yangın",
-      "insaat": "İnşaat ve Montaj",
-      "enerji": "Enerji",
-      "sorumluluk": "Sorumluluk"
-    }
-  },
-  "request": {
-    "eyebrow": "Demo Talebi",
-    "title": "Kendi teklif dosyalarınızla karar akışını birlikte inceleyelim.",
-    "description": "İlk görüşmede ürün uygunluğunu netleştirir, gerçek dosyalar üzerinden kontrollü bir demo akışı kurgularız.",
-    "process": {
-      "step_1": "İhtiyaç değerlendirmesi",
-      "step_2": "Pilot kapsamı",
-      "step_3": "Canlı kullanım planı"
-    },
-    "form": {
-      "name_label": "Ad Soyad",
-      "name_placeholder": "Adınız Soyadınız",
-      "company_label": "Şirket",
-      "company_placeholder": "Şirket adı",
-      "email_label": "Kurumsal E-posta",
-      "email_placeholder": "ornek@sirket.com",
-      "message_label": "Not",
-      "message_placeholder": "İncelemek istediğiniz branş, teklif tipi veya karar süreci",
-      "note": "Talebinizi aldıktan sonra ekibimiz 1 iş günü içinde sizinle iletişime geçer.",
-      "submit": "Kurumsal Demo Talep Et"
-    }
+  "contact": {
+    "eyebrow": "BİRLİKTE İNCELEYELİM",
+    "title": "Versus AI’ı iş akışınızda keşfedin.",
+    "description": "İhtiyacınızı paylaşın; ürünün ekibinize nasıl yardımcı olabileceğini birlikte değerlendirelim.",
+    "back": "Riscodex ana sayfa"
   },
   "footer": {
-    "back": "Ana sayfaya dön",
-    "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+    "copyright": "© 2026 RISCODEX Teknoloji A.Ş."
   }
 }

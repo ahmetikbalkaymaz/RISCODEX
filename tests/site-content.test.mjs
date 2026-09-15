@@ -61,10 +61,10 @@ test("Versus AI page does not ship demo video media or playback controls", async
     assert.doesNotMatch(versusHtml, /versus-ai-demo\.(?:mp4|jpg)/);
     assert.doesNotMatch(versusHtml, /initializeDemoVideos|enableManualVideoMode/);
     assert.doesNotMatch(translationSource, /demo video|demo videosu|Videoyu oynat|Play video|video_aria/i);
-    assert.equal(Object.hasOwn(tr.story.media, "manual_hint"), false);
-    assert.equal(Object.hasOwn(tr.story.media, "video_aria"), false);
-    assert.equal(Object.hasOwn(en.story.media, "manual_hint"), false);
-    assert.equal(Object.hasOwn(en.story.media, "video_aria"), false);
+    assert.equal(Object.hasOwn(tr.story?.media || {}, "manual_hint"), false);
+    assert.equal(Object.hasOwn(tr.story?.media || {}, "video_aria"), false);
+    assert.equal(Object.hasOwn(en.story?.media || {}, "manual_hint"), false);
+    assert.equal(Object.hasOwn(en.story?.media || {}, "video_aria"), false);
     await assert.rejects(access(new URL("../assets/versus-ai-demo.mp4", import.meta.url)));
     await assert.rejects(access(new URL("../assets/versus-ai-demo-poster.jpg", import.meta.url)));
 });
