@@ -7,11 +7,9 @@ export const STAGES = Object.freeze([
 
 export const STORY_SECTION_IDS = Object.freeze([
     "hero",
-    "about",
     "platform",
-    "problem",
     "solutions",
-    "operating-model",
+    "about",
     "access-request"
 ]);
 

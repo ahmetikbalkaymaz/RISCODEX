@@ -13,8 +13,8 @@
   },
   "hero": {
     "eyebrow": "Offer and Policy Comparison",
-    "title": "Read offers, see differences, share the decision.",
-    "description": "Versus AI compares insurance offers and policy files in one workspace, then turns them into controlled decision reports.",
+    "title": "Compare quotes. Decide with reasoned recommendations.",
+    "description": "Versus AI compares insurance quotes and policies, explains important differences, and offers reasoned recommendations on which quote is more suitable and why.",
     "primary_cta": "Request Enterprise Demo",
     "secondary_cta": "Watch Product Flow",
     "stats": {
@@ -92,9 +92,9 @@
     }
   },
   "mobile_story": {
-    "eyebrow": "Mobile Product Flow",
-    "title": "The mobile product flow is presented more simply.",
-    "description": "Documents, critical differences, and decision output are shown in a compact evaluation flow."
+    "eyebrow": "Comparison and recommendations",
+    "title": "From documents to reasoned recommendations.",
+    "description": "Upload quotes and policies, see the critical differences, and review recommendations in a report."
   },
   "capabilities": {
     "eyebrow": "What It Provides",
@@ -110,15 +110,15 @@
         "description": "Summarizes each difference with insurance impact and carries the decision context, not raw data alone."
       },
       "recommend": {
-        "title": "Shortens decision time",
-        "description": "Helps teams evaluate the right offer faster, with more control and consistency."
+        "title": "Offers reasoned recommendations",
+        "description": "Analyzes quotes and explains which option is more suitable and why, presenting its recommendation in the comparison report."
       }
     }
   },
   "how": {
     "eyebrow": "Process",
     "title": "Enterprise usage moves through three steps.",
-    "description": "First, the real file type and decision need are defined; then the pilot workspace and live usage model are set up.",
+    "description": "Upload your documents, review the differences, and share a report with reasoned recommendations with your team.",
     "steps": {
       "upload": {
         "label": "01",
@@ -132,8 +132,8 @@
       },
       "decide": {
         "label": "03",
-        "title": "Share the decision report",
-        "description": "Your team sees why an offer is stronger through the same standard."
+        "title": "Review and share recommendations",
+        "description": "Review recommendations explaining which quote is more suitable and why, and share the report with your team."
       }
     }
   },

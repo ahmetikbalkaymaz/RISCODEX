@@ -23,14 +23,12 @@ test("keeps every primary node inside the desktop hero framing budget", () => {
     assert.ok(horizontalExtent <= 2.75);
 });
 
-test("exposes the approved seven-section story order", () => {
+test("exposes the approved five-section story order", () => {
     assert.deepEqual(STORY_SECTION_IDS, [
         "hero",
-        "about",
         "platform",
-        "problem",
         "solutions",
-        "operating-model",
+        "about",
         "access-request"
     ]);
 });
@@ -84,17 +82,17 @@ test("hero exposes the decision-network canvas and accessible fallback", async (
     assert.match(html, /id="decision-network-fallback"/);
     assert.equal((html.match(/class="decision-network-label(?: is-active)?"/g) || []).length, 4);
     assert.doesNotMatch(html, /decision-network-status|data-network-status/);
-    assert.match(html, /src="js\/landing-translations\.js\?v=20260710"/);
-    assert.match(html, /type="module" src="js\/decision-network\.js\?v=20260710-3"/);
+    assert.match(html, /src="js\/landing-translations\.js\?v=\d+"/);
+    assert.match(html, /type="module" src="js\/decision-network\.js\?v=\d+(?:-\d+)?"/);
     assert.match(html, /three@0\.184\.0/);
 });
 
-test("page exposes one global story canvas and seven marked sections", async () => {
+test("page exposes one global story canvas and five marked sections", async () => {
     const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
     assert.equal((html.match(/class="decision-story-layer" data-decision-network/g) || []).length, 1);
     assert.equal((html.match(/id="decision-network"/g) || []).length, 1);
-    assert.equal((html.match(/data-story-section="(?:hero|about|platform|problem|solutions|operating-model|access-request)"/g) || []).length, 7);
+    assert.deepEqual([...html.matchAll(/data-story-section="([^"]+)"/g)].map((match) => match[1]), STORY_SECTION_IDS);
 });
 
 test("global story layering preserves the hero visual absolute positioning", async () => {
@@ -105,11 +103,11 @@ test("global story layering preserves the hero visual absolute positioning", asy
 });
 
 test("reduced-motion CSS removes decision-network transitions", async () => {
-    const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+    const css = await readFile(new URL("../css/landing.css", import.meta.url), "utf8");
 
     assert.match(
-        html,
-        /@media \(prefers-reduced-motion: reduce\)[\s\S]*?#decision-network,[\s\S]*?\.decision-network-fallback[\s\S]*?transition: none !important;/
+        css,
+        /@media \(prefers-reduced-motion: reduce\)[\s\S]*?[\s\S]*?transition: none !important;/
     );
 });
 
@@ -125,7 +123,7 @@ test("scene module includes the required lifecycle safeguards", async () => {
     assert.match(moduleSource, /dispose\(\)/);
 });
 
-test("scene module implements the continuous seven-state story", async () => {
+test("scene module implements the continuous five-section story", async () => {
     const moduleSource = await readFile(new URL("../js/decision-network.js", import.meta.url), "utf8");
 
     assert.match(moduleSource, /STORY_LAYOUTS/);

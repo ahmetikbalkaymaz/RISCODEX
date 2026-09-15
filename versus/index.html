@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="../js/versus-translations.js"></script>
+    <script src="../js/versus-translations.js?v=20260915"></script>
 
     <script>
         tailwind.config = {
@@ -642,7 +642,12 @@
 
         .brand-hero .hero-title {
             color: var(--ink) !important;
+            font-size: clamp(2.8rem, 4.3vw, 4.6rem);
+            line-height: 1.08;
+            letter-spacing: -.045em;
         }
+
+        .brand-hero-content .max-w-3xl { max-width: 44%; }
 
         .brand-hero .button-secondary {
             background: rgba(255, 255, 255, 0.76);
@@ -679,7 +684,7 @@
             position: absolute;
             right: clamp(1.5rem, 5vw, 5.5rem);
             top: 50%;
-            width: min(46rem, 50vw);
+            width: min(46rem, 42vw);
             transform: translateY(-48%);
             border: 1px solid rgba(15, 23, 42, 0.12);
             background: rgba(255, 255, 255, 0.78);
@@ -936,6 +941,13 @@
                 opacity: 1;
                 transform: none;
             }
+
+            .brand-hero { min-height: 0; }
+            .brand-hero-content { min-height: 0; padding-block: 8rem 3.5rem; }
+            .brand-hero-content .max-w-3xl { max-width: 42rem; }
+            .brand-hero .hero-title { font-size: clamp(2rem, 8.5vw, 3.75rem); }
+            .brand-hero-visual { display: none; }
+            .brand-hero [data-i18n="hero.description"] { font-size: 1rem; line-height: 1.85; }
         }
     </style>
 </head>
@@ -1096,14 +1108,9 @@
                             Teklif ve Poliçe Karşılaştırma
                         </p>
                         <h1 class="hero-title hero-enter hero-enter-delay-1 mt-5 text-6xl font-semibold leading-none sm:text-7xl lg:text-[7rem]"
-                            data-i18n="hero.title">
-                            Teklifleri okuyun, farkları görün, kararı paylaşın.
-                        </h1>
+                            data-i18n="hero.title">Teklifleri karşılaştırın, gerekçeli önerilerle karar verin.</h1>
                         <p class="hero-enter hero-enter-delay-2 mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl"
-                            data-i18n="hero.description">
-                            Versus AI, sigorta tekliflerini ve poliçe dosyalarını aynı çalışma alanında karşılaştırıp
-                            kontrollü karar raporuna dönüştürür.
-                        </p>
+                            data-i18n="hero.description">Versus AI, sigorta tekliflerini ve poliçeleri karşılaştırır; önemli farkları açıklar ve hangi teklifin neden daha uygun olduğuna dair gerekçeli öneriler sunar.</p>
 
                         <div class="hero-enter hero-enter-delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
                             <a href="#request-demo"
@@ -1507,17 +1514,10 @@
         <section class="hidden">
             <div class="mx-auto max-w-7xl px-6">
                 <div class="surface-panel rounded-[32px] p-6">
-                    <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="mobile_story.eyebrow">
-                        Mobil Ürün Akışı
-                    </p>
+                    <p class="eyebrow text-[11px] font-semibold text-blue-700/70" data-i18n="mobile_story.eyebrow">Karşılaştırma ve öneri</p>
                     <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950"
-                        data-i18n="mobile_story.title">
-                        Mobilde ürün akışı daha sade sunulur.
-                    </h2>
-                    <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="mobile_story.description">
-                        Belgeler üst üste gelir, kritik satırlar öne çıkar ve VERSUS AI temiz bir analiz yüzeyi olarak
-                        görünür.
-                    </p>
+                        data-i18n="mobile_story.title">Belgelerden gerekçeli önerilere.</h2>
+                    <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="mobile_story.description">Teklif ve poliçeleri yükleyin, kritik farkları görün ve önerileri rapor halinde inceleyin.</p>
 
                     <div class="mt-8 grid gap-4">
                         <article class="story-paper">
@@ -1616,13 +1616,9 @@
                                 <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
                             </div>
                             <h3 class="mt-5 text-xl font-semibold text-slate-950"
-                                data-i18n="capabilities.cards.recommend.title">
-                                Karar Akışını Hızlandırır
-                            </h3>
+                                data-i18n="capabilities.cards.recommend.title">Gerekçeli öneri sunar</h3>
                             <p class="mt-3 text-sm leading-7 text-slate-600"
-                                data-i18n="capabilities.cards.recommend.description">
-                                Ekiplerin en avantajlı teklife daha hızlı ve daha güvenli ulaşmasına yardımcı olur.
-                            </p>
+                                data-i18n="capabilities.cards.recommend.description">Teklifleri analiz ederek hangi seçeneğin neden daha uygun olduğunu açıklar; önerisini karşılaştırma raporunda sunar.</p>
                         </article>
                     </div>
                 </div>
@@ -1640,10 +1636,7 @@
                             data-i18n="how.title">
                             Kurumsal kullanım akışı üç adımda ilerler.
                         </h2>
-                        <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="how.description">
-                            Önce gerçek dosya tipi ve karar ihtiyacı netleşir, ardından pilot çalışma alanı ve canlı
-                            kullanım modeli kurulur.
-                        </p>
+                        <p class="mt-4 text-base leading-7 text-slate-600" data-i18n="how.description">Belgelerinizi yükleyin, farkları inceleyin ve gerekçeli önerileri içeren raporu ekibinizle paylaşın.</p>
                     </div>
 
                     <div class="mt-10 grid gap-5 md:grid-cols-3">
@@ -1671,13 +1664,9 @@
 
                         <article class="surface-card hover-lift reveal-on-scroll reveal-delay-2 rounded-[28px] p-6">
                             <div class="text-sm font-semibold text-blue-700" data-i18n="how.steps.decide.label">03</div>
-                            <h3 class="mt-4 text-xl font-semibold text-slate-950" data-i18n="how.steps.decide.title">
-                                Karar raporunu paylaşın
-                            </h3>
+                            <h3 class="mt-4 text-xl font-semibold text-slate-950" data-i18n="how.steps.decide.title">Önerileri değerlendirin ve paylaşın</h3>
                             <p class="mt-3 text-sm leading-7 text-slate-600"
-                                data-i18n="how.steps.decide.description">
-                                Ekibiniz hangi teklifin neden daha uygun olduğunu aynı standartta görür.
-                            </p>
+                                data-i18n="how.steps.decide.description">Hangi teklifin neden daha uygun olduğuna dair önerileri inceleyin ve raporu ekibinizle paylaşın.</p>
                         </article>
                     </div>
                 </div>

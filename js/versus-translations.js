@@ -14,8 +14,8 @@ window.__versusTranslations = {
     },
     "hero": {
       "eyebrow": "Teklif ve Poliçe Karşılaştırma",
-      "title": "Teklifleri okuyun, farkları görün, kararı paylaşın.",
-      "description": "Versus AI, sigorta tekliflerini ve poliçe dosyalarını aynı çalışma alanında karşılaştırıp kontrollü karar raporuna dönüştürür.",
+      "title": "Teklifleri karşılaştırın, gerekçeli önerilerle karar verin.",
+      "description": "Versus AI, sigorta tekliflerini ve poliçeleri karşılaştırır; önemli farkları açıklar ve hangi teklifin neden daha uygun olduğuna dair gerekçeli öneriler sunar.",
       "primary_cta": "Kurumsal Demo Talep Et",
       "secondary_cta": "Ürün Akışını İzle",
       "stats": {
@@ -93,9 +93,9 @@ window.__versusTranslations = {
       }
     },
     "mobile_story": {
-      "eyebrow": "Mobil Ürün Akışı",
-      "title": "Mobilde ürün akışı daha sade sunulur.",
-      "description": "Belgeler, kritik farklar ve karar çıktısı kompakt bir değerlendirme akışı içinde gösterilir."
+      "eyebrow": "Karşılaştırma ve öneri",
+      "title": "Belgelerden gerekçeli önerilere.",
+      "description": "Teklif ve poliçeleri yükleyin, kritik farkları görün ve önerileri rapor halinde inceleyin."
     },
     "capabilities": {
       "eyebrow": "Ne Sağlar",
@@ -111,15 +111,15 @@ window.__versusTranslations = {
           "description": "Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, karar bağlamını da taşır."
         },
         "recommend": {
-          "title": "Karar süresini kısaltır",
-          "description": "Ekiplerin en uygun teklifi daha hızlı, daha kontrollü ve daha tutarlı değerlendirmesine yardımcı olur."
+          "title": "Gerekçeli öneri sunar",
+          "description": "Teklifleri analiz ederek hangi seçeneğin neden daha uygun olduğunu açıklar; önerisini karşılaştırma raporunda sunar."
         }
       }
     },
     "how": {
       "eyebrow": "İşleyiş",
       "title": "Kurumsal kullanım akışı üç adımda ilerler.",
-      "description": "Önce gerçek dosya tipi ve karar ihtiyacı netleşir, ardından pilot çalışma alanı ve canlı kullanım modeli kurulur.",
+      "description": "Belgelerinizi yükleyin, farkları inceleyin ve gerekçeli önerileri içeren raporu ekibinizle paylaşın.",
       "steps": {
         "upload": {
           "label": "01",
@@ -133,8 +133,8 @@ window.__versusTranslations = {
         },
         "decide": {
           "label": "03",
-          "title": "Karar raporunu paylaşın",
-          "description": "Ekibiniz hangi teklifin neden daha uygun olduğunu aynı standartta görür."
+          "title": "Önerileri değerlendirin ve paylaşın",
+          "description": "Hangi teklifin neden daha uygun olduğuna dair önerileri inceleyin ve raporu ekibinizle paylaşın."
         }
       }
     },
@@ -197,8 +197,8 @@ window.__versusTranslations = {
     },
     "hero": {
       "eyebrow": "Offer and Policy Comparison",
-      "title": "Read offers, see differences, share the decision.",
-      "description": "Versus AI compares insurance offers and policy files in one workspace, then turns them into controlled decision reports.",
+      "title": "Compare quotes. Decide with reasoned recommendations.",
+      "description": "Versus AI compares insurance quotes and policies, explains important differences, and offers reasoned recommendations on which quote is more suitable and why.",
       "primary_cta": "Request Enterprise Demo",
       "secondary_cta": "Watch Product Flow",
       "stats": {
@@ -276,9 +276,9 @@ window.__versusTranslations = {
       }
     },
     "mobile_story": {
-      "eyebrow": "Mobile Product Flow",
-      "title": "The mobile product flow is presented more simply.",
-      "description": "Documents, critical differences, and decision output are shown in a compact evaluation flow."
+      "eyebrow": "Comparison and recommendations",
+      "title": "From documents to reasoned recommendations.",
+      "description": "Upload quotes and policies, see the critical differences, and review recommendations in a report."
     },
     "capabilities": {
       "eyebrow": "What It Provides",
@@ -294,15 +294,15 @@ window.__versusTranslations = {
           "description": "Summarizes each difference with insurance impact and carries the decision context, not raw data alone."
         },
         "recommend": {
-          "title": "Shortens decision time",
-          "description": "Helps teams evaluate the right offer faster, with more control and consistency."
+          "title": "Offers reasoned recommendations",
+          "description": "Analyzes quotes and explains which option is more suitable and why, presenting its recommendation in the comparison report."
         }
       }
     },
     "how": {
       "eyebrow": "Process",
       "title": "Enterprise usage moves through three steps.",
-      "description": "First, the real file type and decision need are defined; then the pilot workspace and live usage model are set up.",
+      "description": "Upload your documents, review the differences, and share a report with reasoned recommendations with your team.",
       "steps": {
         "upload": {
           "label": "01",
@@ -316,8 +316,8 @@ window.__versusTranslations = {
         },
         "decide": {
           "label": "03",
-          "title": "Share the decision report",
-          "description": "Your team sees why an offer is stronger through the same standard."
+          "title": "Review and share recommendations",
+          "description": "Review recommendations explaining which quote is more suitable and why, and share the report with your team."
         }
       }
     },

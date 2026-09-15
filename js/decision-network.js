@@ -12,7 +12,7 @@ import {
 const STORY_LAYOUTS = Object.freeze([
     {
         nodes: [[-2.7, 0.8, 0.25], [-0.9, -0.35, 0.8], [0.9, 0.55, -0.15], [2.7, -0.45, 0.55]],
-        camera: [0, 0.35, 11.5], lookAt: [0.35, 0, 0], root: [2.35, 0, 0], rotation: [0, 0, 0], scale: 1,
+        camera: [0, 0.35, 11.5], lookAt: [0.35, 0, 0], root: [3.15, 0, 0], rotation: [0, 0, 0], scale: 0.78,
         connections: [0.55, 0.2, 0.16], satellites: 0, gates: 0, points: 0.42, highlight: 0, bend: 0.62
     },
     {
@@ -237,7 +237,7 @@ function initializeDecisionStory() {
 
     function cacheSectionMetrics() {
         storySections.forEach((section, index) => {
-            sectionOffsets[index] = section.offsetTop;
+            sectionOffsets[index] = section.getBoundingClientRect().top + window.scrollY;
             sectionHeights[index] = Math.max(1, section.offsetHeight);
         });
     }
@@ -297,29 +297,32 @@ function initializeDecisionStory() {
     }
 
     function updateScene(deltaSeconds, elapsedSeconds) {
-        const layout = STORY_LAYOUTS[activeStoryIndex];
-        const parallax = reducedMotion ? 0 : budget.pointerParallax;
+        const compact = window.innerWidth < 1024;
+        const layout = STORY_LAYOUTS[compact ? 0 : [0, 2, 4, 1, 6][activeStoryIndex]];
+        const heroFrame = !compact && activeStoryIndex === 0;
+        const viewWidth = 2 * layout.camera[2] * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.aspect;
+        const parallax = reducedMotion || compact ? 0 : budget.pointerParallax;
         const highlight = activeStoryIndex === 0
             ? activeStageIndex
-            : activeStoryIndex === 5 ? Math.min(2, Math.floor(sectionProgress * 3)) : layout.highlight;
+            : layout.highlight;
 
         pointerX = damp(pointerX, targetPointerX, 4.5, deltaSeconds);
         pointerY = damp(pointerY, targetPointerY, 4.5, deltaSeconds);
         camera.position.x = damp(camera.position.x, layout.camera[0] + pointerX * 0.22 * parallax, 3.2, deltaSeconds);
         camera.position.y = damp(camera.position.y, layout.camera[1] - pointerY * 0.16 * parallax, 3.2, deltaSeconds);
-        camera.position.z = damp(camera.position.z, layout.camera[2], 3.2, deltaSeconds);
+        camera.position.z = damp(camera.position.z, (compact ? 6.5 : layout.camera[2]), 3.2, deltaSeconds);
         cameraLookAt.x = damp(cameraLookAt.x, layout.lookAt[0], 3.2, deltaSeconds);
         cameraLookAt.y = damp(cameraLookAt.y, layout.lookAt[1], 3.2, deltaSeconds);
         cameraLookAt.z = damp(cameraLookAt.z, layout.lookAt[2], 3.2, deltaSeconds);
         camera.lookAt(cameraLookAt);
 
-        storyRoot.position.x = damp(storyRoot.position.x, layout.root[0], 3.5, deltaSeconds);
+        storyRoot.position.x = damp(storyRoot.position.x, (compact ? 0 : heroFrame ? viewWidth * 0.25 : layout.root[0]), 3.5, deltaSeconds);
         storyRoot.position.y = damp(storyRoot.position.y, layout.root[1], 3.5, deltaSeconds);
         storyRoot.position.z = damp(storyRoot.position.z, layout.root[2], 3.5, deltaSeconds);
         storyRoot.rotation.x = damp(storyRoot.rotation.x, layout.rotation[0], 3.5, deltaSeconds);
         storyRoot.rotation.y = damp(storyRoot.rotation.y, layout.rotation[1], 3.5, deltaSeconds);
         storyRoot.rotation.z = damp(storyRoot.rotation.z, layout.rotation[2], 3.5, deltaSeconds);
-        const rootScale = damp(storyRoot.scale.x, layout.scale, 3.5, deltaSeconds);
+        const rootScale = damp(storyRoot.scale.x, (compact ? 0.88 * Math.min(1, window.innerWidth / 390) : heroFrame ? viewWidth * 0.06 : layout.scale), 3.5, deltaSeconds);
         storyRoot.scale.setScalar(rootScale);
 
         nodeGroups.forEach((group, index) => {
@@ -406,15 +409,16 @@ function initializeDecisionStory() {
         secondaryGeometry.setDrawRange(0, budget.secondaryPoints);
         cacheSectionMetrics();
         updateStoryTarget();
+        handleDocumentVisibility();
     }
 
     function handleVisibility(entries) {
-        isVisible = (entries[0]?.isIntersecting ?? true) && !document.hidden;
+        isVisible = (window.innerWidth >= 1024 || (entries[0]?.isIntersecting ?? true)) && !document.hidden;
         if (isVisible) start(); else pause();
     }
 
     function handleDocumentVisibility() {
-        isVisible = !document.hidden;
+        isVisible = !document.hidden && (window.innerWidth >= 1024 || hero.getBoundingClientRect().bottom > 0);
         if (isVisible) start(); else pause();
     }
 
@@ -434,6 +438,7 @@ function initializeDecisionStory() {
         window.removeEventListener("pointermove", updatePointer);
         window.removeEventListener("resize", resize);
         document.removeEventListener("visibilitychange", handleDocumentVisibility);
+        document.removeEventListener("landing:language", resize);
         canvas.removeEventListener("webglcontextlost", handleContextLost);
         geometries.forEach((geometry) => geometry.dispose());
         materials.forEach((material) => material.dispose());
@@ -452,6 +457,7 @@ function initializeDecisionStory() {
     window.addEventListener("scroll", updateStoryTarget, { passive: true });
     window.addEventListener("resize", resize, { passive: true });
     document.addEventListener("visibilitychange", handleDocumentVisibility);
+    document.addEventListener("landing:language", resize);
     canvas.addEventListener("webglcontextlost", handleContextLost);
     if (!reducedMotion) window.addEventListener("pointermove", updatePointer, { passive: true });
 
@@ -461,7 +467,7 @@ function initializeDecisionStory() {
     }
     if ("IntersectionObserver" in window) {
         visibilityObserver = new IntersectionObserver(handleVisibility, { threshold: 0.001 });
-        visibilityObserver.observe(document.body);
+        visibilityObserver.observe(hero);
     } else {
         start();
     }

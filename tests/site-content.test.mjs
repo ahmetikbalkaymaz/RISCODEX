@@ -72,3 +72,26 @@ test("standalone locale files match the embedded landing translations", async ()
     assert.equal(legacyTr.footer.copyright, "&copy; 2026 RISCODEX Teknoloji A.Ş.");
     assert.equal(legacyEn.footer.copyright, "&copy; 2026 RISCODEX Technology Inc.");
 });
+
+
+test("company homepage has two products, embedded Tools, and only LocateLoss as upcoming", async () => {
+    const html = await read("index.html");
+    assert.equal((html.match(/data-product="/g) || []).length, 2);
+    const versus = html.match(/<article[^>]*data-product="versus"[\s\S]*?<\/article>/)?.[0];
+    assert.ok(versus, "Versus AI has a dedicated product section");
+    assert.match(versus, /platform\.modules\.tools\.commercial/);
+    assert.match(versus, /platform\.modules\.tools\.fire/);
+    assert.match(html, /LocateLoss/);
+    assert.doesNotMatch(html, /platform\.future|platform\.legend|id="problem"|id="operating-model"|<video/);
+});
+
+test("homepage navigation and hero actions reach real company sections", async () => {
+    const html = await read("index.html");
+    const ids = new Set([...html.matchAll(/id="([^"]+)"/g)].map((match) => match[1]));
+    for (const [, target] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(target), target);
+    const hero = html.match(/<section[^>]*data-story-section="hero"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(hero);
+    assert.match(hero, /href="#platform"/);
+    assert.match(hero, /href="#access-request"/);
+    assert.doesNotMatch(hero, /href="https:\/\/tariffeq/);
+});

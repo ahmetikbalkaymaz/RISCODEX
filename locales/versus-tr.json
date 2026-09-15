@@ -13,8 +13,8 @@
   },
   "hero": {
     "eyebrow": "Teklif ve Poliçe Karşılaştırma",
-    "title": "Teklifleri okuyun, farkları görün, kararı paylaşın.",
-    "description": "Versus AI, sigorta tekliflerini ve poliçe dosyalarını aynı çalışma alanında karşılaştırıp kontrollü karar raporuna dönüştürür.",
+    "title": "Teklifleri karşılaştırın, gerekçeli önerilerle karar verin.",
+    "description": "Versus AI, sigorta tekliflerini ve poliçeleri karşılaştırır; önemli farkları açıklar ve hangi teklifin neden daha uygun olduğuna dair gerekçeli öneriler sunar.",
     "primary_cta": "Kurumsal Demo Talep Et",
     "secondary_cta": "Ürün Akışını İzle",
     "stats": {
@@ -92,9 +92,9 @@
     }
   },
   "mobile_story": {
-    "eyebrow": "Mobil Ürün Akışı",
-    "title": "Mobilde ürün akışı daha sade sunulur.",
-    "description": "Belgeler, kritik farklar ve karar çıktısı kompakt bir değerlendirme akışı içinde gösterilir."
+    "eyebrow": "Karşılaştırma ve öneri",
+    "title": "Belgelerden gerekçeli önerilere.",
+    "description": "Teklif ve poliçeleri yükleyin, kritik farkları görün ve önerileri rapor halinde inceleyin."
   },
   "capabilities": {
     "eyebrow": "Ne Sağlar",
@@ -110,15 +110,15 @@
         "description": "Her farkı sigorta etkisiyle birlikte özetler; yalnızca veriyi değil, karar bağlamını da taşır."
       },
       "recommend": {
-        "title": "Karar süresini kısaltır",
-        "description": "Ekiplerin en uygun teklifi daha hızlı, daha kontrollü ve daha tutarlı değerlendirmesine yardımcı olur."
+        "title": "Gerekçeli öneri sunar",
+        "description": "Teklifleri analiz ederek hangi seçeneğin neden daha uygun olduğunu açıklar; önerisini karşılaştırma raporunda sunar."
       }
     }
   },
   "how": {
     "eyebrow": "İşleyiş",
     "title": "Kurumsal kullanım akışı üç adımda ilerler.",
-    "description": "Önce gerçek dosya tipi ve karar ihtiyacı netleşir, ardından pilot çalışma alanı ve canlı kullanım modeli kurulur.",
+    "description": "Belgelerinizi yükleyin, farkları inceleyin ve gerekçeli önerileri içeren raporu ekibinizle paylaşın.",
     "steps": {
       "upload": {
         "label": "01",
@@ -132,8 +132,8 @@
       },
       "decide": {
         "label": "03",
-        "title": "Karar raporunu paylaşın",
-        "description": "Ekibiniz hangi teklifin neden daha uygun olduğunu aynı standartta görür."
+        "title": "Önerileri değerlendirin ve paylaşın",
+        "description": "Hangi teklifin neden daha uygun olduğuna dair önerileri inceleyin ve raporu ekibinizle paylaşın."
       }
     }
   },
