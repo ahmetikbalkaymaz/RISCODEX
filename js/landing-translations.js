@@ -118,7 +118,8 @@ window.__landingTranslations = {
         "title": "Versus Tools",
         "tools": {
           "commercial": "Ticari/Sınai poliçe primi hesaplama",
-          "fire": "Yangın abonman hesaplama"
+          "fire": "Yangın abonman hesaplama",
+          "check": "Versus Check"
         },
         "caption": "Versus AI içindeki hesaplama araçları"
       },
@@ -279,7 +280,8 @@ window.__landingTranslations = {
         "title": "Versus Tools",
         "tools": {
           "commercial": "Commercial/industrial policy premium calculation",
-          "fire": "Fire declaration policy calculation"
+          "fire": "Fire declaration policy calculation",
+          "check": "Versus Check"
         },
         "caption": "Calculation tools included in Versus AI"
       },

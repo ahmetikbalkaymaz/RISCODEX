@@ -117,7 +117,8 @@
       "title": "Versus Tools",
       "tools": {
         "commercial": "Commercial/industrial policy premium calculation",
-        "fire": "Fire declaration policy calculation"
+        "fire": "Fire declaration policy calculation",
+        "check": "Versus Check"
       },
       "caption": "Calculation tools included in Versus AI"
     },
