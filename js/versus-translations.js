@@ -74,6 +74,7 @@ window.__versusTranslations = {
       "description": "Versus Tools, hesaplama araçlarını Versus AI içinde bir araya getirir.",
       "commercial": "Ticari/Sınai poliçe primi hesaplama",
       "fire": "Yangın abonman hesaplama",
+      "check": "Versus Check",
       "included": "Versus AI içindeki hesaplama araçları"
     },
     "lines": {
@@ -178,6 +179,7 @@ window.__versusTranslations = {
       "description": "Versus Tools brings calculation tools together within Versus AI.",
       "commercial": "Commercial/industrial policy premium calculation",
       "fire": "Fire declaration policy calculation",
+      "check": "Versus Check",
       "included": "Calculation tools within Versus AI"
     },
     "lines": {
