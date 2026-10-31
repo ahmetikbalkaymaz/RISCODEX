@@ -123,6 +123,42 @@
     },
     "upcoming": {
       "status": "Coming soon"
+    },
+    "preview": {
+      "label": "ILLUSTRATIVE EXAMPLE",
+      "tariff": {
+        "aria": "Illustrative TariffEQ calculation",
+        "sum_label": "Sum insured",
+        "sum": "TRY 25 million",
+        "zone_label": "Risk zone",
+        "zone": "Zone 1",
+        "build_label": "Construction",
+        "build": "Reinforced concrete",
+        "premium_label": "Annual premium",
+        "premium": "TRY 41,250",
+        "scenario_a": "2% deductible",
+        "scenario_a_value": "TRY 41,250",
+        "scenario_b": "5% deductible",
+        "scenario_b_value": "TRY 33,000",
+        "check": "Tariff check passed"
+      },
+      "versus": {
+        "aria": "Illustrative Versus AI comparison",
+        "a": "Quote A",
+        "b": "Quote B",
+        "limit": "Limit",
+        "limit_a": "TRY 40 million",
+        "limit_b": "TRY 40 million",
+        "deductible": "Deductible",
+        "deductible_a": "2%",
+        "deductible_b": "5%",
+        "quake": "Earthquake",
+        "quake_a": "Included",
+        "quake_b": "Excluded",
+        "flag": "Critical difference",
+        "verdict": "Recommendation: Quote A",
+        "verdict_reason": "Includes earthquake cover with a lower deductible."
+      }
     }
   },
   "solutions": {
