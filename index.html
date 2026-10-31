@@ -8,9 +8,9 @@
  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
  <script>
- // Decide before first paint whether this visit opens with the logo intro: once per session, never with reduced motion or a deep link.
+ // Decide before first paint whether this visit opens with the logo intro: once per session, never with reduced motion, a deep link or a background tab.
  (() => { try {
-  if (location.hash || matchMedia('(prefers-reduced-motion: reduce)').matches || sessionStorage.getItem('riscodex-intro-seen')) return;
+  if (location.hash || document.hidden || matchMedia('(prefers-reduced-motion: reduce)').matches || sessionStorage.getItem('riscodex-intro-seen')) return;
   sessionStorage.setItem('riscodex-intro-seen', '1');
   document.documentElement.classList.add('brand-intro-active');
   setTimeout(() => document.documentElement.classList.remove('brand-intro-active', 'brand-intro-landing'), 4000);

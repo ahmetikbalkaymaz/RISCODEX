@@ -10,7 +10,7 @@ function classList() {
     const classes = new Set();
     return { add: (...names) => names.forEach((name) => classes.add(name)), remove: (...names) => names.forEach((name) => classes.delete(name)), contains: (name) => classes.has(name) };
 }
-function runHead({ hash = '', reduced = false, seen = null, storageThrows = false } = {}) {
+function runHead({ hash = '', hidden = false, reduced = false, seen = null, storageThrows = false } = {}) {
     const stored = {};
     const root = { classList: classList() };
     const sessionStorage = {
@@ -18,7 +18,7 @@ function runHead({ hash = '', reduced = false, seen = null, storageThrows = fals
         setItem(key, value) { stored[key] = value; }
     };
     const timers = [];
-    runInNewContext(headScript, { location: { hash }, matchMedia: () => ({ matches: reduced }), sessionStorage, document: { documentElement: root }, setTimeout: (callback, delay) => timers.push({ callback, delay }) });
+    runInNewContext(headScript, { location: { hash }, matchMedia: () => ({ matches: reduced }), sessionStorage, document: { documentElement: root, hidden }, setTimeout: (callback, delay) => timers.push({ callback, delay }) });
     return { active: root.classList.contains('brand-intro-active'), stored, timers, root };
 }
 test('the head script plays the intro once per session with a failsafe', () => {
@@ -30,8 +30,9 @@ test('the head script plays the intro once per session with a failsafe', () => {
     assert.equal(first.root.classList.contains('brand-intro-active'), false);
     assert.equal(runHead({ seen: '1' }).active, false);
 });
-test('the intro is skipped for reduced motion, deep links and blocked storage', () => {
+test('the intro is skipped for reduced motion, deep links, background tabs and blocked storage', () => {
     assert.equal(runHead({ reduced: true }).active, false);
+    assert.equal(runHead({ hidden: true }).active, false);
     assert.equal(runHead({ hash: '#platform' }).active, false);
     assert.equal(runHead({ storageThrows: true }).active, false);
 });
