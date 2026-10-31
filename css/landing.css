@@ -246,23 +246,10 @@ p.hero-description { animation-delay: .13s; }
 .brand-intro.is-settled { pointer-events: none; }
 .brand-intro.is-settled svg { opacity: 0; transition: opacity .22s ease; }
 .brand-intro svg { position: relative; display: block; width: min(440px, 64vw); height: auto; overflow: visible; color: #050505; transform-origin: 0 0; will-change: transform; }
-.brand-intro .lockup-network { display: none; }
-.brand-intro .lockup-mark > * { fill: currentColor; fill-opacity: 0; stroke: var(--accent); stroke-width: 10; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: intro-draw .8s var(--ease) forwards, intro-fill .45s .55s ease forwards; }
-.brand-intro .lockup-mark .is-accent { fill: #223c90; animation-delay: .12s, .62s; }
-.brand-intro .lockup-word > * { fill: currentColor; opacity: 0; transform: translateY(90px); transform-box: fill-box; animation: intro-letter .45s var(--ease) forwards; animation-delay: calc(.45s + var(--i) * 40ms); }
-.brand-intro.is-skipping :is(.lockup-mark, .lockup-word) > * { animation-duration: .01s; animation-delay: 0s; }
+.intro-mark > * { fill: currentColor; fill-opacity: 0; stroke: var(--accent); stroke-width: 10; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: intro-draw .8s var(--ease) forwards, intro-fill .45s .55s ease forwards; }
+.intro-mark .is-accent { fill: #223c90; animation-delay: .12s, .62s; }
+.intro-word > * { fill: currentColor; opacity: 0; transform: translateY(90px); transform-box: fill-box; animation: intro-letter .45s var(--ease) forwards; animation-delay: calc(.45s + var(--i) * 40ms); }
+.brand-intro.is-skipping :is(.intro-mark, .intro-word) > * { animation-duration: .01s; animation-delay: 0s; }
 @keyframes intro-draw { to { stroke-dashoffset: 0; } }
 @keyframes intro-fill { to { fill-opacity: 1; stroke-opacity: 0; } }
 @keyframes intro-letter { to { opacity: 1; transform: none; } }
-/* Footer logo: --p (0 → 1) follows how far it has scrolled into view; without JS it rests at 1. */
-.footer-mark { --p: 1; margin-top: 104px; color: #fff; }
-.footer-mark svg { display: block; width: 100%; height: auto; overflow: visible; }
-.footer-mark .lockup-mark > * { --draw: clamp(0, (var(--p) - .3) / .3, 1); --fill: clamp(0, (var(--p) - .5) / .2, 1); fill: currentColor; fill-opacity: var(--fill); stroke: #86a9ed; stroke-width: 6; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--draw)); stroke-opacity: calc(1 - var(--fill)); }
-.footer-mark .lockup-mark .is-accent { fill: #3d6fe3; }
-.footer-mark .lockup-word > * { --rise: clamp(0, (var(--p) - .55 - var(--i) * .04) / .16, 1); fill: currentColor; opacity: var(--rise); transform: translateY(calc((1 - var(--rise)) * 140px)); }
-.footer-mark .lockup-link { fill: none; stroke: #86a9ed; stroke-width: 3; stroke-dasharray: 10 14; opacity: calc(.75 - var(--p) * 4.5); }
-.footer-mark .lockup-node { --merge: clamp(0, (var(--p) - .08 - var(--k) * .04) / .3, 1); fill: #86a9ed; opacity: calc((1 - var(--merge)) * 4); transform: translate(calc((1 - var(--merge)) * var(--dx) * 1px), calc((1 - var(--merge)) * var(--dy) * 1px)); }
-.footer-mark .node-halo { fill: #3d6fe3; opacity: .28; }
-.footer-mark + .footer-bottom { margin-top: 56px; }
-@media (max-width: 1023px) { .footer-mark { margin-top: 72px; } }
-@media (max-width: 639px) { .footer-mark { margin-top: 52px; } .footer-mark + .footer-bottom { margin-top: 32px; } }
