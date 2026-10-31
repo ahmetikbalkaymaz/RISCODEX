@@ -7,12 +7,22 @@
  <link rel="icon" type="image/svg+xml" href="assets/Riscodex_PP_Lockup_Inverse.svg">
  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
- <link rel="stylesheet" href="css/landing.css?v=20260915">
+ <script>
+ // Decide before first paint whether this visit opens with the logo intro: once per session, never with reduced motion or a deep link.
+ (() => { try {
+  if (location.hash || matchMedia('(prefers-reduced-motion: reduce)').matches || sessionStorage.getItem('riscodex-intro-seen')) return;
+  sessionStorage.setItem('riscodex-intro-seen', '1');
+  document.documentElement.classList.add('brand-intro-active');
+  setTimeout(() => document.documentElement.classList.remove('brand-intro-active', 'brand-intro-landing'), 4000);
+ } catch { /* Without session storage the page simply opens without the intro. */ } })();
+ </script>
+ <link rel="stylesheet" href="css/landing.css?v=20261101">
  <script src="js/landing-translations.js?v=20260915"></script>
  <script defer src="js/landing-effects.js?v=20260915"></script>
  <script defer src="js/landing.js?v=20260915"></script>
+ <script defer src="js/brand-intro.js?v=20261101"></script>
  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.184.0/build/three.module.js"}}</script>
- <script type="module" src="js/decision-network.js?v=20260915"></script>
+ <script type="module" src="js/decision-network.js?v=20261101"></script>
 </head>
 <body>
  <a href="#main" class="skip-link"><span data-lang-copy="tr">İçeriğe geç</span><span data-lang-copy="en" hidden>Skip to content</span></a>

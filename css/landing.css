@@ -231,3 +231,25 @@ p.hero-description { animation-delay: .13s; }
  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
  .reveal-pending, .hero-enter { opacity: 1; transform: none; }
 }
+/* Brand intro: only present when the head script opted in for this session. */
+.brand-intro-active body { overflow: hidden; }
+.brand-intro-active body::after { content: ''; position: fixed; inset: 0; z-index: 59; background: var(--page); }
+.brand-intro-active .hero-enter { animation-play-state: paused; }
+.brand-intro-landing #navbar .brand img { opacity: 0; }
+#navbar .brand img { transition: opacity .22s ease; }
+.brand-intro { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; }
+/* Opacity and transform only, so the hand-over stays smooth while the 3D scene boots. */
+.brand-intro::before { content: ''; position: absolute; inset: 0; background: var(--page); transition: opacity .55s var(--ease); }
+.brand-intro.is-leaving::before { opacity: 0; }
+.brand-intro-landing .decision-network-fallback { visibility: hidden; }
+/* The overlay keeps catching pointer events until it settles, so a skip click never lands on a link below. */
+.brand-intro.is-settled { pointer-events: none; }
+.brand-intro.is-settled svg { opacity: 0; transition: opacity .22s ease; }
+.brand-intro svg { position: relative; display: block; width: min(440px, 64vw); height: auto; overflow: visible; color: #050505; transform-origin: 0 0; will-change: transform; }
+.intro-mark > * { fill: currentColor; fill-opacity: 0; stroke: var(--accent); stroke-width: 10; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: intro-draw .8s var(--ease) forwards, intro-fill .45s .55s ease forwards; }
+.intro-mark .is-accent { fill: #223c90; animation-delay: .12s, .62s; }
+.intro-word > * { fill: currentColor; opacity: 0; transform: translateY(90px); transform-box: fill-box; animation: intro-letter .45s var(--ease) forwards; animation-delay: calc(.45s + var(--i) * 40ms); }
+.brand-intro.is-skipping :is(.intro-mark, .intro-word) > * { animation-duration: .01s; animation-delay: 0s; }
+@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-fill { to { fill-opacity: 1; stroke-opacity: 0; } }
+@keyframes intro-letter { to { opacity: 1; transform: none; } }
