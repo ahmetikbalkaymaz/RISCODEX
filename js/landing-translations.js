@@ -17,15 +17,6 @@ window.__landingTranslations = {
       "description": "Riscodex; prim hesaplama, teklif ve poliçe karşılaştırma, analiz ve gerekçeli öneriler sunan sigorta teknolojileri geliştirir.",
       "primary_cta": "Ürünlerimizi Keşfedin",
       "secondary_cta": "Bize Ulaşın",
-      "decision_network": {
-        "aria": "Teklif, karşılaştırma, kontrol ve poliçe aşamalarından oluşan Riscodex karar akışı",
-        "stages": {
-          "offer": "Teklif",
-          "compare": "Karşılaştırma",
-          "control": "Kontrol",
-          "policy": "Poliçe"
-        }
-      },
       "title_html": "Sigorta operasyonları<br>için <span class=\"hero-metal\">akıllı yazılım<br>çözümleri.</span>"
     },
     "about": {
@@ -215,15 +206,6 @@ window.__landingTranslations = {
       "description": "Riscodex develops insurance technology for premium calculation, quote and policy comparison, analysis, and reasoned recommendations.",
       "primary_cta": "Explore Our Products",
       "secondary_cta": "Contact Us",
-      "decision_network": {
-        "aria": "Riscodex decision flow from offer through comparison and control to policy",
-        "stages": {
-          "offer": "Offer",
-          "compare": "Comparison",
-          "control": "Control",
-          "policy": "Policy"
-        }
-      },
       "title_html": "Intelligent software<br>for <span class=\"hero-metal\">insurance<br>operations.</span>"
     },
     "about": {

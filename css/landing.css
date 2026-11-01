@@ -57,27 +57,8 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .hero-footer > a { font-size: 22px; padding: 10px 24px; }
 .hero-footer-note { font-size: 10px; }
 .brand-hero-visual { position: absolute; inset: 0 0 80px auto; width: 48%; pointer-events: none; z-index: 5; }
+.risk-field { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .brand-hero-visual::before { content: ''; position: absolute; inset: 20% 0 12%; opacity: .3; background: repeating-linear-gradient(0deg, #b9cbe4 0 1px, transparent 1px 85px); mask-image: linear-gradient(90deg, transparent, black); }
-.decision-story-layer { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-.decision-story-layer:not([data-active-story="hero"]) { opacity: .07; }
-#decision-network { width: 100%; height: 100%; display: block; opacity: 0; transition: opacity .6s; }
-.decision-story-layer.is-ready #decision-network { opacity: 1; }
-.decision-network-shell { position: absolute; inset: 23% 0 15%; }
-.decision-network-labels { position: absolute; inset: 0; }
-.decision-network-label { position: absolute; display: grid; gap: 5px; font-size: 10px; opacity: .6; transition: opacity .3s; }
-.decision-network-label span { color: var(--accent); font-size: 10px; }
-.decision-network-label strong { font-size: 10px; font-weight: 600; }
-.decision-network-label:nth-child(n) { bottom: 5%; }
-.decision-network-label:nth-child(1) { left: 7%; }
-.decision-network-label:nth-child(2) { left: 33%; }
-.decision-network-label:nth-child(3) { left: 57%; }
-.decision-network-label:nth-child(4) { left: 81%; }
-.decision-network-label.is-active { opacity: 1; }
-.decision-network-label.is-active::after { content: ''; height: 2px; width: 20px; background: var(--accent); margin-top: 3px; }
-.decision-network-fallback { position: absolute; inset: 5%; display: flex; align-items: center; gap: 8px; justify-content: center; }
-.decision-network-fallback span { font-size: 10px; background: white; border: 1px solid #ccd9ef; padding: 18px 10px; border-radius: 50%; }
-.decision-network-fallback i { width: 20px; height: 1px; background: #8aa9dc; }
-.decision-network-shell.is-ready .decision-network-fallback { display: none; }
 .section { position: relative; z-index: 10; padding-block: 100px; }
 .section-heading { max-width: 730px; margin-bottom: 58px; }
 h2 { font-size: clamp(2rem, 3vw, 2.75rem); line-height: 1.15; letter-spacing: -.045em; font-weight: 600; margin-top: 18px; }
@@ -172,14 +153,6 @@ p.hero-description { animation-delay: .13s; }
  .hero-title { font-size: clamp(2.2rem,5.6vw,3.7rem); }
  .hero-description { max-width: 570px; }
  .brand-hero-visual { position: relative; inset: auto; width: 100%; height: 240px; }
- .decision-story-layer { position: absolute; inset: 0; }
- .decision-story-layer[data-active-story] { opacity: 1; }
- .decision-network-shell { inset: 0; }
- .decision-network-label:nth-child(n) { top: auto; bottom: 7%; }
- .decision-network-label:nth-child(1) { left: 12%; }
- .decision-network-label:nth-child(2) { left: 35%; }
- .decision-network-label:nth-child(3) { left: 59%; }
- .decision-network-label:nth-child(4) { left: 80%; }
  .hero-footer { min-height: 68px; }
  .section { padding-block: 72px; }
  .section-heading { margin-bottom: 40px; }
@@ -275,10 +248,9 @@ p.hero-description { animation-delay: .13s; }
 .brand-intro-landing #navbar .brand img { opacity: 0; }
 #navbar .brand img { transition: opacity .22s ease; }
 .brand-intro { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; }
-/* Opacity and transform only, so the hand-over stays smooth while the 3D scene boots. */
+/* Opacity and transform only, so the hand-over stays on the compositor. */
 .brand-intro::before { content: ''; position: absolute; inset: 0; background: var(--page); transition: opacity .55s var(--ease); }
 .brand-intro.is-leaving::before { opacity: 0; }
-.brand-intro-landing .decision-network-fallback { visibility: hidden; }
 /* The overlay keeps catching pointer events until it settles, so a skip click never lands on a link below. */
 .brand-intro.is-settled { pointer-events: none; }
 .brand-intro.is-settled svg { opacity: 0; transition: opacity .22s ease; }

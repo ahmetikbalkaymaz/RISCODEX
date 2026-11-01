@@ -78,7 +78,7 @@
                 { transform: `translate(${to.left - from.left}px, ${to.top - from.top}px) scale(${to.width / from.width})` }
             ], { duration, easing: 'cubic-bezier(.7, 0, .2, 1)', fill: 'forwards' });
         }
-        // Announced after the flight starts, so the 3D scene boots behind a running compositor animation.
+        // Announced after the flight starts; the hero points begin settling into the R as the page appears.
         document.dispatchEvent(new Event('riscodex:intro-reveal'));
     }
 
@@ -86,7 +86,7 @@
 
     root.classList.add('brand-intro-landing');
     document.body.append(intro);
-    // Fly once the last letter has settled; CSS animations can start late while the 3D scene boots.
+    // Fly once the last letter has settled; CSS animations can start late on a busy main thread.
     let timer = window.setTimeout(() => land(false), 3000);
     intro.querySelector('.intro-word > :last-child').addEventListener('animationend', () => {
         clearTimeout(timer);

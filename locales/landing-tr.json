@@ -16,15 +16,6 @@
     "description": "Riscodex; prim hesaplama, teklif ve poliçe karşılaştırma, analiz ve gerekçeli öneriler sunan sigorta teknolojileri geliştirir.",
     "primary_cta": "Ürünlerimizi Keşfedin",
     "secondary_cta": "Bize Ulaşın",
-    "decision_network": {
-      "aria": "Teklif, karşılaştırma, kontrol ve poliçe aşamalarından oluşan Riscodex karar akışı",
-      "stages": {
-        "offer": "Teklif",
-        "compare": "Karşılaştırma",
-        "control": "Kontrol",
-        "policy": "Poliçe"
-      }
-    },
     "title_html": "Sigorta operasyonları<br>için <span class=\"hero-metal\">akıllı yazılım<br>çözümleri.</span>"
   },
   "about": {
