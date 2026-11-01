@@ -125,6 +125,42 @@ window.__landingTranslations = {
       },
       "upcoming": {
         "status": "Yakında"
+      },
+      "preview": {
+        "label": "TEMSİLİ ÖRNEK",
+        "tariff": {
+          "aria": "Temsili TariffEQ hesaplaması",
+          "sum_label": "Bina bedeli",
+          "sum": "25 milyon TL",
+          "zone_label": "Risk bölgesi",
+          "zone": "1. bölge",
+          "build_label": "Yapı tarzı",
+          "build": "Betonarme",
+          "premium_label": "Yıllık prim",
+          "premium": "41.250 TL",
+          "scenario_a": "%2 muafiyet",
+          "scenario_a_value": "41.250 TL",
+          "scenario_b": "%5 muafiyet",
+          "scenario_b_value": "33.000 TL",
+          "check": "Tarife kontrolü tamam"
+        },
+        "versus": {
+          "aria": "Temsili Versus AI karşılaştırması",
+          "a": "Teklif A",
+          "b": "Teklif B",
+          "limit": "Limit",
+          "limit_a": "40 milyon TL",
+          "limit_b": "40 milyon TL",
+          "deductible": "Muafiyet",
+          "deductible_a": "%2",
+          "deductible_b": "%5",
+          "quake": "Deprem",
+          "quake_a": "Dahil",
+          "quake_b": "Hariç",
+          "flag": "Kritik fark",
+          "verdict": "Öneri: Teklif A",
+          "verdict_reason": "Deprem teminatı dahil, muafiyeti daha düşük."
+        }
       }
     },
     "solutions": {
@@ -287,6 +323,42 @@ window.__landingTranslations = {
       },
       "upcoming": {
         "status": "Coming soon"
+      },
+      "preview": {
+        "label": "ILLUSTRATIVE EXAMPLE",
+        "tariff": {
+          "aria": "Illustrative TariffEQ calculation",
+          "sum_label": "Sum insured",
+          "sum": "TRY 25 million",
+          "zone_label": "Risk zone",
+          "zone": "Zone 1",
+          "build_label": "Construction",
+          "build": "Reinforced concrete",
+          "premium_label": "Annual premium",
+          "premium": "TRY 41,250",
+          "scenario_a": "2% deductible",
+          "scenario_a_value": "TRY 41,250",
+          "scenario_b": "5% deductible",
+          "scenario_b_value": "TRY 33,000",
+          "check": "Tariff check passed"
+        },
+        "versus": {
+          "aria": "Illustrative Versus AI comparison",
+          "a": "Quote A",
+          "b": "Quote B",
+          "limit": "Limit",
+          "limit_a": "TRY 40 million",
+          "limit_b": "TRY 40 million",
+          "deductible": "Deductible",
+          "deductible_a": "2%",
+          "deductible_b": "5%",
+          "quake": "Earthquake",
+          "quake_a": "Included",
+          "quake_b": "Excluded",
+          "flag": "Critical difference",
+          "verdict": "Recommendation: Quote A",
+          "verdict_reason": "Includes earthquake cover with a lower deductible."
+        }
       }
     },
     "solutions": {

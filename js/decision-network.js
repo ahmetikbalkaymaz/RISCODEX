@@ -2,6 +2,7 @@ import * as THREE from "three";
 import {
     STAGES,
     STORY_SECTION_IDS,
+    clamp01,
     damp,
     getActiveStageIndex,
     getSceneBudget,
@@ -55,6 +56,7 @@ const heroOverlay = document.querySelector(".decision-network-shell");
 const storySections = STORY_SECTION_IDS.map((id) => document.querySelector(`[data-story-section="${id}"]`));
 const labels = Array.from(document.querySelectorAll(".decision-network-label"));
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const INTRO_UNFOLD_SECONDS = 1.3;
 
 function activateFallback() {
     shell?.classList.remove("is-ready");
@@ -63,15 +65,35 @@ function activateFallback() {
     fallback?.removeAttribute("aria-hidden");
 }
 
-if (shell && canvas && fallback && hero && storySections.every(Boolean)) {
+// When the brand intro plays, the network boots after it and unfolds from its centre.
+const introRoot = document.documentElement;
+const unfoldAfterIntro = introRoot.classList.contains("brand-intro-active") || introRoot.classList.contains("brand-intro-landing");
+
+function bootDecisionStory() {
     try {
-        initializeDecisionStory();
+        initializeDecisionStory(unfoldAfterIntro);
     } catch (error) {
         activateFallback();
     }
 }
 
-function initializeDecisionStory() {
+if (shell && canvas && fallback && hero && storySections.every(Boolean)) {
+    if (introRoot.classList.contains("brand-intro-active")) {
+        // WebGL setup blocks the main thread, so it waits until the intro has handed over to the page.
+        let booted = false;
+        const bootOnce = () => {
+            if (booted) return;
+            booted = true;
+            window.requestAnimationFrame(() => window.setTimeout(bootDecisionStory));
+        };
+        document.addEventListener("riscodex:intro-reveal", bootOnce, { once: true });
+        window.setTimeout(bootOnce, 4000);
+    } else {
+        bootDecisionStory();
+    }
+}
+
+function initializeDecisionStory(unfoldFromCentre) {
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: "high-performance" });
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 100);
@@ -113,6 +135,7 @@ function initializeDecisionStory() {
     let isDestroyed = false;
     let resizeObserver = null;
     let visibilityObserver = null;
+    const unfoldStart = unfoldFromCentre ? performance.now() / 1000 : -Infinity;
 
     renderer.setClearColor(0xf6f8fb, 0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -305,6 +328,8 @@ function initializeDecisionStory() {
         const highlight = activeStoryIndex === 0
             ? activeStageIndex
             : layout.highlight;
+        const unfold = clamp01((elapsedSeconds - unfoldStart) / INTRO_UNFOLD_SECONDS);
+        const spread = 1 - (1 - unfold) ** 3;
 
         pointerX = damp(pointerX, targetPointerX, 4.5, deltaSeconds);
         pointerY = damp(pointerY, targetPointerY, 4.5, deltaSeconds);
@@ -327,11 +352,11 @@ function initializeDecisionStory() {
 
         nodeGroups.forEach((group, index) => {
             const target = layout.nodes[index];
-            group.position.x = damp(group.position.x, target[0], 4.2, deltaSeconds);
-            group.position.y = damp(group.position.y, target[1], 4.2, deltaSeconds);
-            group.position.z = damp(group.position.z, target[2], 4.2, deltaSeconds);
+            group.position.x = damp(group.position.x, target[0] * spread, 4.2, deltaSeconds);
+            group.position.y = damp(group.position.y, target[1] * spread, 4.2, deltaSeconds);
+            group.position.z = damp(group.position.z, target[2] * spread, 4.2, deltaSeconds);
             const isHighlighted = index === highlight;
-            const nodeScale = damp(group.scale.x, isHighlighted ? 1.2 : 1, 5.5, deltaSeconds);
+            const nodeScale = damp(group.scale.x, (isHighlighted ? 1.2 : 1) * (0.35 + 0.65 * spread), 5.5, deltaSeconds);
             group.scale.setScalar(nodeScale);
             if (!reducedMotion) {
                 group.rotation.y += deltaSeconds * (isHighlighted ? 0.28 : 0.1);
@@ -345,8 +370,8 @@ function initializeDecisionStory() {
 
         connections.forEach((connection, index) => {
             updateDynamicConnection(connection, index, layout.bend);
-            connection.material.opacity = damp(connection.material.opacity, layout.connections[index], 5, deltaSeconds);
-            const markersVisible = layout.connections[index] > 0.35 && !reducedMotion;
+            connection.material.opacity = damp(connection.material.opacity, layout.connections[index] * spread, 5, deltaSeconds);
+            const markersVisible = layout.connections[index] > 0.35 && spread > 0.9 && !reducedMotion;
             connection.markers.forEach((marker) => {
                 marker.material.opacity = damp(marker.material.opacity, markersVisible ? 0.9 : 0, 7, deltaSeconds);
                 if (markersVisible) {
@@ -369,7 +394,7 @@ function initializeDecisionStory() {
             if (!reducedMotion) gate.rotation.z = elapsedSeconds * 0.04 * (index % 2 === 0 ? 1 : -1);
         });
 
-        secondaryMaterial.opacity = damp(secondaryMaterial.opacity, layout.points, 5, deltaSeconds);
+        secondaryMaterial.opacity = damp(secondaryMaterial.opacity, layout.points * spread, 5, deltaSeconds);
         secondaryPointCloud.rotation.y = reducedMotion ? 0 : elapsedSeconds * 0.015;
         secondaryPointCloud.rotation.x = reducedMotion ? 0 : Math.sin(elapsedSeconds * 0.08) * 0.05;
     }

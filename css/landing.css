@@ -231,3 +231,62 @@ p.hero-description { animation-delay: .13s; }
  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
  .reveal-pending, .hero-enter { opacity: 1; transform: none; }
 }
+/* Product preview cards: finished by default, stepped through by product-demos.js while on screen. */
+.product-demo { max-width: 340px; margin: 34px 0 0; padding: 18px 20px 20px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 18px 50px #30466d10; font-size: 12px; color: var(--ink); }
+.demo-bar { display: flex; align-items: center; justify-content: space-between; font-size: 9px; font-weight: 600; letter-spacing: .1em; color: #73839b; }
+.demo-live { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.product-demo.is-animated .demo-live { animation: demo-pulse 2s ease-out infinite; }
+@keyframes demo-pulse { from { box-shadow: 0 0 0 0 #285bd155; } to { box-shadow: 0 0 0 8px #285bd100; } }
+.demo-inputs { display: grid; gap: 6px; margin: 14px 0 0; }
+.demo-inputs > div { display: flex; justify-content: space-between; gap: 12px; padding: 7px 10px; background: #f6f8fc; border-radius: 6px; }
+.demo-inputs dt { color: var(--muted); }
+.demo-inputs dd { margin: 0; font-weight: 600; text-align: right; }
+.demo-premium { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); }
+.demo-premium strong { font-size: 22px; font-weight: 700; letter-spacing: -.03em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.demo-scenarios { display: grid; gap: 8px; margin-top: 12px; }
+.demo-scenario { display: grid; grid-template-columns: 86px 1fr auto; gap: 10px; align-items: center; font-size: 11px; color: var(--muted); }
+.demo-scenario i { position: relative; height: 6px; border-radius: 3px; background: #e4ebf6; overflow: hidden; }
+.demo-scenario i::after { content: ''; position: absolute; inset: 0 auto 0 0; width: calc(var(--share) * 100%); border-radius: inherit; background: var(--accent); transform-origin: left; transition: transform .8s var(--ease); }
+.demo-scenario + .demo-scenario i::after { background: #8fb0ef; }
+.demo-scenario b { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.demo-check { margin-top: 12px; font-size: 11px; font-weight: 600; color: #2f8a5b; }
+.demo-compare { width: 100%; margin-top: 12px; border-collapse: collapse; table-layout: fixed; font-size: 11px; text-align: left; }
+.demo-compare :is(th, td) { padding: 8px 6px; font-weight: 500; }
+.demo-compare thead :is(th, td) { padding-block: 4px 6px; font-size: 9px; color: #78869a; }
+.demo-compare thead td { width: 36%; }
+.demo-compare tbody :is(th, td) { border-top: 1px solid #e1e7ef; }
+.demo-compare tbody th { color: #3d4b61; padding-left: 0; }
+.demo-compare td.is-better { background: #edf3ff; color: #214aa3; font-weight: 600; }
+.demo-compare td.is-risk { color: #b4441f; font-weight: 600; }
+.demo-flag { display: block; margin-top: 2px; font-size: 9px; font-style: normal; color: #b4441f; }
+.demo-verdict { margin-top: 12px; padding: 10px 12px; background: #eaf1ff; border-left: 2px solid var(--accent); font-size: 11px; line-height: 1.6; color: #4e6487; }
+.demo-verdict strong { display: block; font-size: 12px; color: #214a9f; }
+.product-demo.is-animated [data-show-at] { opacity: 0; transform: translateY(6px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.product-demo.is-animated tr[data-show-at] { transform: none; }
+.product-demo.is-animated [data-show-at].is-shown { opacity: 1; transform: none; }
+.product-demo.is-animated .demo-scenarios:not(.is-shown) i::after { transform: scaleX(0); }
+.product-demo.is-resetting [data-show-at].is-shown { opacity: 0; }
+@media (max-width: 1023px) { .product-demo { padding: 14px; margin-top: 24px; } .demo-scenario { grid-template-columns: 74px 1fr auto; gap: 8px; } }
+@media (max-width: 639px) { .product-demo { max-width: 420px; margin-top: 20px; } }
+/* Brand intro: only present when the head script opted in for this session. */
+.brand-intro-active body { overflow: hidden; }
+.brand-intro-active body::after { content: ''; position: fixed; inset: 0; z-index: 59; background: var(--page); }
+.brand-intro-active .hero-enter { animation-play-state: paused; }
+.brand-intro-landing #navbar .brand img { opacity: 0; }
+#navbar .brand img { transition: opacity .22s ease; }
+.brand-intro { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; }
+/* Opacity and transform only, so the hand-over stays smooth while the 3D scene boots. */
+.brand-intro::before { content: ''; position: absolute; inset: 0; background: var(--page); transition: opacity .55s var(--ease); }
+.brand-intro.is-leaving::before { opacity: 0; }
+.brand-intro-landing .decision-network-fallback { visibility: hidden; }
+/* The overlay keeps catching pointer events until it settles, so a skip click never lands on a link below. */
+.brand-intro.is-settled { pointer-events: none; }
+.brand-intro.is-settled svg { opacity: 0; transition: opacity .22s ease; }
+.brand-intro svg { position: relative; display: block; width: min(440px, 64vw); height: auto; overflow: visible; color: #050505; transform-origin: 0 0; will-change: transform; }
+.intro-mark > * { fill: currentColor; fill-opacity: 0; stroke: var(--accent); stroke-width: 10; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: intro-draw .8s var(--ease) forwards, intro-fill .45s .55s ease forwards; }
+.intro-mark .is-accent { fill: #223c90; animation-delay: .12s, .62s; }
+.intro-word > * { fill: currentColor; opacity: 0; transform: translateY(90px); transform-box: fill-box; animation: intro-letter .45s var(--ease) forwards; animation-delay: calc(.45s + var(--i) * 40ms); }
+.brand-intro.is-skipping :is(.intro-mark, .intro-word) > * { animation-duration: .01s; animation-delay: 0s; }
+@keyframes intro-draw { to { stroke-dashoffset: 0; } }
+@keyframes intro-fill { to { fill-opacity: 1; stroke-opacity: 0; } }
+@keyframes intro-letter { to { opacity: 1; transform: none; } }
