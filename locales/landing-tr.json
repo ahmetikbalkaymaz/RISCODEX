@@ -117,7 +117,8 @@
       "title": "Versus Tools",
       "tools": {
         "commercial": "Ticari/Sınai poliçe primi hesaplama",
-        "fire": "Yangın abonman hesaplama"
+        "fire": "Yangın abonman hesaplama",
+        "check": "Versus Check"
       },
       "caption": "Versus AI içindeki hesaplama araçları"
     },

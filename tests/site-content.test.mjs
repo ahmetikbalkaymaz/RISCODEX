@@ -9,7 +9,7 @@ async function read(relativePath) {
     return readFile(new URL(relativePath, rootUrl), "utf8");
 }
 
-test("Versus Tools replaces Versus Check with the approved calculator list", async () => {
+test("Versus Tools includes Versus Check and the approved calculator list", async () => {
     const html = await read("index.html");
     const translationSource = await read("js/landing-translations.js");
     const sandbox = { window: {} };
@@ -18,17 +18,17 @@ test("Versus Tools replaces Versus Check with the approved calculator list", asy
 
     const translations = JSON.parse(JSON.stringify(sandbox.window.__landingTranslations));
     const expected = {
-        tr: ["Ticari/Sınai poliçe primi hesaplama", "Yangın abonman hesaplama"],
-        en: ["Commercial/industrial policy premium calculation", "Fire declaration policy calculation"]
+        tr: ["Ticari/Sınai poliçe primi hesaplama", "Yangın abonman hesaplama", "Versus Check"],
+        en: ["Commercial/industrial policy premium calculation", "Fire declaration policy calculation", "Versus Check"]
     };
 
     assert.equal(translations.tr.platform.modules.title, "Versus Tools");
     assert.equal(translations.en.platform.modules.title, "Versus Tools");
     assert.deepEqual(Object.values(translations.tr.platform.modules.tools), expected.tr);
     assert.deepEqual(Object.values(translations.en.platform.modules.tools), expected.en);
-    assert.equal((html.match(/data-i18n="platform\.modules\.tools\./g) || []).length, 2);
+    assert.equal((html.match(/data-i18n="platform\.modules\.tools\./g) || []).length, 3);
     assert.doesNotMatch(html, /data-i18n="platform\.modules\.cta"/);
-    assert.doesNotMatch(html, /Versus Check/);
+    assert.match(html, /Versus Check/);
 });
 
 test("footer exposes the current company details without placeholder policy links", async () => {
@@ -93,11 +93,13 @@ test("standalone locale files match the embedded landing translations", async ()
     assert.equal(en.platform.modules.title, "Versus Tools");
     assert.deepEqual(Object.values(tr.platform.modules.tools), [
         "Ticari/Sınai poliçe primi hesaplama",
-        "Yangın abonman hesaplama"
+        "Yangın abonman hesaplama",
+        "Versus Check"
     ]);
     assert.deepEqual(Object.values(en.platform.modules.tools), [
         "Commercial/industrial policy premium calculation",
-        "Fire declaration policy calculation"
+        "Fire declaration policy calculation",
+        "Versus Check"
     ]);
     assert.equal(tr.footer.copyright, "&copy; 2026 RISCODEX Teknoloji A.Ş.");
     assert.equal(en.footer.copyright, "&copy; 2026 RISCODEX Technology Inc.");
@@ -113,6 +115,7 @@ test("company homepage has two products, embedded Tools, and only LocateLoss as 
     assert.ok(versus, "Versus AI has a dedicated product section");
     assert.match(versus, /platform\.modules\.tools\.commercial/);
     assert.match(versus, /platform\.modules\.tools\.fire/);
+    assert.match(versus, /platform\.modules\.tools\.check/);
     assert.match(html, /LocateLoss/);
     assert.doesNotMatch(html, /platform\.future|platform\.legend|id="problem"|id="operating-model"|<video/);
 });
