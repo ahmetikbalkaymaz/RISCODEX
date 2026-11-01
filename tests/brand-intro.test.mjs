@@ -61,11 +61,11 @@ test('a slow load opens the page straight away and still unfolds the network', (
     assert.equal(late.root.classList.contains('brand-intro-landing'), false);
     assert.deepEqual(late.events, ['riscodex:intro-reveal']);
 });
-test('the network waits for the intro but never stays collapsed', async () => {
-    const scene = await read('js/decision-network.js');
+test('the hero points wait for the intro but never stay scattered', async () => {
+    const scene = await read('js/risk-field.js');
     assert.match(scene, /riscodex:intro-reveal/);
     assert.match(scene, /brand-intro-active/);
-    assert.match(scene, /setTimeout\(bootOnce, 4000\)/);
+    assert.match(scene, /setTimeout\(settle, 4000\)/);
     const css = await read('css/landing.css');
     assert.match(css, /\.brand-intro-active \.hero-enter \{ animation-play-state: paused; \}/);
     assert.match(html, /<script defer src="js\/brand-intro\.js\?v=\d+"><\/script>/);

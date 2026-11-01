@@ -16,15 +16,6 @@
     "description": "Riscodex develops insurance technology for premium calculation, quote and policy comparison, analysis, and reasoned recommendations.",
     "primary_cta": "Explore Our Products",
     "secondary_cta": "Contact Us",
-    "decision_network": {
-      "aria": "Riscodex decision flow from offer through comparison and control to policy",
-      "stages": {
-        "offer": "Offer",
-        "compare": "Comparison",
-        "control": "Control",
-        "policy": "Policy"
-      }
-    },
     "title_html": "Intelligent software<br>for <span class=\"hero-metal\">insurance<br>operations.</span>"
   },
   "about": {
