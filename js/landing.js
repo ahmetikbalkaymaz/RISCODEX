@@ -4,7 +4,8 @@
     const menu = document.getElementById('mobile-menu');
     const menuButton = document.getElementById('mobile-menu-button');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const navLinks = [...document.querySelectorAll('.nav-link')];
+    // A link to the page itself (aria-current="page") stays highlighted; the rest follow the scroll position.
+    const navLinks = [...document.querySelectorAll('.nav-link')].filter((link) => link.getAttribute('aria-current') !== 'page');
     const sections = [...document.querySelectorAll('[data-story-section]')];
     let language = 'tr';
     try { language = localStorage.getItem(storageKey) || 'tr'; } catch { /* Storage can be disabled. */ }
@@ -40,8 +41,10 @@
             });
         }
         document.documentElement.lang = next;
-        document.title = locale.meta.title;
-        document.querySelector('meta[name="description"]').content = locale.hero.description;
+        // A page can name its own section of the locale (body data-i18n-page) for its title and description.
+        const pageMeta = locale[document.body.dataset.i18nPage]?.meta;
+        document.title = pageMeta?.title || locale.meta.title;
+        document.querySelector('meta[name="description"]').content = pageMeta?.description || locale.hero.description;
         document.querySelectorAll('[data-lang-copy]').forEach((el) => { el.hidden = el.dataset.langCopy !== next; });
         document.querySelectorAll('.lang-toggle').forEach((button) => {
             const active = button.dataset.lang === next;

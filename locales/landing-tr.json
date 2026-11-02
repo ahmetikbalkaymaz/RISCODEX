@@ -8,7 +8,8 @@
     "platform": "Ürünler",
     "solutions": "Kimler İçin",
     "access_request": "Bize Ulaşın",
-    "menu_aria": "Menüyü aç"
+    "menu_aria": "Menüyü aç",
+    "gundem": "Gündem"
   },
   "hero": {
     "eyebrow": "RISCODEX · SİGORTA TEKNOLOJİLERİ",
@@ -185,5 +186,68 @@
   },
   "footer": {
     "copyright": "&copy; 2026 RISCODEX Teknoloji A.Ş."
+  },
+  "gundem": {
+    "meta": {
+      "title": "Gündem | Riscodex",
+      "description": "Türkiye’de şirketlerin yatırım, tesis, izin, ihale, finansman ve devir gelişmeleri; resmi kaynaklara dayanan ve iki bağımsız kaynakla doğrulanan haberler."
+    },
+    "eyebrow": "RISCODEX GÜNDEM",
+    "title": "Sigorta ve iş dünyası için şirket gelişmeleri.",
+    "intro": "Türkiye’deki şirketlerin varlıklarını ve faaliyetlerini değiştiren gelişmeler. Her haber resmi kaynaklara dayanır ve en az iki bağımsız kaynakla doğrulanır; yorum içermez.",
+    "loading": "Haberler yükleniyor…",
+    "failed": "Haberlere şu an ulaşılamıyor. Lütfen biraz sonra yeniden deneyin.",
+    "empty": "Bu seçimle eşleşen haber yok.",
+    "updated": "Son güncelleme",
+    "count": "haber",
+    "all": "Tümü",
+    "search": "Firma, borsa kodu veya konu",
+    "search_label": "Haberlerde ara",
+    "filters_label": "Sektöre göre süz",
+    "back": "Tüm haberler",
+    "not_found": "Bu haber bulunamadı.",
+    "source": "Kaynak",
+    "confirmed": "Teyit eden kaynaklar",
+    "facts": "Künye",
+    "companies": "Haberdeki şirketler",
+    "linked": "Bağlantılı gelişme",
+    "correction": "Düzeltme",
+    "abroad": "Yurt dışı",
+    "method_title": "Nasıl hazırlanıyor?",
+    "method_one_title": "Resmi kaynaklar",
+    "method_one": "Kamuyu Aydınlatma Platformu, Resmi Gazete, düzenleyici kurum kararları ve şirket açıklamaları günde iki kez taranır.",
+    "method_two_title": "İki bağımsız kaynak",
+    "method_two": "Şirket unvanı, tarih, işlemin aşaması ve rakamlar iki bağımsız kaynakta eşleşmeden haber yayımlanmaz.",
+    "method_three_title": "Ayrı denetim",
+    "method_three": "Haberler yapay zekâ desteğiyle derlenir; her biri yayımlanmadan önce ayrı bir denetim adımında kaynaklarıyla satır satır karşılaştırılır.",
+    "disclaimer": "İçerik bilgilendirme amaçlıdır; yatırım veya sigorta tavsiyesi değildir. Hata fark edildiğinde haber düzeltilir ve altına düzeltme notu eklenir.",
+    "sectors": {
+      "enerji": "Enerji",
+      "madencilik": "Madencilik",
+      "liman": "Liman ve Denizcilik",
+      "altyapi": "İnşaat ve Altyapı",
+      "kimya": "Kimya ve Petrokimya",
+      "metal": "Metal ve Çelik",
+      "imalat": "İmalat",
+      "gida": "Gıda ve Tarım",
+      "gayrimenkul": "Lojistik ve Gayrimenkul",
+      "saglik": "Sağlık ve İlaç",
+      "hizmet": "Ticaret ve Hizmet",
+      "sigorta": "Sigorta Sektörü",
+      "mevzuat": "Mevzuat"
+    },
+    "types": {
+      "yatirim": "Yeni yatırım",
+      "devreye": "Devreye alma",
+      "kapasite": "Kapasite artışı",
+      "izin": "İzin ve lisans",
+      "ihale": "İhale ve sözleşme",
+      "satinalma": "Satın alma ve devir",
+      "satis": "Tesis ve pay satışı",
+      "kapanis": "Kapanış ve konkordato",
+      "finansman": "Finansman",
+      "yapilanma": "Yeniden yapılanma",
+      "duzenleme": "Düzenleme"
+    }
   }
 }
