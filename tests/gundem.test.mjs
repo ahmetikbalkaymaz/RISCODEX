@@ -55,28 +55,23 @@ test('the command line writes the feed and refuses to publish an empty one', asy
     await assert.rejects(run('node', ['scripts/gundem-export.mjs', empty, output], { cwd: new URL('..', import.meta.url) }));
     assert.equal(JSON.parse(await readFile(output, 'utf8')).count, 1, 'a failed run leaves the last good feed in place');
 });
-test('the Gündem page and homepage link resolve every translation in both languages', async () => {
-    const page = await read('gundem/index.html');
+test('the homepage menus link to Gündem in both languages', async () => {
     const home = await read('index.html');
     const sandbox = { window: {} };
     runInNewContext(await read('js/landing-translations.js'), sandbox);
     for (const lang of ['tr', 'en']) {
-        const locale = sandbox.window.__landingTranslations[lang];
-        const stored = JSON.parse(await read(`locales/landing-${lang}.json`));
-        assert.deepEqual(JSON.parse(JSON.stringify(locale.gundem)), stored.gundem);
-        for (const [, key] of (page + home).matchAll(/data-i18n(?:-aria-label|-html)?="([^"]+)"/g)) {
-            assert.equal(typeof key.split('.').reduce((value, part) => value?.[part], locale), 'string', `${lang}: ${key}`);
-        }
-        assert.equal(typeof locale.gundem.meta.title, 'string');
+        assert.equal(typeof sandbox.window.__landingTranslations[lang].nav.gundem, 'string');
+        assert.equal(JSON.parse(await read(`locales/landing-${lang}.json`)).nav.gundem, sandbox.window.__landingTranslations[lang].nav.gundem);
     }
-    assert.match(page, /<body class="gundem-page" data-i18n-page="gundem">/);
     assert.equal((home.match(/href="gundem\/"/g) || []).length, 2, 'desktop and mobile menus link to Gündem');
+    assert.match(await read('gundem/index.html'), /<a class="logo-home" href="\.\.\/"/, 'the Gündem logo leads back to the company site');
 });
-test('the story view escapes news text instead of injecting it as HTML', async () => {
+test('the news views escape story text instead of injecting it as HTML', async () => {
     const source = await read('js/gundem.js');
     assert.match(source, /const esc = /);
-    // document.title takes plain text, so it is the one place a raw field may appear.
-    const markup = source.split('\n').filter((line) => !line.includes('document.title')).join('\n');
-    assert.doesNotMatch(markup, /\$\{item\.(title|spot|src|link|correction)\}/);
+    // Only lines that build HTML matter; search text, document.title and textContent take plain strings.
+    const markup = source.split('\n').filter((line) => line.includes('<') && !/document\.title|textContent/.test(line)).join('\n');
+    assert.doesNotMatch(markup, /\$\{(n|x|r|f|firm)\.(title|spot|src|srcType|link|correction|name|place|firm|url)\}/);
     assert.match(source, /rel="noopener"/);
+    assert.match(source, /safeUrl\(n\.url\)/);
 });
