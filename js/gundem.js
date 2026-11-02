@@ -311,6 +311,31 @@
     }
 
     const route = () => decodeURIComponent((location.hash || '').replace(/^#/, ''));
+
+    // Visits are counted with Umami (no cookies). Stories open inside this page, so each view is reported as
+    // its own address: /gundem/haber/<id>, /gundem/sektor/<id>, /gundem/firma/<slug>, /gundem/<page>.
+    const track = (...args) => { try { window.umami?.track(...args); } catch { /* Counting never breaks the page. */ } };
+    let lastRoute = null;
+    let lastUrl = '';
+    function viewPath(r) {
+        if (r.startsWith('h-')) return `/gundem/haber/${r.slice(2, 200)}`;
+        if (r.startsWith('f-')) return `/gundem/firma/${r.slice(2, 200)}`;
+        if (r === 'ara' || r.startsWith('ara/')) return '/gundem/ara';
+        if (SECTOR_KEYS.includes(r)) return `/gundem/sektor/${r}`;
+        if (SECNAME[r] || r === 'arsiv' || r === 'yontem') return `/gundem/${r}`;
+        return '/gundem/';
+    }
+    function trackView(r) {
+        if (r === lastRoute) return;
+        lastRoute = r;
+        const url = viewPath(r);
+        const referrer = lastUrl ? `${location.origin}${lastUrl}` : document.referrer;
+        lastUrl = url;
+        track((props) => ({ ...props, url, title: document.title, referrer }));
+        const q = r.startsWith('ara/') ? r.slice(4).trim() : '';
+        if (q) track('Arama', { q: q.slice(0, 100) });
+    }
+
     function render() {
         const r = route();
         renderNav(r);
@@ -331,6 +356,7 @@
         else if (r && SECNAME[r]) view.innerHTML = renderSection(r);
         else view.innerHTML = renderHome();
         bindView();
+        trackView(r);
     }
     function bindView() {
         const sectorSelect = document.getElementById('projSec');
@@ -357,6 +383,7 @@
             if (!followTerms().some((x) => trl(firm).includes(x))) {
                 follow = (follow.trim() ? `${follow.trim()}\n` : '') + firm;
                 store.set(FOLLOW_KEY, follow);
+                track('Takip listesine ekle', { firma: firm.slice(0, 100) });
             }
             render();
         });
@@ -380,6 +407,8 @@
         if (!panel.hidden && !panel.contains(event.target) && !bell.contains(event.target)) closePanel();
         const chip = event.target.closest('[data-tur]');
         if (chip) { arsivTur = chip.dataset.tur; render(); }
+        const source = event.target.closest('.srcline a[target="_blank"]');
+        if (source) track('Kaynak linki', { haber: route().slice(2, 200), kaynak: source.textContent.slice(0, 100) });
     });
     document.getElementById('searchForm').addEventListener('submit', (event) => {
         event.preventDefault();
