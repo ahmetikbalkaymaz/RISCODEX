@@ -9,7 +9,8 @@ window.__landingTranslations = {
       "platform": "Ürünler",
       "solutions": "Kimler İçin",
       "access_request": "Bize Ulaşın",
-      "menu_aria": "Menüyü aç"
+      "menu_aria": "Menüyü aç",
+      "gundem": "Gündem"
     },
     "hero": {
       "eyebrow": "RISCODEX · SİGORTA TEKNOLOJİLERİ",
@@ -198,7 +199,8 @@ window.__landingTranslations = {
       "platform": "Products",
       "solutions": "Who It’s For",
       "access_request": "Contact Us",
-      "menu_aria": "Open menu"
+      "menu_aria": "Open menu",
+      "gundem": "News"
     },
     "hero": {
       "eyebrow": "RISCODEX · INSURANCE TECHNOLOGY",
