@@ -1,7 +1,371 @@
 {
-  "updatedAt": "2026-11-02T09:30:00+03:00",
-  "count": 132,
+  "updatedAt": "2026-11-03T08:55:00+03:00",
+  "count": 137,
   "items": [
+    {
+      "id": "ilke-kararlari-res-hes",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-03T08:55:00+03:00",
+      "sec": "mevzuat",
+      "tur": "duzenleme",
+      "abroad": false,
+      "stage": "",
+      "title": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı nitelikli doğal koruma alanlarında rüzgar santrali sınırını 18 türbine indirdi",
+      "spot": "Önceki düzenlemedeki 50 megavatlık kurulu güç sınırı kaldırıldı. Aynı alanlardaki hidroelektrik santrali projeleri için üniversitelerden ekosistem değerlendirme raporu alınması şartı getirildi.",
+      "firm": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+      "firms": [
+        {
+          "name": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "ticker": "",
+          "slug": "cevre-sehircilik-ve-iklim-degisikligi-bakanligi"
+        },
+        {
+          "name": "Tabiat Varlıklarını Koruma Merkez Komisyonu",
+          "ticker": "",
+          "slug": "tabiat-varliklarini-koruma-merkez-komisyonu"
+        }
+      ],
+      "alias": "doğal sit ilke kararı 157 158 159 151 rüzgar enerji santrali hidroelektrik santrali nitelikli doğal koruma alanı tabiat varlıklarını koruma",
+      "place": "",
+      "body": [
+        "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı'na bağlı Tabiat Varlıklarını Koruma Merkez Komisyonu'nun 26 Ekim 2026'da aldığı dokuz ilke kararı, 3 Kasım 2026 tarihli ve 33419 sayılı Resmi Gazete'de yayımlandı. Kararlardan üçü doğal sit alanlarındaki rüzgar ve hidroelektrik santrali projelerini düzenliyor.",
+        "157 sayılı karar, 5 Ocak 2017 tarihli 98 sayılı Doğal Sit Alanlarında Rüzgar Enerjisi Santralleri İlke Kararı'nı değiştirdi. Nitelikli doğal koruma alanlarında rüzgar santrali projeleri için aranan, türbin sayısının 20'yi ve kurulu gücün 50 megavatı geçmemesi koşulu kaldırıldı. Bu alanlarda artık türbin sayısı 18'i geçmeyen projeler değerlendirilebilecek; yeni metinde kurulu güç için bir sınır yer almıyor. Projeler, koruma amaçlı imar planları doğrultusunda Tabiat Varlıklarını Koruma Bölge Komisyonu tarafından alanın kaynak değerleri, ekolojik bütünlüğü, önerilen tedbirlerin yeterliliği ve kamu yararı açısından değerlendirilecek.",
+        "158 ve 159 sayılı kararlar, nitelikli doğal koruma alanları ile sürdürülebilir koruma ve kontrollü kullanım alanlarındaki hidroelektrik santrali projelerini kapsıyor. Bu projelerde üniversitelerin ilgili bölümlerince ekosistem değerlendirme raporu hazırlanması, raporun yatırımcı idarece uygun bulunması ve rapordaki hususların uygulanacağına dair taahhüt verilmesi gerekiyor. İzin, Bölge Komisyonu'nun değerlendirmesine ve koruma amaçlı imar planlarına bağlı olacak.",
+        "151 sayılı karar ise doğal sit alanlarında daha önce komisyonca uygun görülerek tamamlanan teknik altyapı tesislerinde asgari bakım, onarım, iyileştirme ve izin süresi uzatımının, doğal sit statüsünün değişmemesi, yeni hat veya yapı eklenmemesi ve il müdürlüğünün görüşünün alınması şartıyla yeni bir komisyon kararı aranmadan ilgili idarece yapılabilmesini öngörüyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Türkiye geneli, doğal sit alanları"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Rüzgar santrallerinde en fazla 18 türbin; 50 megavat kurulu güç sınırı kaldırıldı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Kamu kurumu, borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Resmi Gazete, 03.11.2026, sayı 33419"
+        }
+      ],
+      "src": "Resmi Gazete, 03.11.2026, sayı 33419",
+      "srcType": "Resmi Gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261103.htm",
+      "sources": [
+        {
+          "name": "Enerji Günlüğü, 03.11.2026",
+          "url": "https://www.enerjigunlugu.net/koruma-alaninda-res-18-turbinle-sinirlandi-50-mw-siniri-kalkti-70420h.htm"
+        },
+        {
+          "name": "Yeşil Haber, 03.11.2026",
+          "url": "https://yesilhaber.net/dogal-sit-res-hes-ilke-kararlari-18-turbin/"
+        },
+        {
+          "name": "Memurlar.net, 03.11.2026",
+          "url": "https://www.memurlar.net/haber/1182909/resmi-gazete-de-dogal-sit-alanlari-icin-9-ilke-karari.html"
+        }
+      ]
+    },
+    {
+      "id": "togg-pay-devri",
+      "d": "2026-11-02",
+      "addedAt": "2026-11-03T08:55:00+03:00",
+      "sec": "imalat",
+      "tur": "satinalma",
+      "abroad": false,
+      "stage": "anlasma",
+      "title": "Anadolu Grubu ve Vestel, Togg'daki yüzde 46 payı 368 milyon avroya Varlık Fonu ve Turkcell'e satıyor",
+      "spot": "Turkcell'in Togg'daki payı yüzde 34'e çıkacak. Vestel, satıştan elde edeceği tutarın en az yüzde 90'ını vadesi gelmiş banka kredisi borçlarının ödenmesinde kullanacak.",
+      "firm": "Togg",
+      "firms": [
+        {
+          "name": "Togg",
+          "ticker": "",
+          "slug": "togg"
+        },
+        {
+          "name": "AG Anadolu Grubu",
+          "ticker": "AGHOL",
+          "slug": "ag-anadolu-grubu"
+        },
+        {
+          "name": "Vestel Elektronik",
+          "ticker": "VESTL",
+          "slug": "vestel-elektronik"
+        },
+        {
+          "name": "Türkiye Varlık Fonu",
+          "ticker": "",
+          "slug": "turkiye-varlik-fonu"
+        },
+        {
+          "name": "Turkcell",
+          "ticker": "TCELL",
+          "slug": "turkcell"
+        }
+      ],
+      "alias": "togg türkiye'nin otomobili girişim grubu ag anadolu grubu aghol vestel elektronik vestl turkcell tcell türkiye varlık fonu tvf pay devri",
+      "place": "",
+      "body": [
+        "AG Anadolu Grubu Holding ile Vestel Elektronik, Türkiye'nin Otomobili Girişim Grubu Sanayi ve Ticaret A.Ş.'deki (Togg) paylarının devri için 2 Kasım 2026'da bağlayıcı pay alım satım sözleşmeleri imzaladı. İşlemler, şirketlerin Kamuyu Aydınlatma Platformu açıklamalarıyla duyuruldu. İki şirketin her biri Togg sermayesinin yüzde 23'üne sahip.",
+        "AG Anadolu Grubu, 1.665.550.520 adet paydan oluşan yüzde 23'lük payının yüzde 12'sini Türkiye Varlık Fonu'na, yüzde 11'ini Turkcell'e toplam 184 milyon avroya satıyor; pay başına fiyat 0,11047 avro olarak belirlendi. Turkcell, 796.567.640 adet paya karşılık gelen yüzde 11'lik pay için 88 milyon avro ödeyecek ve işlemin kapanışının ardından Togg'daki payı ile oy hakkı oranı yüzde 34'e yükselecek.",
+        "Vestel Elektronik ise Togg'daki yüzde 23'lük payının tamamını 184 milyon avroya Türkiye Varlık Fonu'na satıyor. Şirket, satıştan elde edilecek fonun en az yüzde 90'ının, fonun elde edildiği tarihten itibaren 30 gün içinde vadesi gelmiş nakdi banka kredisi borçlarının ödenmesinde kullanılacağını açıkladı.",
+        "Bedeller kapanışta peşin ve nakit olarak ödenecek. İşlemlerin tamamlanması ilgili kurum onaylarının alınmasına ve sözleşmelerdeki kapanış ön koşullarının yerine getirilmesine bağlı; kapanış tarihi henüz belirlenmedi. Togg'un sermayesi 7.241.524.000 lira. Şirketler 31 Ağustos 2026'daki açıklamalarında görüşmelerin sürdüğünü bildirmişti."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "02.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Türkiye"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Togg sermayesinin yüzde 46'sı; AG Anadolu Grubu payı için 184 milyon avro, Vestel Elektronik payı için 184 milyon avro"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Togg borsada işlem görmüyor; AGHOL, VESTL, TCELL"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu açıklamaları, 02-03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Sözleşmeler imzalandı; kurum onayları ve kapanış bekleniyor"
+        }
+      ],
+      "src": "Turkcell, AG Anadolu Grubu ve Vestel Elektronik'in Kamuyu Aydınlatma Platformu açıklamaları, 02.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1691266",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Turkcell bildirimi 1691266",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1691266"
+        },
+        {
+          "name": "Hürriyet, 03.11.2026",
+          "url": "https://www.hurriyet.com.tr/gundem/toggda-anadolu-grubu-ve-vestelin-paylari-tvf-ve-turkcelle-geciyor-43363874"
+        },
+        {
+          "name": "Endeks24, 03.11.2026",
+          "url": "https://www.endeks24.com/togg-vestel-anadolu-pay-satisi-184-milyon-avro"
+        },
+        {
+          "name": "Borsatek, AG Anadolu Grubu bildirimi",
+          "url": "https://www.borsatek.com/aghol-togg-pay-satisi/"
+        }
+      ]
+    },
+    {
+      "id": "hatay-sehir-hastanesi-yda",
+      "d": "2026-11-02",
+      "addedAt": "2026-11-02T20:30:00+03:00",
+      "sec": "altyapi",
+      "tur": "ihale",
+      "abroad": false,
+      "stage": "sozlesme",
+      "title": "Hatay'daki 1.000 yataklı şehir hastanesinin yapım ihalesini 11,37 milyar liralık teklifle YDA İnşaat kazandı",
+      "spot": "İhalede ilk olarak Ahes İnşaat kazanan olarak açıklanmıştı; Kamu İhale Kurumu'nun düzeltici işlem kararının ardından teklifler yeniden değerlendirildi. Yaklaşık maliyet 14,91 milyar lira.",
+      "firm": "YDA İnşaat",
+      "firms": [
+        {
+          "name": "YDA İnşaat",
+          "ticker": "",
+          "slug": "yda-insaat"
+        },
+        {
+          "name": "Ahes İnşaat",
+          "ticker": "",
+          "slug": "ahes-insaat"
+        },
+        {
+          "name": "Sağlık Yatırımları Genel Müdürlüğü",
+          "ticker": "",
+          "slug": "saglik-yatirimlari-genel-mudurlugu"
+        },
+        {
+          "name": "Kamu İhale Kurumu",
+          "ticker": "",
+          "slug": "kamu-ihale-kurumu"
+        }
+      ],
+      "alias": "hatay şehir hastanesi hatay sehir hastanesi yda inşaat yda insaat ahes inşaat sağlık yatırımları genel müdürlüğü",
+      "place": "Hatay",
+      "body": [
+        "Sağlık Yatırımları Genel Müdürlüğü'nün Hatay'da yaptıracağı 1.000 yataklı şehir hastanesinin yapım ihalesi, Kamu İhale Kurumu'nun düzeltici işlem kararının ardından yeniden değerlendirilerek sonuçlandırıldı. İhaleyi 11.374.400.000 liralık teklifle YDA İnşaat kazandı.",
+        "İhaleye 17 teklif verildi. İşin yaklaşık maliyeti 14.910.112.985 lira olarak belirlenmişti. İhalede ilk olarak Ahes İnşaat kazanan olarak açıklanmış, YDA İnşaat bu sonuca itiraz etmişti.",
+        "Yasal süreçlerin tamamlanmasının ardından YDA İnşaat'ın sözleşme imzalamaya davet edilmesi bekleniyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "02.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Hatay"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "1.000 yatak; kazanan teklif 11.374.400.000 lira, yaklaşık maliyet 14.910.112.985 lira"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Sağlık Yatırımları Genel Müdürlüğü ihalesi; Hatay Ekspres ve Antakya Gazetesi, 02.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "İhale sonuçlandı; sözleşme henüz imzalanmadı"
+        }
+      ],
+      "src": "Sağlık Yatırımları Genel Müdürlüğü ihale sonucu, Hatay yerel basını, 02.11.2026",
+      "srcType": "Kamu ihalesi",
+      "url": "https://antakyagazetesi.com/hatay-sehir-hastanesinde-ihale-dugumu-cozuldu-kazanan-firma-degisti/",
+      "sources": [
+        {
+          "name": "Antakya Gazetesi, 02.11.2026",
+          "url": "https://antakyagazetesi.com/hatay-sehir-hastanesinde-ihale-dugumu-cozuldu-kazanan-firma-degisti/"
+        },
+        {
+          "name": "Hatay Ekspres, 02.11.2026",
+          "url": "https://www.hatayekspres.com/hatay-sehir-hastanesi-ihalesinde-kazanan-firma-degisti/169134"
+        },
+        {
+          "name": "Taşınmaz Haber, 02.11.2026",
+          "url": "https://tasinmazhaber.com/hatay-sehir-hastanesi-ihalesi-yda-insaat-tarafindan-kazanildi-1137-milyar-tllik-teklif/"
+        }
+      ]
+    },
+    {
+      "id": "yeka-res-2026-sonuc",
+      "d": "2026-11-02",
+      "addedAt": "2026-11-02T20:30:00+03:00",
+      "sec": "enerji",
+      "tur": "ihale",
+      "abroad": false,
+      "stage": "sozlesme",
+      "title": "1.500 megavatlık rüzgar yarışmalarında Ecogreen Kütahya'yı, Metgün Sivas'ı kazandı",
+      "spot": "Yedi yarışmanın tamamında elektrik satış fiyatı taban değer olan kilovatsaat başına 3,50 avro sentte oluştu. Kazananlarla kullanım hakkı sözleşmeleri Bakanlık onayının ardından imzalanacak.",
+      "firm": "Ecogreen Enerji",
+      "firms": [
+        {
+          "name": "Ecogreen Enerji",
+          "ticker": "ECOGR",
+          "slug": "ecogreen-enerji"
+        },
+        {
+          "name": "Metgün Enerji",
+          "ticker": "METEN",
+          "slug": "metgun-enerji"
+        },
+        {
+          "name": "Egesa Elektrik",
+          "ticker": "",
+          "slug": "egesa-elektrik"
+        },
+        {
+          "name": "Fe Girişim Enerji",
+          "ticker": "",
+          "slug": "fe-girisim-enerji"
+        },
+        {
+          "name": "Poyraz Yenilenebilir Enerji",
+          "ticker": "",
+          "slug": "poyraz-yenilenebilir-enerji"
+        },
+        {
+          "name": "Enerji ve Tabii Kaynaklar Bakanlığı",
+          "ticker": "",
+          "slug": "enerji-ve-tabii-kaynaklar-bakanligi"
+        }
+      ],
+      "alias": "yeka res-2026 ecogreen ecogr metgün metgun meten egesa fe girişim poyraz rüzgar yarışması",
+      "place": "Sivas, Kütahya, Balıkesir, Manisa",
+      "body": [
+        "Enerji ve Tabii Kaynaklar Bakanlığı'nın toplam 1.500 megavatlık Yenilenebilir Enerji Kaynak Alanı (YEKA) RES-2026 rüzgar yarışmaları 2 Kasım 2026'da Ankara'da tamamlandı. Yedi yarışmaya 11 şirket katıldı.",
+        "Ecogreen Enerji Holding'in tamamına sahip olduğu bağlı ortaklığı Ecogreen Elektrik Enerji Üretim A.Ş., 260 megavatlık Kütahya yarışmasını megavat başına 72 bin avro katkı payıyla kazandı. Metgün Enerji Yatırımları A.Ş., 320 megavatlık Sivas yarışmasını megavat başına 30 bin avro katkı payıyla aldı.",
+        "Egesa Elektrik 235 megavatlık Balıkesir-2 ve 235 megavatlık Manisa yarışmalarını, Fe Girişim Enerji 170 megavatlık Balıkesir-3 ve 140 megavatlık Balıkesir-4 yarışmalarını, Poyraz Yenilenebilir Enerji ise 140 megavatlık Balıkesir-1 yarışmasını kazandı.",
+        "Yarışmalarda elektrik satış fiyatı için taban değer kilovatsaat başına 3,50 avro sent, tavan değer 5,50 avro sent olarak belirlenmişti; yedi yarışmada da kazanan fiyat taban değerde oluştu. Bakanlık onayının ardından şirketlerle YEKA kullanım hakkı sözleşmeleri imzalanacak. Güneş enerjisi yarışmalarının 3 Kasım'da yapılması planlanıyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "02.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Sivas, Kütahya, Balıkesir, Manisa"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "7 yarışma, toplam 1.500 megavat; Kütahya için megavat başına 72 bin avro, Sivas için 30 bin avro katkı payı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "ECOGR, METEN; Egesa Elektrik, Fe Girişim Enerji ve Poyraz Yenilenebilir Enerji borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Enerji ve Tabii Kaynaklar Bakanlığı; Kamuyu Aydınlatma Platformu açıklamaları, 02.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Yarışmalar sonuçlandı; kullanım hakkı sözleşmeleri Bakanlık onayının ardından imzalanacak"
+        }
+      ],
+      "src": "Enerji ve Tabii Kaynaklar Bakanlığı ve şirketlerin Kamuyu Aydınlatma Platformu açıklamaları, 02.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.borsatek.com/ecogr-yeka-res-2026-kutahya-en-iyi-teklif/",
+      "sources": [
+        {
+          "name": "Forbes Türkiye, 02.11.2026",
+          "url": "https://www.forbes.com.tr/haberler/ruzgar-enerjisi-yarismalarinda-yedi-projenin-kazananlari-belli-oldu"
+        },
+        {
+          "name": "Yeşil Haber, 02.11.2026",
+          "url": "https://yesilhaber.net/yeka-res-2026-sonuclari-1500-mwe/"
+        },
+        {
+          "name": "CNBC-e, 02.11.2026",
+          "url": "https://www.cnbce.com/enerji/yeka-res-2026-yarismalari-tamamlandi-7-projede-kazananlar-belli-oldu-h40791"
+        },
+        {
+          "name": "Borsatek, Ecogreen Kamuyu Aydınlatma Platformu açıklaması, 02.11.2026",
+          "url": "https://www.borsatek.com/ecogr-yeka-res-2026-kutahya-en-iyi-teklif/"
+        },
+        {
+          "name": "YatırımX, Metgün Kamuyu Aydınlatma Platformu açıklaması, 02.11.2026",
+          "url": "https://www.yatirimx.com.tr/sirket-haberleri/metenden-yeka-res-2026-hamlesi-320-mwe-kapasite-metgunun-oldu/27498"
+        },
+        {
+          "name": "Bloomberg HT, 19.10.2026",
+          "url": "https://www.bloomberght.com/yeka-yarismalari-2-3-kasim-da-yapilacak-3791805"
+        }
+      ],
+      "project": {
+        "slug": "yeka",
+        "name": "YEKA RES-2026 rüzgar yarışmaları"
+      }
+    },
     {
       "id": "limak-onikisubat",
       "d": "2026-10-31",
@@ -74,6 +438,91 @@
         {
           "name": "CNBC-e, Başpınar tesisi (Mayıs 2026)",
           "url": "https://www.cnbce.com/borsa/limak-cimento-lmkdc-baspinar-tesisinde-uretim-faaliyetlerini-sonlandirdi-h30531"
+        }
+      ]
+    },
+    {
+      "id": "glyho-barselona-terminal",
+      "d": "2026-10-30",
+      "addedAt": "2026-11-02T20:30:00+03:00",
+      "sec": "liman",
+      "tur": "yatirim",
+      "abroad": true,
+      "stage": "plan",
+      "title": "Global Ports Holding Barselona'da 104,5 milyon avroluk yeni terminal yapacak, imtiyaz 2050'ye uzadı",
+      "spot": "Barselona Liman İdaresi yönetim kurulu imtiyaz sözleşmesindeki değişikliği onayladı. 11.253 metrekarelik yeni C Terminali, yıkılacak mevcut terminalin yerine inşa edilecek.",
+      "firm": "Global Ports Holding",
+      "firms": [
+        {
+          "name": "Global Ports Holding",
+          "ticker": "",
+          "slug": "global-ports-holding"
+        },
+        {
+          "name": "Global Yatırım Holding",
+          "ticker": "GLYHO",
+          "slug": "global-yatirim-holding"
+        },
+        {
+          "name": "Creuers del Port de Barcelona",
+          "ticker": "",
+          "slug": "creuers-del-port-de-barcelona"
+        }
+      ],
+      "alias": "global ports holding gph global yatırım holding glyho barselona barcelona kruvaziyer terminal c creuers",
+      "place": "İspanya, Barselona, Adossat rıhtımı",
+      "body": [
+        "Global Yatırım Holding, dolaylı bağlı ortaklığı Global Ports Holding'in işlettiği Barselona Kruvaziyer Limanı'na ilişkin imtiyaz sözleşmesindeki değişikliğin Barselona Liman İdaresi yönetim kurulunca onaylandığını 30 Ekim 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Değişiklikle 2030'da sona erecek ve 2033'e kadar uzatılabilecek olan imtiyaz süresi 2050'ye uzatıldı; 2053'e kadar ek uzatma seçeneği de bulunuyor. Proje kapsamında toplam 11.253 metrekare kapalı alana sahip yeni bir C Terminali inşa edilecek. Toplam yatırım tutarı 104,5 milyon avro olup bunun 50 milyon avroyu aşan kısmı terminal binasına ayrılıyor.",
+        "Tüm kruvaziyer şirketlerinin kullanımına açık olacak terminalde güneş enerjisiyle elektrik üretimi ve gemilere rıhtımdan elektrik verilmesini sağlayan sistemler yer alacak. Proje, terminale hizmet verecek yol ve ulaşım alanlarını ve yeni bir yolcu köprüsünü de kapsıyor.",
+        "Barselona'da terminali Global Ports Holding'in bağlı ortaklığı Creuers del Port de Barcelona işletiyor. Mevcut C Terminali 1 Kasım'daki son operasyonun ardından boşaltılıp yıkılacak ve yeni terminal aynı alana yapılacak. Yeni terminal hizmete girdiğinde A ve B terminallerinin de yıkılması planlanıyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "30.10.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "İspanya, Barselona, Adossat rıhtımı"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "104,5 milyon avro toplam yatırım; 11.253 metrekare terminal; imtiyaz 2050'ye, seçenekle 2053'e kadar"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "GLYHO (Global Ports Holding dolaylı bağlı ortaklık)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu açıklaması, 30.10.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "İmtiyaz değişikliği liman idaresince onaylandı; inşaat takvimi açıklanmadı"
+        }
+      ],
+      "src": "Kamuyu Aydınlatma Platformu açıklaması, 30.10.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.foreks.com/haber/detay/6ae4bb95422c786f3f7adc86/FRKS/tr/global-ports-holding-mevcut-imtiyaz-sozlesmesinde-degisiklik-yapilmasinin-barselona-limani-yonetim-kurulu-tarafindan-onaylandigini-bildirdi-30-10-26/",
+      "sources": [
+        {
+          "name": "Foreks, Kamuyu Aydınlatma Platformu aktarımı, 30.10.2026",
+          "url": "https://www.foreks.com/haber/detay/6ae4bb95422c786f3f7adc86/FRKS/tr/global-ports-holding-mevcut-imtiyaz-sozlesmesinde-degisiklik-yapilmasinin-barselona-limani-yonetim-kurulu-tarafindan-onaylandigini-bildirdi-30-10-26/"
+        },
+        {
+          "name": "Borsatek, 30.10.2026",
+          "url": "https://www.borsatek.com/glyho-barselona-terminal-ve-imtiyaz-uzatimi/"
+        },
+        {
+          "name": "Baird Maritime, 30.10.2026",
+          "url": "https://www.bairdmaritime.com/shipping/ports/barcelona-cruise-terminal-c-replacement"
+        },
+        {
+          "name": "DataPortuaria, 29.10.2026",
+          "url": "https://dataportuaria.com/en/destacadas/port-of-barcelona-approves-new-104-5-million-cruise-terminal-c-27e88b"
         }
       ]
     },
@@ -2702,7 +3151,11 @@
           "url": "https://borsacoo.com/bildirim/100580"
         }
       ],
-      "correction": "29.10.2026: Ecogreen açıklamasının tarihi 23 Ekim olarak verilmişti; doğrusu 26 Ekim'dir."
+      "correction": "29.10.2026: Ecogreen açıklamasının tarihi 23 Ekim olarak verilmişti; doğrusu 26 Ekim'dir.",
+      "project": {
+        "slug": "yeka",
+        "name": "YEKA RES-2026 rüzgar yarışmaları"
+      }
     },
     {
       "id": "mpark-lightyear",
