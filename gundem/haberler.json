@@ -1,7 +1,268 @@
 {
-  "updatedAt": "2026-11-03T08:55:00+03:00",
-  "count": 137,
+  "updatedAt": "2026-11-03T20:00:00+03:00",
+  "count": 141,
   "items": [
+    {
+      "id": "pahol-egehidro",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-03T20:00:00+03:00",
+      "sec": "enerji",
+      "tur": "satinalma",
+      "abroad": false,
+      "stage": "anlasma",
+      "title": "Pasifik Holding, Kahramanmaraş'ta 45,7 megavatlık iki hidroelektrik santralini 2,42 milyon dolara alıyor",
+      "spot": "Egehidro Enerji'nin yüzde 51'ini Pasifik Yenilenebilir Enerji, yüzde 49'unu Pasifik Girişim Sermayesi Yatırım Ortaklığı devralacak. Santrallerin yıllık üretimi yaklaşık 50 gigavatsaat.",
+      "firm": "Pasifik Holding",
+      "firms": [
+        {
+          "name": "Pasifik Holding",
+          "ticker": "PAHOL",
+          "slug": "pasifik-holding"
+        },
+        {
+          "name": "Egehidro Enerji",
+          "ticker": "",
+          "slug": "egehidro-enerji"
+        },
+        {
+          "name": "Pasifik Girişim Sermayesi Yatırım Ortaklığı",
+          "ticker": "",
+          "slug": "pasifik-girisim-sermayesi-yatirim-ortakligi"
+        }
+      ],
+      "alias": "pasifik holding pahol egehidro enerji madencilik pasifik yenilenebilir enerji pasifik girişim çakmak hes söğütlü hes",
+      "place": "Kahramanmaraş",
+      "body": [
+        "Pasifik Holding, Egehidro Enerji Madencilik Sanayi ve Ticaret A.Ş.'nin sermayesinin tamamını temsil eden 77,5 milyon payın devri için Pay Satış ve Devir Sözleşmesi imzalandığını 3 Kasım 2026'da Kamuyu Aydınlatma Platformu'na bildirdi. Toplam bedel 2.424.001 dolar.",
+        "Payların 39.525.000 adedini (yüzde 51) Pasifik Holding'in bağlı ortaklığı Pasifik Yenilenebilir Enerji Sanayi ve Ticaret A.Ş., 37.975.000 adedini (yüzde 49) grup şirketi Pasifik Girişim Sermayesi Yatırım Ortaklığı A.Ş. alacak. Satıcılar Egehidro'nun mevcut ortakları.",
+        "Egehidro, Kahramanmaraş'taki 27,38 megavatlık Çakmak Regülatörü ve Hidroelektrik Santrali ile 18,32 megavatlık Söğütlü Hidroelektrik Santrali'ni işletiyor. Toplam 45,7 megavat kurulu güce sahip santrallerin yıllık üretimi yaklaşık 50 gigavatsaat.",
+        "Şirket, başvurusu yapılmış 18 megavatlık güneş enerjisi santrali yatırımının izin ve onayların ardından hidroelektrik santraliyle hibrit olarak gerçekleştirileceğini açıkladı. Açıklamada devrin tamamlanma tarihine yer verilmedi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Kahramanmaraş"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "2.424.001 dolar; yüzde 100 pay; 45,7 megavat kurulu güç, yıllık yaklaşık 50 gigavatsaat üretim"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "PAHOL; Egehidro Enerji borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu, 03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Pay satış ve devir sözleşmesi imzalandı"
+        }
+      ],
+      "src": "Pasifik Holding'in Kamuyu Aydınlatma Platformu açıklaması, 03.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1691690",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, bildirim 1691690",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1691690"
+        },
+        {
+          "name": "Paratic, 03.11.2026",
+          "url": "https://paratic.com/pasifik-holding-pahol-egehidro-enerjinin-tamamini-devralacak/"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 03.11.2026",
+          "url": "https://hibya.com/pasifik-holding-egehidro-enerjinin-tamamini-242-milyon-dolara-devralacak-1080208"
+        }
+      ]
+    },
+    {
+      "id": "seddk-iki-sirket-denetim",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-03T20:00:00+03:00",
+      "sec": "sigorta",
+      "tur": "duzenleme",
+      "abroad": false,
+      "stage": "",
+      "title": "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu iki sigorta şirketini kapsamlı denetime aldı",
+      "spot": "Kurum, şirketlerin adını açıklamadı. Bu iki şirket dışında sermaye piyasasındaki gelişmelerle bağlantılı risklerin sektör aktif büyüklüğünün on binde birinin altında kaldığını bildirdi.",
+      "firm": "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu",
+      "firms": [
+        {
+          "name": "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu",
+          "ticker": "",
+          "slug": "sigortacilik-ve-ozel-emeklilik-duzenleme-ve-denetleme-kurumu"
+        }
+      ],
+      "alias": "seddk sigortacılık ve özel emeklilik düzenleme ve denetleme kurumu kapsamlı denetim sigorta sektörü üçüncü çeyrek",
+      "place": "",
+      "body": [
+        "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu, Eylül ayından bu yana sermaye piyasalarında yaşanan gelişmelerle eş zamanlı olarak sektör genelinde gözetim taramaları yaptığını 3 Kasım 2026'da açıkladı. Kurum, taramalarda tespit edilen bulgular üzerine iki şirketin kapsamlı denetime alındığını bildirdi; şirketlerin adları açıklanmadı.",
+        "Açıklamaya göre bu iki şirket dışında söz konusu gelişmelerle bağlantılı riskler, sektörün aktif büyüklüğünün on binde birinin altında kaldı.",
+        "Kurumun açıkladığı 2026 yılı üçüncü çeyrek verilerine göre sigorta sektörünün aktif toplamı 4,7 trilyon lirayı, prim üretimi 1,1 trilyon lirayı aştı; özkaynaklar 600 milyar liraya ulaştı ve sermaye yeterlilik oranı yüzde 200'ün üzerinde gerçekleşti. Bireysel emeklilik sisteminde Ekim sonu itibarıyla katılımcı sayısı 18,3 milyon, portföy büyüklüğü 2,5 trilyon liranın üzerinde."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Türkiye"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "İki sigorta şirketi kapsamlı denetimde; sektör aktif toplamı 4,7 trilyon liranın üzerinde"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Şirket adları açıklanmadı"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu açıklaması, 03.11.2026"
+        }
+      ],
+      "src": "Sigortacılık ve Özel Emeklilik Düzenleme ve Denetleme Kurumu açıklaması, 03.11.2026",
+      "srcType": "Basın",
+      "url": "https://www.aa.com.tr/tr/ekonomi/sigorta-sektorunun-aktif-toplami-4-7-trilyon-lirayi-asti/4109447",
+      "sources": [
+        {
+          "name": "Anadolu Ajansı, 03.11.2026",
+          "url": "https://www.aa.com.tr/tr/ekonomi/sigorta-sektorunun-aktif-toplami-4-7-trilyon-lirayi-asti/4109447"
+        },
+        {
+          "name": "Sigorta Dünyası, 03.11.2026",
+          "url": "https://www.sigortadunyasi.com.tr/2026/11/03/seddkden-piyasalardaki-gelismeler-sonrasi-sigorta-sektorune-guven-mesaji/"
+        },
+        {
+          "name": "Sigorta Kulisi, 03.11.2026",
+          "url": "https://www.sigortakulisi.com/sektor/sigorta-sektorunde-guclu-buyume-iki-sirkete-kapsamli-denetim/4212"
+        }
+      ]
+    },
+    {
+      "id": "yeka-ges-2026-sonuc",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-03T20:00:00+03:00",
+      "sec": "enerji",
+      "tur": "ihale",
+      "abroad": false,
+      "stage": "sozlesme",
+      "title": "785 megavatlık güneş yarışmalarında Egesa Elektrik üç sahayla toplam 345 megavatı kazandı",
+      "spot": "On bir yarışmanın tamamında elektrik satış fiyatı taban değer olan kilovatsaat başına 3,25 avro sentte oluştu; kazananlar katkı payı teklifleriyle belirlendi. En yüksek katkı payı megavat başına 91 bin avroyla Malatya-1 yarışmasında verildi.",
+      "firm": "Egesa Elektrik",
+      "firms": [
+        {
+          "name": "Egesa Elektrik",
+          "ticker": "",
+          "slug": "egesa-elektrik"
+        },
+        {
+          "name": "Temmuz Güneş Enerji",
+          "ticker": "",
+          "slug": "temmuz-gunes-enerji"
+        },
+        {
+          "name": "İş Enerji Yatırımları",
+          "ticker": "",
+          "slug": "is-enerji-yatirimlari"
+        },
+        {
+          "name": "Ezel Mensucat",
+          "ticker": "",
+          "slug": "ezel-mensucat"
+        },
+        {
+          "name": "Erser Grup",
+          "ticker": "",
+          "slug": "erser-grup"
+        },
+        {
+          "name": "İklim İnvest Enerji",
+          "ticker": "",
+          "slug": "iklim-invest-enerji"
+        },
+        {
+          "name": "Ecogreen Enerji",
+          "ticker": "ECOGR",
+          "slug": "ecogreen-enerji"
+        },
+        {
+          "name": "Enerji ve Tabii Kaynaklar Bakanlığı",
+          "ticker": "",
+          "slug": "enerji-ve-tabii-kaynaklar-bakanligi"
+        }
+      ],
+      "alias": "yeka ges-2026 güneş yarışması egesa temmuz güneş iş enerji ezel mensucat erser iklim invest ecogreen ecogr",
+      "place": "Denizli, Ankara, Konya, Kahramanmaraş, Malatya, Diyarbakır, Mardin, Batman, Elazığ",
+      "body": [
+        "Enerji ve Tabii Kaynaklar Bakanlığı'nın toplam 785 megavatlık Yenilenebilir Enerji Kaynak Alanı (YEKA) GES-2026 güneş enerjisi yarışmaları 3 Kasım 2026'da Ankara'da yapıldı. On bir yarışma için toplam 44 başvuru vardı.",
+        "Egesa Elektrik İnşaat Enerji Üretim A.Ş. 200 megavatlık Diyarbakır, 120 megavatlık Mardin-2 ve 25 megavatlık Batman yarışmalarında en iyi teklifi verdi; katkı payları sırasıyla megavat başına 16 bin, 18 bin ve 36 bin avro oldu. İş Enerji Yatırımları A.Ş. 110 megavatlık Konya yarışmasını megavat başına 64 bin avroyla aldı.",
+        "Temmuz Güneş Kahramanmaraş Enerji Üretim A.Ş. 85 megavatlık Kahramanmaraş-2 ve 50 megavatlık Kahramanmaraş-3 yarışmalarını megavat başına 60 bin ve 74 bin avroyla, Temmuz Güneş Denizli Enerji Üretim A.Ş. ise 30 megavatlık Denizli yarışmasını megavat başına 60 bin avroyla kazandı. Ezel Mensucat 55 megavatlık Malatya-1 yarışmasında 16 tur sonunda megavat başına 91 bin avroluk teklif verdi.",
+        "Erser Grup Tarım Ürünleri 40 megavatlık Ankara-1, İklim İnvest Enerji ve Teknoloji Yatırımları 30 megavatlık Ankara-2, Ecogreen Enerji Holding'in bağlı ortaklığı Ecogreen Elektrik Enerji Üretim A.Ş. de 40 megavatlık Elazığ yarışmasında en iyi teklifi verdi. Yarışmalarda tavan fiyat kilovatsaat başına 5,50 avro sent, taban fiyat 3,25 avro sentti. Sonuçlar tutanakların imzalanmasının ardından Bakanlık onayıyla kesinleşecek. Bakanlığın 1.500 megavatlık rüzgar yarışmaları bir gün önce tamamlanmıştı."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Denizli, Ankara, Konya, Kahramanmaraş, Malatya, Diyarbakır, Mardin, Batman, Elazığ"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "11 yarışma, toplam 785 megavat; katkı payları megavat başına 12 bin ile 91 bin avro arasında"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "ECOGR; diğer kazananlar borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Enerji ve Tabii Kaynaklar Bakanlığı yarışmaları; Anadolu Ajansı, İhlas Haber Ajansı, 03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "En iyi teklifler belirlendi; sonuçlar Bakanlık onayıyla kesinleşecek"
+        }
+      ],
+      "src": "Enerji ve Tabii Kaynaklar Bakanlığı YEKA GES-2026 yarışmaları, 03.11.2026",
+      "srcType": "Bakanlık duyurusu",
+      "url": "https://www.konyapostasi.com.tr/konya-haberleri/yeka-ges-2026-yarismalarinda-en-iyi-teklifler-belli-oldu/785370",
+      "sources": [
+        {
+          "name": "Anadolu Ajansı (Konya Postası aktarımı), 03.11.2026",
+          "url": "https://www.konyapostasi.com.tr/konya-haberleri/yeka-ges-2026-yarismalarinda-en-iyi-teklifler-belli-oldu/785370"
+        },
+        {
+          "name": "İhlas Haber Ajansı (Saray Medya aktarımı), 03.11.2026",
+          "url": "https://www.saraymedya.com/haber/yeka-ges-2026-yarismalarinda-11-bolge-icin-kazananlar-belli-oldu_320521/"
+        },
+        {
+          "name": "Enerji Günlüğü, 03.11.2026",
+          "url": "https://www.enerjigunlugu.net/yeka-ges-2026-yarismalari-tamamlandi-70429h.htm"
+        },
+        {
+          "name": "Endeks24, 03.11.2026",
+          "url": "https://www.endeks24.com/yeka-ges-2026-yarismalarinda-785-megavat-dagitildi"
+        }
+      ],
+      "project": {
+        "slug": "yeka",
+        "name": "YEKA 2026 yenilenebilir enerji yarışmaları"
+      }
+    },
     {
       "id": "ilke-kararlari-res-hes",
       "d": "2026-11-03",
@@ -71,6 +332,90 @@
         {
           "name": "Memurlar.net, 03.11.2026",
           "url": "https://www.memurlar.net/haber/1182909/resmi-gazete-de-dogal-sit-alanlari-icin-9-ilke-karari.html"
+        }
+      ]
+    },
+    {
+      "id": "garan-romanya",
+      "d": "2026-11-02",
+      "addedAt": "2026-11-03T20:00:00+03:00",
+      "sec": "hizmet",
+      "tur": "satis",
+      "abroad": true,
+      "stage": "tamam",
+      "title": "Garanti BBVA, Romanya'daki bankasını 3,01 milyar leye Raiffeisen Bank'a devretti",
+      "spot": "Satış, banka için 30 Eylül 2026 finansal tablolarına göre yaklaşık 6,7 milyar liralık kâr doğuracak. Bedel peşin ve nakit ödendi.",
+      "firm": "Garanti BBVA",
+      "firms": [
+        {
+          "name": "Garanti BBVA",
+          "ticker": "GARAN",
+          "slug": "garanti-bbva"
+        },
+        {
+          "name": "Garanti Bank Romanya",
+          "ticker": "",
+          "slug": "garanti-bank-romanya"
+        },
+        {
+          "name": "Raiffeisen Bank",
+          "ticker": "",
+          "slug": "raiffeisen-bank"
+        }
+      ],
+      "alias": "garanti bbva garanti bankası garan garanti bank sa motoractive ifn raiffeisen romanya",
+      "place": "Romanya",
+      "body": [
+        "Türkiye Garanti Bankası, Hollanda'daki bağlı ortaklıkları Garanti Holding B.V. ve G Netherlands B.V. aracılığıyla sahip olduğu Romanya'daki Garanti Bank S.A. ile Motoractive IFN S.A.'nın paylarının tamamının Raiffeisen Bank S.A.'ya devrini 2 Kasım 2026'da tamamladı. Banka, işlemi 3 Kasım'da Kamuyu Aydınlatma Platformu'na bildirdi.",
+        "Satış bedeli 3.014.000.000 Romanya leyi olarak belirlendi ve peşin, nakit ödendi. Devredilen payların nominal değeri 1.244.013.176 ley. Satışa konu şirketler, bankanın son finansal tablolarına göre konsolide aktif toplamının yüzde 4,1'ini oluşturuyordu.",
+        "Satış sözleşmesi, yönetim kurulunun 23 Mart 2026 tarihli kararının ardından 28 Mart 2026'da imzalanmıştı. Devir, gerekli düzenleyici izinlerin alınmasının ardından gerçekleşti. Satışın ardından Garanti BBVA'nın bu şirketlerdeki payı ve oy hakkı sıfıra indi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "02.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Romanya"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "3.014.000.000 Romanya leyi; yüzde 100 pay; yaklaşık 6,7 milyar lira satış kârı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "GARAN"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu, 03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Devir tamamlandı"
+        }
+      ],
+      "src": "Garanti BBVA'nın Kamuyu Aydınlatma Platformu açıklaması, 03.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1691278",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, bildirim 1691278",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1691278"
+        },
+        {
+          "name": "Forbes Türkiye, 03.11.2026",
+          "url": "https://www.forbes.com.tr/haberler/garanti-bbva-romanya-daki-istiraklerini-3-milyar-rumen-leyi-karsiliginda-raiffeisen-bank-a-devretti"
+        },
+        {
+          "name": "Borsa Gündem, 03.11.2026",
+          "url": "https://www.borsagundem.com.tr/garanti-bbvanin-romanya-satisindan-67-milyar-tl-kar"
+        },
+        {
+          "name": "Foreks, 03.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6ae974e758b1b941c2096c91/FRKS/tr/garanti-bbva-romanya-daki-istirak-satisini-tamamladi-03-11-26/"
         }
       ]
     },
