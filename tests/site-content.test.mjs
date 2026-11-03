@@ -108,9 +108,9 @@ test("standalone locale files match the embedded landing translations", async ()
 });
 
 
-test("company homepage has two products, embedded Tools, and only LocateLoss as upcoming", async () => {
+test("company homepage has three product rows, embedded Tools, and only LocateLoss as upcoming", async () => {
     const html = await read("index.html");
-    assert.equal((html.match(/data-product="/g) || []).length, 2);
+    assert.equal((html.match(/data-product="/g) || []).length, 3);
     const versus = html.match(/<article[^>]*data-product="versus"[\s\S]*?<\/article>/)?.[0];
     assert.ok(versus, "Versus AI has a dedicated product section");
     assert.match(versus, /platform\.modules\.tools\.commercial/);

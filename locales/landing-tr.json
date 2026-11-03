@@ -114,6 +114,17 @@
       },
       "caption": "Versus AI içindeki hesaplama araçları"
     },
+    "gundem": {
+      "subtitle": "Sigorta ve iş dünyası haberleri",
+      "description": "Türkiye’de şirketlerin yatırım, tesis, izin, ihale, finansman ve devir gelişmelerini her gün takip edin. Haberler resmi kaynaklara dayanır ve iki bağımsız kaynakla doğrulanır.",
+      "feature_1": "Sektöre ve firmaya göre takip",
+      "feature_2": "Günde iki kez güncellenir",
+      "cta": "Gündem’i Oku",
+      "latest_label": "SON HABERLER",
+      "latest_aria": "Gündem’deki son haberler",
+      "fallback": "Son haberler için Gündem’i açın",
+      "updated": "{count} haber · son güncelleme {date}"
+    },
     "upcoming": {
       "status": "Yakında"
     },

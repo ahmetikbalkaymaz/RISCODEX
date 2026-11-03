@@ -63,7 +63,7 @@ test('the homepage menus link to Gündem in both languages', async () => {
         assert.equal(typeof sandbox.window.__landingTranslations[lang].nav.gundem, 'string');
         assert.equal(JSON.parse(await read(`locales/landing-${lang}.json`)).nav.gundem, sandbox.window.__landingTranslations[lang].nav.gundem);
     }
-    assert.equal((home.match(/href="gundem\/"/g) || []).length, 2, 'desktop and mobile menus link to Gündem');
+    assert.equal((home.match(/class="nav-link" href="gundem\/"/g) || []).length, 2, 'desktop and mobile menus link to Gündem');
     assert.match(await read('gundem/index.html'), /<a class="logo-home" href="\.\.\/"/, 'the Gündem logo leads back to the company site');
 });
 test('the news views escape story text instead of injecting it as HTML', async () => {
@@ -74,4 +74,27 @@ test('the news views escape story text instead of injecting it as HTML', async (
     assert.doesNotMatch(markup, /\$\{(n|x|r|f|firm)\.(title|spot|src|srcType|link|correction|name|place|firm|url)\}/);
     assert.match(source, /rel="noopener"/);
     assert.match(source, /safeUrl\(n\.url\)/);
+});
+test('the homepage Gündem row shows the newest headlines as plain text and keeps a link without JS', async () => {
+    const home = await read('index.html');
+    const row = home.match(/<article[^>]*data-product="gundem"[\s\S]*?<\/article>/)?.[0];
+    assert.ok(row, 'Gündem has its own product row');
+    assert.ok(home.indexOf('data-product="versus"') < home.indexOf('data-product="gundem"'), 'Gündem follows Versus AI');
+    assert.ok(home.indexOf('data-product="gundem"') < home.indexOf('LocateLoss'), 'LocateLoss stays last');
+    assert.match(row, /<a class="gundem-fallback" href="gundem\/"/);
+    assert.match(row, /<a class="button-secondary" href="gundem\/"/);
+    assert.match(home, /<script defer src="js\/gundem-latest\.js\?v=\d+"><\/script>/);
+    const sandbox = { window: {} };
+    runInNewContext(await read('js/landing-translations.js'), sandbox);
+    for (const lang of ['tr', 'en']) {
+        const locale = sandbox.window.__landingTranslations[lang];
+        assert.deepEqual(JSON.parse(JSON.stringify(locale.platform.gundem)), JSON.parse(await read(`locales/landing-${lang}.json`)).platform.gundem);
+        for (const [, key] of row.matchAll(/data-i18n(?:-aria-label)?="(platform\.gundem\.[^"]+)"/g)) {
+            assert.equal(typeof key.split('.').reduce((value, part) => value?.[part], locale), 'string', `${lang}: ${key}`);
+        }
+        assert.match(locale.platform.gundem.updated, /\{count\}[\s\S]*\{date\}/);
+    }
+    const source = await read('js/gundem-latest.js');
+    assert.doesNotMatch(source, /innerHTML|insertAdjacentHTML/, 'headlines go in as text');
+    assert.match(source, /encodeURIComponent\(n\.id\)/);
 });
