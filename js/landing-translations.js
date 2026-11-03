@@ -115,6 +115,17 @@ window.__landingTranslations = {
         },
         "caption": "Versus AI içindeki hesaplama araçları"
       },
+      "gundem": {
+        "subtitle": "Sigorta ve iş dünyası haberleri",
+        "description": "Türkiye’de şirketlerin yatırım, tesis, izin, ihale, finansman ve devir gelişmelerini her gün takip edin. Haberler resmi kaynaklara dayanır ve iki bağımsız kaynakla doğrulanır.",
+        "feature_1": "Sektöre ve firmaya göre takip",
+        "feature_2": "Günde iki kez güncellenir",
+        "cta": "Gündem’i Oku",
+        "latest_label": "SON HABERLER",
+        "latest_aria": "Gündem’deki son haberler",
+        "fallback": "Son haberler için Gündem’i açın",
+        "updated": "{count} haber · son güncelleme {date}"
+      },
       "upcoming": {
         "status": "Yakında"
       },
@@ -304,6 +315,17 @@ window.__landingTranslations = {
           "check": "Versus Check"
         },
         "caption": "Calculation tools included in Versus AI"
+      },
+      "gundem": {
+        "subtitle": "Insurance and business news, in Turkish",
+        "description": "Follow investment, facility, permit, tender, financing and acquisition news from companies in Türkiye every day. Stories rest on official sources and are confirmed by two independent sources.",
+        "feature_1": "Follow by sector and company",
+        "feature_2": "Updated twice a day",
+        "cta": "Read Gündem",
+        "latest_label": "LATEST NEWS",
+        "latest_aria": "Latest stories from Gündem",
+        "fallback": "Open Gündem for the latest news",
+        "updated": "{count} stories · updated {date}"
       },
       "upcoming": {
         "status": "Coming soon"
