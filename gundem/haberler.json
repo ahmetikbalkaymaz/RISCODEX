@@ -1,7 +1,215 @@
 {
-  "updatedAt": "2026-11-04T09:20:00+03:00",
-  "count": 143,
+  "updatedAt": "2026-11-04T19:55:00+03:00",
+  "count": 146,
   "items": [
+    {
+      "id": "avod-kredi-takip",
+      "d": "2026-11-04",
+      "addedAt": "2026-11-04T19:55:00+03:00",
+      "sec": "gida",
+      "tur": "yapilanma",
+      "abroad": false,
+      "stage": "",
+      "title": "AVOD Kurutulmuş Gıda'nın dört bankaya 284,9 milyon liralık kredi borcu yasal takibe aktarıldı",
+      "spot": "Şirket kredi geri ödemelerinde gecikmeler yaşandığını, borçların uzun vadeli yapılandırılması için bankalarla görüşmelerin sürdüğünü bildirdi. Üretim ve ticari faaliyetlerin devam ettiği belirtildi.",
+      "firm": "AVOD Kurutulmuş Gıda",
+      "firms": [
+        {
+          "name": "AVOD Kurutulmuş Gıda",
+          "ticker": "AVOD",
+          "slug": "avod-kurutulmus-gida"
+        }
+      ],
+      "alias": "avod a.v.o.d. kurutulmus gida kurutulmuş gıda ve tarım ürünleri kredi yapilandirma yasal takip",
+      "place": "",
+      "body": [
+        "A.V.O.D. Kurutulmuş Gıda ve Tarım Ürünleri Sanayi Ticaret A.Ş., son dönemde yaşanan finansal ve operasyonel zorluklar nedeniyle kredi geri ödemelerinde gecikmeler meydana geldiğini 4 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Açıklamaya göre dört ayrı bankadaki toplam 284.946.000 liralık kredi borcu yasal takip statüsüne aktarıldı. Şirket, bu yükümlülüklerin uzun vadeli olarak yapılandırılması için bankalarla görüşmelerin sürdüğünü, görüşmelerin henüz sonuçlanmadığını bildirdi.",
+        "Şirket, üretim ve ticari faaliyetlerine devam ettiğini ve gelişmeleri kamuoyuyla paylaşacağını belirtti."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "04.11.2026"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Dört bankaya toplam 284.946.000 TL kredi borcu"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "AVOD"
+        },
+        {
+          "k": "Kaynak",
+          "v": "AVOD Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Borç yasal takipte; yapılandırma görüşmeleri sürüyor"
+        }
+      ],
+      "src": "AVOD Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1692541",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, AVOD açıklaması (04.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1692541"
+        },
+        {
+          "name": "Paratic, 04.11.2026",
+          "url": "https://paratic.com/avodun-284-9-milyon-tllik-kredi-borcu-yasal-takibe-alindi/"
+        },
+        {
+          "name": "Borsatek, 04.11.2026",
+          "url": "https://www.borsatek.com/avod-kredi-borcu-yasal-takip/"
+        }
+      ]
+    },
+    {
+      "id": "bntas-tesvik",
+      "d": "2026-11-04",
+      "addedAt": "2026-11-04T19:55:00+03:00",
+      "sec": "imalat",
+      "tur": "yatirim",
+      "abroad": false,
+      "stage": "plan",
+      "title": "Bantaş, tam entegrasyon yatırımı için 241,5 milyon liralık yatırım teşvik belgesi aldı",
+      "spot": "Belge 9 Ekim 2026'dan 9 Ekim 2029'a kadar geçerli. Şirket yüzde 60 vergi indirimi, yüzde 20 yatırıma katkı oranı ve bir yıllık sigorta primi işveren hissesi desteğinden yararlanabilecek.",
+      "firm": "Bantaş",
+      "firms": [
+        {
+          "name": "Bantaş",
+          "ticker": "BNTAS",
+          "slug": "bantas"
+        },
+        {
+          "name": "Sanayi ve Teknoloji Bakanlığı",
+          "ticker": "",
+          "slug": "sanayi-ve-teknoloji-bakanligi"
+        }
+      ],
+      "alias": "bantas bantaş bntas bantaş bandırma ambalaj bandirma ambalaj tesvik",
+      "place": "",
+      "body": [
+        "Bantaş Bandırma Ambalaj Sanayi ve Ticaret A.Ş., Sanayi ve Teknoloji Bakanlığı Teşvik Uygulama ve Yabancı Sermaye Genel Müdürlüğü'nden \"tam entegrasyon sağlama amaçlı yatırım\" kapsamında 241.504.427 liralık yatırım teşvik belgesi aldığını 4 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Belgenin başlangıç tarihi 9 Ekim 2026, bitiş tarihi 9 Ekim 2029. Şirket, belge kapsamında yüzde 60 vergi indirim oranı ve yüzde 20 yatırıma katkı oranıyla vergi indiriminden, ayrıca bir yıl süreyle Sosyal Güvenlik Kurumu işveren hissesi desteğinden yararlanabilecek.",
+        "Açıklamaya göre başvurunun onaylandığı şirkete 4 Kasım 2026'da bildirildi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "04.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Açıklanmadı"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "241.504.427 TL yatırım teşvik belgesi"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "BNTAS"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Bantaş Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Belge süresi 09.10.2026 - 09.10.2029"
+        }
+      ],
+      "src": "Bantaş Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1692234",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Bantaş açıklaması (04.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1692234"
+        },
+        {
+          "name": "Paratic, 04.11.2026",
+          "url": "https://paratic.com/bantasa-241-milyon-tllik-yatirim-tesviki-vergi-indirimi-de-var/"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 04.11.2026",
+          "url": "https://hibya.com/bantas-ambalaja-2415-milyon-tllik-yatirim-tesvik-belgesi-verildi-1080970"
+        }
+      ]
+    },
+    {
+      "id": "pekgy-kayyim",
+      "d": "2026-11-04",
+      "addedAt": "2026-11-04T19:55:00+03:00",
+      "sec": "gayrimenkul",
+      "tur": "yapilanma",
+      "abroad": false,
+      "stage": "",
+      "title": "Peker GYO'ya Tasarruf Mevduatı Sigorta Fonu kayyım olarak atandı, yönetim kurulu değişti",
+      "spot": "Kayyım ataması İstanbul 11. Sulh Ceza Hakimliği'nin 3 Kasım tarihli kararıyla yapıldı. Fon Kurulu'nun oluşturduğu yeni yönetim kurulunun başkanlığına Enis Güçlü Şirin, şirketin CEO'luğuna Tolga Yenice getirildi.",
+      "firm": "Peker GYO",
+      "firms": [
+        {
+          "name": "Peker GYO",
+          "ticker": "PEKGY",
+          "slug": "peker-gyo"
+        },
+        {
+          "name": "Tasarruf Mevduatı Sigorta Fonu",
+          "ticker": "",
+          "slug": "tasarruf-mevduati-sigorta-fonu"
+        }
+      ],
+      "alias": "peker gyo pekgy peker gayrimenkul yatirim ortakligi tmsf kayyim",
+      "place": "",
+      "body": [
+        "Peker Gayrimenkul Yatırım Ortaklığı A.Ş., İstanbul 11. Sulh Ceza Hakimliği'nin 3 Kasım 2026 tarihli ve 2026/11155 D. iş sayılı kararıyla Tasarruf Mevduatı Sigorta Fonu'nun şirkete kayyım olarak atandığını 4 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Fon Kurulu'nun oluşturduğu yönetim kurulunda başkanlığa Enis Güçlü Şirin, başkan vekilliğine Cüneyt Ardağ getirildi; Melek İnceköse İmert, Ercan Doğan, Mert Can Aktı, Aybike Kaynar Bardakcı ve Tolga Yenice kurul üyesi oldu. Tolga Yenice şirketin CEO'luğuna atandı.",
+        "Şirketin yönetimi ve temsili Fon Kurulu'nca atanan yönetim kuruluna geçti. Şirket, süreçle ilgili gelişmeleri Kamuyu Aydınlatma Platformu'nda paylaşacağını bildirdi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "04.11.2026"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "PEKGY"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Peker GYO Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Tasarruf Mevduatı Sigorta Fonu 03.11.2026 tarihli mahkeme kararıyla kayyım olarak atandı"
+        }
+      ],
+      "src": "Peker GYO Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1692695",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Peker GYO açıklaması (04.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1692695"
+        },
+        {
+          "name": "Foreks, 04.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6aeb555095131d72027d6940/PICNEWS/tr/peker-gyo-ya-tmsf-kayyim-olarak-atandi-yonetim-kurulu-degisti-04-11-26/"
+        },
+        {
+          "name": "CNBC-e, 04.11.2026",
+          "url": "https://www.cnbce.com/haberler/peker-gyoya-tmsf-kayyim-olarak-atandi-yeni-yonetim-belli-oldu-h41049"
+        }
+      ]
+    },
     {
       "id": "cment-recydia-elazig",
       "d": "2026-11-03",
