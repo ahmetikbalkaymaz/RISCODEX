@@ -1,7 +1,156 @@
 {
-  "updatedAt": "2026-11-03T20:00:00+03:00",
-  "count": 141,
+  "updatedAt": "2026-11-04T09:20:00+03:00",
+  "count": 143,
   "items": [
+    {
+      "id": "cment-recydia-elazig",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-04T09:20:00+03:00",
+      "sec": "imalat",
+      "tur": "yatirim",
+      "abroad": false,
+      "stage": "plan",
+      "title": "Çimentaş, Elazığ'da şehir merkezi dışında yeni çimento fabrikası kurmak için görüşmeler yürütüyor",
+      "spot": "Yeni tesisin kurulmasıyla Elazığ şehir merkezindeki mevcut fabrikanın kapatılması öngörülüyor. Görüşmeler Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Sanayi ve Teknoloji Bakanlığı ve Elazığ Valiliği ile sürüyor.",
+      "firm": "Çimentaş",
+      "firms": [
+        {
+          "name": "Çimentaş",
+          "ticker": "CMENT",
+          "slug": "cimentas"
+        },
+        {
+          "name": "Recydia",
+          "ticker": "",
+          "slug": "recydia"
+        }
+      ],
+      "alias": "çimentaş cimentas cment recydia elazığ çimento fabrikası",
+      "place": "Elazığ",
+      "body": [
+        "Çimentaş İzmir Çimento Fabrikası T.A.Ş., bağlı ortaklığı Recydia Atık Yönetimi Yenilenebilir Enerji Üretimi Nakliye ve Lojistik Hizmetleri Sanayi ve Ticaret A.Ş.'nin Elazığ'daki çimento üretimini sürdürmesi amacıyla, şehir merkezi dışında uygun bir yerde yeni bir çimento tesisi kurulması için görüşmeler yürüttüğünü 3 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Şirketin açıklamasına göre görüşmeler başta Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Sanayi ve Teknoloji Bakanlığı ve Elazığ Valiliği olmak üzere ilgili kamu kurumlarıyla sürüyor. Yeni tesisin yeri, yatırımın kapsamı ve takvimi bu kurumlarla birlikte değerlendiriliyor; kapasite ve yatırım tutarı açıklanmadı.",
+        "Elazığ şehir merkezindeki mevcut fabrika bu süreçte olağan faaliyetlerine devam edecek. Yeni fabrikanın kurulmasına bağlı olarak mevcut tesisin kapatılması öngörülüyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Elazığ"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Kapasite ve yatırım tutarı açıklanmadı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "CMENT"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu açıklaması, 03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Kamu kurumlarıyla görüşmeler sürüyor; yer ve takvim belirlenmedi"
+        }
+      ],
+      "src": "Çimentaş'ın Kamuyu Aydınlatma Platformu açıklaması, 03.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1691897",
+      "sources": [
+        {
+          "name": "Foreks, Kamuyu Aydınlatma Platformu aktarımı, 03.11.2026",
+          "url": "https://foreks.com/haber/detay/6aea044158b1b941c20973e0/FRKS/tr/cimentas-bagli-ortakligi-recydia-icin-elazig-da-yeni-cimento-tesisi-icin-gorusmeler-yurutuldugunu-bildirdi-03-11-26"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 03.11.2026",
+          "url": "https://hibya.com/cimentas-elazigda-yeni-cimento-tesisi-kurmayi-planliyor-1080315"
+        },
+        {
+          "name": "Tekreferans, 03.11.2026",
+          "url": "https://tekreferans.com/haber/izmirli-cimento-devinden-hamle-elazig-a-yeni-fabrika-kuracak"
+        },
+        {
+          "name": "Borsatek",
+          "url": "https://www.borsatek.com/cment-elazigda-yeni-cimento-tesisi-gorusmeleri/"
+        }
+      ]
+    },
+    {
+      "id": "sise-karadiken",
+      "d": "2026-11-03",
+      "addedAt": "2026-11-04T09:20:00+03:00",
+      "sec": "kimya",
+      "tur": "kapasite",
+      "abroad": false,
+      "stage": "izin",
+      "title": "Şişecam'ın Tarsus'taki 404 milyon liralık depolama sahası projesinin nihai raporu görüşe açıldı",
+      "spot": "Proje, soda üretimi arıtma çamurunun depolandığı sahanın hacmini yaklaşık 2,9 milyon metreküpten 10,3 milyon metreküpe çıkarmayı öngörüyor. Rapor on takvim günü süreyle halkın görüşüne açıldı.",
+      "firm": "Şişecam",
+      "firms": [
+        {
+          "name": "Şişecam",
+          "ticker": "SISE",
+          "slug": "sisecam"
+        }
+      ],
+      "alias": "şişecam sisecam sise türkiye şişe ve cam karadiken düzenli depolama tarsus soda",
+      "place": "Mersin, Tarsus",
+      "body": [
+        "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Türkiye Şişe ve Cam Fabrikaları A.Ş.'nin Mersin'in Tarsus ilçesindeki Karadiken Düzenli Depolama Tesisi Kapasite Artışı projesine ilişkin Çevresel Etki Değerlendirmesi raporunun İnceleme ve Değerlendirme Komisyonu tarafından son şeklini aldığını ve on takvim günü süreyle halkın görüşüne açıldığını 3 Kasım 2026'da duyurdu. Görüşler Bakanlığa veya Mersin Çevre, Şehircilik ve İklim Değişikliği İl Müdürlüğü'ne iletilebilecek.",
+        "Proje kapsamında sahadaki Lot-2 ve Lot-3 alanları tek bir depolama alanında birleştirilecek. Depolama hacmi 7.380.000 metreküp artışla 2.909.323 metreküpten 10.289.323 metreküpe çıkacak. Soda üretiminden kaynaklanan arıtma çamurunun günlük kabul miktarı 2.500 tondan 3.750 tona yükselecek; günde 110 ton kazan külüyle (atık kodu 10 01 02) birlikte toplam kabul günde 3.860 tona ulaşacak.",
+        "Projenin maliyeti 404.274.990 lira olarak öngörülüyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "03.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Mersin, Tarsus, Karadiken"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "404.274.990 lira; depolama hacmi 10.289.323 metreküpe, günlük kabul 3.860 tona"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "SISE"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı duyurusu, 03.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Nihai Çevresel Etki Değerlendirmesi raporu on gün süreyle halkın görüşünde"
+        }
+      ],
+      "src": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı duyurusu, 03.11.2026",
+      "srcType": "Bakanlık duyurusu",
+      "url": "https://www.foreks.com/haber/detay/6ae9a77a58b1b941c2096e9f/FRKS/tr/ced-duyurusu-sisecam-03-11-26/",
+      "sources": [
+        {
+          "name": "Foreks, Çevresel Etki Değerlendirmesi duyurusu, 03.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6ae9a77a58b1b941c2096e9f/FRKS/tr/ced-duyurusu-sisecam-03-11-26/"
+        },
+        {
+          "name": "Yatırımlar Dergisi, 03.11.2026",
+          "url": "https://yatirimlar.com/haber/sisecam-in-karadiken-duzenli-depolama-tesisi-kapasite-artisi-projesi-halkin-gorusune-acildi_258331"
+        },
+        {
+          "name": "Mersin Haberci, 13.05.2026",
+          "url": "https://www.mersinhaberci.com/habermobil/66831/sisecamdan-ormanin-ortasinda-depo-buyutme-hamlesi.html"
+        }
+      ]
+    },
     {
       "id": "pahol-egehidro",
       "d": "2026-11-03",
