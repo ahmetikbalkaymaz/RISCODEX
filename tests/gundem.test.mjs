@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { runInNewContext } from 'node:vm';
-import { buildFeed, toItem, isPublishable } from '../scripts/gundem-export.mjs';
+import { buildFeed, mergeFeed, toItem, isPublishable } from '../scripts/gundem-export.mjs';
 const run = promisify(execFile);
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), 'utf8');
 const record = (overrides = {}) => ({
@@ -97,4 +97,37 @@ test('the homepage Gündem row shows the newest headlines as plain text and keep
     const source = await read('js/gundem-latest.js');
     assert.doesNotMatch(source, /innerHTML|insertAdjacentHTML/, 'headlines go in as text');
     assert.match(source, /encodeURIComponent\(n\.id\)/);
+});
+test('merging adds new stories, applies field corrections and refuses changes that break a story', () => {
+    const { skipped, ...feed } = buildFeed([{ id: 'reysas-tuzla', record: record() }]);
+    const merged = mergeFeed(feed, [
+        { id: 'yeni-haber', record: record({ d: '2026-11-04', addedAt: '2026-11-04T09:20:00+03:00', title: 'Yeni haber' }) },
+        { id: 'reysas-tuzla', record: { title: 'Reysaş Tuzla’da depo inşaatına başladı', correction: '04.11.2026: Başlık düzeltildi.' } },
+        { id: 'tek-kaynak', record: record({ sources: [{ name: 'Tek', url: 'https://example.com' }] }) }
+    ]);
+    assert.deepEqual([merged.added, merged.updated, merged.skipped], [['yeni-haber'], ['reysas-tuzla'], ['tek-kaynak']]);
+    assert.deepEqual(merged.feed.items.map((item) => item.id), ['yeni-haber', 'reysas-tuzla']);
+    assert.equal(merged.feed.count, 2);
+    assert.equal(merged.feed.updatedAt, '2026-11-04T09:20:00+03:00');
+    const corrected = merged.feed.items[1];
+    assert.equal(corrected.title, 'Reysaş Tuzla’da depo inşaatına başladı');
+    assert.equal(corrected.correction, '04.11.2026: Başlık düzeltildi.');
+    assert.equal(corrected.spot, 'Yapı ruhsatı alındı.', 'fields the correction does not name stay as they were');
+    const broken = mergeFeed(merged.feed, [{ id: 'reysas-tuzla', record: { body: [] } }]);
+    assert.deepEqual(broken.skipped, ['reysas-tuzla']);
+    assert.equal(broken.feed.items[1].body.length, 1, 'a refused change leaves the published story alone');
+});
+test('the merge command updates the feed in place and leaves it alone when there is nothing new', async () => {
+    const dir = await mkdtemp(join(tmpdir(), 'gundem-merge-'));
+    const feedFile = join(dir, 'haberler.json');
+    const { skipped, ...feed } = buildFeed([{ id: 'reysas-tuzla', record: record() }]);
+    await writeFile(feedFile, `${JSON.stringify(feed, null, 2)}\n`);
+    const empty = await mkdtemp(join(tmpdir(), 'gundem-merge-empty-'));
+    await run('node', ['scripts/gundem-export.mjs', '--merge', empty, feedFile], { cwd: new URL('..', import.meta.url) });
+    assert.equal(await readFile(feedFile, 'utf8'), `${JSON.stringify(feed, null, 2)}\n`);
+    const fresh = await mkdtemp(join(tmpdir(), 'gundem-merge-new-'));
+    await writeFile(join(fresh, 'yeni-haber.json'), JSON.stringify(record({ d: '2026-11-04', title: 'Yeni haber' })));
+    const { stdout } = await run('node', ['scripts/gundem-export.mjs', '--merge', fresh, feedFile], { cwd: new URL('..', import.meta.url) });
+    assert.match(stdout, /2 news: 1 added, 0 updated/);
+    assert.deepEqual(JSON.parse(await readFile(feedFile, 'utf8')).items.map((item) => item.id), ['yeni-haber', 'reysas-tuzla']);
 });
