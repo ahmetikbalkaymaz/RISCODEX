@@ -1,7 +1,256 @@
 {
-  "updatedAt": "2026-11-05T09:00:00+03:00",
-  "count": 148,
+  "updatedAt": "2026-11-05T19:55:00+03:00",
+  "count": 151,
   "items": [
+    {
+      "id": "borsk-ada-seker-kapasite",
+      "d": "2026-11-05",
+      "addedAt": "2026-11-05T19:55:00+03:00",
+      "sec": "gida",
+      "tur": "kapasite",
+      "abroad": false,
+      "stage": "",
+      "title": "Bor Şeker, Ada Şeker'in yıllık 99 bin tonluk kapasitesini bünyesine aldı, kotaya esas kapasitesi 186.528 ton oldu",
+      "spot": "Kapasite birleştirme talebi ilgili bakanlığın 21 Ekim 2026 tarihli onayıyla uygun bulundu; üretim ve kota dağılımı 2026/2027 pazarlama yılından itibaren Bor Şeker bünyesinde yapılacak. Modernizasyonu tamamlanan Bor fabrikasının yıllık üretim kapasitesi 250 bin tona yükseltildi.",
+      "firm": "Bor Şeker",
+      "firms": [
+        {
+          "name": "Bor Şeker",
+          "ticker": "BORSK",
+          "slug": "bor-seker"
+        },
+        {
+          "name": "Ada Şeker",
+          "ticker": "",
+          "slug": "ada-seker"
+        },
+        {
+          "name": "Yıldız Holding",
+          "ticker": "",
+          "slug": "yildiz-holding"
+        }
+      ],
+      "alias": "bor seker bor şeker borsk ada şeker ada seker adapazarı şeker fabrikası adapazari seker fabrikasi şeker kotası seker kotasi",
+      "place": "Niğde, Bor",
+      "body": [
+        "Bor Şeker A.Ş., Adapazarı Şeker Fabrikası A.Ş.'ye (Ada Şeker) tahsisli yıllık 99 bin ton şeker kapasitesinin tamamını bünyesine aldığını 5 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Şirket, Yıldız Holding'in Ada Şeker sermayesindeki yüzde 99,584 payını devralmak için 21 Nisan 2026'da pay alım satım sözleşmesi imzalamıştı. Açıklamaya göre pay devrinin ardından Ada Şeker'e tahsisli kapasitenin ve kota dağılımının Bor Şeker bünyesinde birleştirilmesi için çalışma yürütüldü.",
+        "Kapasitenin tamamının şirket bünyesine alınması ve 2026/2027 pazarlama yılından itibaren üretim ile kota dağılımının Bor Şeker bünyesinde gerçekleştirilmesi talebi, ilgili bakanlığın 21 Ekim 2026 tarihli onayıyla uygun bulundu. Böylece şirketin kotaya esas kapasitesi yıllık 186.528 ton olarak belirlendi.",
+        "Şirket ayrıca modernizasyon çalışmaları tamamlanan Bor Şeker Fabrikası'nın yıllık üretim kapasitesinin 250 bin tona yükseltildiğini bildirdi. Açıklamada bu yapılanmayla üretimin tek merkezde yürütülmesinin hedeflendiği belirtildi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "05.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Niğde, Bor"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Ada Şeker'den 99.000 ton/yıl kapasite devri; kotaya esas kapasite 186.528 ton/yıl; fabrika kapasitesi 250.000 ton/yıl"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "BORSK (Ada Şeker borsada işlem görmüyor)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Bor Şeker, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Bakanlık onayı 21.10.2026; birleşik üretim ve kota 2026/2027 pazarlama yılından itibaren"
+        }
+      ],
+      "src": "Bor Şeker, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1693244",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Bor Şeker açıklaması (05.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1693244"
+        },
+        {
+          "name": "Foreks, 05.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6aec9a834b1852391445c832/FRKS/tr/bor-seker-ada-seker-e-tahsisli-99000-ton-yil-seker-kapasitesinin-tamamini-sirket-bunyesine-aldi-05-11-26/"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 05.11.2026",
+          "url": "https://hibya.com/bor-sekerin-kotaya-esas-yillik-kapasitesi-186-bin-528-tona-yukseldi-1082234"
+        }
+      ]
+    },
+    {
+      "id": "eupwr-euroes-teias",
+      "d": "2026-11-05",
+      "addedAt": "2026-11-05T19:55:00+03:00",
+      "sec": "enerji",
+      "tur": "ihale",
+      "abroad": false,
+      "stage": "sozlesme",
+      "title": "Europower ortaklığı Euroes, Konya Kuzey-İGA hattı için 1,13 milyar liralık sözleşme imzaladı",
+      "spot": "Türkiye Elektrik İletim A.Ş. ile imzalanan sözleşme, Konya Kuzey ile İGA güneş enerjisi santrali arasında yaklaşık 85 ve 82,9 kilometrelik iki kısımdan oluşan iletim hattının komple tesis yapımını kapsıyor. Euroes'in ihalede birinci olduğu 18 Eylül'de açıklanmıştı.",
+      "firm": "Euroes Teknoloji",
+      "firms": [
+        {
+          "name": "Euroes Teknoloji",
+          "ticker": "",
+          "slug": "euroes-teknoloji"
+        },
+        {
+          "name": "Europower Enerji",
+          "ticker": "EUPWR",
+          "slug": "europower-enerji"
+        },
+        {
+          "name": "Girişim Elektrik",
+          "ticker": "GESAN",
+          "slug": "girisim-elektrik"
+        },
+        {
+          "name": "Türkiye Elektrik İletim A.Ş.",
+          "ticker": "",
+          "slug": "turkiye-elektrik-iletim-a-s"
+        }
+      ],
+      "alias": "euroes euroes teknoloji europower eupwr girişim elektrik girisim elektrik gesan teiaş teias konya kuzey iga ges iletim hattı iletim hatti",
+      "place": "Konya",
+      "body": [
+        "Europower Enerji ve Otomasyon Teknolojileri Sanayi Ticaret A.Ş., yüzde 49 oranında ortağı olduğu ve Girişim Elektrik Sanayi Taahhüt ve Ticaret A.Ş.'nin dolaylı ortaklığı olan Euroes Teknoloji ve Taahhüt A.Ş.'nin Türkiye Elektrik İletim A.Ş. Genel Müdürlüğü ile sözleşme imzaladığını 5 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Sözleşme, H.476 referanslı 400 kilovoltluk Konya Kuzey-İGA güneş enerjisi santrali enerji iletim hattının teklif birim fiyatlı komple tesis yapım işini kapsıyor. Hat yaklaşık 85 kilometrelik birinci kısım ile yaklaşık 82,9 kilometrelik ikinci kısımdan oluşuyor. Sözleşme baz bedeli 1.133.133.133 lira.",
+        "Euroes'in ihalede en avantajlı teklifi vererek birinci olduğu 18 Eylül 2026'da açıklanmıştı. Hat için acele kamulaştırma kararı ise Resmi Gazete'nin 10 Ekim 2026 tarihli nüshasında yayımlanmıştı."
+      ],
+      "link": "Konya Kuzey-İGA hattı için acele kamulaştırma kararı 10 Ekim 2026'da Resmi Gazete'de yayımlanmıştı.",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "05.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Konya"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "1.133.133.133 TL sözleşme baz bedeli; yaklaşık 85 ve 82,9 kilometrelik iki kısım, 400 kilovolt"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Euroes Teknoloji borsada işlem görmüyor; Europower Enerji EUPWR, Girişim Elektrik GESAN"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Europower Enerji, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Sözleşme imzalandı"
+        }
+      ],
+      "src": "Europower Enerji, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1693089",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Europower Enerji açıklaması (05.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1693089"
+        },
+        {
+          "name": "Yeşil Haber, 05.11.2026",
+          "url": "https://yesilhaber.net/europower-euroes-teias-iletim-hatti-sozlesmesi/"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 05.11.2026",
+          "url": "https://hibya.com/europowerin-bagli-ortakligi-teias-ile-113-milyar-tllik-sozlesme-imzaladi-1081937"
+        },
+        {
+          "name": "Anadolu Ajansı (Foreks aktarımı), 10.10.2026",
+          "url": "https://www.foreks.com/haber/detay/6ac9f91224008d7d4374044c/AA/tr/enerjide-acele-kamulastirma-kararlari-alindi-10-10-26/"
+        }
+      ],
+      "project": {
+        "slug": "iga",
+        "name": "Konya Kuzey-İGA güneş santrali iletim hattı"
+      }
+    },
+    {
+      "id": "huner-letonya-depolama",
+      "d": "2026-11-05",
+      "addedAt": "2026-11-05T19:55:00+03:00",
+      "sec": "enerji",
+      "tur": "yatirim",
+      "abroad": true,
+      "stage": "plan",
+      "title": "Hun Yenilenebilir Enerji, Riga'daki 6 milyon avroluk batarya depolama projesinin inşaatına 2027'de başlamayı planlıyor",
+      "spot": "Yaklaşık 15 megavat ve 30 megavatsaat kapasiteli projeyi, şirketin yüzde 60 payını devraldığını Haziran'da açıkladığı SW Electricity SIA geliştiriyor. Finansman için Letonya'daki bankalardan bağlayıcı teklifler alındı.",
+      "firm": "Hun Yenilenebilir Enerji",
+      "firms": [
+        {
+          "name": "Hun Yenilenebilir Enerji",
+          "ticker": "HUNER",
+          "slug": "hun-yenilenebilir-enerji"
+        },
+        {
+          "name": "SW Electricity",
+          "ticker": "",
+          "slug": "sw-electricity"
+        }
+      ],
+      "alias": "hun yenilenebilir enerji hun enerji huner sw electricity sia letonya riga batarya depolama",
+      "place": "Riga, Letonya",
+      "body": [
+        "Hun Yenilenebilir Enerji Üretim A.Ş., Letonya'daki bataryalı enerji depolama sistemi projesine ilişkin gelişmeleri 5 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Hun Yenilenebilir Enerji'nin sermayesindeki yüzde 60 payı devraldığını 29 Haziran 2026'da duyurduğu SW Electricity SIA, açıklamaya göre Riga'da yaklaşık 15 megavat ve 30 megavatsaat kapasiteli bir bataryalı enerji depolama sistemi projesi geliştiriyor. Projenin inşaatına 2027 içinde başlanması planlanıyor, toplam yatırım tutarının yaklaşık 6 milyon avro olması öngörülüyor.",
+        "Şirket, projenin finansmanı için Letonya'da faaliyet gösteren bankalardan bağlayıcı teklifler aldığını, kredi koşullarına ilişkin görüşmelerin sürdüğünü bildirdi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "05.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Riga, Letonya"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Yaklaşık 6 milyon avro toplam yatırım; yaklaşık 15 megavat ve 30 megavatsaat"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "HUNER (SW Electricity borsada işlem görmüyor)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Hun Yenilenebilir Enerji, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "İnşaatın 2027'de başlaması planlanıyor; kredi görüşmeleri sürüyor"
+        }
+      ],
+      "src": "Hun Yenilenebilir Enerji, Kamuyu Aydınlatma Platformu açıklaması, 05.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1693151",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Hun Yenilenebilir Enerji açıklaması (05.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1693151"
+        },
+        {
+          "name": "Foreks, 05.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6aec86984b1852391445c72a/FRKS/tr/hun-yenilenebilir-enerji-letonya-da-sw-electricity-sia-nin-bataryali-enerji-depolama-projesi-konusunda-bilgilendirme-yapti-05-11-26/"
+        },
+        {
+          "name": "Paratic, 05.11.2026",
+          "url": "https://paratic.com/hun-yenilenebilir-enerjinin-letonya-projesinde-finansman-gorusmeleri-suruyor/"
+        }
+      ]
+    },
     {
       "id": "cagdas-solar-devreye",
       "d": "2026-11-04",
@@ -8009,7 +8258,11 @@
           "name": "Paratic, 18.09.2026",
           "url": "https://paratic.com/gesanin-ortak-oldugu-sirket-teias-ihalesinde-birinci-oldu/"
         }
-      ]
+      ],
+      "project": {
+        "slug": "iga",
+        "name": "Konya Kuzey-İGA güneş santrali iletim hattı"
+      }
     },
     {
       "id": "alves",
