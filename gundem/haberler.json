@@ -1,7 +1,160 @@
 {
-  "updatedAt": "2026-11-04T19:55:00+03:00",
-  "count": 146,
+  "updatedAt": "2026-11-05T09:00:00+03:00",
+  "count": 148,
   "items": [
+    {
+      "id": "cagdas-solar-devreye",
+      "d": "2026-11-04",
+      "addedAt": "2026-11-05T09:00:00+03:00",
+      "sec": "imalat",
+      "tur": "devreye",
+      "abroad": false,
+      "stage": "devreye",
+      "title": "Çağdaş Cam, Manisa'daki yeni solar cam hattını devreye aldı, ön seri üretime başladı",
+      "spot": "Yeni hatla şirketin yıllık solar cam üretim kapasitesi 5 milyon metrekareden 14 milyon metrekareye yükseldi. Yatırıma Eylül 2025'te yönetim kurulu kararıyla başlanmıştı.",
+      "firm": "Çağdaş Cam",
+      "firms": [
+        {
+          "name": "Çağdaş Cam",
+          "ticker": "CGCAM",
+          "slug": "cagdas-cam"
+        }
+      ],
+      "alias": "çağdaş cam cagdas cam cgcam solar cam manisa",
+      "place": "Manisa, Manisa Organize Sanayi Bölgesi",
+      "body": [
+        "Çağdaş Cam Sanayi ve Ticaret A.Ş., Manisa Organize Sanayi Bölgesi'ndeki 1 numaralı tesisinde yürüttüğü kapasite artışı yatırımını tamamladığını, yeni üretim hattını devreye alarak ön seri üretime başladığını 4 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Yeni hattın devreye alınmasıyla şirketin yıllık solar cam üretim kapasitesi 5 milyon metrekareden 14 milyon metrekareye çıktı. Yatırım, şirketin 1 Eylül 2025 tarihli yönetim kurulu kararıyla başlatılmış, teknik kurulumun son aşamaya geldiği 22 Eylül 2026'da duyurulmuştu.",
+        "Şirket 30 Ekim'de yayımladığı faaliyet raporunda hattın kurulumunu tamamladığını ve 1,6 milimetre kalınlığında solar cam üreteceğini bildirmişti."
+      ],
+      "link": "Çağdaş Cam, Manisa'daki yeni solar cam hattının kurulumunu tamamladığını 30 Ekim 2026'da açıklamıştı.",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "04.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Manisa, Manisa Organize Sanayi Bölgesi"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Yıllık solar cam kapasitesi 5 milyon metrekareden 14 milyon metrekareye"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "CGCAM"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Çağdaş Cam, Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Yeni hat devreye alındı, ön seri üretime başlandı"
+        }
+      ],
+      "src": "Çağdaş Cam, Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1692562",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Çağdaş Cam açıklaması (04.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1692562"
+        },
+        {
+          "name": "Kamuyu Aydınlatma Platformu, Çağdaş Cam açıklaması (04.11.2026), Borsacoo aktarımı",
+          "url": "https://borsacoo.com/bildirim/104766"
+        },
+        {
+          "name": "Foreks, 04.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6aeb4e9895131d72027d681c/FRKS/tr/cagdas-cam-manisa-osb-1-tesisindeki-yeni-uretim-hattini-devreye-aldi-04-11-26/"
+        },
+        {
+          "name": "CNBC-e, 04.11.2026",
+          "url": "https://www.cnbce.com/borsa/borsa-istanbulda-8-sirketten-kap-aciklamasi-milyonluk-anlasmalar-ve-yeni-yatirimlar-g41057"
+        }
+      ],
+      "project": {
+        "slug": "cagdas-manisa-solar",
+        "name": "Çağdaş Cam Manisa solar cam hattı"
+      }
+    },
+    {
+      "id": "cwene-abd-kira",
+      "d": "2026-11-04",
+      "addedAt": "2026-11-05T09:00:00+03:00",
+      "sec": "enerji",
+      "tur": "yatirim",
+      "abroad": true,
+      "stage": "plan",
+      "title": "CW Enerji, ABD'de kurmayı planladığı 1 gigavatlık güneş paneli fabrikası için arsa ve bina kiraladı",
+      "spot": "Taşınmaz, yüzde 100 bağlı ortaklık CW Energy USA Inc. bünyesinde kurulması planlanan tesis için kiralandı. Makine ve ekipman temini ile fizibilite ve üretime hazırlık çalışmaları sürüyor.",
+      "firm": "CW Enerji",
+      "firms": [
+        {
+          "name": "CW Enerji",
+          "ticker": "CWENE",
+          "slug": "cw-enerji"
+        },
+        {
+          "name": "CW Energy USA",
+          "ticker": "",
+          "slug": "cw-energy-usa"
+        }
+      ],
+      "alias": "cw enerji cwene cw energy usa abd güneş paneli fabrikası abd gunes paneli",
+      "place": "Amerika Birleşik Devletleri (eyalet ve şehir açıklanmadı)",
+      "body": [
+        "CW Enerji Mühendislik Ticaret ve Sanayi A.Ş., Amerika Birleşik Devletleri'nde kurmayı planladığı güneş paneli üretim tesisinin yer alacağı arsa ve binadan oluşan taşınmaz için kira sözleşmesi imzaladığını 4 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Tesisin şirketin yüzde 100 bağlı ortaklığı olan ABD merkezli CW Energy USA Inc. bünyesinde, yıllık 1 gigavat panel üretim kapasitesiyle kurulması planlanıyor. Şirket, yatırım çalışmalarının başlatıldığını 8 Eylül 2026'da duyurmuştu.",
+        "Açıklamaya göre tesiste kullanılacak makine ve ekipmanların teminine yönelik çalışmalar ile daha önce duyurulan danışmanlık sözleşmesi kapsamındaki fizibilite ve üretime hazırlık süreçleri devam ediyor. Taşınmazın bulunduğu eyalet, kira bedeli ve süresi ile toplam yatırım tutarı açıklanmadı."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "04.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Amerika Birleşik Devletleri (eyalet ve şehir açıklanmadı)"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Yıllık 1 gigavat güneş paneli üretim kapasitesi hedefi; kira bedeli ve yatırım tutarı açıklanmadı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "CWENE (CW Energy USA borsada işlem görmüyor)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "CW Enerji, Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Arsa ve bina kira sözleşmesi imzalandı; makine ve ekipman temini, fizibilite ve üretime hazırlık çalışmaları sürüyor"
+        }
+      ],
+      "src": "CW Enerji, Kamuyu Aydınlatma Platformu açıklaması, 04.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://kap.org.tr/tr/api/BildirimPdf/1692850",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, CW Enerji açıklaması (04.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1692850"
+        },
+        {
+          "name": "Yeşil Haber, 04.11.2026",
+          "url": "https://yesilhaber.net/cw-enerji-abd-1-gw-panel-tesisi-kira/"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 04.11.2026",
+          "url": "https://hibya.com/cw-enerjinin-abddeki-gunes-paneli-yatirimi-icin-kira-sozlesmesi-imzalandi-1081564"
+        }
+      ]
+    },
     {
       "id": "avod-kredi-takip",
       "d": "2026-11-04",
@@ -1296,7 +1449,11 @@
           "name": "Enerji Ekonomisi, 01.11.2026",
           "url": "https://www.enerjiekonomisi.com/cagdas-cam-solar-camda-uretim-kapasitesi-artiriyor/44619"
         }
-      ]
+      ],
+      "project": {
+        "slug": "cagdas-manisa-solar",
+        "name": "Çağdaş Cam Manisa solar cam hattı"
+      }
     },
     {
       "id": "petrol-ofisi-derince",
