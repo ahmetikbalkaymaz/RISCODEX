@@ -1,7 +1,173 @@
 {
-  "updatedAt": "2026-11-06T09:30:00+03:00",
-  "count": 153,
+  "updatedAt": "2026-11-06T20:00:00+03:00",
+  "count": 155,
   "items": [
+    {
+      "id": "alcar-gebze-kapanis",
+      "d": "2026-11-06",
+      "addedAt": "2026-11-06T20:00:00+03:00",
+      "sec": "imalat",
+      "tur": "kapanis",
+      "abroad": false,
+      "stage": "",
+      "title": "Alarko Carrier, Gebze fabrikasında üretimi Şubat 2027 sonunda durduracak, 183 çalışanın işine son verilecek",
+      "spot": "Fabrikada Carrier markalı klima santrali, çatı tipi klima ve fancoil üretiliyor; tesis şirketin toplam üretim maliyetinin yaklaşık yüzde 55'ini oluşturuyor. Kıdem ve ihbar tazminatlarının yaklaşık 293 milyon lira olacağı öngörülüyor.",
+      "firm": "Alarko Carrier",
+      "firms": [
+        {
+          "name": "Alarko Carrier",
+          "ticker": "ALCAR",
+          "slug": "alarko-carrier"
+        },
+        {
+          "name": "Alarko Holding",
+          "ticker": "ALARK",
+          "slug": "alarko-holding"
+        },
+        {
+          "name": "Carrier HVACR Investments",
+          "ticker": "",
+          "slug": "carrier-hvacr-investments"
+        },
+        {
+          "name": "Viessmann Isı Teknikleri",
+          "ticker": "",
+          "slug": "viessmann-isi-teknikleri"
+        }
+      ],
+      "alias": "alarko carrier alcar alarko holding alark carrier viessmann gebze fabrikası gebze fabrikasi klima santrali fancoil",
+      "place": "Kocaeli, Gebze",
+      "body": [
+        "Alarko Carrier Sanayi ve Ticaret A.Ş., Gebze Fabrikası'ndaki üretim faaliyetlerini sonlandırma kararını 6 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı. Yönetim kurulunun 5 Kasım 2026 tarihli kararına göre mevcut ve kabul edilmiş Carrier markalı siparişler üretilip sevk edildikten sonra fabrikadaki üretim sona erecek. Üretimin 28 Şubat 2027'de durdurulması planlanıyor; şirket bu tarihin üretim koşulları, tedarik süreçleri ve müşteri sevkiyat programına bağlı olarak değişebileceğini bildirdi.",
+        "Gebze Fabrikası'nda Carrier markalı klima santrali, çatı tipi klima ve fancoil ürünleri üretiliyor. Fabrikanın üretimi şirketin toplam üretim maliyetinin yaklaşık yüzde 55'ini oluşturuyor; burada üretilen Carrier markalı ürünlerin satışları 2025 yılında şirketin toplam net satışlarının yaklaşık yüzde 13'üne karşılık geldi.",
+        "Karar kapsamında üretim, Ar-Ge ve destek birimlerinde çalışan 183 kişinin iş sözleşmesi feshedilecek. Bunlardan 119'unun sözleşmesi 31 Aralık 2026 itibarıyla, 64'ünün sözleşmesi ise üretim ve sevkiyat planına bağlı olarak Şubat 2027 sonuna kadar kademeli olarak sona erecek. Ödenecek kıdem ve ihbar tazminatlarının toplamı yaklaşık 293 milyon lira olarak açıklandı. Şirket, organizasyon ve operasyon yapısını kalan faaliyetlere uyumlu hale getirmek için yeniden yapılanmaya gidileceğini de bildirdi.",
+        "Karar, Alarko Holding A.Ş. ile Carrier HVACR Investments B.V. arasında 7 Ağustos 2026'da imzalanan ve Alarko Carrier sermayesinin yüzde 42,03'ünü temsil eden payların Carrier'dan satın alınmasına ilişkin bağlayıcı pay alım sözleşmesine dayanıyor. Aynı tarihte imzalanan faaliyet ayrıştırma sözleşmesiyle Carrier ve Toshiba markalarına ilişkin bazı stokların, sözleşmelerin ve yükümlülüklerin Viessmann Isı Teknikleri Ticaret Ltd. Şti.'ye devredilmesi öngörülüyor; işlemlerin tamamlanmasıyla şirketin bu markalardaki faaliyetleri sona erecek.",
+        "Eskişehir Fabrikası'nda Alarko markalı ürünlerin üretimi ile bu ürünlerin satış ve satış sonrası hizmetleri mevcut şekilde sürecek. Şirket, kararın süreklilik varsayımını etkilemesini beklemediğini açıkladı."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "06.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Kocaeli, Gebze"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "183 çalışan; yaklaşık 293 milyon TL kıdem ve ihbar tazminatı; fabrika toplam üretim maliyetinin yaklaşık yüzde 55'i"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "ALCAR (Alarko Holding: ALARK)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Alarko Carrier, Kamuyu Aydınlatma Platformu açıklaması, 06.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Üretimin 28 Şubat 2027'de durdurulması planlanıyor"
+        }
+      ],
+      "src": "Alarko Carrier, Kamuyu Aydınlatma Platformu açıklaması, 06.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1693512",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, bildirim 1693512 (06.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1693512"
+        },
+        {
+          "name": "YatırımX, 06.11.2026",
+          "url": "https://www.yatirimx.com.tr/sirket-haberleri/alarko-carrier-gebze-fabrikasini-kapatiyor-183-kisi-issiz-kalacak/27773"
+        },
+        {
+          "name": "Patronlar Dünyası, 06.11.2026",
+          "url": "https://www.patronlardunyasi.com/abdli-carrier-ile-yollarini-ayirma-karari-alan-alarko-holding-gebzedeki-fabrikasini-kapatiyor-183-calisan-isten-cikarilacak"
+        }
+      ]
+    },
+    {
+      "id": "cwene-abd-makine",
+      "d": "2026-11-06",
+      "addedAt": "2026-11-06T20:00:00+03:00",
+      "sec": "enerji",
+      "tur": "yatirim",
+      "abroad": true,
+      "stage": "plan",
+      "title": "CW Enerji, ABD'deki 1 gigavatlık güneş paneli fabrikası için makine ve ekipman alım sözleşmeleri imzaladı",
+      "spot": "Şirket, tesisin inşaat ve montaj çalışmalarının 2027'nin ilk çeyreğinde tamamlanmasını, seri üretime 2027'nin ilk yarısı itibarıyla başlanmasını öngörüyor. Sözleşmelerin tutarı ve tedarikçiler açıklanmadı.",
+      "firm": "CW Enerji",
+      "firms": [
+        {
+          "name": "CW Enerji",
+          "ticker": "CWENE",
+          "slug": "cw-enerji"
+        },
+        {
+          "name": "CW Energy USA",
+          "ticker": "",
+          "slug": "cw-energy-usa"
+        }
+      ],
+      "alias": "cw enerji cwene cw energy usa abd güneş paneli fabrikası abd gunes paneli makine ekipman",
+      "place": "Amerika Birleşik Devletleri (eyalet ve şehir açıklanmadı)",
+      "body": [
+        "CW Enerji Mühendislik Ticaret ve Sanayi A.Ş., yüzde 100 bağlı ortaklığı CW Energy USA Inc. bünyesinde Amerika Birleşik Devletleri'nde kurmayı planladığı yıllık 1 gigavat kapasiteli güneş paneli üretim tesisinde kullanılacak makine ve ekipmanların satın alımına ilişkin sözleşmeleri imzaladığını 6 Kasım 2026'da Kamuyu Aydınlatma Platformu'nda açıkladı.",
+        "Şirketin güncel projeksiyonlarına göre tesisin inşaat ve montaj çalışmalarının 2027'nin ilk çeyreğinde tamamlanması, makine ve ekipmanların kurulumu ile test ve devreye alma süreçlerinin ardından tesisin 2027'nin ilk yarısı itibarıyla faaliyete geçmesi ve seri üretime başlanması öngörülüyor.",
+        "Şirket, tesisin kurulacağı arsa ve binadan oluşan taşınmaz için kira sözleşmesi imzaladığını 4 Kasım 2026'da duyurmuştu. Sözleşmelerin bedeli, tedarikçi firmalar, tesisin bulunduğu eyalet ve toplam yatırım tutarı açıklanmadı."
+      ],
+      "link": "https://kap.org.tr/tr/api/BildirimPdf/1692850",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "06.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Amerika Birleşik Devletleri (eyalet ve şehir açıklanmadı)"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Yıllık 1 gigavat güneş paneli üretim kapasitesi; sözleşme tutarları açıklanmadı"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "CWENE (CW Energy USA borsada işlem görmüyor)"
+        },
+        {
+          "k": "Kaynak",
+          "v": "CW Enerji, Kamuyu Aydınlatma Platformu açıklaması, 06.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Makine ve ekipman alım sözleşmeleri imzalandı; seri üretimin 2027'nin ilk yarısında başlaması öngörülüyor"
+        }
+      ],
+      "src": "CW Enerji, Kamuyu Aydınlatma Platformu açıklaması, 06.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1693867",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, bildirim 1693867 (06.11.2026)",
+          "url": "https://kap.org.tr/tr/api/BildirimPdf/1693867"
+        },
+        {
+          "name": "Foreks, 06.11.2026",
+          "url": "https://www.foreks.com/haber/detay/6aeddbe34b1852391445d7c6/FRKS/tr/cw-enerji-abd-deki-tesiste-kullanilacak-makine-ve-ekipmanlarin-satin-alimina-iliskin-sozlesmeler-imzaladi-06-11-26/"
+        },
+        {
+          "name": "Paratic, 06.11.2026",
+          "url": "https://paratic.com/cw-enerjinin-abd-yatiriminda-takvim-netlesiyor-uretim-icin-tarih-verdi/"
+        }
+      ],
+      "project": {
+        "slug": "cwene-abd-kira",
+        "name": "CW Enerji ABD güneş paneli fabrikası"
+      }
+    },
     {
       "id": "osb-uygulama-yonetmeligi",
       "d": "2026-11-06",
@@ -544,7 +710,11 @@
           "name": "Hibya Haber Ajansı, 04.11.2026",
           "url": "https://hibya.com/cw-enerjinin-abddeki-gunes-paneli-yatirimi-icin-kira-sozlesmesi-imzalandi-1081564"
         }
-      ]
+      ],
+      "project": {
+        "slug": "cwene-abd-kira",
+        "name": "CW Enerji ABD güneş paneli fabrikası"
+      }
     },
     {
       "id": "avod-kredi-takip",
