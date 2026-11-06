@@ -1,7 +1,149 @@
 {
-  "updatedAt": "2026-11-05T19:55:00+03:00",
-  "count": 151,
+  "updatedAt": "2026-11-06T09:30:00+03:00",
+  "count": 153,
   "items": [
+    {
+      "id": "osb-uygulama-yonetmeligi",
+      "d": "2026-11-06",
+      "addedAt": "2026-11-06T09:30:00+03:00",
+      "sec": "mevzuat",
+      "tur": "duzenleme",
+      "abroad": false,
+      "stage": "",
+      "title": "Sanayi ve Teknoloji Bakanlığı, organize sanayi bölgelerindeki parsellerde üst hakkı kurulmasına izin verdi",
+      "spot": "Bakanlık onayı alınmadan payların toplam yüzde 49'unu aşan ortaklık değişikliği yapan şirketlerin ön tahsis ve arsa tahsisleri iptal edilecek. İş yeri açma ve çalışma ruhsatlarının çevrim içi sistemde elektronik ortamda imzalanması zorunlu hale geldi.",
+      "firm": "Sanayi ve Teknoloji Bakanlığı",
+      "firms": [
+        {
+          "name": "Sanayi ve Teknoloji Bakanlığı",
+          "ticker": "",
+          "slug": "sanayi-ve-teknoloji-bakanligi"
+        }
+      ],
+      "alias": "sanayi ve teknoloji bakanlığı organize sanayi bölgeleri uygulama yönetmeliği osb üst hakkı parsel tahsisi ön tahsis iş yeri açma ve çalışma ruhsatı",
+      "place": "Türkiye geneli",
+      "body": [
+        "Organize Sanayi Bölgeleri Uygulama Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik 6 Kasım 2026 tarihli ve 33422 sayılı Resmi Gazete'de yayımlanarak yürürlüğe girdi. Değişiklik, 2 Şubat 2019 tarihli ve 30674 sayılı yönetmeliği güncelliyor.",
+        "Yönetmeliğe eklenen üst hakkı maddesine göre organize sanayi bölgesinin mülkiyetindeki ve katılımcıya ön tahsis ya da tahsis edilmiş parsellerde, tahsis hakkı sahibinin bildirdiği ve bölge yönetim kurulunun uygun gördüğü kişi lehine üst hakkı tesis edilebilecek. Bu hak bağımsız ve sürekli nitelikte olmayacak, tapuda ayrı sayfaya kaydedilmeyecek, devredilemeyecek ve süresi tahsis süresini aşamayacak. Lehtarın aldığı inşaat ruhsat ve izinleri katılımcının alması gereken ruhsatların yerine geçecek; katılımcı, lehtarın yönetmeliğe aykırı fiillerinden müteselsilen sorumlu olacak. Tamamen veya kısmen bedelsiz tahsis edilen parsellerde bu hüküm, mülkiyet katılımcıya devredilmeden uygulanmayacak. Katılımcı mülkiyetindeki sanayi parsellerinde bağımsız ve sürekli üst hakkı kurulamayacak; bu parsellerde aynı şartlarla ve bölge yönetim kurulunun izniyle üst hakkı tesis edilebilecek.",
+        "Spekülatif işlemleri önlemek amacıyla, ön tahsis veya arsa tahsisi yapılan şirketin paylarında Bakanlık onayı alınmadan toplam yüzde 49'u aşan ortaklık değişikliği yapılması halinde tahsis iptal edilecek. Ön tahsisler belirlenen şartlarla devredilebilecek; Bakanlık izni alınmadan şirket hisselerinin devredildiği tespit edilirse ön tahsis iptal edilecek.",
+        "İlana çıkılan parselle doğrudan ortak sınırı bulunan ve ruhsat alarak üretime geçmiş katılımcılara öncelik tanınabilmesi için ihale yapılacak ve tahsis ihale bedeli üzerinden gerçekleşecek; benzer durumda birden fazla başvuru olursa öncelik tanınmayacak. Süre nedeniyle tahsisi iptal edilen katılımcıya, bedel iadesinden önce başvurması, organize sanayi bölgesinin uygun görmesi ve Bakanlık onayı alınması halinde parsel ilana çıkılmadan güncel bedelle yeniden tahsis edilebilecek; bu parsellere süre uzatımı verilmeyecek. Katılımcı ve kiracısının tahsis başvurusunu birlikte yapması halinde kiralamaya ilişkin şartlardan biri aranmayacak. İş yeri açma ve çalışma ruhsatlarının çevrim içi sistemde elektronik ortamda imzalanması zorunlu olacak."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "06.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Türkiye geneli"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Organize sanayi bölgelerindeki parsel tahsisleri, ortaklık değişiklikleri, üst hakkı ve iş yeri ruhsatları"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Bakanlık, borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Resmi Gazete, 06.11.2026, sayı 33422"
+        },
+        {
+          "k": "Durum",
+          "v": "Yayımı tarihinde yürürlüğe girdi"
+        }
+      ],
+      "src": "Resmi Gazete, 06.11.2026, sayı 33422",
+      "srcType": "Resmi Gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261106-1.htm",
+      "sources": [
+        {
+          "name": "Resmi Gazete, 06.11.2026",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261106-1.htm"
+        },
+        {
+          "name": "Lexpera, 06.11.2026",
+          "url": "https://www.lexpera.com.tr/resmi-gazete/metin/organize-sanayi-bolgeleri-uygulama-yonetmeliginde-degisiklik-yapilmasina-dair-yonetmelik-33422"
+        }
+      ]
+    },
+    {
+      "id": "dzgyo-bodrum-otel",
+      "d": "2026-11-05",
+      "addedAt": "2026-11-06T09:30:00+03:00",
+      "sec": "gayrimenkul",
+      "tur": "satis",
+      "abroad": false,
+      "stage": "tamam",
+      "title": "Deniz GYO, Bodrum'daki otel binasını 979,4 milyon liraya sattı",
+      "spot": "Alıcı, aynı finans grubundan Deniz Finansal Kiralama. Satış bedeli 23 Ekim tarihli değerleme raporundaki 968,7 milyon liralık değerin üzerinde; tahsilat 13 Kasım'da yapılacak.",
+      "firm": "Deniz GYO",
+      "firms": [
+        {
+          "name": "Deniz GYO",
+          "ticker": "DZGYO",
+          "slug": "deniz-gyo"
+        },
+        {
+          "name": "Deniz Finansal Kiralama",
+          "ticker": "",
+          "slug": "deniz-finansal-kiralama"
+        }
+      ],
+      "alias": "deniz gyo dzgyo deniz gayrimenkul yatırım ortaklığı bodrum otel eskiçeşme deniz finansal kiralama deniz leasing",
+      "place": "Muğla, Bodrum, Eskiçeşme Mahallesi",
+      "body": [
+        "Deniz Gayrimenkul Yatırım Ortaklığı, portföyündeki Muğla'nın Bodrum ilçesi Eskiçeşme Mahallesi'nde, 928 ada 2 parsel ile 929 ada 3 parselde bulunan otel binasını katma değer vergisi hariç 979.364.000 liraya sattığını 5 Kasım 2026'da Kamuyu Aydınlatma Platformu'na bildirdi. Satışa ilişkin yönetim kurulu kararı 23 Ekim 2026'da alındı ve bağımsız üyelerin çoğunluğu karara onay verdi.",
+        "Karşı taraf, Deniz Finansal Hizmetler Grubu şirketi olan ve sermaye piyasası düzenlemelerine göre ilişkili taraf sayılan Deniz Finansal Kiralama. Satış vadeli olarak yapıldı; bedelin tahsilatı 13 Kasım 2026'da gerçekleşecek.",
+        "Harmoni Gayrimenkul Değerleme ve Danışmanlık'ın 23 Ekim 2026 tarihli raporunda otelin değeri katma değer vergisi hariç 968.700.000 lira olarak belirlenmişti. Şirketin açıklamasına göre otelin son finansal tablodaki kayıtlı değeri, 30 Aralık 2025 tarihli 821,5 milyon liralık değerleme üzerine enflasyon muhasebesi etkisi yansıtılarak yaklaşık 1,03 milyar lira olarak hesaplanmıştı; bu değere göre satıştan 52,2 milyon lira zarar hesaplandığı, değerleme raporuna göre ise işlemin kârla sonuçlandığı belirtildi. Satış bedeli şirketin ödenmiş sermayesinin yüzde 244,84'üne, son finansal tablodaki aktif toplamının yüzde 10,57'sine karşılık geliyor."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "05.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Muğla, Bodrum, Eskiçeşme Mahallesi"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "979.364.000 TL (KDV hariç); değerleme 968.700.000 TL"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "DZGYO"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Kamuyu Aydınlatma Platformu, 05.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Satış gerçekleşti, tahsilat 13.11.2026"
+        }
+      ],
+      "src": "Kamuyu Aydınlatma Platformu, 05.11.2026",
+      "srcType": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/Bildirim/1693404",
+      "sources": [
+        {
+          "name": "Kamuyu Aydınlatma Platformu, 05.11.2026",
+          "url": "https://www.kap.org.tr/tr/Bildirim/1693404"
+        },
+        {
+          "name": "Hibya Haber Ajansı, 05.11.2026",
+          "url": "https://hibya.com/deniz-gyo-bodrumdaki-otelini-9793-milyon-tlye-satti-1082364"
+        },
+        {
+          "name": "Borsatek, 05.11.2026",
+          "url": "https://www.borsatek.com/dzgyo-bodrum-otel-satisi-979-364-000-tl/"
+        }
+      ]
+    },
     {
       "id": "borsk-ada-seker-kapasite",
       "d": "2026-11-05",
