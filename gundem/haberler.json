@@ -1,7 +1,78 @@
 {
-  "updatedAt": "2026-11-06T20:00:00+03:00",
-  "count": 155,
+  "updatedAt": "2026-11-07T08:50:00+03:00",
+  "count": 157,
   "items": [
+    {
+      "id": "ced-yonetmelik-termik-su-aktarma",
+      "d": "2026-11-07",
+      "addedAt": "2026-11-07T08:50:00+03:00",
+      "sec": "mevzuat",
+      "tur": "duzenleme",
+      "abroad": false,
+      "stage": "",
+      "title": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, termik tesis ve su aktarma projelerinde çevresel etki kurallarını değiştirdi",
+      "spot": "Akarsu havzaları arasında su aktaran projeler, boruyla yapılan içme suyu taşımaları dışında, Çevresel Etki Değerlendirmesi uygulanacak projeler listesine alındı. Seçme ve eleme listesinde termik tesisler için eşik 20 megavat ısıl güç olarak belirlendi.",
+      "firm": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+      "firms": [
+        {
+          "name": "Çevre, Şehircilik ve İklim Değişikliği Bakanlığı",
+          "ticker": "",
+          "slug": "cevre-sehircilik-ve-iklim-degisikligi-bakanligi"
+        }
+      ],
+      "alias": "çed yönetmeliği çevresel etki değerlendirmesi yönetmeliği ek-1 ek-2 termik santral nükleer tesis havzalar arası su aktarma akarsu yatağı düzenleme",
+      "place": "Türkiye geneli",
+      "body": [
+        "Çevresel Etki Değerlendirmesi Yönetmeliğinde Değişiklik Yapılmasına Dair Yönetmelik 7 Kasım 2026 tarihli ve 33423 sayılı Resmi Gazete'de yayımlanarak yürürlüğe girdi. Değişiklik, 29 Temmuz 2022 tarihli ve 31907 sayılı yönetmeliğin Çevresel Etki Değerlendirmesi uygulanacak projeleri sayan EK-1 listesi ile seçme ve eleme kriterleri uygulanacak projeleri sayan EK-2 listesini güncelliyor.",
+        "EK-1 listesinin ikinci maddesi yeniden düzenlendi. Buna göre toplam ısıl gücü 300 megavat ve üzeri olan termik güç santralleri ile gaz, buhar ve sıcak su üreten 300 megavat ısıl güç ve üzeri endüstriyel tesisler bu listede yer alıyor. Nükleer güç santralleri ve diğer nükleer tesisler de aynı maddede düzenlendi; sürekli termik yükü 1 kilovatı aşmayan belirli araştırma tesisleri kapsam dışında tutuldu.",
+        "EK-1 listesine eklenen 55. madde ile akarsu havzaları arası su aktarma projeleri, boru ile yapılan içme suyu taşımaları hariç, Çevresel Etki Değerlendirmesi uygulanacak projeler arasına alındı.",
+        "EK-2 listesinin 40. maddesinde termik güç santralleri ile gaz, buhar ve sıcak su üreten endüstriyel tesisler için eşik toplam ısıl gücü 20 megavat ve üzeri olarak belirlendi. Listenin 44. maddesi ise sürekli akış gösteren akarsuların yataklarında 5 kilometre ve üzerinde düzenleme yapılan projeleri kapsayacak şekilde değiştirildi."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "07.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Türkiye geneli"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "Termik tesisler, nükleer tesisler, havzalar arası su aktarma ve akarsu yatağı düzenleme projeleri"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Bakanlık, borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Resmi Gazete, 07.11.2026, sayı 33423"
+        },
+        {
+          "k": "Durum",
+          "v": "Yayımı tarihinde yürürlüğe girdi"
+        }
+      ],
+      "src": "Resmi Gazete, 07.11.2026, sayı 33423",
+      "srcType": "Resmi Gazete",
+      "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261107-3.htm",
+      "sources": [
+        {
+          "name": "Resmi Gazete, 07.11.2026",
+          "url": "https://www.resmigazete.gov.tr/eskiler/2026/11/20261107-3.htm"
+        },
+        {
+          "name": "Yeşil Haber, 07.11.2026",
+          "url": "https://yesilhaber.net/ced-termik-tesisler-havzalar-arasi-su-aktarma/"
+        },
+        {
+          "name": "Dünya, 07.11.2026",
+          "url": "https://www.dunya.com/ekonomi/sanayi-yatirimlarinda-ced-kurallari-degisti-enerji-tesislerine-yeni-esikler-haberi-846754"
+        }
+      ]
+    },
     {
       "id": "alcar-gebze-kapanis",
       "d": "2026-11-06",
@@ -1403,6 +1474,90 @@
         {
           "name": "Memurlar.net, 03.11.2026",
           "url": "https://www.memurlar.net/haber/1182909/resmi-gazete-de-dogal-sit-alanlari-icin-9-ilke-karari.html"
+        }
+      ]
+    },
+    {
+      "id": "asko-goldoni",
+      "d": "2026-11-02",
+      "addedAt": "2026-11-07T08:50:00+03:00",
+      "sec": "imalat",
+      "tur": "satinalma",
+      "abroad": true,
+      "stage": "tamam",
+      "title": "ASKO Holding, İtalyan traktör üreticisi Goldoni'yi Belçikalı Keestrack'tan devraldı",
+      "spot": "Satış ihalesinde daha yüksek teklif gelmeyince geriye ASKO Holding'in 8 milyon avroluk teklifi kalmıştı; nihai devir bedeli açıklanmadı. ASKO, teklifinde yaklaşık 100 çalışandan 41'inin iş sözleşmesini devralmayı taahhüt etmişti.",
+      "firm": "ASKO Holding",
+      "firms": [
+        {
+          "name": "ASKO Holding",
+          "ticker": "",
+          "slug": "asko-holding"
+        },
+        {
+          "name": "Goldoni",
+          "ticker": "",
+          "slug": "goldoni"
+        },
+        {
+          "name": "Keestrack",
+          "ticker": "",
+          "slug": "keestrack"
+        }
+      ],
+      "alias": "asko holding asko başak traktör goldoni goldoni keestrack keestrack traktör carpi modena italya",
+      "place": "İtalya, Modena, Carpi (Migliarina)",
+      "body": [
+        "Başak Traktör'ün de bağlı olduğu ASKO Holding, Belçikalı Keestrack grubuna ait İtalyan traktör üreticisi Goldoni'yi devraldı. Hollanda merkezli tarım makineleri yayını Trekker, 2 Kasım 2026'da Goldoni'nin kesin olarak ASKO Holding'e geçtiğini duyurdu. İtalyan yerel basını da 6 Kasım'da aylardır süren alım satım görüşmelerinin sonuçlandığını bildirdi.",
+        "Daha yüksek teklifler için tanınan süre 23 Nisan 2026'da dolduğunda yeni teklif gelmemiş, geriye ASKO Holding'in şirketin varlıklarını, haklarını, hukuki ilişkilerini ve şerefiyesini kapsayan 8 milyon avroluk teklifi kalmıştı. Nihai devir bedeli açıklanmadı. Satış sürecinde Güney Koreli ve Belçikalı birer şirketin de ilgi gösterdiği bildirilmişti.",
+        "ASKO Holding, teklifinde yaklaşık 100 çalışandan 41'inin iş sözleşmelerini devralmayı taahhüt etmişti. 1926'da kurulan Goldoni, bağ, bahçe ve dar alanlarda kullanılan kompakt traktörleriyle biliniyor; üretim tesisi Modena iline bağlı Carpi'nin Migliarina bölgesinde bulunuyor. Keestrack, Goldoni'yi 2021'de devralmıştı."
+      ],
+      "link": "",
+      "facts": [
+        {
+          "k": "Tarih",
+          "v": "02.11.2026"
+        },
+        {
+          "k": "Yer",
+          "v": "Migliarina, Carpi, Modena, İtalya"
+        },
+        {
+          "k": "Tutar ve ölçek",
+          "v": "İhaledeki tek teklif 8 milyon avro; nihai bedel açıklanmadı. 41 çalışanın iş sözleşmesinin devralınması taahhüt edildi"
+        },
+        {
+          "k": "Şirket bilgisi",
+          "v": "Borsada işlem görmüyor"
+        },
+        {
+          "k": "Kaynak",
+          "v": "Trekker, 02.11.2026; Temponews, 06.11.2026"
+        },
+        {
+          "k": "Durum",
+          "v": "Devir tamamlandı"
+        }
+      ],
+      "src": "Trekker, 02.11.2026",
+      "srcType": "Basın",
+      "url": "https://trekkeronline.nl/2026/11/trekkermerk-goldoni-in-turkse-handen/",
+      "sources": [
+        {
+          "name": "Trekker, 02.11.2026",
+          "url": "https://trekkeronline.nl/2026/11/trekkermerk-goldoni-in-turkse-handen/"
+        },
+        {
+          "name": "Temponews, 06.11.2026",
+          "url": "https://temponews.it/2026/11/06/e-ufficiale-la-goldoni-keestrack-e-turca/"
+        },
+        {
+          "name": "Omnitrattore, Nisan 2026",
+          "url": "https://www.omnitrattore.it/features/794056/goldoni-keestrack:-asta-asko/"
+        },
+        {
+          "name": "Hisse.net, 06.11.2026",
+          "url": "https://www.hisse.net/haber/guney-kore-ve-belcika-da-istiyordu-italyan-tarim-devi-turk-sirketine-gecti-105766"
         }
       ]
     },
